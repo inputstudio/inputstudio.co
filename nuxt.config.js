@@ -1,4 +1,6 @@
 export default {
+  telemetry: false,
+
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
 
@@ -18,7 +20,7 @@ export default {
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
-  css: [],
+  css: ['~/assets/main.scss'],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [],
@@ -30,10 +32,26 @@ export default {
   buildModules: [
     // https://go.nuxtjs.dev/eslint
     '@nuxtjs/eslint-module',
+    // https://github.com/nuxt-community/style-resources-module
+    '@nuxtjs/style-resources',
   ],
 
+  styleResources: {
+    scss: [],
+  },
+
   // Modules: https://go.nuxtjs.dev/config-modules
-  modules: [],
+  modules: [
+    // https://github.com/nuxt-community/google-fonts-module
+    '@nuxtjs/google-fonts',
+  ],
+
+  googleFonts: {
+    families: {
+      'Fjalla+One': true,
+      Roboto: true,
+    },
+  },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},
