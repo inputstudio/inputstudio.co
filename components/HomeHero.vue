@@ -4,16 +4,13 @@
       <!-- TODO: Optimize video size -->
       <!-- TODO: Stop video on scroll -->
       <!-- https://www.pexels.com/video/abstract-digital-animation-7670836/ -->
-      <source
-        src="@/assets/pexels-rostislav-uzunov-7670836.mp4"
-        type="video/mp4"
-      />
+      <source src="@/assets/pexels-rostislav-uzunov-7670836.mp4" type="video/mp4" />
       <!-- TODO: Add an image as placeholder -->
       Your browser does not support the video tag.
     </video>
     <h1>Together we prevail,</h1>
     <h2>We don't build websites, we build web experiences...</h2>
-    <nuxt-link to="" class="button invert">Learn more</nuxt-link>
+    <nuxt-link to="" class="learnmore-btn">Learn more</nuxt-link>
   </div>
 </template>
 
@@ -68,5 +65,9 @@ h2 {
   &:hover {
     transform: scale(1.1);
   }
+}
+
+.learnmore-btn {
+  @include button;
 }
 </style>
