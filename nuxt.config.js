@@ -51,6 +51,8 @@ export default {
       'Fjalla+One': true,
       Roboto: true,
     },
+    download: true,
+    inject: true,
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
