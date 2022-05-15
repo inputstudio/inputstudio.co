@@ -2,6 +2,10 @@
   <div id="about" class="about--wrapper">
     <div class="about--title">
       <h1>Think outside the box</h1>
+
+      <nuxt-link :to="{ path: '/', hash: '#services' }">
+        <ion-icon name="arrow-down" size="large"></ion-icon>
+      </nuxt-link>
     </div>
 
     <div class="about--content">
@@ -33,6 +37,9 @@
   width: 40%;
   flex-shrink: 0;
   padding-right: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .about--content {

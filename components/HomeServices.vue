@@ -3,6 +3,10 @@
     <div class="services--header">
       <div class="services--title">
         <h1>Nos services</h1>
+
+        <nuxt-link :to="{ path: '/', hash: '#team' }">
+          <ion-icon name="arrow-down" size="large"></ion-icon>
+        </nuxt-link>
       </div>
 
       <div class="services--desc">
@@ -36,6 +40,9 @@
   width: 40%;
   flex-shrink: 0;
   padding-right: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 p {
