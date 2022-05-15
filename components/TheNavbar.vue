@@ -7,7 +7,6 @@
     <div class="navbar--links">
       <nuxt-link to="/">Accueil</nuxt-link>
       <nuxt-link to="">Services</nuxt-link>
-      <nuxt-link to="">Réalisations</nuxt-link>
       <nuxt-link to="">L'équipe</nuxt-link>
     </div>
 
@@ -34,8 +33,8 @@ export default {}
 .navbar--links {
   a {
     display: inline-block;
-    margin-left: 1rem;
-    font-size: 0.9rem;
+    margin: 0 1rem;
+    font-size: 1rem;
     transition: border 0.1s ease-in-out;
     padding-bottom: 3px;
 
