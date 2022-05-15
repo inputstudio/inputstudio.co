@@ -1,7 +1,7 @@
 <template>
   <nav class="navbar--wrapper">
     <div class="navbar--brand">
-      <nuxt-link to="/" class="brand">Input Studio</nuxt-link>
+      <TheLogo />
     </div>
 
     <div class="navbar--links">
@@ -29,13 +29,6 @@ export default {}
   background: #111;
   color: white;
   padding: 1rem 20vw;
-}
-
-.brand {
-  text-transform: uppercase;
-  font-family: 'Fjalla One', sans-serif;
-  font-weight: bold;
-  font-size: 1rem;
 }
 
 .navbar--links {
