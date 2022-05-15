@@ -9,7 +9,9 @@
       Votre navigateur ne supporte pas la balise video.
     </video>
     <h1 class="baffle">Nous ne realisons pas des sites web, mais des experiences web.</h1>
-    <ion-icon name="arrow-down" size="large"></ion-icon>
+    <nuxt-link :to="{ path: '/', hash: '#about' }">
+      <ion-icon name="arrow-down" size="large"></ion-icon>
+    </nuxt-link>
   </div>
 </template>
 
@@ -74,7 +76,7 @@ video {
 
 h1 {
   display: block;
-  width: 60%;
+  padding: 0 20vw;
   text-align: left;
   font-family: 'Fjalla One', sans-serif;
   font-size: 4rem;

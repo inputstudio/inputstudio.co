@@ -1,5 +1,10 @@
 <template>
-  <HomeHero />
+  <div class="wrapper">
+    <HomeHero />
+    <HomeAbout />
+    <HomeServices />
+    <HomeTeam />
+  </div>
 </template>
 
 <script>

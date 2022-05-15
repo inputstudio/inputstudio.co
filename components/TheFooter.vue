@@ -9,9 +9,9 @@
 
       <div class="footer--links">
         <nuxt-link to="/">Accueil</nuxt-link>
-        <nuxt-link to="">Services</nuxt-link>
-        <nuxt-link to="">L'équipe</nuxt-link>
-        <nuxt-link to="">Nous contacter</nuxt-link>
+        <nuxt-link :to="{ path: '/', hash: 'services' }">Services</nuxt-link>
+        <nuxt-link :to="{ path: '/', hash: 'team' }">L'équipe</nuxt-link>
+        <nuxt-link to="/contact-us">Nous contacter</nuxt-link>
       </div>
 
       <div class="footer--socials">
@@ -34,7 +34,7 @@ export default {}
 footer {
   background: #111;
   color: #fff;
-  padding: 10vh 10vw;
+  padding: 10vh 20vw;
 }
 
 h3 {

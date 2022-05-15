@@ -6,8 +6,8 @@
 
     <div class="navbar--links">
       <nuxt-link to="/">Accueil</nuxt-link>
-      <nuxt-link to="">Services</nuxt-link>
-      <nuxt-link to="">L'équipe</nuxt-link>
+      <nuxt-link :to="{ path: '/', hash: 'services' }">Services</nuxt-link>
+      <nuxt-link :to="{ path: '/', hash: 'team' }">L'équipe</nuxt-link>
     </div>
 
     <div class="navbar--end">
