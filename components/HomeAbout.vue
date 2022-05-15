@@ -1,7 +1,7 @@
 <template>
   <div id="about" class="about--wrapper">
     <div class="about--title">
-      <h1>Think outside the box.</h1>
+      <h1>Think outside the box</h1>
     </div>
 
     <div class="about--content">
