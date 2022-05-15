@@ -5,17 +5,47 @@
       <!-- TODO: Stop video on scroll -->
       <!-- https://www.pexels.com/video/abstract-digital-animation-7670836/ -->
       <source src="@/assets/pexels-rostislav-uzunov-7670836.mp4" type="video/mp4" />
-      <!-- TODO: Add an image as placeholder -->
-      Your browser does not support the video tag.
+      <!-- TODO: Add a fallback image -->
+      Votre navigateur ne supporte pas la balise video.
     </video>
-    <h1>Together we prevail,</h1>
-    <h2>We don't build websites, we build web experiences...</h2>
-    <nuxt-link to="" class="learnmore-btn">Learn more</nuxt-link>
+    <h1 class="baffle">Nous ne realisons pas des sites web, mais des experiences web.</h1>
+    <ion-icon name="arrow-down" size="large"></ion-icon>
   </div>
 </template>
 
 <script>
-export default {}
+import baffle from 'baffle'
+
+export default {
+  mounted() {
+    const gibberish = [
+      '\u2588',
+      '\u2593',
+      '\u2592',
+      '\u2591',
+      '\u2588',
+      '\u2593',
+      '\u2592',
+      '\u2591',
+      '\u2588',
+      '\u2593',
+      '\u2592',
+      '\u2591',
+      '\u003C',
+      '\u003E',
+      '\u002F',
+    ]
+
+    const text = document.querySelector('.baffle')
+    const b = baffle(text, { characters: gibberish })
+    b.reveal(1000, 1000)
+
+    text.addEventListener('click', function (e) {
+      e.preventDefault()
+      b.reveal(1000)
+    })
+  },
+}
 </script>
 
 <style lang="scss" scoped>
@@ -27,7 +57,7 @@ export default {}
   flex-direction: column;
   text-align: center;
   width: 100%;
-  height: 100vh;
+  height: 80vh;
   color: #fff;
   overflow: hidden;
 }
@@ -43,31 +73,13 @@ video {
 }
 
 h1 {
+  display: block;
+  width: 60%;
+  text-align: left;
   font-family: 'Fjalla One', sans-serif;
-  font-size: 5rem;
+  font-size: 4rem;
   text-transform: uppercase;
-  text-shadow: 1px 1px 3px #111;
-  margin-bottom: 1rem;
-  cursor: grab;
-
-  &:hover {
-    font-style: italic;
-  }
-}
-
-h2 {
-  font-family: 'Fjalla One', sans-serif;
-  font-size: 1.5rem;
-  text-transform: uppercase;
-  margin-bottom: 2rem;
-  text-shadow: 1px 1px 3px #111;
-
-  &:hover {
-    transform: scale(1.1);
-  }
-}
-
-.learnmore-btn {
-  @include button;
+  margin-bottom: 1.5rem;
+  cursor: pointer;
 }
 </style>
