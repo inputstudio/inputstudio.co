@@ -79,5 +79,9 @@ p {
 .footer--bottom {
   margin-top: 6rem;
   text-align: center;
+
+  p {
+    font-size: .9em;
+  }
 }
 </style>
