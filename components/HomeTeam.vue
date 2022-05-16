@@ -27,8 +27,8 @@ export default {
           social: '',
         },
         {
-          name: 'Henri-Joel Kouassi',
-          bio: 'Développeur Fullstack Flutter, Laravel et React...',
+          name: 'Henri Joel Kouassi',
+          bio: 'Développeur Fullstack Flutter, Laravel et ReactJS. Passionné d\'informatique, d\'astrononomie et de sports.',
           image: 'https://ui-avatars.com/api/?name=H+K&size=256',
           social: '',
         },
@@ -59,5 +59,6 @@ export default {
 .team--grid {
   display: flex;
   justify-content: space-between;
+  gap: 1.5em;
 }
 </style>
