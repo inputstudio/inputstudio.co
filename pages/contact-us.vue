@@ -7,19 +7,21 @@
         <label for="full_name">Nom et prénoms</label>
         <input id="full_name" type="text" name="full_name">
       </div>
-      <div class="row">
-        <div class="form--group">
-          <label for="email">Email</label>
-          <input id="email" type="email" name="email">
-        </div>
-        <div class="form--group">
-          <label for="contact">Contact</label>
-          <input id="contact" type="text" name="contact">
-        </div>
+      <div class="form--group">
+        <label for="email">Email</label>
+        <input id="email" type="email" name="email">
       </div>
       <div class="form--group">
         <label for="subject">Objet</label>
-        <input id="subject" type="text" name="subject">
+        <select id="subject" type="text" name="subject">
+          <option value="" selected></option>
+          <option value="static_website">Site vitrine</option>
+          <option value="ecommmerce">Site commercial</option>
+          <option value="mobile_app">Application mobile</option>
+          <option value="refactoring">Refonte d'un site existant</option>
+          <option value="mockup">Realisation d'une maquette de site</option>
+          <option value="other">Autres</option>
+        </select>
       </div>
       <div class="form--group">
         <label for="message">Message</label>
@@ -59,10 +61,14 @@ export default {
   flex-direction: column;
   gap: 1em;
 
-  input, textarea {
+  input, textarea , select{
     padding: .5em 1em;
     border: .2em solid rgb(168, 168, 168);
     border-radius: .3em;
+  }
+
+  select {
+    background-color: white;
   }
 
   textarea {
