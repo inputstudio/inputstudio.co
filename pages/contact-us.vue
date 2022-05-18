@@ -29,7 +29,7 @@
       </div>
       <button type="submit" class="btn--submit">Envoyer</button>
     </form>
-    <div class="icon-div">
+    <div class="icon--div">
       <ion-icon name="paper-plane"></ion-icon>
     </div>
   </div>
@@ -49,14 +49,21 @@ export default {
 
 .wrapper {
   height: 100vh;
-  padding: 4em;
-  padding-right: 0;
-  display: flex;
-  justify-content: space-between;
+  
+  @media screen and (max-width: 768px) {
+    padding: 2em;
+    margin-bottom: 2em;
+    overflow: hidden;
+  }
+  @media screen and (min-width: 768px) {
+    padding: 4em;
+    padding-right: 0;
+    display: flex;
+    justify-content: space-between;
+  }
 }
 
 .contact--us {
-  width: 60%;
   display: flex;
   flex-direction: column;
   gap: 1em;
@@ -73,6 +80,13 @@ export default {
 
   textarea {
     resize: none;
+  }
+
+  @media screen and (max-width: 768px) {
+    width: 100%; 
+  }
+  @media screen and (min-width: 768px) {
+    width: 60%;
   }
 }
 
@@ -93,7 +107,18 @@ export default {
   @include button($border: solid, $cursor: pointer);
 }
 
-ion-icon {
-  font-size: 27em;
+.icon--div {
+  @media screen and (max-width: 768px) {
+    display: none; 
+  }
+
+  @media screen and (min-width: 768px) {
+    display: block;
+
+    ion-icon {
+      font-size: 27em;
+    }
+  }
+
 }
 </style>

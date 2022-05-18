@@ -123,6 +123,7 @@ $navbar-bg: #111;
 }
 
 .dropdown--items {
+  visibility: hidden;
   background-color: $navbar-bg;
   display: flex;
   flex-direction: column;
