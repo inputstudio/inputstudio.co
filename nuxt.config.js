@@ -8,7 +8,7 @@ export default {
   head: {
     title: 'inputstudio.co',
     htmlAttrs: {
-      lang: 'en',
+      lang: 'fr',
     },
     meta: [
       { charset: 'utf-8' },
