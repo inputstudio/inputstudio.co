@@ -17,7 +17,18 @@ export default {
       { name: 'format-detection', content: 'telephone=no' },
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
-    script: [{ src: 'https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js', body: true }],
+    script: [
+      {
+        type: 'text/javascript',
+        innerHTML: `(function(c,l,a,r,i,t,y){
+          c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+          t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+          y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+        })(window, document, "clarity", "script", "bydeojcf1q");`,
+      },
+      { src: 'https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js', body: true },
+    ],
+    __dangerouslyDisableSanitizers: ['script'],
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
