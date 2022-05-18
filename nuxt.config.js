@@ -26,6 +26,11 @@ export default {
           y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
         })(window, document, "clarity", "script", "bydeojcf1q");`,
       },
+      {
+        src: 'http://188.166.72.179/js/plausible.js',
+        'data-domain': 'inputstudio.co',
+        defer: true,
+      },
       { src: 'https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js', body: true },
     ],
     __dangerouslyDisableSanitizers: ['script'],
