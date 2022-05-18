@@ -50,6 +50,6 @@ export default {}
 }
 
 .contact-btn {
-  @include button($border: unset);
+  @include button($border: unset, $cursor: pointer);
 }
 </style>
