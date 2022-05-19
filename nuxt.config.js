@@ -27,7 +27,7 @@ export default {
         })(window, document, "clarity", "script", "bydeojcf1q");`,
       },
       {
-        src: 'http://188.166.72.179/js/plausible.js',
+        src: 'http://188.166.72.179:8000/js/plausible.js',
         'data-domain': 'inputstudio.co',
         defer: true,
       },
