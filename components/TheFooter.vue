@@ -56,23 +56,63 @@ p {
 .footer--main {
   display: flex;
   justify-content: space-between;
+
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+  }
 }
 
 .footer--logo,
 .footer--links,
 .footer--socials {
-  width: 20%;
+  width: 100%;
+  margin: 1em 0;
 
   a {
     display: block;
     margin-bottom: 0.5rem;
-    font-size: 1.5rem;
+  }
+
+  @media screen and (min-width: 768px) {
+    width: 20%;
+
+    a {
+      font-size: 1.2rem;
+    }
+  }
+}
+
+.footer--links {
+  a {
+    position: relative;
+
+    &:after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      transform: scaleX(0);
+      height: 1px;
+      bottom: 0;
+      left: 0;
+      background-color: white;
+      transform-origin: bottom right;
+      transition: transform 0.40s ease-out;
+    }
+
+    &:hover:after {
+      transform: scaleX(1);
+      transform-origin: bottom left;
+    }
   }
 }
 
 .footer--logo {
   * {
     margin-bottom: 1rem;
+  }
+
+  & > a {
+    font-size: 1em;
   }
 }
 
@@ -81,7 +121,7 @@ p {
   text-align: center;
 
   p {
-    font-size: .9em;
+    font-size: 0.9em;
   }
 }
 </style>
