@@ -48,11 +48,8 @@ export default {
 <style lang="scss" scoped>
 
 .wrapper {
-  height: 100vh;
-  
   @media screen and (max-width: 768px) {
     padding: 2em;
-    margin-bottom: 2em;
     overflow: hidden;
   }
   @media screen and (min-width: 768px) {
