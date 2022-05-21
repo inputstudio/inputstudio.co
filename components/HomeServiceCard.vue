@@ -42,15 +42,22 @@ export default {
 
 <style lang="scss" scoped>
 .service--card--wrapper {
-  box-shadow: .047em .12em .80em rgba(128, 128, 128, 0.5) ;
-  
+  height: 28em;
+  width: 25em;
+  box-shadow: .047em .12em .80em rgba(128, 128, 128, 0.5);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 }
 
 .card--content {
-  padding: 1em;
+  padding: .5em 1em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 }
 .card--header {
-  margin: .5em 0;
+  margin: .2em 0;
 
   ion-icon {
     font-size: 3em;
@@ -58,15 +65,13 @@ export default {
 }
 
 .card--title {
-  margin: 1em 0;
-}
-.card--body {
-  padding: 0 .5em;
+  margin: .8em 0;
 }
 
 .card--footer {
   padding: 1em;
   display: flex;
+  flex-wrap: wrap;
   gap: .2em;
 }
 

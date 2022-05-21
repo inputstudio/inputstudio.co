@@ -27,7 +27,6 @@
         :description="service.description"
         :examples="service.examples"
       />
-
     </div>
   </div>
 </template>
@@ -38,28 +37,24 @@ export default {
       services: [
         {
           icon_name: 'globe',
-          title: 'Applications web',
-          description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit.',
-          examples: ['ecommerce', 'portfolio', 'vitrine']
+          title: 'Web',
+          description:
+            "Une conception web élégante et réactive qui parle le langage de votre marque et atteint vos objectifs. Des pages d'accueil aux applications web, nous faisons tout !",
+          examples: ['ecommerce', 'portfolio', 'vitrine', 'front-end', 'back-end', 'refonte'],
         },
         {
           icon_name: 'phone-portrait',
-          title: 'Applications mobiles',
-          description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit.',
-          examples: ['mapping', 'livraison', 'commande']
-          
-        },
-        {
-          icon_name: 'school',
-          title: 'Refactoring',
-          description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit.',
-          examples: ['mise à jour', 'deploiement', 'traduction']
+          title: 'Mobile',
+          description:
+            "Nous concevons avec soin des applications iOS et Android avant tout portés sur l'expérience utilisateur (UX). Nous garantissons la création d'applications faciles à utiliser, belles et attrayantes.",
+          examples: ['Android', 'iOS', 'Flutter'],
         },
         {
           icon_name: 'albums',
           title: 'Maquette',
-          description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit.',
-          examples: ['design', 'creation', 'proposition']
+          description:
+            "<< Une image vaut milles mots >>. Ebauchez ce que vous avez toujours pensé, c'est la première étape dans la réalisation de votre projet.",
+          examples: ['design', "structure d'interface", 'prototype', 'sketch'],
         },
       ],
     }
@@ -70,7 +65,7 @@ export default {
 .services--wrapper {
   width: 85%;
   min-height: 100vh;
-  padding: 6rem 0vw;
+  padding: 6rem 0;
   margin: auto;
   margin-bottom: 6rem;
   border-bottom: 1px solid #000;
@@ -98,15 +93,15 @@ p {
 
 .services--grid {
   @media screen and(max-width: 768px) {
-    display:flex;
+    display: flex;
     flex-direction: column;
   }
   @media screen and(min-width: 768px) {
-    padding: 2em 0;
-    display: grid;
-    grid-template-columns: 48% 48%;
+    padding: 2em 4.5em;
+    display: flex;
   }
 
+  overflow: auto;
   gap: 1em;
   justify-content: center;
   align-items: center;
