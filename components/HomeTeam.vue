@@ -46,7 +46,8 @@ export default {
 
 <style lang="scss" scoped>
 .team--wrapper {
-  width: 60vw;
+  width: 85%;
+  min-height: 100vh;
   padding: 3rem 0;
   margin: auto;
   margin-bottom: 6rem;

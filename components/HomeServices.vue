@@ -25,6 +25,7 @@
         :icon_name="service.icon_name"
         :title="service.title"
         :description="service.description"
+        :examples="service.examples"
       />
 
     </div>
@@ -39,21 +40,26 @@ export default {
           icon_name: 'globe',
           title: 'Applications web',
           description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit.',
+          examples: ['ecommerce', 'portfolio', 'vitrine']
         },
         {
           icon_name: 'phone-portrait',
           title: 'Applications mobiles',
           description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit.',
+          examples: ['mapping', 'livraison', 'commande']
+          
         },
         {
           icon_name: 'school',
           title: 'Refactoring',
           description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit.',
+          examples: ['mise à jour', 'deploiement', 'traduction']
         },
         {
           icon_name: 'albums',
           title: 'Maquette',
           description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit.',
+          examples: ['design', 'creation', 'proposition']
         },
       ],
     }
@@ -62,8 +68,9 @@ export default {
 </script>
 <style lang="scss" scoped>
 .services--wrapper {
-  width: 60vw;
-  padding: 6rem 0;
+  width: 85%;
+  min-height: 100vh;
+  padding: 6rem 0vw;
   margin: auto;
   margin-bottom: 6rem;
   border-bottom: 1px solid #000;

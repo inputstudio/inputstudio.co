@@ -25,7 +25,8 @@
 
 <style lang="scss" scoped>
 .about--wrapper {
-  width: 60vw;
+  width: 85%;
+  min-height: 100vh;
   padding: 6rem 0;
   margin: auto;
   margin-bottom: 6rem;
@@ -35,6 +36,7 @@
 
 .about--title {
   width: 40%;
+  height: 100vh;
   flex-shrink: 0;
   padding-right: 1rem;
   display: flex;

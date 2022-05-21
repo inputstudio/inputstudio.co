@@ -26,7 +26,7 @@ export default {
 
     const options = {
       rootMargin : '0px',
-      threshold: .2
+      threshold: .1
     } 
 
     const observer = new IntersectionObserver(showSection, options)
@@ -40,23 +40,24 @@ export default {
 <style lang="scss" scoped>
 .animated--section {
   opacity: 0;
-  transform: scale(0);
+  transform: scaleY(0);
 }
 
 .show {
-  animation: puff-in-hor 1.5s cubic-bezier(0.47, 0, 0.745, 0.715) both;
+	animation: scale-in-ver-bottom 0.8s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
 
-@keyframes puff-in-hor {
+@keyframes scale-in-ver-bottom {
   0% {
-    transform: scaleX(2);
-    filter: blur(4px);
-    opacity: 0;
+    transform: scaleY(0);
+    transform-origin: 0% 100%;
+    opacity: 1;
   }
   100% {
-    transform: scaleX(1);
-    filter: blur(0px);
+    transform: scaleY(1);
+    transform-origin: 0% 100%;
     opacity: 1;
   }
 }
+
 </style>

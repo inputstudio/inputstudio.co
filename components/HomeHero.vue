@@ -59,7 +59,7 @@ export default {
   flex-direction: column;
   text-align: center;
   width: 100%;
-  height: 80vh;
+  height: 100vh;
   color: #fff;
   overflow: hidden;
 }

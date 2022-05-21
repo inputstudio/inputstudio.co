@@ -9,7 +9,11 @@
         {{ description }}
       </div>
     </div>
-    <div class="card--footer"></div>
+    <div class="card--footer">
+      <span class="example" v-for="(example, index) in examples" v-bind:key="index">
+        {{ example }}
+      </span>
+    </div>
   </div>
 </template>
 
@@ -26,6 +30,10 @@ export default {
     },
     description: {
       type: String,
+      required: true,
+    },
+    examples: {
+      type: Array,
       required: true,
     },
   },
@@ -54,5 +62,18 @@ export default {
 }
 .card--body {
   padding: 0 .5em;
+}
+
+.card--footer {
+  padding: 1em;
+  display: flex;
+  gap: .2em;
+}
+
+.example {
+  background-color: #111;
+  color: white;
+  padding: .3em .5em;
+  text-transform: capitalize;
 }
 </style>
