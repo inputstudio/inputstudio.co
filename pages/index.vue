@@ -25,9 +25,9 @@ export default {
     }
 
     const options = {
-      rootMargin : '0px',
-      threshold: .1
-    } 
+      rootMargin: '0px',
+      threshold: 0.1,
+    }
 
     const observer = new IntersectionObserver(showSection, options)
 
@@ -41,11 +41,10 @@ export default {
 .animated--section {
   opacity: 0;
   transform: scaleY(0);
-	animation: scale-in-ver-bottom 0.8s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
 
 .show {
-	animation: scale-in-ver-bottom 0.8s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  animation: scale-in-ver-bottom 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
 
 @keyframes scale-in-ver-bottom {
@@ -60,5 +59,4 @@ export default {
     opacity: 1;
   }
 }
-
 </style>
