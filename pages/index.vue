@@ -41,6 +41,7 @@ export default {
 .animated--section {
   opacity: 0;
   transform: scaleY(0);
+	animation: scale-in-ver-bottom 0.8s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
 
 .show {

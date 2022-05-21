@@ -2,7 +2,7 @@
   <div class="service--card--wrapper">
     <div class="card--content">
       <div class="card--header">
-        <ion-icon :name="icon_name"></ion-icon>
+        <ion-icon :name="iconName"></ion-icon>
         <h2 class="card--title">{{ title }}</h2>
       </div>
       <div class="card--body">
@@ -10,9 +10,9 @@
       </div>
     </div>
     <div class="card--footer">
-      <span class="example" v-for="(example, index) in examples" v-bind:key="index">
+      <p v-for="(example, index) in examples" v-bind:key="index" class="example">
         {{ example }}
-      </span>
+      </p>
     </div>
   </div>
 </template>
@@ -20,7 +20,7 @@
 <script>
 export default {
   props: {
-    icon_name: {
+    iconName: {
       type: String,
       required: true,
     },
@@ -48,6 +48,11 @@ export default {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+
+  transform: scaleY(0);
+  transform-origin: 50% top;
+  animation: fade-down 1s 1s;
+  animation-fill-mode: forwards;
 }
 
 .card--content {
@@ -80,5 +85,35 @@ export default {
   color: white;
   padding: .3em .5em;
   text-transform: capitalize;
+  opacity: 0;
+
+  @for $i from 1 through 6 {
+      &:nth-child(#{$i}){
+        animation: fade-in 300ms 1s * $i;
+        animation-fill-mode: forwards;
+    }
+  }
+}
+
+@keyframes fade-down {
+  from {
+    transform: scaleY(0);
+  }
+  to {
+    transform: scaleY(1);
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.2);
+  }
+  100% {
+    opacity: 1;
+  }
 }
 </style>
