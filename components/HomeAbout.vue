@@ -1,5 +1,5 @@
 <template>
-  <div id="about" class="about--wrapper">
+  <div id="about" class="about--wrapper animated--section">
     <div class="about--title">
       <h1>Think outside the box</h1>
 

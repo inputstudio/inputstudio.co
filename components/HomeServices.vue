@@ -1,5 +1,5 @@
 <template>
-  <div id="services" class="services--wrapper">
+  <div id="services" class="services--wrapper animated--section">
     <div class="services--header">
       <div class="services--title">
         <h1>Nos services</h1>

@@ -1,5 +1,5 @@
 <template>
-  <div id="team" class="team--wrapper">
+  <div id="team" class="team--wrapper animated--section">
     <h1 class="team--title">Faire connaissance avec l'équipe</h1>
 
     <div class="team--grid">
