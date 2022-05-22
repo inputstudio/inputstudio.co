@@ -16,17 +16,35 @@ export default {
     }
   },
   mounted() {
+    const servicesCardTimeout = 100
+
     const animatedSections = document.querySelectorAll('.animated--section')
 
     const showSection = (entries) => {
-      entries.forEach((entry) => {
-        entry.isIntersecting && entry.target.classList.add('show')
+      entries.forEach((entry, index) => {
+        if(entry.isIntersecting){
+            entry.target.classList.add('show')
+
+            if(entry.target.classList.contains('services--wrapper')){
+
+              setTimeout(() => {
+                document.querySelectorAll('.service--card--wrapper').forEach(element => {
+                  element.classList.add('card-fade-down')
+                })
+              }, servicesCardTimeout)
+
+              setTimeout(() => {
+                document.querySelectorAll('.example').forEach(element => {
+                  element.classList.add('example-fade-in')
+                })
+              }, servicesCardTimeout + 3200)
+            }
+          } 
       })
     }
 
     const options = {
       rootMargin : '0px',
-      threshold: .1
     } 
 
     const observer = new IntersectionObserver(showSection, options)
@@ -41,7 +59,6 @@ export default {
 .animated--section {
   opacity: 0;
   transform: scaleY(0);
-	animation: scale-in-ver-bottom 0.8s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
 
 .show {
