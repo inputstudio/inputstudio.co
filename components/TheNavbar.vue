@@ -5,9 +5,9 @@
     </div>
 
     <div class="navbar--links">
-      <nuxt-link to="/">Accueil</nuxt-link>
-      <nuxt-link :to="{ path: '/', hash: 'services' }">Services</nuxt-link>
-      <nuxt-link :to="{ path: '/', hash: 'team' }">L'équipe</nuxt-link>
+      <nuxt-link to="/" class="navbar--link">Accueil</nuxt-link>
+      <nuxt-link :to="{ path: '/', hash: 'services' }" class="navbar--link">Services</nuxt-link>
+      <nuxt-link :to="{ path: '/', hash: 'team' }" class="navbar--link">L'équipe</nuxt-link>
       <nuxt-link to="/contact-us" class="contact-btn">Nous contacter</nuxt-link>
     </div>
 
@@ -72,17 +72,21 @@ $navbar-color: #fff;
     display: inline-block;
     margin: 0 1rem;
     font-size: 1rem;
-    transition: border 0.1s ease-in-out;
-    padding-bottom: 3px;
-
-    &:hover {
-      padding-bottom: 0px;
-      border-bottom: 3px solid #fff;
-    }
   }
 
   @media screen and (min-width: 768px) {
-    display: block;
+    display: flex;
+    align-items: center;
+  }
+}
+
+.navbar--link {
+  transition: border 0.1s ease-in-out;
+  padding-bottom: 3px;
+
+  &:hover {
+    padding-bottom: 0px;
+    border-bottom: 3px solid #fff;
   }
 }
 
