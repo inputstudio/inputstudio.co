@@ -96,7 +96,7 @@ export default {
 .card-fade-down {
   @for $i from 1 through 3 {
     &:nth-child(#{$i}) {
-      animation: fade-down 800ms 1s * $i;
+      animation: fade-down 600ms 800ms * $i;
       animation-fill-mode: forwards;
     }
   }

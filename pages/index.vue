@@ -17,7 +17,7 @@ export default {
     }
   },
   mounted() {
-    const servicesCardTimeout = 100
+    // const servicesCardTimeout = 100
 
     const animatedSections = document.querySelectorAll('.animated--section')
 
@@ -27,17 +27,15 @@ export default {
           entry.target.classList.add('show')
 
           if (entry.target.classList.contains('services--wrapper')) {
-            setTimeout(() => {
               document.querySelectorAll('.service--card--wrapper').forEach((element) => {
                 element.classList.add('card-fade-down')
               })
-            }, servicesCardTimeout)
 
             setTimeout(() => {
               document.querySelectorAll('.example').forEach((element) => {
                 element.classList.add('example-fade-in')
               })
-            }, servicesCardTimeout + 3200)
+            }, 2500)
           }
         }
       })
@@ -56,11 +54,6 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
-.animated--section {
-  opacity: 0;
-  transform: scaleY(0);
-}
-
 .show {
   animation: scale-in-ver-top 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
