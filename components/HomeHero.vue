@@ -44,6 +44,13 @@ export default {
   -webkit-animation: HeroGradient 16s ease infinite;
   -moz-animation: HeroGradient 16s ease infinite;
   animation: HeroGradient 16s ease infinite;
+
+  ion-icon {
+    position: absolute;
+    z-index: 10000;
+    margin-top: 20px;
+    animation: arrow-animation 2s linear infinite;
+  }
 }
 
 h1 {
