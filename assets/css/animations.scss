@@ -26,16 +26,22 @@
 
 // Fade-in animation
 @keyframes fade-in {
-    0% {
+    from {
         opacity: 0;
     }
-
-    50% {
+    to {
         opacity: 1;
-        transform: scale(1.2);
     }
+}
 
-    100% {
+// Fade-from-top animation
+@keyframes fade-from-top {
+    from {
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+    to {
         opacity: 1;
+        transform: translateY(0);
     }
 }

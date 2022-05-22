@@ -30,6 +30,11 @@
     padding: 6rem 1rem;
     flex-direction: column;
   }
+
+  div {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
 }
 
 .about--title {
@@ -58,5 +63,9 @@ p {
   font-size: 1.2rem;
   color: #333;
   margin-bottom: 1rem;
+}
+
+.show-about {
+  @include div-from-top
 }
 </style>

@@ -78,6 +78,11 @@ export default {
   @media screen and(max-width: 768px) {
     flex-direction: column;
   }
+
+  div {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
 }
 
 .services--title {
@@ -114,5 +119,9 @@ p {
   gap: 1em;
   justify-content: center;
   align-items: center;
+}
+
+.show-service-header {
+  @include div-from-top
 }
 </style>
