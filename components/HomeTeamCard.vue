@@ -1,12 +1,15 @@
 <template>
-  <div class="team--card--wrapper">
+  <div class="team-card--wrapper">
     <img :src="image" :alt="'Photo de ' + name" />
-    <h2 class="name">
-      <a :href="social" target="_blank" rel="noopener noreferrer">
-        {{ name }}
-      </a>
-    </h2>
+    <h2 class="name">{{ name }}</h2>
     <p class="bio">{{ bio }}</p>
+    <div class="socials">
+      <div v-for="(social, index) in socials" :key="index">
+        <a :href="social.url" target="_blank" rel="noopener noreferrer" :title="social.name">
+          <ion-icon :name="social.icon" size="large"></ion-icon>
+        </a>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -25,16 +28,16 @@ export default {
       type: String,
       required: true,
     },
-    social: {
-      type: String,
-      required: true,
+    socials: {
+      type: Array,
+      default: () => [],
     },
   },
 }
 </script>
 
 <style lang="scss" scoped>
-.team--card--wrapper {
+.team-card--wrapper {
   width: 300px;
   display: flex;
   flex-direction: column;
@@ -51,6 +54,11 @@ img {
   &:hover {
     opacity: 0.8;
   }
+
+  @media screen and(max-width: 768px) {
+    width: 128px;
+    height: 128px;
+  }
 }
 
 .name {
@@ -66,5 +74,11 @@ img {
   font-size: 1.2rem;
   color: #333;
   text-align: justify;
+  margin-bottom: 1rem;
+}
+
+.socials {
+  display: flex;
+  gap: 1rem;
 }
 </style>
