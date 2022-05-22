@@ -1,32 +1,4 @@
-// https: //www.gradient-animator.com/
-@-webkit-keyframes HeroGradient {
-    0% {
-        background-position: 0% 15%;
-    }
-
-    50% {
-        background-position: 100% 86%;
-    }
-
-    100% {
-        background-position: 0% 15%;
-    }
-}
-
-@-moz-keyframes HeroGradient {
-    0% {
-        background-position: 0% 15%;
-    }
-
-    50% {
-        background-position: 100% 86%;
-    }
-
-    100% {
-        background-position: 0% 15%;
-    }
-}
-
+// Hero gradient animation (https: //www.gradient-animator.com/)
 @keyframes HeroGradient {
     0% {
         background-position: 0% 15%;
@@ -38,5 +10,32 @@
 
     100% {
         background-position: 0% 15%;
+    }
+}
+
+// Fade-down animation
+@keyframes fade-down {
+    from {
+        transform: scaleY(0);
+    }
+
+    to {
+        transform: scaleY(1);
+    }
+}
+
+// Fade-in animation
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+        transform: scale(1.2);
+    }
+
+    100% {
+        opacity: 1;
     }
 }

@@ -43,23 +43,27 @@ export default {
 <style lang="scss" scoped>
 .service--card--wrapper {
   height: 28em;
-  width: 25em;
-  box-shadow: .047em .12em .80em rgba(128, 128, 128, 0.5);
+  width: 400px;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   transform: scaleY(0);
   transform-origin: 50% top;
+  background: lighten($color: #2b00d4, $amount: 5);
+
+  @media screen and(max-width: 768px) {
+    width: 90%;
+  }
 }
 
 .card--content {
-  padding: .5em 1em;
+  padding: 0.5em 1em;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
 }
 .card--header {
-  margin: .2em 0;
+  margin: 0.2em 0;
 
   ion-icon {
     font-size: 3em;
@@ -67,61 +71,43 @@ export default {
 }
 
 .card--title {
-  margin: .8em 0;
+  margin: 0.8em 0;
+}
+
+.card--body {
+  color: #ddd;
 }
 
 .card--footer {
   padding: 1em;
   display: flex;
   flex-wrap: wrap;
-  gap: .2em;
+  gap: 0.5em;
 }
 
 .example {
-  background-color: #111;
+  background: lighten($color: #2b00d4, $amount: 15);
   color: white;
-  padding: .3em .5em;
+  padding: 0.3em 0.5em;
   text-transform: capitalize;
   opacity: 0;
 }
 
 .card-fade-down {
   @for $i from 1 through 3 {
-      &:nth-child(#{$i}){
-        animation: fade-down 800ms 1s * $i;
-        animation-fill-mode: forwards;
+    &:nth-child(#{$i}) {
+      animation: fade-down 800ms 1s * $i;
+      animation-fill-mode: forwards;
     }
   }
 }
 
 .example-fade-in {
   @for $i from 1 through 6 {
-      &:nth-child(#{$i}){
-        animation: fade-in 300ms 0.5s * $i;
-        animation-fill-mode: forwards;
+    &:nth-child(#{$i}) {
+      animation: fade-in 300ms 0.5s * $i;
+      animation-fill-mode: forwards;
     }
-  }
-}
-
-@keyframes fade-down {
-  from {
-    transform: scaleY(0);
-  }
-  to {
-    transform: scaleY(1);
-  }
-}
-
-@keyframes fade-in {
-  0% {
-    opacity: 0;
-  }
-  50% {
-    opacity: 1;
-    transform: scale(1.2);
-  }
-  100% {
-    opacity: 1;
   }
 }
 </style>

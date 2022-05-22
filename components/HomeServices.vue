@@ -3,23 +3,20 @@
     <div class="services--header">
       <div class="services--title">
         <h1>Nos services</h1>
-
-        <nuxt-link :to="{ path: '/', hash: '#team' }">
-          <ion-icon name="arrow-down" size="large"></ion-icon>
-        </nuxt-link>
       </div>
 
       <div class="services--desc">
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis excepturi sequi deleniti? Assumenda nam numquam
-          pariatur, animi non, corrupti tempore voluptas temporibus magnam, itaque possimus asperiores perspiciatis ipsa
-          fuga? Aliquam.
+          Tous les sites Web sont différents et chaque site requiert une démarche personnalisée pour maximiser son
+          potentiel. Qu'il s'agisse d'un travail d'agence de référence spécifique à un projet , Input Studio est
+          particulièrement bien placé pour fournir des services stratégiques, axés sur la croissance et les résultats
+          grâce à notre approche de la conception Web centrée sur l'humain, convaincante et évolutive.
         </p>
       </div>
     </div>
 
     <div class="services--grid">
-      <HomeServiceCard
+      <HomeServicesCard
         v-for="(service, index) in services"
         :key="index"
         :icon="service.icon"
@@ -53,7 +50,7 @@ export default {
           icon: 'albums',
           title: 'Maquette',
           description:
-            "<< Une image vaut milles mots >>. Ebauchez ce que vous avez toujours pensé, c'est la première étape dans la réalisation de votre projet.",
+            "« Une image vaut milles mots ». Ebauchez ce que vous avez toujours pensé, c'est la première étape dans la réalisation de votre projet.",
           examples: ['design', "structure d'interface", 'prototype', 'sketch'],
         },
       ],
@@ -63,17 +60,24 @@ export default {
 </script>
 <style lang="scss" scoped>
 .services--wrapper {
-  width: 85%;
-  min-height: 100vh;
-  padding: 6rem 0;
-  margin: auto;
-  margin-bottom: 6rem;
-  border-bottom: 1px solid #000;
+  width: 100%;
+  padding: 6rem;
+  background-color: #2b00d4;
+  color: #fff;
+
+  @media screen and(max-width: 768px) {
+    padding: 6rem 1rem;
+    flex-direction: column;
+  }
 }
 
 .services--header {
   display: flex;
   margin-bottom: 3rem;
+
+  @media screen and(max-width: 768px) {
+    flex-direction: column;
+  }
 }
 
 .services--title {
@@ -83,11 +87,16 @@ export default {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+
+  @media screen and(max-width: 768px) {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
 }
 
 p {
   font-size: 1.2rem;
-  color: #333;
+  color: #ddd;
   margin-bottom: 1rem;
 }
 

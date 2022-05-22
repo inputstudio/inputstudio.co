@@ -2,10 +2,6 @@
   <div id="about" class="about--wrapper animated--section">
     <div class="about--title">
       <h1>Think outside the box</h1>
-
-      <nuxt-link :to="{ path: '/', hash: '#services' }">
-        <ion-icon name="arrow-down" size="large"></ion-icon>
-      </nuxt-link>
     </div>
 
     <div class="about--content">
@@ -25,27 +21,37 @@
 
 <style lang="scss" scoped>
 .about--wrapper {
-  width: 85%;
-  min-height: 100vh;
-  padding: 6rem 0;
+  width: 100%;
+  padding: 6rem;
   margin: auto;
-  margin-bottom: 6rem;
   display: flex;
-  border-bottom: 1px solid #000;
+
+  @media screen and(max-width: 768px) {
+    padding: 6rem 1rem;
+    flex-direction: column;
+  }
 }
 
 .about--title {
   width: 40%;
-  height: 100vh;
   flex-shrink: 0;
   padding-right: 1rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+
+  @media screen and(max-width: 768px) {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
 }
 
 .about--content {
   padding-left: 1rem;
+
+  @media screen and(max-width: 768px) {
+    padding-left: unset;
+  }
 }
 
 p {
