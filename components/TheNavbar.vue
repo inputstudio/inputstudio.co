@@ -8,63 +8,66 @@
       <nuxt-link to="/">Accueil</nuxt-link>
       <nuxt-link :to="{ path: '/', hash: 'services' }">Services</nuxt-link>
       <nuxt-link :to="{ path: '/', hash: 'team' }">L'équipe</nuxt-link>
-    </div>
-
-    <div class="navbar--end">
       <nuxt-link to="/contact-us" class="contact-btn">Nous contacter</nuxt-link>
     </div>
 
     <div class="dropdown--menu">
-      <button class="dropdown--btn">
-        <ion-icon name="menu"></ion-icon>
+      <button class="dropdown-btn" type="button" @click="toggleMenu">
+        <ion-icon v-if="!isMenuActive" name="menu"></ion-icon>
+        <ion-icon v-else name="close"></ion-icon>
       </button>
-      <div class="dropdown--items">
+      <div v-if="isMenuActive" class="dropdown--items">
         <nuxt-link to="/">Accueil</nuxt-link>
         <nuxt-link :to="{ path: '/', hash: 'services' }">Services</nuxt-link>
         <nuxt-link :to="{ path: '/', hash: 'team' }">L'équipe</nuxt-link>
         <nuxt-link to="/contact-us">Nous contacter</nuxt-link>
       </div>
     </div>
-    
   </nav>
 </template>
 
 <script>
-export default {}
+export default {
+  data() {
+    return { isMenuActive: false }
+  },
+  mounted() {
+    const closeMenu = function (event) {
+      if (this.isMenuActive && !event.target.matches('.dropdown-btn > *')) {
+        this.isMenuActive = false
+      }
+    }.bind(this)
+
+    document.body.addEventListener('click', closeMenu)
+  },
+  methods: {
+    toggleMenu() {
+      this.isMenuActive = !this.isMenuActive
+    },
+  },
+}
 </script>
 
 <style lang="scss" scoped>
-
-$navbar-bg: #111; 
-
-.navbar--links, .navbar--end, .contact-btn {
-  @media screen and (max-width: 768px) {
-    display: none;
-  }
-  @media screen and (min-width: 768px) {
-    display: block;
-  }
-}
-
-.dropdown--menu {
-  @media screen and (max-width: 768px) {
-    display: block;
-  }
-  @media screen and (min-width: 768px) {
-    display: none;
-  }
-}
+$navbar-bg: #111;
+$navbar-color: #fff;
 
 .navbar--wrapper {
   display: flex;
   justify-content: space-between;
   align-items: center;
   background: $navbar-bg;
-  color: white;
-  padding: 1rem 20vw;
+  color: $navbar-color;
+  padding: 1rem;
+
+  @media screen and (min-width: 768px) {
+    padding: 1rem 20vw;
+  }
 }
 
 .navbar--links {
+  display: none;
+
   a {
     display: inline-block;
     margin: 0 1rem;
@@ -77,22 +80,30 @@ $navbar-bg: #111;
       border-bottom: 3px solid #fff;
     }
   }
-}
 
-.navbar--end {
-  display: flex;
+  @media screen and (min-width: 768px) {
+    display: block;
+  }
 }
 
 .contact-btn {
   @include button($border: unset, $cursor: pointer);
 }
 
-.dropdown--btn {
+.dropdown--menu {
+  display: block;
+
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+}
+
+.dropdown-btn {
   display: flex;
   justify-content: center;
   background-color: $navbar-bg;
-  color: white;
-  padding: .5em;
+  color: $navbar-color;
+  padding: 0.5em;
   border: unset;
   position: relative;
   cursor: pointer;
@@ -103,8 +114,8 @@ $navbar-bg: #111;
       opacity: 1;
     }
   }
-  
-  &::after{
+
+  &::after {
     content: '';
     position: absolute;
     top: 0;
@@ -123,20 +134,22 @@ $navbar-bg: #111;
 }
 
 .dropdown--items {
-  visibility: hidden;
   background-color: $navbar-bg;
   display: flex;
   flex-direction: column;
   position: absolute;
+  padding: 1rem;
+  left: 0;
+  width: 100%;
   z-index: 500;
 
   a {
-    padding: .8em 1.5em;
+    padding: 0.8em 1.5em;
     text-align: center;
     transition: background-color 300ms;
 
     &:hover {
-      background-color: white;
+      background-color: $navbar-color;
       color: $navbar-bg;
     }
   }
