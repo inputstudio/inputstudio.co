@@ -2,7 +2,7 @@
   <div class="service--card--wrapper">
     <div class="card--content">
       <div class="card--header">
-        <ion-icon :name="iconName"></ion-icon>
+        <ion-icon :name="icon"></ion-icon>
         <h2 class="card--title">{{ title }}</h2>
       </div>
       <div class="card--body">
@@ -10,7 +10,7 @@
       </div>
     </div>
     <div class="card--footer">
-      <p v-for="(example, index) in examples" v-bind:key="index" class="example">
+      <p v-for="(example, index) in examples" :key="index" class="example">
         {{ example }}
       </p>
     </div>
@@ -20,7 +20,7 @@
 <script>
 export default {
   props: {
-    iconName: {
+    icon: {
       type: String,
       required: true,
     },
@@ -48,11 +48,8 @@ export default {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-
   transform: scaleY(0);
   transform-origin: 50% top;
-  animation: fade-down 1s 1s;
-  animation-fill-mode: forwards;
 }
 
 .card--content {
@@ -86,10 +83,21 @@ export default {
   padding: .3em .5em;
   text-transform: capitalize;
   opacity: 0;
+}
 
+.card-fade-down {
+  @for $i from 1 through 3 {
+      &:nth-child(#{$i}){
+        animation: fade-down 800ms 1s * $i;
+        animation-fill-mode: forwards;
+    }
+  }
+}
+
+.example-fade-in {
   @for $i from 1 through 6 {
       &:nth-child(#{$i}){
-        animation: fade-in 300ms 1s * $i;
+        animation: fade-in 300ms 0.5s * $i;
         animation-fill-mode: forwards;
     }
   }

@@ -22,7 +22,7 @@
       <HomeServiceCard
         v-for="(service, index) in services"
         :key="index"
-        :iconName="service.iconName"
+        :icon="service.icon"
         :title="service.title"
         :description="service.description"
         :examples="service.examples"
@@ -36,21 +36,21 @@ export default {
     return {
       services: [
         {
-          iconName: 'globe',
+          icon: 'globe',
           title: 'Web',
           description:
             "Une conception web élégante et réactive qui parle le langage de votre marque et atteint vos objectifs. Des pages d'accueil aux applications web, nous faisons tout !",
           examples: ['ecommerce', 'portfolio', 'vitrine', 'front-end', 'back-end', 'refonte'],
         },
         {
-          iconName: 'phone-portrait',
+          icon: 'phone-portrait',
           title: 'Mobile',
           description:
             "Nous concevons avec soin des applications iOS et Android avant tout portés sur l'expérience utilisateur (UX). Nous garantissons la création d'applications faciles à utiliser, belles et attrayantes.",
           examples: ['Android', 'iOS', 'Flutter'],
         },
         {
-          iconName: 'albums',
+          icon: 'albums',
           title: 'Maquette',
           description:
             "<< Une image vaut milles mots >>. Ebauchez ce que vous avez toujours pensé, c'est la première étape dans la réalisation de votre projet.",
