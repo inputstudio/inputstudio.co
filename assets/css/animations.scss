@@ -1,0 +1,42 @@
+// https: //www.gradient-animator.com/
+@-webkit-keyframes HeroGradient {
+    0% {
+        background-position: 0% 15%;
+    }
+
+    50% {
+        background-position: 100% 86%;
+    }
+
+    100% {
+        background-position: 0% 15%;
+    }
+}
+
+@-moz-keyframes HeroGradient {
+    0% {
+        background-position: 0% 15%;
+    }
+
+    50% {
+        background-position: 100% 86%;
+    }
+
+    100% {
+        background-position: 0% 15%;
+    }
+}
+
+@keyframes HeroGradient {
+    0% {
+        background-position: 0% 15%;
+    }
+
+    50% {
+        background-position: 100% 86%;
+    }
+
+    100% {
+        background-position: 0% 15%;
+    }
+}

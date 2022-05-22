@@ -1,15 +1,8 @@
 <template>
   <div class="hero--wrapper">
-    <video playsinline autoplay muted loop>
-      <!-- TODO: Optimize video size -->
-      <!-- TODO: Stop video on scroll -->
-      <!-- https://www.pexels.com/video/abstract-digital-animation-7670836/ -->
-      <source src="@/assets/pexels-rostislav-uzunov-7670836.mp4" type="video/mp4" />
-      <!-- TODO: Add a fallback image -->
-      Votre navigateur ne supporte pas la balise video.
-    </video>
-    <h1 class="baffle">Nous ne realisons pas des sites web, mais des experiences web.</h1>
-    <nuxt-link :to="{ path: '/', hash: '#about' }">
+    <h1 class="baffle">Nous réalisons des applications et des sites web.</h1>
+    <nuxt-link :to="{ path: '/', hash: '#about' }" class="learnmore-btn">
+      <span>En savoir plus</span>
       <ion-icon name="arrow-down" size="large"></ion-icon>
     </nuxt-link>
   </div>
@@ -20,24 +13,7 @@ import baffle from 'baffle'
 
 export default {
   mounted() {
-    const gibberish = [
-      '\u2588',
-      '\u2593',
-      '\u2592',
-      '\u2591',
-      '\u2588',
-      '\u2593',
-      '\u2592',
-      '\u2591',
-      '\u2588',
-      '\u2593',
-      '\u2592',
-      '\u2591',
-      '\u003C',
-      '\u003E',
-      '\u002F',
-    ]
-
+    const gibberish = ['\u2588', '\u2593', '\u2592', '\u2591', '\u2588', '\u2593', '\u2592', '\u2591', '\u2588']
     const text = document.querySelector('.baffle')
     const b = baffle(text, { characters: gibberish })
     b.reveal(1000, 1000)
@@ -62,16 +38,12 @@ export default {
   height: 100vh;
   color: #fff;
   overflow: hidden;
-}
-
-video {
-  position: absolute;
-  top: 0;
-  left: 0;
-  object-fit: cover;
-  height: 100%;
-  width: 100%;
-  z-index: -1;
+  // https://colorhunt.co/palette/293462f24c4cec9b3bf7d716
+  background: linear-gradient(320deg, #293462, #f24c4c, #f7d716);
+  background-size: 600% 600%;
+  -webkit-animation: HeroGradient 16s ease infinite;
+  -moz-animation: HeroGradient 16s ease infinite;
+  animation: HeroGradient 16s ease infinite;
 }
 
 h1 {
@@ -81,7 +53,21 @@ h1 {
   font-family: 'Fjalla One', sans-serif;
   font-size: 4rem;
   text-transform: uppercase;
-  margin-bottom: 1.5rem;
+  margin-bottom: 2rem;
   cursor: pointer;
+
+  @media screen and (max-width: 768px) {
+    font-size: 3rem;
+  }
+}
+
+.learnmore-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  span {
+    margin-bottom: 0.5rem;
+  }
 }
 </style>
