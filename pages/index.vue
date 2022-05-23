@@ -36,7 +36,6 @@ export default {
           }
           // Else If the visible section is services section then ... 
           else if (entry.target.classList.contains('services--wrapper')) {
-  
               // Select all div in services section header
               const serviceHeader = entry.target.querySelector('.services--header').querySelectorAll('div')
               
@@ -63,7 +62,7 @@ export default {
 
     const options = {
       rootMargin: '0px',
-      threshold: .4
+      threshold: .2
     }
 
     const observer = new IntersectionObserver(showSection, options)

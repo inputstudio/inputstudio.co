@@ -6,14 +6,13 @@
 
     <div class="about--content">
       <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis excepturi sequi deleniti? Assumenda nam numquam
-        pariatur, animi non, corrupti tempore voluptas temporibus magnam, itaque possimus asperiores perspiciatis ipsa
-        fuga? Aliquam.
+        Ce qui etait à la base une passion, nous en avons fait notre métier. Chaque jour, nous apprenons pour être à la pointe des nouvelles technologies afin de répondre au mieux à vos besoins.
       </p>
       <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis excepturi sequi deleniti? Assumenda nam numquam
-        pariatur, animi non, corrupti tempore voluptas temporibus magnam, itaque possimus asperiores perspiciatis ipsa
-        fuga? Aliquam.
+        Nous sommes là pour vous aider à réaliser les projets que vous avez toujours pensé en mettant à votre disposition notre expertise et notre savoir-faire.
+      </p>
+      <p>
+        <span>Input Studio</span> est avant tout une agence web qui s'adapte aux besoins du client et avec notre approche des projets unique, nous saurons mettre en oeuvre un puissant outil repondant à toutes vos attentes et même plus.
       </p>
     </div>
   </div>
