@@ -1,6 +1,6 @@
 <template>
   <div class="hero--wrapper">
-    <h1 class="baffle">Nous réalisons des applications et des sites web.</h1>
+    <h1 class="baffle">Nous ne réalisons pas des sites mais des experiences web.</h1>
     <nuxt-link :to="{ path: '/', hash: '#about' }" class="learnmore-btn">
       <span>En savoir plus</span>
       <ion-icon name="arrow-down" size="large"></ion-icon>
@@ -38,8 +38,12 @@ export default {
   height: 100vh;
   color: #fff;
   overflow: hidden;
-  // https://colorhunt.co/palette/293462f24c4cec9b3bf7d716
-  background: linear-gradient(320deg, #293462, #f24c4c, #f7d716);
+  /* // https://colorhunt.co/palette/293462f24c4cec9b3bf7d716
+  background: linear-gradient(320deg, #293462, #f24c4c, #f7d716); */
+
+  // https://colorhunt.co/palette/2121216d9886d9cab3f6f6f6
+  background: linear-gradient(320deg, #212121, #6D9886, #D9CAB3);
+
   background-size: 600% 600%;
   -webkit-animation: HeroGradient 16s ease infinite;
   -moz-animation: HeroGradient 16s ease infinite;
