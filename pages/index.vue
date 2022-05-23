@@ -3,7 +3,7 @@
     <HomeHero />
     <HomeAbout />
     <HomeServices />
-    <HomeTeam />
+    <!-- <HomeTeam /> -->
     <HomeContact />
   </div>
 </template>

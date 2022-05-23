@@ -62,7 +62,7 @@ export default {
 .services--wrapper {
   width: 100%;
   padding: 6rem;
-  background-color: #2b00d4;
+  background-color: $bg-secondary;
   color: #fff;
 
   @media screen and(max-width: 768px) {
@@ -73,6 +73,7 @@ export default {
 
 .services--header {
   display: flex;
+  padding: 0 4.5em;
   margin-bottom: 3rem;
 
   @media screen and(max-width: 768px) {
@@ -97,6 +98,10 @@ export default {
     width: 100%;
     margin-bottom: 1rem;
   }
+}
+
+.services--desc {
+  text-align: justify;
 }
 
 p {

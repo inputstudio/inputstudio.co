@@ -39,6 +39,7 @@
 .about--title {
   width: 40%;
   flex-shrink: 0;
+  padding-left: 4.5em;
   padding-right: 1rem;
   display: flex;
   flex-direction: column;
@@ -52,9 +53,16 @@
 
 .about--content {
   padding-left: 1rem;
+  padding-right: 4.5em;
+  text-align: justify;
 
   @media screen and(max-width: 768px) {
     padding-left: unset;
+  }
+
+  span {
+    font-weight: bold;
+    text-transform: uppercase;
   }
 }
 

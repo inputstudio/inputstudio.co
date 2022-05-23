@@ -42,7 +42,7 @@ export default {
   background: linear-gradient(320deg, #293462, #f24c4c, #f7d716); */
 
   // https://colorhunt.co/palette/2121216d9886d9cab3f6f6f6
-  background: linear-gradient(320deg, #212121, #6D9886, #D9CAB3);
+  background: linear-gradient(320deg, $bg-primary, $bg-secondary, $bg-tertiary);
 
   background-size: 600% 600%;
   -webkit-animation: HeroGradient 16s ease infinite;
@@ -53,6 +53,8 @@ export default {
     position: absolute;
     z-index: 10000;
     margin-top: 20px;
+    -webkit-animation: arrow-animation 2s linear infinite;
+    -moz-animation: arrow-animation 2s linear infinite;
     animation: arrow-animation 2s linear infinite;
   }
 }

@@ -49,15 +49,12 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-$navbar-bg: #111;
-$navbar-color: #fff;
-
 .navbar--wrapper {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: $navbar-bg;
-  color: $navbar-color;
+  background: $bg-primary;
+  color: $navbar-text-color;
   padding: 1rem;
 
   @media screen and (min-width: 768px) {
@@ -105,8 +102,8 @@ $navbar-color: #fff;
 .dropdown-btn {
   display: flex;
   justify-content: center;
-  background-color: $navbar-bg;
-  color: $navbar-color;
+  background-color: $bg-primary;
+  color: $navbar-text-color;
   padding: 0.5em;
   border: unset;
   position: relative;
@@ -129,7 +126,7 @@ $navbar-color: #fff;
     opacity: 0;
     z-index: -1;
     transition: opacity 300ms;
-    background-color: lighten($navbar-bg, 5);
+    background-color: lighten($bg-primary, 5);
   }
 
   ion-icon {
@@ -138,7 +135,7 @@ $navbar-color: #fff;
 }
 
 .dropdown--items {
-  background-color: $navbar-bg;
+  background-color: $bg-primary;
   display: flex;
   flex-direction: column;
   position: absolute;
@@ -153,8 +150,8 @@ $navbar-color: #fff;
     transition: background-color 300ms;
 
     &:hover {
-      background-color: $navbar-color;
-      color: $navbar-bg;
+      background-color: $navbar-text-color;
+      color: $bg-primary;
     }
   }
 }
