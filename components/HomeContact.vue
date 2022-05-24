@@ -1,5 +1,5 @@
 <template>
-  <div class="contact--wrapper">
+  <div class="contact--wrapper animated--section">
     <div class="contact--title">
       <h1>Prêt à tenter une expérience inédite ?</h1>
     </div>
@@ -24,6 +24,11 @@ export default {}
   justify-content: space-between;
   align-items: center;
   gap: 2.5em;
+
+  div, .contact-us {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
 }
 
 .contact--title {
@@ -33,6 +38,10 @@ export default {}
 .contact-us {
   @include button($cursor: pointer);
   width: 15%;
+}
+
+.show-contact {
+  @include div-from-top($to: 3, $delay: 500ms)
 }
 
 </style>

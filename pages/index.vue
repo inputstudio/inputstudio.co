@@ -25,36 +25,54 @@ export default {
       entries.forEach((entry) => {
         // If the section is visible in viewport then...
         if (entry.isIntersecting) {
-          
-          // If the visible section is about section then ... 
-          if (entry.target.classList.contains('about--wrapper')) {
+          const currentSection = entry.target
 
-            // Select all div in about--wrapper and for each div add animated class show-about 
-            entry.target.querySelectorAll('div').forEach((element) => {
-                element.classList.add('show-about')
-              })
+          // If the visible section is about section then ...
+          if (currentSection.classList.contains('about--wrapper')) {
+            // Select all div in about--wrapper and for each div add animated class show-about
+            currentSection.querySelectorAll('div').forEach((element) => {
+              element.classList.add('show-about')
+            })
           }
-          // Else If the visible section is services section then ... 
-          else if (entry.target.classList.contains('services--wrapper')) {
-              // Select all div in services section header
-              const serviceHeader = entry.target.querySelector('.services--header').querySelectorAll('div')
-              
-              // For each div add animated class show-service-header 
-              serviceHeader.forEach(header => {
-                header.classList.add('show-service-header')
-              })
+          // Else If the visible section is services section then ...
+          else if (currentSection.classList.contains('services--wrapper')) {
+            // Select all div in services section header
+            const serviceHeader = currentSection.querySelector('.services--header').querySelectorAll('div')
 
-              setTimeout(() => {
-                document.querySelectorAll('.service--card--wrapper').forEach((element) => {
-                  element.classList.add('card-fade-down')
-                })
-              }, servicesCardTimeout)
+            // For each div add animated class show-service-header
+            serviceHeader.forEach((header) => {
+              header.classList.add('show-service-header')
+            })
 
+            // After a delay equal to servicesCardTimeout, add card-fade-down class to elements in service card wrapper
             setTimeout(() => {
-              document.querySelectorAll('.example').forEach((element) => {
+              currentSection.querySelectorAll('.service--card--wrapper').forEach((element) => {
+                element.classList.add('card-fade-down')
+              })
+            }, servicesCardTimeout)
+
+            // After a delay equal to servicesCardTimeout + 2500 ms, add example-fade-in class to examples elements in each card
+            setTimeout(() => {
+              currentSection.querySelectorAll('.example').forEach((element) => {
                 element.classList.add('example-fade-in')
               })
             }, servicesCardTimeout + 2500)
+          } else if (currentSection.classList.contains('contact--wrapper')) {
+            // get the div elements in contact wrapper 
+            const contactSectionDivs = currentSection.querySelectorAll('div')
+
+            // get the contact us button in the same section
+            const contactUsBtn = currentSection.querySelector('.contact-us')
+
+            // Add show-contact class in all div to launch the animation
+            contactSectionDivs.forEach((div) => {
+              div.classList.add('show-contact')
+            })
+
+            // After 200ms, add show-contact class to contact-us button
+            setTimeout(() => {
+              contactUsBtn.classList.add('show-contact')
+            }, 200)
           }
         }
       })
@@ -62,7 +80,7 @@ export default {
 
     const options = {
       rootMargin: '0px',
-      threshold: .2
+      threshold: 0.2,
     }
 
     const observer = new IntersectionObserver(showSection, options)
