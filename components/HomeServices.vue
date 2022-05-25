@@ -61,7 +61,6 @@ export default {
 <style lang="scss" scoped>
 .services--wrapper {
   width: 100%;
-  padding: 6rem;
   background-color: $bg-secondary;
   color: #fff;
 
@@ -69,15 +68,23 @@ export default {
     padding: 6rem 1rem;
     flex-direction: column;
   }
+
+  @media screen and(min-width: 768px) {
+    padding: 6rem;
+  }
 }
 
 .services--header {
   display: flex;
-  padding: 0 4.5em;
   margin-bottom: 3rem;
 
   @media screen and(max-width: 768px) {
     flex-direction: column;
+    text-align: center;
+  }
+
+  @media screen and(min-width: 768px) {
+    padding: 0 4.5em;
   }
 
   div {
@@ -87,21 +94,32 @@ export default {
 }
 
 .services--title {
-  width: 40%;
   flex-shrink: 0;
-  padding-right: 1rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 
   @media screen and(max-width: 768px) {
+    text-align: center;
     width: 100%;
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
+    font-size: 1.2em;
+  }
+
+  @media screen and(min-width: 768px) {
+    width: 40%;
+    padding-right: 1rem;
   }
 }
 
 .services--desc {
-  text-align: justify;
+  @media screen and(max-width: 768px) {
+    text-align: center;
+  }
+
+  @media screen and(min-width: 768px) {
+    text-align: justify;
+  }
 }
 
 p {
@@ -127,6 +145,6 @@ p {
 }
 
 .show-service-header {
-  @include div-from-top
+  @include div-from-top;
 }
 </style>

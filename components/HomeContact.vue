@@ -37,7 +37,14 @@ export default {}
 
 .contact-us {
   @include button($cursor: pointer);
-  width: 15%;
+  
+  @media screen and(max-width: 768px) {
+    width: 90%;
+  }
+
+  @media screen and(min-width: 768px) {
+    width: 15%;
+  }
 }
 
 .show-contact {
