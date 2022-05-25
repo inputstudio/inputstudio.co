@@ -37,6 +37,34 @@ export default {
       required: true,
     },
   },
+  mounted(){
+    const serviceCard = document.querySelectorAll('.service--card--wrapper')
+
+    const showCard = (entries) => {
+      entries.forEach(entry => {
+        if(entry.isIntersecting){
+          entry.target.classList.add('card-fade-down')
+
+          setTimeout(() => {
+              entry.target.querySelectorAll('.example').forEach((element) => {
+                element.classList.add('example-fade-in')
+              })
+            }, 2500)
+        }
+      })
+    }
+    const options = {
+      rootMargin: '0px',
+      threshold: 0.2,
+    }
+
+    const observer = new IntersectionObserver(showCard, options)
+
+    serviceCard.forEach((section) => {
+      observer.observe(section)
+    })
+
+  }
 }
 </script>
 

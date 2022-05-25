@@ -17,8 +17,6 @@ export default {
     }
   },
   mounted() {
-    const servicesCardTimeout = 450
-
     const animatedSections = document.querySelectorAll('.animated--section')
 
     const showSection = (entries) => {
@@ -43,22 +41,8 @@ export default {
             serviceHeader.forEach((header) => {
               header.classList.add('show-service-header')
             })
-
-            // After a delay equal to servicesCardTimeout, add card-fade-down class to elements in service card wrapper
-            setTimeout(() => {
-              currentSection.querySelectorAll('.service--card--wrapper').forEach((element) => {
-                element.classList.add('card-fade-down')
-              })
-            }, servicesCardTimeout)
-
-            // After a delay equal to servicesCardTimeout + 2500 ms, add example-fade-in class to examples elements in each card
-            setTimeout(() => {
-              currentSection.querySelectorAll('.example').forEach((element) => {
-                element.classList.add('example-fade-in')
-              })
-            }, servicesCardTimeout + 2500)
           } else if (currentSection.classList.contains('contact--wrapper')) {
-            // get the div elements in contact wrapper 
+            // get the div elements in contact wrapper
             const contactSectionDivs = currentSection.querySelectorAll('div')
 
             // get the contact us button in the same section
