@@ -37,25 +37,25 @@ export default {
       required: true,
     },
   },
-  mounted(){
+  mounted() {
     const serviceCard = document.querySelectorAll('.service--card--wrapper')
 
     const showCard = (entries) => {
-      entries.forEach(entry => {
-        if(entry.isIntersecting){
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
           entry.target.classList.add('card-fade-down')
 
           setTimeout(() => {
-              entry.target.querySelectorAll('.example').forEach((element) => {
-                element.classList.add('example-fade-in')
-              })
-            }, 2500)
+            entry.target.querySelectorAll('.example').forEach((element) => {
+              element.classList.add('example-fade-in')
+            })
+          }, window.screen.width < 768 ? 100 : 2500)
         }
       })
     }
     const options = {
       rootMargin: '0px',
-      threshold: 0.2,
+      threshold: 0.5,
     }
 
     const observer = new IntersectionObserver(showCard, options)
@@ -63,8 +63,7 @@ export default {
     serviceCard.forEach((section) => {
       observer.observe(section)
     })
-
-  }
+  },
 }
 </script>
 
@@ -122,10 +121,17 @@ export default {
 }
 
 .card-fade-down {
-  @for $i from 1 through 3 {
-    &:nth-child(#{$i}) {
-      animation: fade-down 600ms 800ms * $i;
-      animation-fill-mode: forwards;
+  @media screen and(max-width: 768px) {
+    animation: fade-down 600ms 800ms;
+    animation-fill-mode: forwards;
+  }
+
+  @media screen and(min-width: 768px) {
+    @for $i from 1 through 3 {
+      &:nth-child(#{$i}) {
+        animation: fade-down 600ms 800ms * $i;
+        animation-fill-mode: forwards;
+      }
     }
   }
 }

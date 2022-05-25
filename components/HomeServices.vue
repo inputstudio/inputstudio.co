@@ -132,14 +132,15 @@ p {
   @media screen and(max-width: 768px) {
     display: flex;
     flex-direction: column;
+    gap: 2.5em;
   }
   @media screen and(min-width: 768px) {
     padding: 2em 4.5em;
     display: flex;
+    gap: 1em;
   }
 
   overflow: auto;
-  gap: 1em;
   justify-content: center;
   align-items: center;
 }
