@@ -11,7 +11,7 @@
         <nuxt-link to="/">Accueil</nuxt-link>
         <nuxt-link :to="{ path: '/', hash: 'services' }">Services</nuxt-link>
         <nuxt-link :to="{ path: '/', hash: 'team' }">L'équipe</nuxt-link>
-        <nuxt-link to="/contact-us">Nous contacter</nuxt-link>
+        <nuxt-link to="/contact">Nous contacter</nuxt-link>
       </div>
 
       <div class="footer--socials">
@@ -96,7 +96,7 @@ p {
       left: 0;
       background-color: white;
       transform-origin: bottom right;
-      transition: transform 0.40s ease-out;
+      transition: transform 0.4s ease-out;
     }
 
     &:hover:after {
