@@ -6,7 +6,7 @@
     <div class="contact--content">
       <h2>Faites nous confiance, faites partie de nos premiers clients !</h2>
     </div>
-    <nuxt-link to="/contact-us" class="contact-us">Contactez nous</nuxt-link>
+    <nuxt-link to="/contact" class="contact-us">Contactez nous</nuxt-link>
   </div>
 </template>
 
@@ -25,7 +25,8 @@ export default {}
   align-items: center;
   gap: 2.5em;
 
-  div, .contact-us {
+  div,
+  .contact-us {
     opacity: 0;
     transform: translateY(-100%);
   }
@@ -37,7 +38,7 @@ export default {}
 
 .contact-us {
   @include button($cursor: pointer);
-  
+
   @media screen and(max-width: 768px) {
     width: 90%;
   }
@@ -48,7 +49,6 @@ export default {}
 }
 
 .show-contact {
-  @include div-from-top($to: 3, $delay: 500ms)
+  @include div-from-top($to: 3, $delay: 500ms);
 }
-
 </style>
