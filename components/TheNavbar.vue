@@ -6,8 +6,8 @@
 
     <div class="navbar--links">
       <nuxt-link to="/" class="navbar--link">Accueil</nuxt-link>
-      <nuxt-link :to="{ path: '/', hash: 'services' }" class="navbar--link">Services</nuxt-link>
-      <nuxt-link :to="{ path: '/', hash: 'team' }" class="navbar--link">L'équipe</nuxt-link>
+      <nuxt-link to="/process" class="navbar--link">Démarche</nuxt-link>
+      <nuxt-link to="/about" class="navbar--link">À propos</nuxt-link>
       <nuxt-link to="/contact-us" class="contact-btn">Nous contacter</nuxt-link>
     </div>
 
@@ -18,8 +18,8 @@
       </button>
       <div v-if="isMenuActive" class="dropdown--items">
         <nuxt-link to="/">Accueil</nuxt-link>
-        <nuxt-link :to="{ path: '/', hash: 'services' }">Services</nuxt-link>
-        <nuxt-link :to="{ path: '/', hash: 'team' }">L'équipe</nuxt-link>
+        <nuxt-link to="/process">Démarche</nuxt-link>
+        <nuxt-link to="/about">À propos</nuxt-link>
         <nuxt-link to="/contact-us">Nous contacter</nuxt-link>
       </div>
     </div>
