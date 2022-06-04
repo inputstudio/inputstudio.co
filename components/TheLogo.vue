@@ -1,14 +1,15 @@
 <template>
   <div>
-    <nuxt-link to="/" class="brand">Input Studio</nuxt-link>
+    <nuxt-link to="/">
+      <img src="~/assets/img/logo.png" alt="Logo Input Studio" />
+    </nuxt-link>
   </div>
 </template>
 
 <style lang="scss" scoped>
-.brand {
-  text-transform: uppercase;
-  font-family: 'Fjalla One', sans-serif;
-  font-weight: bold;
-  font-size: 1rem;
+img {
+  filter: invert(1);
+  height: 32px;
+  width: auto;
 }
 </style>
