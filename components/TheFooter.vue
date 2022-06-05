@@ -9,8 +9,8 @@
 
       <div class="footer--links">
         <nuxt-link to="/">Accueil</nuxt-link>
-        <nuxt-link :to="{ path: '/', hash: 'services' }">Services</nuxt-link>
-        <nuxt-link :to="{ path: '/', hash: 'team' }">L'équipe</nuxt-link>
+        <nuxt-link to="/process">Démarche</nuxt-link>
+        <nuxt-link to="/about">À propos</nuxt-link>
         <nuxt-link to="/contact">Nous contacter</nuxt-link>
       </div>
 
