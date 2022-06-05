@@ -1,33 +1,44 @@
 <template>
   <div class="wrapper">
-    <form class="contact--us" method="post" action="#">
-      <h1>Formulaire de contact</h1>
-      <h3>Merci de nous contacter en remplissant correctement tous les champs ci-dessous.</h3>
+    <form class="contact--us" @submit.prevent="handleForm()">
+      <h1>Vous avez un projet ?</h1>
+
       <div class="form--group">
-        <label for="full_name">Nom et prénoms</label>
-        <input id="full_name" type="text" name="full_name" />
+        <label for="options">Vous êtes intéressé par...</label>
+        <div id="options">
+          <div
+            v-for="(subject, index) in subjects"
+            :key="index"
+            :class="{ 'option-chip': true, 'option-chip-active': isSelectedSubject(index) }"
+            @click="changeSubject(index)"
+          >
+            {{ subject }}
+          </div>
+        </div>
+      </div>
+
+      <div class="form--group">
+        <label for="fullname">Votre nom</label>
+        <input id="fullname" v-model="fullname" type="text" placeholder="John Doe" required />
       </div>
       <div class="form--group">
-        <label for="email">Email</label>
-        <input id="email" type="email" name="email" />
+        <label for="email">Votre adresse email</label>
+        <input id="email" v-model="email" type="email" placeholder="johndoe@gmail.com" required />
       </div>
       <div class="form--group">
-        <label for="subject">Objet</label>
-        <select id="subject" type="text" name="subject">
-          <option value="" selected></option>
-          <option value="static_website">Site vitrine</option>
-          <option value="ecommmerce">Site commercial</option>
-          <option value="mobile_app">Application mobile</option>
-          <option value="refactoring">Refonte d'un site existant</option>
-          <option value="mockup">Realisation d'une maquette de site</option>
-          <option value="other">Autres</option>
-        </select>
-      </div>
-      <div class="form--group">
-        <label for="message">Message</label>
-        <textarea id="message" name="message" rows="5"></textarea>
+        <label for="message">Parlez-nous de votre projet</label>
+        <textarea
+          id="message"
+          v-model="message"
+          rows="5"
+          placeholder="Vous pouvez commencer par vous présenter vous ou votre entreprise, puis vous nous exposerez brièvement votre projet..."
+          required
+        ></textarea>
       </div>
       <button type="submit" class="btn--submit">Envoyer</button>
+      <p class="mail-alt">
+        Vous préférez nous envoyer un mail ? <a href="mailto:hello@inputstudio.co">hello@inputstudio.co</a>
+      </p>
     </form>
     <div class="icon--div">
       <ion-icon name="paper-plane"></ion-icon>
@@ -37,23 +48,45 @@
 
 <script>
 export default {
+  data() {
+    return {
+      fullname: '',
+      email: '',
+      message: '',
+      subjectIndex: 0,
+      subjects: [
+        'Site vitrine',
+        'Site commercial',
+        'Application mobile',
+        "Refonte d'un site existant",
+        "Réalisation d'une maquette de site",
+        'Autres',
+      ],
+    }
+  },
   head() {
     return {
       title: 'Nous contacter - Input Studio',
     }
+  },
+  methods: {
+    isSelectedSubject(index) {
+      return this.subjectIndex === index
+    },
+    changeSubject(index) {
+      this.subjectIndex = index
+    },
+    handleForm() {},
   },
 }
 </script>
 
 <style lang="scss" scoped>
 .wrapper {
-  @media screen and (max-width: 768px) {
-    padding: 2em;
-    overflow: hidden;
-  }
+  padding: 2em;
+
   @media screen and (min-width: 768px) {
-    padding: 4em;
-    padding-right: 0;
+    padding: 6em 20vw;
     display: flex;
     justify-content: space-between;
   }
@@ -67,6 +100,7 @@ export default {
   input,
   textarea,
   select {
+    font-size: 1rem;
     padding: 0.5em 1em;
     border: 0.2em solid rgb(168, 168, 168);
     border-radius: 0.3em;
@@ -78,6 +112,10 @@ export default {
 
   textarea {
     resize: none;
+  }
+
+  label {
+    margin-bottom: 0.5rem;
   }
 
   @media screen and (max-width: 768px) {
@@ -94,6 +132,7 @@ export default {
   gap: 0.4em;
   width: 100%;
   transform: translateX(-100%);
+  margin-bottom: 0.5rem;
 
   @for $i from 1 through 6 {
     &:nth-child(#{$i}) {
@@ -111,7 +150,7 @@ export default {
 
 .btn--submit {
   @include button($border: solid, $cursor: pointer);
-  @include fade-in-animation
+  @include fade-in-animation;
 }
 
 .icon--div {
@@ -123,18 +162,33 @@ export default {
     display: block;
 
     ion-icon {
-      font-size: 27em;
-      @include fade-in-animation($duration: 1000ms, $delay: 800ms)
+      font-size: 20em;
+      @include fade-in-animation($duration: 1000ms, $delay: 800ms);
     }
   }
 }
 
-@keyframes from-left {
-  from {
-    transform: translateX(-100%);
-  }
-  to {
-    transform: translateX(0%);
+#options {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.option-chip {
+  @include button($border: solid, $cursor: pointer);
+  width: fit-content;
+}
+
+.option-chip-active {
+  @include button($bg: $bg-primary, $color: #fff, $cursor: pointer);
+}
+
+.mail-alt {
+  margin-top: 1rem;
+  text-align: center;
+
+  a {
+    font-weight: bold;
   }
 }
 </style>

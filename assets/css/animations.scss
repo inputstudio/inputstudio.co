@@ -56,3 +56,14 @@
         transform: translateY(-2px);
     }
 }
+
+// Contact page from-left animation
+@keyframes from-left {
+    from {
+        transform: translateX(-100%);
+    }
+
+    to {
+        transform: translateX(0%);
+    }
+}
