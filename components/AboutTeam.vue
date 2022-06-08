@@ -3,7 +3,7 @@
     <h1 class="team--title">Faites connaissance avec l'équipe</h1>
 
     <div class="team--grid">
-      <HomeTeamCard
+      <AboutTeamCard
         v-for="(teammate, index) in team"
         :key="index"
         :name="teammate.name"
