@@ -1,5 +1,8 @@
 <template>
   <div class="about--wrapper">
+    <AboutHero />
+    <!-- Introduce ourselves -->
+    <!-- Our core values -->
     <AboutTeam />
     <AppContact />
   </div>
