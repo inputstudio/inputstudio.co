@@ -13,7 +13,12 @@ export default {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '' },
+      {
+        hid: 'description',
+        name: 'description',
+        content:
+          'Input Studio, votre agence web à Abidjan, spécialiste des services sur mesure pour ses clients : nous réalisons des sites web et des applications mobiles.',
+      },
       { name: 'format-detection', content: 'telephone=no' },
     ],
     link: [
