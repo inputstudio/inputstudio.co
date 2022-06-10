@@ -77,7 +77,7 @@ export default {
 
   plausible: {
     domain: 'inputstudio.co',
-    apiHost: 'http://analytics.inputstudio.co',
+    apiHost: 'https://analytics.inputstudio.co',
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
