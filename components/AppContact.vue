@@ -17,7 +17,7 @@ export default {}
 <style lang="scss" scoped>
 .contact--wrapper {
   width: 100%;
-  padding: 6rem;
+  padding: 6rem 2rem;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -29,6 +29,10 @@ export default {}
   .contact-us {
     opacity: 0;
     transform: translateY(-100%);
+  }
+
+  @media screen and (min-width: 768px) {
+    padding: 6rem;
   }
 }
 
