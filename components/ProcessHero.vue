@@ -18,8 +18,7 @@ export default {}
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background-image: url('../assets/img/process-hero-bg.jpg');
-  background-size: cover;
+  background: linear-gradient(320deg, $bg-primary, $bg-secondary, $bg-tertiary);
   position: relative;
   isolation: isolate;
   color: white;
