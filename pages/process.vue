@@ -1,5 +1,8 @@
 <template>
-  <ProcessHero />
+  <div class="wrapper">
+    <ProcessHero />
+    <ProcessApp />
+  </div>
 </template>
 
 <script>
