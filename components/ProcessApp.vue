@@ -11,7 +11,7 @@
     <div class="app--body">
       <div class="apps-grid">
         <div class="web-app">
-          <img src="../assets/img/webapp.svg" alt="Applications web" />
+          <img src="@/assets/img/webapp.svg" alt="Applications web" />
           <h2>Applications webs</h2>
           <p>
             Grâce à nos partenariats avec les chefs de file du marché, nous vous fournissons les solutions
@@ -21,7 +21,7 @@
         </div>
 
         <div class="mobile-app">
-          <img src="../assets/img/mobile-app.svg" alt="Applications mobile" />
+          <img src="@/assets/img/mobile-app.svg" alt="Applications mobile" />
           <h2>Applications mobile</h2>
           <p>
             Grâce à la méthode DevOps, nous livrons plus vite, avec un code de qualité supérieure. Ce processus favorise
@@ -30,88 +30,74 @@
         </div>
       </div>
 
-      <div class="app--step">
-        <img src="../assets/img/meeting.svg" alt="Prise de contact" />
-        <div class="step--body">
-          <h2>Prise de contact</h2>
-          <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Placeat molestiae esse quae dicta rerum in iure
-            explicabo culpa! Est praesentium, tempore atque eum ipsa error nam natus. Corrupti, libero laboriosam?
-          </p>
-        </div>
-      </div>
+      <ProcessStep
+        v-for="(step, index) in steps"
+        :key="index"
+        :image="step.image"
+        :title="step.title"
+        :description="step.description"
+      />
 
-      <div class="app--step">
-        <div class="step--body">
-          <h2>Analyse du projet et dressage du système d'information</h2>
-          <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Placeat molestiae esse quae dicta rerum in iure
-            explicabo culpa! Est praesentium, tempore atque eum ipsa error nam natus. Corrupti, libero laboriosam?
-          </p>
-        </div>
-        <img src="../assets/img/analysis.svg" alt="Analyse du projet" />
-      </div>
-
-      <div class="app--step">
-        <img src="../assets/img/tools-pick.svg" alt="Choix des outils" />
-        <div class="step--body">
-          <h2>Choix des outils adéquats</h2>
-          <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Placeat molestiae esse quae dicta rerum in iure
-            explicabo culpa! Est praesentium, tempore atque eum ipsa error nam natus. Corrupti, libero laboriosam?
-          </p>
-        </div>
-      </div>
-
-      <div class="app--step">
-        <div class="step--body">
-          <h2>Realisation de l'application</h2>
-          <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Placeat molestiae esse quae dicta rerum in iure
-            explicabo culpa! Est praesentium, tempore atque eum ipsa error nam natus. Corrupti, libero laboriosam?
-          </p>
-        </div>
-        <img src="../assets/img/programming.svg" alt="Realisation de l'application" />
-      </div>
-
-      <div class="app--step">
-        <img src="../assets/img/test.svg" alt="Test de l'application" />
-        <div class="step--body">
-          <h2>Test de l'application</h2>
-          <p>
-            Grâce à une équipe dédiée et des outils automatisés, nous testons la plate-forme selon des scénarios
-            prédéfinis. L'analyse et le débogage permettent une mise en œuvre optimale de votre outil.
-          </p>
-        </div>
-      </div>
-
-      <div class="app--step">
-        <div class="step--body">
-          <h2>Maintenance</h2>
-          <p>
-            Un suivi régulier permet d'anticiper les mises à jour de code et de corriger les éventuels bugs. Nos équipes
-            effectuent des changements qui permettent à vos applications de fonctionner de manière durable et optimale.
-          </p>
-        </div>
-        <img src="../assets/img/maintenance.svg" alt="Maintenance de l'application" />
-      </div>
     </div>
   </div>
 </template>
 
 <script>
-export default {}
+export default {
+  data(){
+    return {
+      steps : [
+        {
+          image: "meeting.svg",
+          title: "Prise de contact",
+          description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Placeat molestiae esse quae dicta rerum in iure explicabo culpa! Est praesentium, tempore atque eum ipsa error nam natus. Corrupti, libero laboriosam?"
+        },
+        {
+          image: "analysis.svg",
+          title: "Analyse du projet et dressage du système d'information",
+          description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Placeat molestiae esse quae dicta rerum in iure explicabo culpa! Est praesentium, tempore atque eum ipsa error nam natus. Corrupti, libero laboriosam?"
+        },
+        {
+          image: "tools-pick.svg",
+          title: "Choix des outils adéquats",
+          description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Placeat molestiae esse quae dicta rerum in iure explicabo culpa! Est praesentium, tempore atque eum ipsa error nam natus. Corrupti, libero laboriosam?"
+        },
+        {
+          image: "programming.svg",
+          title: "Realisation de l'application",
+          description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Placeat molestiae esse quae dicta rerum in iure explicabo culpa! Est praesentium, tempore atque eum ipsa error nam natus. Corrupti, libero laboriosam?"
+        },
+        {
+          image: "test.svg",
+          title: "Test de l'application",
+          description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Placeat molestiae esse quae dicta rerum in iure explicabo culpa! Est praesentium, tempore atque eum ipsa error nam natus. Corrupti, libero laboriosam?"
+        },
+        {
+          image: "maintenance.svg",
+          title: "Maintenance",
+          description: "Un suivi régulier permet d'anticiper les mises à jour de code et de corriger les éventuels bugs. Nos équipes effectuent des changements qui permettent à vos applications de fonctionner de manière durable et optimale."
+        },
+      ]
+    }
+  }
+}
 </script>
 
 <style lang="scss" scoped>
 .process-app--wrapper {
-  min-height: 100vh;
-  padding: 6em;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   text-align: center;
   gap: 2em;
+
+  @media screen and (max-width: 768px) {
+    padding: 6rem 1rem;
+  }
+
+  @media screen and (min-width: 768px) {
+    padding: 6rem;
+  }
 }
 
 .app--header {
@@ -139,17 +125,24 @@ export default {}
   }
 
   h3 {
-    color: grey;
+    color: rgba(128, 128, 128, 0.701);
     font-weight: 300;
-    font-size: 1em;
-    font-style: italic;
+    font-size: .8em;
   }
 }
 
 .apps-grid {
   display: grid;
-  grid-template-columns: 40% 40%;
   justify-content: space-around;
+
+  @media screen and (max-width: 768px) {
+    grid-template-columns: 100%;
+    gap: 1.5em;
+  }
+
+  @media screen and (min-width: 768px) {
+    grid-template-columns: 40% 40%;
+  }
 
   div {
     display: flex;
@@ -167,35 +160,5 @@ export default {}
   display: flex;
   flex-direction: column;
   gap: 1.5em;
-}
-.app--footer {
-  position: relative;
-  height: 4em;
-  width: 50%;
-  align-self: center;
-}
-
-.app--step {
-  display: flex;
-  gap: 2em;
-
-  img {
-    width: 30em;
-    height: 15em;
-  }
-
-  h2 {
-    font-family: 'Fjalla One', sans-serif;
-    font-size: 1.8em;
-  }
-}
-
-.step--body {
-  text-align: left;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 1.5em;
-  padding-inline: 2em;
 }
 </style>

@@ -1,9 +1,9 @@
 <template>
   <div class="process-hero--wrapper">
-      <h1>Demarche de conception</h1>
-      <h3>Decouvrez notre approche unique de conception des applications</h3>
+    <h1>Demarche de conception</h1>
+    <h3>Decouvrez notre approche unique de conception des applications</h3>
 
-      <div class="scroll-indicator"></div>
+    <div class="scroll-indicator"></div>
   </div>
 </template>
 
@@ -22,34 +22,54 @@ export default {}
   position: relative;
   isolation: isolate;
   color: white;
-  padding: 4em;
   gap: 1.2em;
 
-  &::before{
-      content: '';
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      right: 0;
-      left: 0;
-      background: linear-gradient(0deg, rgb(0 0 0 / 0.9), rgb(0 0 0 / 0));
-      z-index: -1;
+  @media screen and (max-width: 768px) {
+    padding: 6rem 1rem;
+  }
+
+  @media screen and (min-width: 768px) {
+    padding: 6rem;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background: linear-gradient(0deg, rgb(0 0 0 / 0.9), rgb(0 0 0 / 0));
+    z-index: -1;
   }
 }
 
 h1 {
-  font-size: 5em;
   text-transform: uppercase;
+
+  @media screen and (max-width: 768px) {
+    font-size: 4.5em;
+  }
+
+  @media screen and (min-width: 768px) {
+    font-size: 5em;
+  }
 }
 
 h3 {
-      font-size: 1.6em;
+  @media screen and (max-width: 768px) {
+    font-size: 1.1em;
+  }
+
+  @media screen and (min-width: 768px) {
+    font-size: 1.6em;
+  }
 }
 
 .scroll-indicator {
   width: 2.3em;
   height: 4em;
-  border: .1em solid white;
+  border: 0.1em solid white;
   border-radius: 2em;
   position: absolute;
   bottom: 2em;
@@ -58,8 +78,8 @@ h3 {
   &::after {
     content: '';
     position: absolute;
-    height: .6em;
-    width: .4em;
+    height: 0.6em;
+    width: 0.4em;
     top: 20%;
     left: 42%;
     border-radius: 50%;
@@ -76,7 +96,6 @@ h3 {
   to {
     opacity: 0;
     top: 50%;
-    /* transform: scale(0); */
   }
 }
 </style>

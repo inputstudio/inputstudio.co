@@ -1,6 +1,7 @@
 <template>
   <div class="wrapper">
     <ProcessHero />
+    <ProcessMockup />
     <ProcessApp />
   </div>
 </template>
