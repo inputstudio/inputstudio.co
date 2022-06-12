@@ -15,8 +15,12 @@
       </div>
 
       <div class="footer--socials">
-        <a href=""><ion-icon name="logo-instagram"></ion-icon>Instagram</a>
-        <a href=""><ion-icon name="logo-facebook"></ion-icon>Facebook</a>
+        <a href="https://www.instagram.com/inputstudi0/">
+          <ion-icon name="logo-instagram" size="large"></ion-icon> Instagram
+        </a>
+        <a href="https://www.facebook.com/InputStudio/">
+          <ion-icon name="logo-facebook" size="large"></ion-icon> Facebook
+        </a>
       </div>
     </div>
 
