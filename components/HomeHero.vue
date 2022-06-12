@@ -1,11 +1,11 @@
 <template>
-  <div class="hero--wrapper">
+  <section class="hero--wrapper">
     <h1 class="baffle">Nous ne réalisons pas des sites mais des experiences web.</h1>
     <nuxt-link :to="{ path: '/', hash: '#about' }" class="learnmore-btn">
       <span>En savoir plus</span>
       <ion-icon name="arrow-down" size="large"></ion-icon>
     </nuxt-link>
-  </div>
+  </section>
 </template>
 
 <script>
@@ -28,6 +28,7 @@ export default {
 
 <style lang="scss" scoped>
 .hero--wrapper {
+  padding: 0;
   position: relative;
   display: flex;
   justify-content: center;

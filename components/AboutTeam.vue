@@ -1,5 +1,5 @@
 <template>
-  <div id="team" class="team--wrapper animated--section">
+  <section id="team" class="team--wrapper animated--section">
     <h2 class="team--title">Rencontrez l'équipe</h2>
 
     <div class="team--grid">
@@ -12,7 +12,7 @@
         :socials="teammate.socials"
       />
     </div>
-  </div>
+  </section>
 </template>
 
 <script>
@@ -78,7 +78,7 @@ export default {
   padding: 6rem 2rem;
 
   @media screen and (min-width: 768px) {
-    padding: 6rem 20vw;
+    padding: 6rem 10vw;
   }
 }
 

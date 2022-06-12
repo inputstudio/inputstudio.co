@@ -1,5 +1,5 @@
 <template>
-  <div class="intro--wrapper">
+  <section class="intro--wrapper">
     <h1>Nous sommes Input Studio.</h1>
 
     <p>
@@ -12,7 +12,7 @@
       obcaecati corrupti autem harum nihil et dolorem quasi totam voluptatibus doloribus quisquam aspernatur dolorum
       quibusdam.
     </p>
-  </div>
+  </section>
 </template>
 
 <script>

@@ -1,5 +1,5 @@
 <template>
-  <div id="about" class="about--wrapper animated--section">
+  <section id="about" class="about--wrapper animated--section">
     <div class="about--title">
       <h1>Think outside the box</h1>
     </div>
@@ -19,7 +19,7 @@
         même plus.
       </p>
     </div>
-  </div>
+  </section>
 </template>
 
 <style lang="scss" scoped>

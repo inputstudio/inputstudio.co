@@ -1,5 +1,5 @@
 <template>
-  <div class="process-app--wrapper">
+  <section class="process-app--wrapper">
     <div class="app--header">
       <h1>Applications</h1>
       <h3>
@@ -39,7 +39,7 @@
       />
 
     </div>
-  </div>
+  </section>
 </template>
 
 <script>

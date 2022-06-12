@@ -1,10 +1,10 @@
 <template>
-  <div class="process-hero--wrapper">
+  <section class="process-hero--wrapper">
     <h1>Demarche de conception</h1>
     <h3>Decouvrez notre approche unique de conception des applications</h3>
 
     <div class="scroll-indicator"></div>
-  </div>
+  </section>
 </template>
 
 <script>

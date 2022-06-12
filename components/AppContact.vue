@@ -1,5 +1,5 @@
 <template>
-  <div class="contact--wrapper animated--section">
+  <section class="contact--wrapper">
     <div class="contact--title">
       <h1>Prêt à tenter une expérience inédite ?</h1>
     </div>
@@ -7,7 +7,7 @@
       <h2>Faites nous confiance, faites partie de nos premiers clients !</h2>
     </div>
     <nuxt-link to="/contact" class="contact-us">Contactez nous</nuxt-link>
-  </div>
+  </section>
 </template>
 
 <script>

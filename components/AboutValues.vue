@@ -1,5 +1,5 @@
 <template>
-  <div class="values--wrapper">
+  <section class="values--wrapper">
     <h2 class="values-title">Nos valeurs</h2>
 
     <div class="values-grid">
@@ -10,7 +10,7 @@
         :description="value.description"
       />
     </div>
-  </div>
+  </section>
 </template>
 
 <script>

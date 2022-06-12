@@ -1,5 +1,5 @@
 <template>
-  <div class="process-mockup--wrapper">
+  <section class="process-mockup--wrapper">
     <div class="mockup--header">
       <h1>Maquettes</h1>
       <h3>
@@ -18,7 +18,7 @@
         :description="step.description"
       />
     </div>
-  </div>
+  </section>
 </template>
 
 <script>
