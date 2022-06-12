@@ -30,7 +30,7 @@ export default {
           image: "audio-conversation.svg",
           title: "Compréhension du besoin",
           description:
-            "Nous travaillons à définir et à conceptualiser votre plate-forme.L'expertise de nos maquettistes permet de répondre aux enjeux de votre métier.",
+            "Nous travaillons à définir et à conceptualiser votre plate-forme. L'expertise de nos maquettistes permet de répondre aux enjeux de votre métier.",
         },
         {
           image: "mockup.svg",

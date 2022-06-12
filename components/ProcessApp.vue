@@ -50,27 +50,27 @@ export default {
         {
           image: "meeting.svg",
           title: "Prise de contact",
-          description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Placeat molestiae esse quae dicta rerum in iure explicabo culpa! Est praesentium, tempore atque eum ipsa error nam natus. Corrupti, libero laboriosam?"
+          description: "Nous sommes à votre entière disposition et venons à votre rencontre pour vous permettre de pleinement expliquer ce que vous avez en tête."
         },
         {
           image: "analysis.svg",
           title: "Analyse du projet et dressage du système d'information",
-          description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Placeat molestiae esse quae dicta rerum in iure explicabo culpa! Est praesentium, tempore atque eum ipsa error nam natus. Corrupti, libero laboriosam?"
+          description: "Une fois le projet connu, nous analysons tous les composants dans le but d'en ressortir un système d'information fiable, robuste et capable de répondre à toutes vos attentes."
         },
         {
           image: "tools-pick.svg",
           title: "Choix des outils adéquats",
-          description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Placeat molestiae esse quae dicta rerum in iure explicabo culpa! Est praesentium, tempore atque eum ipsa error nam natus. Corrupti, libero laboriosam?"
+          description: "Le choix des outils est tout aussi important que l'étape de l'analyse. Une mauvaise selection est susceptible de gacher l'experience utilisateur et reduire les performances de votre application."
         },
         {
           image: "programming.svg",
           title: "Realisation de l'application",
-          description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Placeat molestiae esse quae dicta rerum in iure explicabo culpa! Est praesentium, tempore atque eum ipsa error nam natus. Corrupti, libero laboriosam?"
+          description: "Place au code ! Vous pouvez dormir sur vos lauriers. Nous travaillons sans relache, jour et nuit dans le but de réaliser une application qui vous satisfera en un temps record."
         },
         {
           image: "test.svg",
           title: "Test de l'application",
-          description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Placeat molestiae esse quae dicta rerum in iure explicabo culpa! Est praesentium, tempore atque eum ipsa error nam natus. Corrupti, libero laboriosam?"
+          description: "Grâce à une équipe dédiée et des outils automatisés, nous testons la plate-forme selon des scénarios prédéfinis.L'analyse et le débogage permettent une mise en œuvre optimale de votre outil."
         },
         {
           image: "maintenance.svg",
