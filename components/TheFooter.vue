@@ -15,10 +15,10 @@
       </div>
 
       <div class="footer--socials">
-        <a href="https://www.instagram.com/inputstudi0/">
+        <a href="https://www.instagram.com/inputstudi0/" target="_blank" rel="noopener noreferrer">
           <ion-icon name="logo-instagram" size="large"></ion-icon> Instagram
         </a>
-        <a href="https://www.facebook.com/InputStudio/">
+        <a href="https://www.facebook.com/inputstd/" target="_blank" rel="noopener noreferrer">
           <ion-icon name="logo-facebook" size="large"></ion-icon> Facebook
         </a>
       </div>
