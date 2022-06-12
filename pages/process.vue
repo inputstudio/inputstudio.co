@@ -3,16 +3,17 @@
     <ProcessHero />
     <ProcessMockup />
     <ProcessApp />
+    <AppContact />
   </div>
 </template>
 
 <script>
 export default {
-  head() {
-    return {
-      title: 'Comment travaillons-nous ? - Input Studio',
-    }
-  },
+    head() {
+        return {
+            title: "Comment travaillons-nous ? - Input Studio",
+        };
+    },
 }
 </script>
 
