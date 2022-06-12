@@ -1,6 +1,6 @@
 <template>
   <div id="team" class="team--wrapper animated--section">
-    <h1 class="team--title">Faites connaissance avec l'équipe</h1>
+    <h2 class="team--title">Rencontrez l'équipe</h2>
 
     <div class="team--grid">
       <AboutTeamCard
@@ -75,19 +75,23 @@ export default {
 <style lang="scss" scoped>
 .team--wrapper {
   width: 100%;
-  padding: 6rem;
-  margin: auto;
-  margin-bottom: 6rem;
+  padding: 6rem 2rem;
+
+  @media screen and (min-width: 768px) {
+    padding: 6rem 20vw;
+  }
 }
 
 .team--title {
-  margin-bottom: 6rem;
+  font-size: 4rem;
+  text-transform: uppercase;
+  margin-bottom: 4rem;
 }
 
 .team--grid {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   flex-wrap: wrap;
-  gap: 1.5rem 3rem;
+  gap: 3rem;
 }
 </style>
