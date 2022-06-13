@@ -1,5 +1,5 @@
 <template>
-  <section class="contact--wrapper">
+  <section class="contact--wrapper animated--section">
     <div class="contact--title">
       <h1>Prêt à tenter une expérience inédite ?</h1>
     </div>
