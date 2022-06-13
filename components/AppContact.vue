@@ -1,5 +1,5 @@
 <template>
-  <section class="contact--wrapper animated--section">
+  <section class="contact--wrapper">
     <div class="contact--title">
       <h1>Prêt à tenter une expérience inédite ?</h1>
     </div>
@@ -11,7 +11,40 @@
 </template>
 
 <script>
-export default {}
+export default {
+  mounted() {
+    const contactWrapper = document.querySelector('.contact--wrapper')
+
+    const showSection = (entry) => {
+      if (entry[0].isIntersecting) {
+        // get the div elements in contact wrapper
+        const contactSectionDivs = entry[0].target.querySelectorAll('div')
+
+        // get the contact us button in the same section
+        const contactUsBtn = entry[0].target.querySelector('.contact-us')
+
+        // Add show-contact class in all div to launch the animation
+        contactSectionDivs.forEach((div) => {
+          div.classList.add('show-contact')
+        })
+
+        // After 200ms, add show-contact class to contact-us button
+        setTimeout(() => {
+          contactUsBtn.classList.add('show-contact')
+        }, 200)
+      }
+    }
+
+    const options = {
+      rootMargin: '0px',
+      threshold: 0.2,
+    }
+
+    const observer = new IntersectionObserver(showSection, options)
+
+    observer.observe(contactWrapper)
+  },
+}
 </script>
 
 <style lang="scss" scoped>

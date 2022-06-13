@@ -1,5 +1,5 @@
 <template>
-  <section id="about" class="about--wrapper animated--section">
+  <section id="about" class="about--wrapper">
     <div class="about--title">
       <h1>Think outside the box</h1>
     </div>
@@ -22,6 +22,30 @@
   </section>
 </template>
 
+<script>
+export default {
+  mounted() {
+    const aboutWrapper = document.querySelector('.about--wrapper')
+
+    const showSection = (entry) => {
+      if (entry[0].isIntersecting) {
+        entry[0].target.querySelectorAll('div').forEach((element) => {
+          element.classList.add('show-about')
+        })
+      }
+    }
+
+    const options = {
+      rootMargin: '0px',
+      threshold: 0.2,
+    }
+
+    const observer = new IntersectionObserver(showSection, options)
+
+    observer.observe(aboutWrapper)
+  },
+}
+</script>
 <style lang="scss" scoped>
 .about--wrapper {
   width: 100%;

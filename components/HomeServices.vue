@@ -1,5 +1,5 @@
 <template>
-  <section id="services" class="services--wrapper animated--section">
+  <section id="services" class="services--wrapper">
     <div class="services--header">
       <div class="services--title">
         <h1>Nos services</h1>
@@ -55,6 +55,30 @@ export default {
         },
       ],
     }
+  },
+  mounted() {
+    const servicesWrapper = document.querySelector('.services--wrapper')
+
+    const showSection = (entry) => {
+      if (entry[0].isIntersecting) {
+        // Select all div in services section header
+        const serviceHeader = entry[0].target.querySelector('.services--header').querySelectorAll('div')
+
+        // For each div add animated class show-service-header
+        serviceHeader.forEach((header) => {
+          header.classList.add('show-service-header')
+        })
+      }
+    }
+
+    const options = {
+      rootMargin: '0px',
+      threshold: 0.2,
+    }
+
+    const observer = new IntersectionObserver(showSection, options)
+
+    observer.observe(servicesWrapper)
   },
 }
 </script>
