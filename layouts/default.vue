@@ -3,6 +3,7 @@
     <TheNavbar />
     <Nuxt />
     <TheFooter />
+    <ScrollToTop />
   </div>
 </template>
 
