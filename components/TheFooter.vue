@@ -28,7 +28,19 @@
     </div>
 
     <div class="footer--bottom">
-      <p>Copyright &#169; 2022 Input Studio</p>
+      <p class="cookies-notice">
+        Ce site web ne vous piste pas. Nous n'utilisons pas de cookies. Nous recueillons des données d'usage à l'aide
+        d'une version
+        <a href="https://m.do.co/c/758f392749a4" title="DigitalOcean (lien de parrainage)" target="_blank">
+          auto-hébergée
+        </a>
+        de Plausible,
+        <a href="https://plausible.io/vs-google-analytics" title="Plausible vs Google Analytics" target="_blank">
+          une alternative à Google Analytics
+        </a>
+        à la fois open source et respectueuse de la vie privée.
+      </p>
+      <p class="copyright">Copyright &#169; 2022 Input Studio</p>
     </div>
   </footer>
 </template>
@@ -129,6 +141,14 @@ p {
 
   p {
     font-size: 0.9em;
+  }
+}
+
+.cookies-notice {
+  margin-bottom: 3rem;
+
+  a {
+    font-weight: bold;
   }
 }
 </style>
