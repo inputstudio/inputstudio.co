@@ -43,6 +43,11 @@ export default {
           image: 'https://ui-avatars.com/api/?name=H+K&size=256',
           socials: [
             {
+              name: 'Site web',
+              url: 'https://khenrijo.netlify.app',
+              icon: 'globe',
+            },
+            {
               name: 'GitHub',
               url: 'https://github.com/khenrijo21',
               icon: 'logo-github',
