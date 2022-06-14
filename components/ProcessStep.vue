@@ -1,6 +1,6 @@
 <template>
   <div class="process--step">
-    <img :src="'@/assets/img/' + image" :alt="title" />
+    <img :src="getImage(image)" :alt="title" />
     <div class="step--body">
       <h2>{{ title }}</h2>
       <p>
@@ -26,6 +26,11 @@ export default {
       required: true,
     },
   },
+  methods: {
+    getImage(url) {
+      return require(`~/assets/img/${url}`)
+    },
+  }
 }
 </script>
 
