@@ -6,7 +6,7 @@
 
     <div class="about--content">
       <p>
-        Ce qui etait à la base une passion, nous en avons fait notre métier. Chaque jour, nous apprenons pour être à la
+        Ce qui était à la base une passion, nous en avons fait notre métier. Chaque jour, nous apprenons pour être à la
         pointe des nouvelles technologies afin de répondre au mieux à vos besoins.
       </p>
       <p>
