@@ -21,6 +21,9 @@
         <a href="https://www.facebook.com/inputstd/" target="_blank" rel="noopener noreferrer">
           <ion-icon name="logo-facebook" size="large"></ion-icon> Facebook
         </a>
+        <a href="https://www.linkedin.com/company/inputstudio" target="_blank" rel="noopener noreferrer">
+          <ion-icon name="logo-linkedin" size="large"></ion-icon> LinkedIn
+        </a>
       </div>
     </div>
 
