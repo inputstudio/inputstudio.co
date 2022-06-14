@@ -21,22 +21,22 @@ export default {
         {
           title: 'Goût du défi',
           description:
-            'Going out of comfort zone - Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque at quae doloribus rerum autem, accusamus ut sit molestias nisi libero!',
+            'Nous sommes toujours à la recherche de nouveaux défis, sortir de notre zone de confort ne nous fait pas peur.',
         },
         {
           title: "Priorité à l'utilisateur",
           description:
-            'UX - Privacy - Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque at quae doloribus rerum autem, accusamus ut sit molestias nisi libero!',
+            "Nous nous efforçons de rendre nos applications intuitives, et pour cela, nous n'hésitons pas à nous affranchir des règles établies.",
         },
         {
           title: "À l'écoute",
           description:
-            'Listen smart - Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque at quae doloribus rerum autem, accusamus ut sit molestias nisi libero!',
+            "Nous écoutons attentivement les besoins de nos clients. C'est ainsi que nous parviendrons à développer d'excellentes applications ensemble.",
         },
         {
           title: 'Apprentissage permanent',
           description:
-            'Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque at quae doloribus rerum autem, accusamus ut sit molestias nisi libero!',
+            'Le web évolue constamment, raison pour laquelle nous observons les tendances et les avancées technologiques afin de créer des applications modernes pour vos utilisateurs.',
         },
       ],
     }
