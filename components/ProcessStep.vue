@@ -74,11 +74,17 @@ export default {
 }
 
 .step--body {
-  text-align: left;
   display: flex;
   flex-direction: column;
   justify-content: center;
   gap: 1.5em;
   padding-inline: 2em;
+
+  @media screen and (max-width: 768px) {
+    text-align: center;
+  }
+  @media screen and (min-width: 768px) {
+    text-align: left;
+  }
 }
 </style>
