@@ -42,6 +42,7 @@ export default {
   @media screen and (max-width: 768px) {
     flex-direction: column;
     padding: 1em;
+    margin-block: 2em;
   }
 
   @media screen and (min-width: 768px) {
