@@ -26,6 +26,7 @@ export default {}
 
   @media screen and (max-width: 768px) {
     padding: 6rem 1rem;
+    text-align: center;
   }
 
   @media screen and (min-width: 768px) {
@@ -48,7 +49,7 @@ h1 {
   text-transform: uppercase;
 
   @media screen and (max-width: 768px) {
-    font-size: 4.5em;
+    font-size: 4em;
   }
 
   @media screen and (min-width: 768px) {
@@ -68,12 +69,21 @@ h3 {
 
 .scroll-indicator {
   width: 2.3em;
-  height: 4em;
   border: 0.1em solid white;
   border-radius: 2em;
   position: absolute;
-  bottom: 2em;
-  right: 2em;
+
+  @media screen and (max-width: 768px) {
+    height: 3.5em;
+    bottom: .8em;
+    right: .5em;
+  }
+
+  @media screen and (min-width: 768px) {
+    height: 4em;
+    bottom: 2em;
+    right: 2em;
+  }
 
   &::after {
     content: '';
