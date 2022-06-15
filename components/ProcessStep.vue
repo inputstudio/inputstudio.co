@@ -30,7 +30,7 @@ export default {
     getImage(url) {
       return require(`~/assets/img/${url}`)
     },
-  }
+  },
 }
 </script>
 
@@ -60,8 +60,11 @@ export default {
   }
 
   img {
-    width: 30em;
     height: 15em;
+
+    @media screen and (min-width: 768px) {
+      width: 30em;
+    }
   }
 
   h2 {

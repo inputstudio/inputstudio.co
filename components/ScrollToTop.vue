@@ -32,9 +32,7 @@ export default {
   display: none;
   justify-content: center;
   align-items: center;
-  height: 1.7em;
-  width: 1.7em;
-  font-size: 1.5em;
+
   color: white;
   background-color: $bg-quaternary;
   position: fixed;
@@ -43,13 +41,36 @@ export default {
   cursor: pointer;
   transition: all 0.2s;
 
+  @media screen and (max-width: 768px) {
+    height: 1.5em;
+    width: 1.5em;
+    font-size: 1.2em;
+  }
+
+  @media screen and (min-width: 768px) {
+    height: 1.7em;
+    width: 1.7em;
+    font-size: 1.5em;
+  }
+
   &:hover {
     transform: scale(1.1);
   }
 
   p {
+    width: 100%;
+    height: 100%;
     transform: rotate(270deg);
     position: relative;
+
+    @media screen and (max-width: 768px) {
+      padding-top: .25em;
+    }
+
+    @media screen and (min-width: 768px) {
+      padding-top: .35em;
+    }
+
     animation: fade-to-top 1.5s 0s infinite;
   }
 }
