@@ -3,14 +3,15 @@
     <h1>Nous sommes Input Studio.</h1>
 
     <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste blanditiis alias soluta, saepe culpa exercitationem
-      obcaecati corrupti autem harum nihil et dolorem quasi totam voluptatibus doloribus quisquam aspernatur dolorum
-      quibusdam.
+      Nous sommes une agence web de spécialistes basée à Abidjan. À Input Studio, construire un site web est bien plus
+      que simplement installer un logiciel de conception et faire de l'intégration. En effet, notre équipe vous
+      accompagne dans une démarche de planification, de choix technologique, de développement et de maintenance web.
       <br />
       <br />
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste blanditiis alias soluta, saepe culpa exercitationem
-      obcaecati corrupti autem harum nihil et dolorem quasi totam voluptatibus doloribus quisquam aspernatur dolorum
-      quibusdam.
+      Avec le nombre assez considérable de compagnies présentement en ligne, vous ne pouvez pas vous limiter à faire
+      comme tout le monde. C’est la raison pour laquelle notre Agence web de spécialistes travaillons à mettre la
+      technologie à votre service. Ainsi, Cela comprend la transformation de la technologie pour qu'elle corresponde à
+      vos objectifs opérationnels.
     </p>
   </section>
 </template>
