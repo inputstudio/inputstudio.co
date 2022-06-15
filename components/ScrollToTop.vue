@@ -1,7 +1,5 @@
 <template>
-  <button id="scroll-top" type="button">
-    <p>></p>
-  </button>
+  <button id="scroll-top" type="button"></button>
 </template>
 
 <script>
@@ -10,10 +8,12 @@ export default {
     const btnScrollTop = document.getElementById('scroll-top')
 
     window.onscroll = () => {
-      if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-        btnScrollTop.style.display = 'flex'
-      } else {
-        btnScrollTop.style.display = 'none'
+      if (screen.width > 768) {
+        if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+          btnScrollTop.style.display = 'flex'
+        } else {
+          btnScrollTop.style.display = 'none'
+        }
       }
     }
 
@@ -31,8 +31,7 @@ export default {
   border: unset;
   display: none;
   justify-content: center;
-  align-items: center;
-
+  align-content: center;
   color: white;
   background-color: $bg-quaternary;
   position: fixed;
@@ -40,37 +39,22 @@ export default {
   right: 1em;
   cursor: pointer;
   transition: all 0.2s;
-
-  @media screen and (max-width: 768px) {
-    height: 1.5em;
-    width: 1.5em;
-    font-size: 1.2em;
-  }
-
-  @media screen and (min-width: 768px) {
-    height: 1.7em;
-    width: 1.7em;
-    font-size: 1.5em;
-  }
+  height: 1.7em;
+  width: 1.7em;
+  font-size: 1.5em;
 
   &:hover {
     transform: scale(1.1);
   }
 
-  p {
+  &::after {
+    content: '>';
     width: 100%;
     height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     transform: rotate(270deg);
-    position: relative;
-
-    @media screen and (max-width: 768px) {
-      padding-top: .25em;
-    }
-
-    @media screen and (min-width: 768px) {
-      padding-top: .35em;
-    }
-
     animation: fade-to-top 1.5s 0s infinite;
   }
 }
