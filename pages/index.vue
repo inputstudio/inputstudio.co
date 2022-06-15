@@ -10,6 +10,7 @@
 <script>
 export default {
   name: 'IndexPage',
+  scrollToTop: true,
   head() {
     return {
       title: 'Input Studio - Agence de développement web',

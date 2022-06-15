@@ -8,10 +8,10 @@
       </div>
 
       <div class="footer--links">
-        <nuxt-link to="/">Accueil</nuxt-link>
-        <nuxt-link to="/process">Démarche</nuxt-link>
-        <nuxt-link to="/about">À propos</nuxt-link>
-        <nuxt-link to="/contact">Nous contacter</nuxt-link>
+        <nuxt-link to="/">Accueil</nuxt-link><br />
+        <nuxt-link to="/process">Démarche</nuxt-link><br />
+        <nuxt-link to="/about">À propos</nuxt-link><br />
+        <nuxt-link to="/contact">Nous contacter</nuxt-link><br />
       </div>
 
       <div class="footer--socials">
@@ -103,6 +103,8 @@ p {
 
 .footer--links {
   a {
+    display: inline-block;
+    gap: 2em;
     position: relative;
 
     &:after {

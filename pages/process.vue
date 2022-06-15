@@ -9,6 +9,7 @@
 
 <script>
 export default {
+  scrollToTop: true,
     head() {
         return {
             title: "Comment travaillons-nous ? - Input Studio",

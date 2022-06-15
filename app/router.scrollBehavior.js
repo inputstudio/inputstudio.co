@@ -5,4 +5,8 @@ export default function (to, from, savedPosition) {
       behavior: 'smooth',
     }
   }
+
+  if (to.path !== from.path) {
+    window.scrollTo(0, 0)
+  }
 }
