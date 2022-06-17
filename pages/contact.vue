@@ -84,16 +84,21 @@ export default {
     },
     async handleForm() {
       try {
-        const response = await this.$axios.$post('https://hermes.marcaureln.workers.dev', {
+        await this.$axios.$post('https://hermes.marcaureln.workers.dev', {
           name: this.fullname,
           email: this.email,
           subject: this.subject,
           message: this.message,
         })
 
-        alert(response)
+        this.fullname = ''
+        this.email = ''
+        this.message = ''
+        this.subjectIndex = 0
+
+        this.$toast.success('Votre message a été envoyé avec succès, vous aurez bientôt de nos nouvelles.')
       } catch (error) {
-        alert(error)
+        this.$toast.success("Une erreur s'est produite, veuillez réessayer plus tard.")
       }
     },
   },

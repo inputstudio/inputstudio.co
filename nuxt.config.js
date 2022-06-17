@@ -72,6 +72,8 @@ export default {
     'vue-plausible',
     // https://axios.nuxtjs.org/
     '@nuxtjs/axios',
+    // https://github.com/nuxt-community/community-modules/tree/master/packages/toast
+    '@nuxtjs/toast',
   ],
 
   googleFonts: {
@@ -86,6 +88,11 @@ export default {
   plausible: {
     domain: 'inputstudio.co',
     apiHost: 'https://analytics.inputstudio.co',
+  },
+
+  toast: {
+    position: 'bottom-center',
+    duration: 3000,
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
