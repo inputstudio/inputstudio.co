@@ -70,6 +70,8 @@ export default {
     '@nuxtjs/google-fonts',
     // https://github.com/moritzsternemann/vue-plausible
     'vue-plausible',
+    // https://axios.nuxtjs.org/
+    '@nuxtjs/axios',
   ],
 
   googleFonts: {

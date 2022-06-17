@@ -7,12 +7,12 @@
         <label for="options">Vous êtes intéressé par...</label>
         <div id="options">
           <div
-            v-for="(subject, index) in subjects"
+            v-for="(elt, index) in subjects"
             :key="index"
             :class="{ 'option-chip': true, 'option-chip-active': isSelectedSubject(index) }"
             @click="changeSubject(index)"
           >
-            {{ subject }}
+            {{ elt }}
           </div>
         </div>
       </div>
@@ -70,6 +70,11 @@ export default {
       title: 'Nous contacter - Input Studio',
     }
   },
+  computed: {
+    subject() {
+      return this.subjects[this.subjectIndex]
+    },
+  },
   methods: {
     isSelectedSubject(index) {
       return this.subjectIndex === index
@@ -77,7 +82,20 @@ export default {
     changeSubject(index) {
       this.subjectIndex = index
     },
-    handleForm() {},
+    async handleForm() {
+      try {
+        const response = await this.$axios.$post('https://hermes.marcaureln.workers.dev', {
+          name: this.fullname,
+          email: this.email,
+          subject: this.subject,
+          message: this.message,
+        })
+
+        alert(response)
+      } catch (error) {
+        alert(error)
+      }
+    },
   },
 }
 </script>
