@@ -98,6 +98,8 @@ export default {
   @media screen and (min-width: 768px) {
     padding: 6rem;
   }
+  animation: fade-in 1s forwards;
+
 }
 
 .app--header {
