@@ -97,4 +97,9 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},
+
+  // https://nuxtjs.org/docs/features/configuration/#edit-host-and-port
+  server: {
+    host: '0.0.0.0', // default: localhost
+  },
 }
