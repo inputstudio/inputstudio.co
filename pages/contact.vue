@@ -57,10 +57,10 @@ export default {
       subjectIndex: 0,
       subjects: [
         'Site vitrine',
-        'Site commercial',
+        'Boutique en ligne',
         'Application mobile',
         "Refonte d'un site existant",
-        "Réalisation d'une maquette de site",
+        'Maquette (UI/UX)',
         'Autres',
       ],
     }
