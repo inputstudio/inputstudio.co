@@ -1,32 +1,33 @@
 @mixin button($bg: #fff, $color: $bg-primary, $border: 3px solid $bg-primary, $cursor: auto) {
-    padding: 0.5rem 1rem;
-    border: $border;
-    background: $bg;
-    color: $color;
-    font-weight: bold;
-    cursor: $cursor;
-    transition: background 0.2s ease-in;
+  padding: 0.5rem 1rem;
+  border: $border;
+  background: $bg;
+  color: $color;
+  font-weight: bold;
+  cursor: $cursor;
+  transition: background 0.2s ease-in;
 
+  @media screen and (min-width: 768px) {
     &:hover {
-        background: $color;
-        color: $bg;
+      background: $color;
+      color: $bg;
     }
+  }
 }
 
 @mixin fade-in-animation($duration: 800ms, $delay: 1100ms) {
-    opacity: 0;
-    -webkit-animation: fade-in $duration $delay forwards;
-    -moz-animation: fade-in $duration $delay forwards;
-    animation: fade-in $duration $delay forwards;
-
+  opacity: 0;
+  -webkit-animation: fade-in $duration $delay forwards;
+  -moz-animation: fade-in $duration $delay forwards;
+  animation: fade-in $duration $delay forwards;
 }
 
 @mixin div-from-top($from: 1, $to: 2, $duration: 700ms, $delay: 300ms) {
-    @for $i from $from through $to {
-        &:nth-child(#{$i}) {
-            -webkit-animation: fade-from-top $duration $delay * $i forwards;
-            -moz-animation: fade-from-top $duration $delay * $i forwards;
-            animation: fade-from-top $duration $delay * $i forwards;
-        }
+  @for $i from $from through $to {
+    &:nth-child(#{$i}) {
+      -webkit-animation: fade-from-top $duration $delay * $i forwards;
+      -moz-animation: fade-from-top $duration $delay * $i forwards;
+      animation: fade-from-top $duration $delay * $i forwards;
     }
+  }
 }
