@@ -58,10 +58,21 @@ export default {
     '@nuxtjs/eslint-module',
     // https://github.com/nuxt-community/style-resources-module
     '@nuxtjs/style-resources',
+    // https://github.com/nuxt-community/fontawesome-module
+    '@nuxtjs/fontawesome',
   ],
 
   styleResources: {
     scss: ['~/assets/css/*.scss'],
+  },
+
+  fontawesome: {
+    component: 'fa',
+    suffix: false,
+    icons: {
+      solid: ['faArrowDown', 'faPaperPlane', 'faGlobe', 'faMobile', 'faPenRuler'],
+      brands: ['faFacebookF', 'faLinkedin', 'faGithub', 'faInstagram'],
+    },
   },
 
   // Modules: https://go.nuxtjs.dev/config-modules

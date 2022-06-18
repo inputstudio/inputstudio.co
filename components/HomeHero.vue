@@ -3,7 +3,7 @@
     <h1 class="baffle">Nous ne réalisons pas des sites mais des experiences web.</h1>
     <nuxt-link :to="{ path: '/', hash: '#about' }" class="learnmore-btn">
       <span>En savoir plus</span>
-      <ion-icon name="arrow-down" size="large"></ion-icon>
+      <fa class="icon" :icon="['fas', 'arrow-down']" size="lg" />
     </nuxt-link>
   </section>
 </template>
@@ -29,7 +29,6 @@ export default {
 <style lang="scss" scoped>
 .hero--wrapper {
   padding: 0;
-  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -49,22 +48,12 @@ export default {
   -webkit-animation: HeroGradient 16s ease infinite;
   -moz-animation: HeroGradient 16s ease infinite;
   animation: HeroGradient 16s ease infinite;
-
-  ion-icon {
-    position: absolute;
-    z-index: 10000;
-    margin-top: 20px;
-    -webkit-animation: arrow-animation 2s linear infinite;
-    -moz-animation: arrow-animation 2s linear infinite;
-    animation: arrow-animation 2s linear infinite;
-  }
 }
 
 h1 {
   display: block;
   padding: 0 20vw;
   text-align: left;
-  font-family: 'Fjalla One', sans-serif;
   font-size: 4rem;
   text-transform: uppercase;
   margin-bottom: 2rem;
@@ -72,6 +61,7 @@ h1 {
 
   @media screen and (max-width: 768px) {
     font-size: 3rem;
+    padding: 0 10vw;
   }
 }
 
@@ -81,7 +71,13 @@ h1 {
   align-items: center;
 
   span {
-    margin-bottom: 0.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .icon {
+    -webkit-animation: arrow-animation 2s linear infinite;
+    -moz-animation: arrow-animation 2s linear infinite;
+    animation: arrow-animation 2s linear infinite;
   }
 }
 </style>

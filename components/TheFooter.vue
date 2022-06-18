@@ -16,16 +16,16 @@
 
       <div class="footer--socials">
         <a href="https://www.instagram.com/inputstudi0/" target="_blank" rel="noopener noreferrer">
-          <ion-icon name="logo-instagram" size="large"></ion-icon> Instagram
+          <fa class="icon" :icon="['fab', 'instagram']" size="lg" /> Instagram
         </a>
         <a href="https://www.facebook.com/inputstd/" target="_blank" rel="noopener noreferrer">
-          <ion-icon name="logo-facebook" size="large"></ion-icon> Facebook
+          <fa class="icon" :icon="['fab', 'facebook-f']" size="lg" /> Facebook
         </a>
         <a href="https://www.linkedin.com/company/inputstudio" target="_blank" rel="noopener noreferrer">
-          <ion-icon name="logo-linkedin" size="large"></ion-icon> LinkedIn
+          <fa class="icon" :icon="['fab', 'linkedin']" size="lg" /> LinkedIn
         </a>
         <a href="https://github.com/inputstudio" target="_blank" rel="noopener noreferrer">
-          <ion-icon name="logo-github" size="large"></ion-icon> GitHub
+          <fa class="icon" :icon="['fab', 'github']" size="lg" /> GitHub
         </a>
       </div>
     </div>
@@ -65,7 +65,7 @@ h3 {
   color: #ddd;
 }
 
-ion-icon {
+.icon {
   vertical-align: middle;
   margin-right: 0.5rem;
 }

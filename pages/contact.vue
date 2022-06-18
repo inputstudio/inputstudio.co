@@ -41,7 +41,7 @@
       </p>
     </form>
     <div class="icon--div">
-      <ion-icon name="paper-plane"></ion-icon>
+      <fa class="icon" :icon="['fas', 'paper-plane']" />
     </div>
   </div>
 </template>
@@ -185,7 +185,7 @@ export default {
   @media screen and (min-width: 768px) {
     display: block;
 
-    ion-icon {
+    .icon {
       font-size: 20em;
       @include fade-in-animation($duration: 1000ms, $delay: 800ms);
     }

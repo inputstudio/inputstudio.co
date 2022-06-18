@@ -6,7 +6,7 @@
     <div class="socials">
       <div v-for="(social, index) in socials" :key="index">
         <a :href="social.url" target="_blank" rel="noopener noreferrer" :title="social.name">
-          <ion-icon :name="social.icon" size="large"></ion-icon>
+          <fa class="icon" :icon="social.icon" size="2x" />
         </a>
       </div>
     </div>

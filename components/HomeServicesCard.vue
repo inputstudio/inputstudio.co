@@ -2,7 +2,7 @@
   <div class="service--card--wrapper">
     <div class="card--content">
       <div class="card--header">
-        <ion-icon :name="icon"></ion-icon>
+        <fa :icon="['fas', icon]" size="3x" />
         <h2 class="card--title">{{ title }}</h2>
       </div>
       <div class="card--body">
@@ -45,11 +45,14 @@ export default {
         if (entry.isIntersecting) {
           entry.target.classList.add('card-fade-down')
 
-          setTimeout(() => {
-            entry.target.querySelectorAll('.example').forEach((element) => {
-              element.classList.add('example-fade-in')
-            })
-          }, window.screen.width < 768 ? 100 : 2500)
+          setTimeout(
+            () => {
+              entry.target.querySelectorAll('.example').forEach((element) => {
+                element.classList.add('example-fade-in')
+              })
+            },
+            window.screen.width < 768 ? 100 : 2500
+          )
         }
       })
     }
@@ -91,10 +94,6 @@ export default {
 }
 .card--header {
   margin: 0.2em 0;
-
-  ion-icon {
-    font-size: 3em;
-  }
 }
 
 .card--title {

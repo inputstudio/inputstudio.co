@@ -40,14 +40,14 @@ export default {
           examples: ['ecommerce', 'portfolio', 'vitrine', 'front-end', 'back-end', 'refonte'],
         },
         {
-          icon: 'phone-portrait',
+          icon: 'mobile',
           title: 'Mobile',
           description:
             "Nous concevons avec soin des applications iOS et Android avant tout portés sur l'expérience utilisateur (UX). Nous garantissons la création d'applications faciles à utiliser, belles et attrayantes.",
           examples: ['Android', 'iOS', 'Flutter'],
         },
         {
-          icon: 'albums',
+          icon: 'pen-ruler',
           title: 'Maquette',
           description:
             "« Une image vaut milles mots ». Ebauchez ce que vous avez toujours pensé, c'est la première étape dans la réalisation de votre projet.",
