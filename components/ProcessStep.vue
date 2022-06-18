@@ -69,7 +69,6 @@ export default {
   }
 
   h2 {
-    font-family: 'Fjalla One', sans-serif;
     font-size: 1.8em;
   }
 }

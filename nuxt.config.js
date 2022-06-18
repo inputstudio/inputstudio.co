@@ -87,8 +87,8 @@ export default {
 
   googleFonts: {
     families: {
-      'Fjalla+One': true,
-      Roboto: true,
+      'Public+Sans': [400],
+      Inter: [700],
     },
     download: true,
     inject: true,

@@ -13,7 +13,6 @@ export default {}
 
 <style lang="scss" scoped>
 .process-hero--wrapper {
-  font-family: 'Fjalla One', sans-serif;
   height: 90vh;
   display: flex;
   flex-direction: column;
