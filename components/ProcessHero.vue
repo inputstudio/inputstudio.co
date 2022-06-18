@@ -24,12 +24,7 @@ export default {}
   gap: 1.2em;
 
   @media screen and (max-width: 768px) {
-    padding: 6rem 1rem;
     text-align: center;
-  }
-
-  @media screen and (min-width: 768px) {
-    padding: 6rem;
   }
 
   &::before {

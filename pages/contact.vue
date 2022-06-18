@@ -1,5 +1,5 @@
 <template>
-  <div class="wrapper">
+  <section class="wrapper">
     <form class="contact--us" @submit.prevent="handleForm()">
       <h1>Vous avez un projet ?</h1>
 
@@ -43,7 +43,7 @@
     <div class="icon--div">
       <fa class="icon" :icon="['fas', 'paper-plane']" />
     </div>
-  </div>
+  </section>
 </template>
 
 <script>
@@ -107,10 +107,11 @@ export default {
 
 <style lang="scss" scoped>
 .wrapper {
-  padding: 2em;
+  @media screen and (max-width: 768px) {
+    padding: 2em;
+  }
 
   @media screen and (min-width: 768px) {
-    padding: 6em 20vw;
     display: flex;
     justify-content: space-between;
   }

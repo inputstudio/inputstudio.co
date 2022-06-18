@@ -53,12 +53,7 @@ export default {
   display: flex;
 
   @media screen and(max-width: 768px) {
-    padding: 6rem 1rem;
     flex-direction: column;
-  }
-
-  @media screen and(min-width: 768px) {
-    padding: 6rem;
   }
 
   div {
@@ -101,7 +96,6 @@ export default {
 
   span {
     font-weight: bold;
-    text-transform: uppercase;
   }
 }
 

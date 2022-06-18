@@ -27,13 +27,13 @@ export default {
     return {
       steps: [
         {
-          image: "audio-conversation.svg",
-          title: "Compréhension du besoin",
+          image: 'audio-conversation.svg',
+          title: 'Compréhension du besoin',
           description:
             "Nous travaillons à définir et à conceptualiser votre plate-forme. L'expertise de nos maquettistes permet de répondre aux enjeux de votre métier.",
         },
         {
-          image: "mockup.svg",
+          image: 'mockup.svg',
           title: "Maquettage de l'app",
           description:
             "Une fois les workflows, les fonctionnalités et les chemins d'utilisation définis ensemble, nos équipes UX/UI créent avec vous une visualisation haute résolution de toutes les pages de votre outil dans un temps record.",
@@ -51,14 +51,6 @@ export default {
   justify-content: space-between;
   text-align: center;
   gap: 2em;
-
-  @media screen and (max-width: 768px) {
-    padding: 6rem 1rem;
-  }
-
-  @media screen and (min-width: 768px) {
-    padding: 6rem;
-  }
   animation: fade-in 1s forwards;
 }
 

@@ -23,13 +23,8 @@ export default {}
 <style lang="scss" scoped>
 .intro--wrapper {
   width: 100vw;
-  padding: 6rem 2rem;
   display: flex;
   flex-direction: column;
-
-  @media screen and (min-width: 768px) {
-    padding: 6rem 20vw;
-  }
 }
 
 h1 {

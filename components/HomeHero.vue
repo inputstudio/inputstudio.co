@@ -28,7 +28,6 @@ export default {
 
 <style lang="scss" scoped>
 .hero--wrapper {
-  padding: 0;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -47,7 +46,6 @@ export default {
 
 h1 {
   display: block;
-  padding: 0 20vw;
   text-align: left;
   font-size: 4rem;
   text-transform: uppercase;

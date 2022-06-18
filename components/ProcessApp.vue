@@ -37,49 +37,54 @@
         :title="step.title"
         :description="step.description"
       />
-
     </div>
   </section>
 </template>
 
 <script>
 export default {
-  data(){
+  data() {
     return {
-      steps : [
+      steps: [
         {
-          image: "meeting.svg",
-          title: "Prise de contact",
-          description: "Nous sommes à votre entière disposition et venons à votre rencontre pour vous permettre de pleinement expliquer ce que vous avez en tête."
+          image: 'meeting.svg',
+          title: 'Prise de contact',
+          description:
+            'Nous sommes à votre entière disposition et venons à votre rencontre pour vous permettre de pleinement expliquer ce que vous avez en tête.',
         },
         {
-          image: "analysis.svg",
+          image: 'analysis.svg',
           title: "Analyse du projet et dressage du système d'information",
-          description: "Une fois le projet connu, nous analysons tous les composants dans le but d'en ressortir un système d'information fiable, robuste et capable de répondre à toutes vos attentes."
+          description:
+            "Une fois le projet connu, nous analysons tous les composants dans le but d'en ressortir un système d'information fiable, robuste et capable de répondre à toutes vos attentes.",
         },
         {
-          image: "tools-pick.svg",
-          title: "Choix des outils adéquats",
-          description: "Le choix des outils est tout aussi important que l'étape de l'analyse. Une mauvaise selection est susceptible de gacher l'experience utilisateur et reduire les performances de votre application."
+          image: 'tools-pick.svg',
+          title: 'Choix des outils adéquats',
+          description:
+            "Le choix des outils est tout aussi important que l'étape de l'analyse. Une mauvaise selection est susceptible de gacher l'experience utilisateur et reduire les performances de votre application.",
         },
         {
-          image: "programming.svg",
+          image: 'programming.svg',
           title: "Realisation de l'application",
-          description: "Place au code ! Vous pouvez dormir sur vos lauriers. Nous travaillons sans relache, jour et nuit dans le but de réaliser une application qui vous satisfera en un temps record."
+          description:
+            'Place au code ! Vous pouvez dormir sur vos lauriers. Nous travaillons sans relache, jour et nuit dans le but de réaliser une application qui vous satisfera en un temps record.',
         },
         {
-          image: "test.svg",
+          image: 'test.svg',
           title: "Test de l'application",
-          description: "Grâce à une équipe dédiée et des outils automatisés, nous testons la plate-forme selon des scénarios prédéfinis.L'analyse et le débogage permettent une mise en œuvre optimale de votre outil."
+          description:
+            "Grâce à une équipe dédiée et des outils automatisés, nous testons la plate-forme selon des scénarios prédéfinis.L'analyse et le débogage permettent une mise en œuvre optimale de votre outil.",
         },
         {
-          image: "maintenance.svg",
-          title: "Maintenance",
-          description: "Un suivi régulier permet d'anticiper les mises à jour de code et de corriger les éventuels bugs. Nos équipes effectuent des changements qui permettent à vos applications de fonctionner de manière durable et optimale."
+          image: 'maintenance.svg',
+          title: 'Maintenance',
+          description:
+            "Un suivi régulier permet d'anticiper les mises à jour de code et de corriger les éventuels bugs. Nos équipes effectuent des changements qui permettent à vos applications de fonctionner de manière durable et optimale.",
         },
-      ]
+      ],
     }
-  }
+  },
 }
 </script>
 
@@ -90,16 +95,7 @@ export default {
   justify-content: space-between;
   text-align: center;
   gap: 2em;
-
-  @media screen and (max-width: 768px) {
-    padding: 6rem 1rem;
-  }
-
-  @media screen and (min-width: 768px) {
-    padding: 6rem;
-  }
   animation: fade-in 1s forwards;
-
 }
 
 .app--header {
@@ -129,7 +125,7 @@ export default {
   h3 {
     color: rgba(128, 128, 128, 0.701);
     font-weight: 300;
-    font-size: .8em;
+    font-size: 0.8em;
   }
 }
 

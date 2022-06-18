@@ -47,13 +47,8 @@ export default {
 <style lang="scss" scoped>
 .values--wrapper {
   width: 100vw;
-  padding: 6rem 2rem;
   background-color: $primary;
   color: $on-primary;
-
-  @media screen and (min-width: 768px) {
-    padding: 6rem 20vw;
-  }
 }
 
 .values-grid {

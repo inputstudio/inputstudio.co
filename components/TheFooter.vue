@@ -56,7 +56,11 @@ export default {}
 footer {
   background: $background;
   color: $on-background;
-  padding: 10vh 20vw;
+  padding: 10vh 10vw;
+
+  @media screen and (min-width: 768px) {
+    padding: 10vh 20vw;
+  }
 }
 
 h3 {
