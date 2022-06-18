@@ -79,7 +79,7 @@ export default {
   justify-content: space-around;
   transform: scaleY(0);
   transform-origin: 50% top;
-  background: lighten($color: $bg-secondary, $amount: 5);
+  background: darken($color: $primary, $amount: 5);
 
   @media screen and(max-width: 768px) {
     width: 90%;
@@ -112,7 +112,7 @@ export default {
 }
 
 .example {
-  background: lighten($color: $bg-secondary, $amount: 15);
+  background: darken($color: $primary, $amount: 10);
   color: white;
   padding: 0.3em 0.5em;
   text-transform: capitalize;

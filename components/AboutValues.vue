@@ -48,8 +48,8 @@ export default {
 .values--wrapper {
   width: 100vw;
   padding: 6rem 2rem;
-  background-color: $bg-secondary;
-  color: white;
+  background-color: $primary;
+  color: $on-primary;
 
   @media screen and (min-width: 768px) {
     padding: 6rem 20vw;

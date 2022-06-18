@@ -204,7 +204,7 @@ export default {
 }
 
 .option-chip-active {
-  @include button($bg: $bg-primary, $color: #fff, $cursor: pointer);
+  @include button($bg: $background, $color: $on-background, $cursor: pointer);
 }
 
 .mail-alt {

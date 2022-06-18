@@ -85,7 +85,7 @@ export default {
 <style lang="scss" scoped>
 .services--wrapper {
   width: 100%;
-  background-color: $bg-secondary;
+  background-color: $primary;
   color: #fff;
 
   @media screen and(max-width: 768px) {

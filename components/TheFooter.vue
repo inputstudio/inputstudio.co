@@ -54,8 +54,8 @@ export default {}
 
 <style lang="scss" scoped>
 footer {
-  background: $bg-primary;
-  color: #fff;
+  background: $background;
+  color: $on-background;
   padding: 10vh 20vw;
 }
 

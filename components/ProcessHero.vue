@@ -18,7 +18,7 @@ export default {}
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background: linear-gradient(320deg, $bg-primary, $bg-secondary, $bg-tertiary);
+  background: linear-gradient(320deg, $primary, $secondary, $tertiary);
   position: relative;
   isolation: isolate;
   color: white;
@@ -75,8 +75,8 @@ h3 {
 
   @media screen and (max-width: 768px) {
     height: 3.5em;
-    bottom: .8em;
-    right: .5em;
+    bottom: 0.8em;
+    right: 0.5em;
   }
 
   @media screen and (min-width: 768px) {

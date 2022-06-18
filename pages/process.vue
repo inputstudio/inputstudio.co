@@ -56,7 +56,7 @@ export default {
     height: 0;
 
     &:checked + span {
-      background: $bg-secondary;
+      background: $primary;
     }
 
     &:checked + span::before {
@@ -70,7 +70,7 @@ export default {
     right: 0;
     bottom: 0;
     left: 0;
-    background-color: $bg-quaternary;
+    background-color: $secondary;
     border-radius: 0.8em;
 
     &::before {

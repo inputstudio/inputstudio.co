@@ -38,12 +38,7 @@ export default {
   height: 100vh;
   color: #fff;
   overflow: hidden;
-  /* // https://colorhunt.co/palette/293462f24c4cec9b3bf7d716
-  background: linear-gradient(320deg, #293462, #f24c4c, #f7d716); */
-
-  // https://colorhunt.co/palette/2121216d9886d9cab3f6f6f6
-  background: linear-gradient(320deg, $bg-primary, $bg-secondary, $bg-tertiary);
-
+  background: linear-gradient(320deg, $primary, $secondary, $tertiary);
   background-size: 600% 600%;
   -webkit-animation: HeroGradient 16s ease infinite;
   -moz-animation: HeroGradient 16s ease infinite;

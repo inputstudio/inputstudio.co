@@ -1,4 +1,4 @@
-@mixin button($bg: #fff, $color: $bg-primary, $border: 3px solid $bg-primary, $cursor: auto) {
+@mixin button($bg: $on-background, $color: $background, $border: 3px solid $background, $cursor: auto) {
   padding: 0.5rem 1rem;
   border: $border;
   background: $bg;

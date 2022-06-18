@@ -21,8 +21,8 @@ export default {}
 .navbar--wrapper {
   display: flex;
   justify-content: space-between;
-  background: $bg-primary;
-  color: $navbar-text-color;
+  background: $background;
+  color: $on-background;
   padding: 1rem;
   flex-direction: column;
   gap: 1em;
