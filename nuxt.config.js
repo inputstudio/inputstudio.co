@@ -37,8 +37,6 @@ export default {
           y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
         })(window, document, "clarity", "script", "bydeojcf1q");`,
       },
-      { src: 'https://unpkg.com/ionicons@4.5.10-0/dist/ionicons/ionicons.esm.js', type: 'module' },
-      { src: 'https://unpkg.com/ionicons@4.5.10-0/dist/ionicons/ionicons.js', nomodule: '' },
     ],
     __dangerouslyDisableSanitizers: ['script'],
   },
