@@ -10,70 +10,62 @@
       <nuxt-link to="/about" class="navbar--link">À propos</nuxt-link>
       <nuxt-link to="/contact" class="contact-btn">Nous contacter</nuxt-link>
     </div>
-
-    <div class="dropdown--menu">
-      <button class="dropdown-btn" type="button" @click="toggleMenu">
-        <ion-icon v-if="!isMenuActive" name="menu"></ion-icon>
-        <ion-icon v-else name="close"></ion-icon>
-      </button>
-      <div v-if="isMenuActive" class="dropdown--items">
-        <nuxt-link to="/">Accueil</nuxt-link>
-        <nuxt-link to="/process">Démarche</nuxt-link>
-        <nuxt-link to="/about">À propos</nuxt-link>
-        <nuxt-link to="/contact">Nous contacter</nuxt-link>
-      </div>
-    </div>
   </nav>
 </template>
 
 <script>
-export default {
-  data() {
-    return { isMenuActive: false }
-  },
-  mounted() {
-    const closeMenu = function (event) {
-      if (this.isMenuActive && !event.target.matches('.dropdown-btn > *')) {
-        this.isMenuActive = false
-      }
-    }.bind(this)
-
-    document.body.addEventListener('click', closeMenu)
-  },
-  methods: {
-    toggleMenu() {
-      this.isMenuActive = !this.isMenuActive
-    },
-  },
-}
+export default {}
 </script>
 
 <style lang="scss" scoped>
 .navbar--wrapper {
   display: flex;
   justify-content: space-between;
-  align-items: center;
   background: $bg-primary;
   color: $navbar-text-color;
   padding: 1rem;
 
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+    gap: 1em;
+  }
+
   @media screen and (min-width: 768px) {
+    align-items: center;
     padding: 1rem 20vw;
   }
 }
 
+@media screen and (max-width: 768px) {
+  .navbar--brand {
+    display: flex;
+    justify-content: center;
+  }
+}
 .navbar--links {
-  display: none;
+  display: flex;
 
-  a {
-    display: inline-block;
-    margin: 0 1rem;
-    font-size: 1rem;
+  @media screen and (max-width: 768px) {
+    overflow-x: auto;
   }
 
   @media screen and (min-width: 768px) {
-    display: flex;
     align-items: center;
+  }
+
+  a {
+    display: inline-block;
+    font-size: 1rem;
+
+    @media screen and (max-width: 768px) {
+      white-space: nowrap;
+      padding: 0.8rem;
+      margin: auto;
+    }
+
+    @media screen and (min-width: 768px) {
+      margin-inline: 1rem;
+    }
   }
 }
 
@@ -88,71 +80,8 @@ export default {
 }
 
 .contact-btn {
-  @include button($border: unset, $cursor: pointer);
-}
-
-.dropdown--menu {
-  display: block;
-
   @media screen and (min-width: 768px) {
-    display: none;
-  }
-}
-
-.dropdown-btn {
-  display: flex;
-  justify-content: center;
-  background-color: $bg-primary;
-  color: $navbar-text-color;
-  padding: 0.5em;
-  border: unset;
-  position: relative;
-  cursor: pointer;
-  z-index: 1;
-
-  &:hover {
-    &::after {
-      opacity: 1;
-    }
-  }
-
-  &::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    opacity: 0;
-    z-index: -1;
-    transition: opacity 300ms;
-    background-color: lighten($bg-primary, 5);
-  }
-
-  ion-icon {
-    font-size: 2em;
-  }
-}
-
-.dropdown--items {
-  background-color: $bg-primary;
-  display: flex;
-  flex-direction: column;
-  position: absolute;
-  padding: 1rem;
-  left: 0;
-  width: 100%;
-  z-index: 500;
-
-  a {
-    padding: 0.8em 1.5em;
-    text-align: center;
-    transition: background-color 300ms;
-
-    &:hover {
-      background-color: $navbar-text-color;
-      color: $bg-primary;
-    }
+    @include button($border: unset, $cursor: pointer);
   }
 }
 </style>
