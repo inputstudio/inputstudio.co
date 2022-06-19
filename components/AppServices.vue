@@ -48,7 +48,7 @@ export default {
         },
         {
           icon: 'pen-ruler',
-          title: 'Maquette',
+          title: 'UI/UX Design',
           description:
             "« Une image vaut milles mots ». Ebauchez ce que vous avez toujours pensé, c'est la première étape dans la réalisation de votre projet.",
           examples: ['design', "structure d'interface", 'prototype', 'sketch'],

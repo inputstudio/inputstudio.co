@@ -2,7 +2,7 @@
   <div class="process--step">
     <img :src="getImage(image)" :alt="title" />
     <div class="step--body">
-      <h3>{{ title }}</h3>
+      <h3>{{ step + 1 }}.  {{ title }}</h3>
       <p>{{ description }}</p>
     </div>
   </div>
@@ -11,6 +11,10 @@
 <script>
 export default {
   props: {
+    step: {
+      type: Number,
+      required: true,
+    },
     image: {
       type: String,
       required: true,

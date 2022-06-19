@@ -33,6 +33,7 @@
       <ProcessStep
         v-for="(step, index) in steps"
         :key="index"
+        :step="index"
         :image="step.image"
         :title="step.title"
         :description="step.description"
