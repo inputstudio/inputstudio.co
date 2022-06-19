@@ -2,7 +2,7 @@
   <div class="wrapper">
     <ProcessHero />
 
-    <div class="toggle--wrapper">
+    <div id="firstToggle" class="toggle--wrapper">
       <p>Maquettes</p>
 
       <label class="toggle-btn">
@@ -15,6 +15,17 @@
 
     <ProcessMockup v-if="!isChecked" />
     <ProcessApp v-else />
+
+    <div class="toggle--wrapper">
+      <p>Maquettes</p>
+
+      <label id="secondToggle" class="toggle-btn">
+        <input v-model="isChecked" type="checkbox" />
+        <span></span>
+      </label>
+
+      <p>Applications</p>
+    </div>
     <AppContact />
   </div>
 </template>
@@ -28,6 +39,17 @@ export default {
     return {
       title: 'Comment travaillons-nous ? - Input Studio',
     }
+  },
+  mounted() {
+    const firstTogglePosition = document.getElementById('firstToggle').getBoundingClientRect()
+    const secondToggle = document.getElementById('secondToggle')
+
+    secondToggle.addEventListener('click', () => {
+      window.scrollTo({
+        top: firstTogglePosition.top,
+        behavior: 'smooth',
+      })
+    })
   },
 }
 </script>
