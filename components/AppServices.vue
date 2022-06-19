@@ -16,7 +16,7 @@
     </div>
 
     <div class="services--grid">
-      <HomeServicesCard
+      <AppServicesCard
         v-for="(service, index) in services"
         :key="index"
         :icon="service.icon"
