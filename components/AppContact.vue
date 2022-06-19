@@ -1,7 +1,7 @@
 <template>
   <section class="contact--wrapper">
     <h2 class="contact-title">Prêt à tenter une expérience inédite ?</h2>
-    <h3 class="contact-subtitle">Faites nous confiance, faites partie de nos premiers clients !</h3>
+    <h3 class="contact-subtitle">Faites nous confiance, faites partie de nos clients !</h3>
     <nuxt-link to="/contact" class="contact-btn">Contactez nous</nuxt-link>
   </section>
 </template>
@@ -14,10 +14,10 @@ export default {
     const showSection = (entry) => {
       if (entry[0].isIntersecting) {
         // get the div elements in contact wrapper
-        const contactSectionDivs = entry[0].target.querySelectorAll('div')
+        const contactSectionDivs = entry[0].target.querySelectorAll('h2, h3')
 
         // get the contact us button in the same section
-        const contactUsBtn = entry[0].target.querySelector('.contact-us')
+        const contactUsBtn = entry[0].target.querySelector('.contact-btn')
 
         // Add show-contact class in all div to launch the animation
         contactSectionDivs.forEach((div) => {
@@ -53,8 +53,9 @@ export default {
   align-items: center;
   gap: 2.5em;
 
-  div,
-  .contact-us {
+  h2,
+  h3,
+  .contact-btn {
     opacity: 0;
     transform: translateY(-100%);
   }

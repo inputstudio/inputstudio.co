@@ -139,15 +139,13 @@ export default {
 
 .card-fade-down {
   @media screen and(max-width: 768px) {
-    animation: fade-down 600ms 800ms;
-    animation-fill-mode: forwards;
+    animation: fade-down 600ms 800ms forwards;
   }
 
   @media screen and(min-width: 768px) {
     @for $i from 1 through 3 {
       &:nth-child(#{$i}) {
-        animation: fade-down 600ms 800ms * $i;
-        animation-fill-mode: forwards;
+        animation: fade-down 600ms 800ms * $i forwards;
       }
     }
   }
