@@ -35,7 +35,7 @@ export default {
   justify-content: center;
   align-content: center;
   color: white;
-  background-color: $secondary;
+  background-color: $background;
   position: fixed;
   bottom: 1.5em;
   right: 1em;
@@ -44,7 +44,7 @@ export default {
   height: 1.7em;
   width: 1.7em;
   font-size: 1.5em;
-  opacity: 0.8;
+  opacity: 0.5;
 
   &:hover {
     transform: scale(1.1);

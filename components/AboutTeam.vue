@@ -1,6 +1,6 @@
 <template>
   <section id="team" class="team--wrapper animated--section">
-    <h2 class="team--title">Rencontrez l'équipe</h2>
+    <h2 class="team-title">Rencontrez l'équipe</h2>
 
     <div class="team--grid">
       <AboutTeamCard
@@ -87,9 +87,7 @@ export default {
   }
 }
 
-.team--title {
-  font-size: 4rem;
-  text-transform: uppercase;
+.team-title {
   margin-bottom: 4rem;
 }
 

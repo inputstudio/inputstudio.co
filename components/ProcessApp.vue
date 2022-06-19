@@ -1,18 +1,18 @@
 <template>
   <section class="process-app--wrapper">
     <div class="app--header">
-      <h1>Applications</h1>
-      <h3>
+      <h2>Applications</h2>
+      <p>
         Une application (ou encore une appli) est un programme directement utilisé pour réaliser une tâche, ou un
         ensemble de tâches élémentaires d'un même domaine ou formant un tout.
-      </h3>
+      </p>
     </div>
 
     <div class="app--body">
       <div class="apps-grid">
         <div class="web-app">
           <img src="@/assets/img/webapp.svg" alt="Applications web" />
-          <h2>Applications webs</h2>
+          <h3>Applications webs</h3>
           <p>
             Grâce à nos partenariats avec les chefs de file du marché, nous vous fournissons les solutions
             technologiques qui répondent le mieux à vos besoins. Nous atténuons les risques liés à vos investissements
@@ -22,7 +22,7 @@
 
         <div class="mobile-app">
           <img src="@/assets/img/mobile-app.svg" alt="Applications mobile" />
-          <h2>Applications mobile</h2>
+          <h3>Applications mobile</h3>
           <p>
             Grâce à la méthode DevOps, nous livrons plus vite, avec un code de qualité supérieure. Ce processus favorise
             alors l'intégration des développements et la gestion de l'entretien de vos applications.
@@ -103,9 +103,8 @@ export default {
   flex-direction: column;
   gap: 1em;
 
-  h1 {
+  h2 {
     text-transform: uppercase;
-    font-size: 2.5em;
     position: relative;
     padding-bottom: 0.5em;
 
@@ -122,10 +121,9 @@ export default {
     }
   }
 
-  h3 {
+  p {
     color: rgba(128, 128, 128, 0.701);
     font-weight: 300;
-    font-size: 0.8em;
   }
 }
 
@@ -153,6 +151,7 @@ export default {
     }
   }
 }
+
 .app--body {
   margin-block: 1.5em;
   display: flex;

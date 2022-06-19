@@ -1,11 +1,11 @@
 <template>
   <section id="services" class="services--wrapper">
     <div class="services--header">
-      <div class="services--title">
-        <h1>Nos services</h1>
+      <div class="services-title">
+        <h2>Nos services</h2>
       </div>
 
-      <div class="services--desc">
+      <div class="services-desc">
         <p>
           Tous les sites Web sont différents et chaque site requiert une démarche personnalisée pour maximiser son
           potentiel. Qu'il s'agisse d'un travail d'agence de référence spécifique à un projet , Input Studio est
@@ -66,7 +66,7 @@ export default {
 
         // For each div add animated class show-service-header
         serviceHeader.forEach((header) => {
-          header.classList.add('show-service-header')
+          header.classList.add('show-services--header')
         })
       }
     }
@@ -116,7 +116,7 @@ export default {
   }
 }
 
-.services--title {
+.services-title {
   flex-shrink: 0;
   display: flex;
   flex-direction: column;
@@ -126,7 +126,6 @@ export default {
     text-align: center;
     width: 100%;
     margin-bottom: 1.5rem;
-    font-size: 1.2em;
   }
 
   @media screen and(min-width: 768px) {
@@ -135,7 +134,7 @@ export default {
   }
 }
 
-.services--desc {
+.services-desc {
   @media screen and(max-width: 768px) {
     text-align: center;
   }
@@ -146,7 +145,6 @@ export default {
 }
 
 p {
-  font-size: 1.2rem;
   color: #ddd;
   margin-bottom: 1rem;
 }
@@ -168,7 +166,7 @@ p {
   align-items: center;
 }
 
-.show-service-header {
+.show-services--header {
   @include div-from-top;
 }
 </style>

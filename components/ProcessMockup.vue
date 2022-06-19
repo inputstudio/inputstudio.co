@@ -1,11 +1,11 @@
 <template>
   <section class="process-mockup--wrapper">
     <div class="mockup--header">
-      <h1>Maquettes</h1>
-      <h3>
+      <h2>Maquettes</h2>
+      <p>
         Une maquette est une représentation partielle ou complète d'un système ou d'un objet afin d'en tester et valider
         certains aspects et/ou le comportement, ou simplement à des fins ludiques ou informatives.
-      </h3>
+      </p>
       <img src="@/assets/img/mockup-banner.svg" alt="Bannière maquette" />
     </div>
 
@@ -59,9 +59,8 @@ export default {
   flex-direction: column;
   gap: 1em;
 
-  h1 {
+  h2 {
     text-transform: uppercase;
-    font-size: 2.5em;
     position: relative;
     padding-bottom: 0.5em;
 
@@ -78,10 +77,9 @@ export default {
     }
   }
 
-  h3 {
+  p {
     color: rgba(128, 128, 128, 0.701);
     font-weight: 300;
-    font-size: 0.8em;
   }
 
   img {

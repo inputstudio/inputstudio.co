@@ -1,20 +1,20 @@
 <template>
   <footer>
     <div class="footer--main">
-      <div class="footer--logo">
+      <div class="footer-logo">
         <TheLogo />
         <p>Agence de développement web basée à Abidjan, Côte d'Ivoire.</p>
         <a href="mailto:hello@inputstudio.co">hello@inputstudio.co</a>
       </div>
 
-      <div class="footer--links">
+      <div class="footer-links">
         <nuxt-link to="/">Accueil</nuxt-link><br />
         <nuxt-link to="/process">Démarche</nuxt-link><br />
         <nuxt-link to="/about">À propos</nuxt-link><br />
         <nuxt-link to="/contact">Nous contacter</nuxt-link><br />
       </div>
 
-      <div class="footer--socials">
+      <div class="footer-socials">
         <a href="https://www.instagram.com/inputstudi0/" target="_blank" rel="noopener noreferrer">
           <fa class="icon" :icon="['fab', 'instagram']" size="lg" /> Instagram
         </a>
@@ -63,12 +63,6 @@ footer {
   }
 }
 
-h3 {
-  font-size: 3rem;
-  margin-bottom: 1rem;
-  color: #ddd;
-}
-
 .icon {
   vertical-align: middle;
   margin-right: 0.5rem;
@@ -76,7 +70,6 @@ h3 {
 
 p {
   color: #ccc;
-  font-size: 1.2rem;
 }
 
 .footer--main {
@@ -88,9 +81,9 @@ p {
   }
 }
 
-.footer--logo,
-.footer--links,
-.footer--socials {
+.footer-logo,
+.footer-links,
+.footer-socials {
   width: 100%;
   margin: 1em 0;
 
@@ -108,7 +101,7 @@ p {
   }
 }
 
-.footer--links {
+.footer-links {
   a {
     display: inline-block;
     gap: 2em;
@@ -134,13 +127,9 @@ p {
   }
 }
 
-.footer--logo {
+.footer-logo {
   * {
     margin-bottom: 1rem;
-  }
-
-  & > a {
-    font-size: 1em;
   }
 }
 

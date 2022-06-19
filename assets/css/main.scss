@@ -27,6 +27,34 @@ h6 {
   font-weight: 700;
 }
 
+h1 {
+  font-size: 4rem;
+
+  @media screen and (max-width: 768px) {
+    font-size: 3rem;
+  }
+}
+
+h2 {
+  font-size: 3rem;
+
+  @media screen and (max-width: 768px) {
+    font-size: 2rem;
+  }
+}
+
+h3 {
+  font-size: 1.6rem;
+
+  @media screen and (max-width: 768px) {
+    font-size: 1.2rem;
+  }
+}
+
+p {
+  font-size: 1.2rem;
+}
+
 a {
   text-decoration: none;
   color: unset;

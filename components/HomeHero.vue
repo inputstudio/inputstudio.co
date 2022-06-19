@@ -47,15 +47,9 @@ export default {
 h1 {
   display: block;
   text-align: left;
-  font-size: 4rem;
   text-transform: uppercase;
   margin-bottom: 2rem;
   cursor: pointer;
-
-  @media screen and (max-width: 768px) {
-    font-size: 3rem;
-    padding: 0 10vw;
-  }
 }
 
 .learnmore-btn {

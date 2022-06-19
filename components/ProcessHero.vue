@@ -41,24 +41,6 @@ export default {}
 
 h1 {
   text-transform: uppercase;
-
-  @media screen and (max-width: 768px) {
-    font-size: 4em;
-  }
-
-  @media screen and (min-width: 768px) {
-    font-size: 5em;
-  }
-}
-
-h3 {
-  @media screen and (max-width: 768px) {
-    font-size: 1.1em;
-  }
-
-  @media screen and (min-width: 768px) {
-    font-size: 1.6em;
-  }
 }
 
 .scroll-indicator {

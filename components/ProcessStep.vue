@@ -2,10 +2,8 @@
   <div class="process--step">
     <img :src="getImage(image)" :alt="title" />
     <div class="step--body">
-      <h2>{{ title }}</h2>
-      <p>
-        {{ description }}
-      </p>
+      <h3>{{ title }}</h3>
+      <p>{{ description }}</p>
     </div>
   </div>
 </template>
@@ -66,10 +64,6 @@ export default {
     @media screen and (min-width: 768px) {
       width: 30em;
     }
-  }
-
-  h2 {
-    font-size: 1.8em;
   }
 }
 

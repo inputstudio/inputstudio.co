@@ -1,7 +1,7 @@
 <template>
   <div class="team-card--wrapper">
     <img :src="image" :alt="'Photo de ' + name" />
-    <h2 class="name">{{ name }}</h2>
+    <h3 class="name">{{ name }}</h3>
     <p class="bio">{{ bio }}</p>
     <div class="socials">
       <div v-for="(social, index) in socials" :key="index">
@@ -71,7 +71,6 @@ img {
 }
 
 .bio {
-  font-size: 1.2rem;
   color: #333;
   text-align: justify;
   margin-bottom: 1rem;

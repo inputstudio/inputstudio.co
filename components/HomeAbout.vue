@@ -1,7 +1,7 @@
 <template>
   <section id="about" class="about--wrapper">
     <div class="about--title">
-      <h1>Think outside the box</h1>
+      <h2>Think outside the box</h2>
     </div>
 
     <div class="about--content">
@@ -72,7 +72,6 @@ export default {
     text-align: center;
     width: 100%;
     margin-bottom: 1.5rem;
-    font-size: 1.2em;
   }
 
   @media screen and(min-width: 768px) {
@@ -100,7 +99,6 @@ export default {
 }
 
 p {
-  font-size: 1.2rem;
   color: #333;
   margin-bottom: 1rem;
 }

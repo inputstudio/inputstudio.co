@@ -55,7 +55,6 @@ export default {}
 
 .navbar-link {
   display: inline-block;
-  font-size: 1rem;
   transition: border 0.1s ease-in-out;
 
   @media screen and (max-width: 768px) {

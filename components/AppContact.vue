@@ -1,12 +1,8 @@
 <template>
   <section class="contact--wrapper">
-    <div class="contact--title">
-      <h1>Prêt à tenter une expérience inédite ?</h1>
-    </div>
-    <div class="contact--content">
-      <h2>Faites nous confiance, faites partie de nos premiers clients !</h2>
-    </div>
-    <nuxt-link to="/contact" class="contact-us">Contactez nous</nuxt-link>
+    <h2 class="contact-title">Prêt à tenter une expérience inédite ?</h2>
+    <h3 class="contact-subtitle">Faites nous confiance, faites partie de nos premiers clients !</h3>
+    <nuxt-link to="/contact" class="contact-btn">Contactez nous</nuxt-link>
   </section>
 </template>
 
@@ -64,11 +60,7 @@ export default {
   }
 }
 
-.contact--title {
-  font-size: 1.5em;
-}
-
-.contact-us {
+.contact-btn {
   @include button($cursor: pointer);
 
   @media screen and(max-width: 768px) {

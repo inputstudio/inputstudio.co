@@ -32,18 +32,16 @@ export default {
   }
 
   @media screen and (min-width: 768px) {
-    max-width: 250px;
+    max-width: 200px;
   }
 }
 
 h3 {
-  font-size: 2rem;
   text-align: center;
   margin-bottom: 1rem;
 }
 
 p {
   text-align: center;
-  font-size: 1.2rem;
 }
 </style>

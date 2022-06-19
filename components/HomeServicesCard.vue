@@ -1,9 +1,9 @@
 <template>
-  <div class="service--card--wrapper">
+  <div class="service-card--wrapper">
     <div class="card--content">
       <div class="card--header">
-        <fa :icon="['fas', icon]" size="3x" />
-        <h2 class="card--title">{{ title }}</h2>
+        <fa class="icon" :icon="['fas', icon]" />
+        <h3 class="card-title">{{ title }}</h3>
       </div>
       <div class="card--body">
         {{ description }}
@@ -38,7 +38,7 @@ export default {
     },
   },
   mounted() {
-    const serviceCard = document.querySelectorAll('.service--card--wrapper')
+    const serviceCard = document.querySelectorAll('.service-card--wrapper')
 
     const showCard = (entries) => {
       entries.forEach((entry) => {
@@ -71,7 +71,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.service--card--wrapper {
+.service-card--wrapper {
   height: 28em;
   width: 400px;
   display: flex;
@@ -83,6 +83,7 @@ export default {
 
   @media screen and(max-width: 768px) {
     width: 90%;
+    height: auto;
   }
 }
 
@@ -91,17 +92,26 @@ export default {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+
+  @media screen and(max-width: 768px) {
+    margin: 2rem 0;
+  }
 }
+
 .card--header {
   margin: 0.2em 0;
 }
 
-.card--title {
+.card-title {
   margin: 0.8em 0;
 }
 
 .card--body {
   color: #ddd;
+
+  @media screen and(max-width: 768px) {
+    margin-bottom: 1rem;
+  }
 }
 
 .card--footer {
@@ -117,6 +127,14 @@ export default {
   padding: 0.3em 0.5em;
   text-transform: capitalize;
   opacity: 0;
+}
+
+.icon {
+  font-size: 3em;
+
+  @media screen and(max-width: 768px) {
+    font-size: 2em;
+  }
 }
 
 .card-fade-down {
