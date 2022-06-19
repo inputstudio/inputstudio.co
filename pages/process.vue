@@ -82,7 +82,7 @@ export default {
     }
 
     &:checked + span::before {
-      left: 2.7em;
+      left: 68%;
     }
   }
 
@@ -100,7 +100,7 @@ export default {
       display: inline-block;
       position: absolute;
       top: 50%;
-      left: 0.2em;
+      left: 6%;
       width: 1em;
       height: 1em;
       background: white;
