@@ -1,12 +1,20 @@
 :root {
-    overflow-x: hidden;
-    font-family: Roboto, sans-serif;
+  overflow-x: hidden;
+  font-family: 'Public Sans', sans-serif;
 }
 
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+section {
+  padding: 6rem 2rem;
+
+  @media screen and (min-width: 768px) {
+    padding: 6rem 20vw;
+  }
 }
 
 h1,
@@ -14,12 +22,40 @@ h2,
 h3,
 h4,
 h5,
-h6
-{
-  font-family: 'Fjalla One', sans-serif;
+h6 {
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+}
+
+h1 {
+  font-size: 4rem;
+
+  @media screen and (max-width: 768px) {
+    font-size: 3rem;
+  }
+}
+
+h2 {
+  font-size: 3rem;
+
+  @media screen and (max-width: 768px) {
+    font-size: 2rem;
+  }
+}
+
+h3 {
+  font-size: 1.6rem;
+
+  @media screen and (max-width: 768px) {
+    font-size: 1.2rem;
+  }
+}
+
+p {
+  font-size: 1.2rem;
 }
 
 a {
-    text-decoration: none;
-    color: unset;
+  text-decoration: none;
+  color: unset;
 }

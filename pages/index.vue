@@ -2,7 +2,7 @@
   <div class="wrapper">
     <HomeHero />
     <HomeAbout />
-    <HomeServices />
+    <AppServices />
     <AppContact />
   </div>
 </template>

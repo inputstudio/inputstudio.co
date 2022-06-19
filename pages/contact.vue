@@ -1,5 +1,5 @@
 <template>
-  <div class="wrapper">
+  <section class="wrapper">
     <form class="contact--us" @submit.prevent="handleForm()">
       <h1>Vous avez un projet ?</h1>
 
@@ -7,12 +7,12 @@
         <label for="options">Vous êtes intéressé par...</label>
         <div id="options">
           <div
-            v-for="(subject, index) in subjects"
+            v-for="(elt, index) in subjects"
             :key="index"
             :class="{ 'option-chip': true, 'option-chip-active': isSelectedSubject(index) }"
             @click="changeSubject(index)"
           >
-            {{ subject }}
+            {{ elt }}
           </div>
         </div>
       </div>
@@ -41,9 +41,9 @@
       </p>
     </form>
     <div class="icon--div">
-      <ion-icon name="paper-plane"></ion-icon>
+      <fa class="icon" :icon="['fas', 'paper-plane']" />
     </div>
-  </div>
+  </section>
 </template>
 
 <script>
@@ -57,10 +57,10 @@ export default {
       subjectIndex: 0,
       subjects: [
         'Site vitrine',
-        'Site commercial',
+        'Boutique en ligne',
         'Application mobile',
         "Refonte d'un site existant",
-        "Réalisation d'une maquette de site",
+        'Maquette (UI/UX)',
         'Autres',
       ],
     }
@@ -70,6 +70,11 @@ export default {
       title: 'Nous contacter - Input Studio',
     }
   },
+  computed: {
+    subject() {
+      return this.subjects[this.subjectIndex]
+    },
+  },
   methods: {
     isSelectedSubject(index) {
       return this.subjectIndex === index
@@ -77,17 +82,36 @@ export default {
     changeSubject(index) {
       this.subjectIndex = index
     },
-    handleForm() {},
+    async handleForm() {
+      try {
+        await this.$axios.$post('https://hermes.marcaureln.workers.dev', {
+          name: this.fullname,
+          email: this.email,
+          subject: this.subject,
+          message: this.message,
+        })
+
+        this.fullname = ''
+        this.email = ''
+        this.message = ''
+        this.subjectIndex = 0
+
+        this.$toast.success('Votre message a été envoyé avec succès, vous aurez bientôt de nos nouvelles.')
+      } catch (error) {
+        this.$toast.success("Une erreur s'est produite, veuillez réessayer plus tard.")
+      }
+    },
   },
 }
 </script>
 
 <style lang="scss" scoped>
 .wrapper {
-  padding: 2em;
+  @media screen and (max-width: 768px) {
+    padding: 2em;
+  }
 
   @media screen and (min-width: 768px) {
-    padding: 6em 20vw;
     display: flex;
     justify-content: space-between;
   }
@@ -162,7 +186,7 @@ export default {
   @media screen and (min-width: 768px) {
     display: block;
 
-    ion-icon {
+    .icon {
       font-size: 20em;
       @include fade-in-animation($duration: 1000ms, $delay: 800ms);
     }
@@ -181,7 +205,7 @@ export default {
 }
 
 .option-chip-active {
-  @include button($bg: $bg-primary, $color: #fff, $cursor: pointer);
+  @include button($bg: $background, $color: $on-background, $cursor: pointer);
 }
 
 .mail-alt {

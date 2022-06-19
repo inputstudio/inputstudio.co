@@ -1,11 +1,11 @@
 <template>
   <section class="process-mockup--wrapper">
     <div class="mockup--header">
-      <h1>Maquettes</h1>
-      <h3>
+      <h2>UI/UX Design</h2>
+      <p>
         Une maquette est une représentation partielle ou complète d'un système ou d'un objet afin d'en tester et valider
         certains aspects et/ou le comportement, ou simplement à des fins ludiques ou informatives.
-      </h3>
+      </p>
       <img src="@/assets/img/mockup-banner.svg" alt="Bannière maquette" />
     </div>
 
@@ -13,6 +13,7 @@
       <ProcessStep
         v-for="(step, index) in steps"
         :key="index"
+        :step="index"
         :image="step.image"
         :title="step.title"
         :description="step.description"
@@ -27,16 +28,34 @@ export default {
     return {
       steps: [
         {
-          image: "audio-conversation.svg",
-          title: "Compréhension du besoin",
+          image: 'audio-conversation.svg',
+          title: 'Compréhension du besoin',
           description:
-            "Nous travaillons à définir et à conceptualiser votre plate-forme. L'expertise de nos maquettistes permet de répondre aux enjeux de votre métier.",
+            "Nous travaillons à définir et à conceptualiser votre plateforme. L'expertise de nos designers permet de répondre aux enjeux de votre métier.",
         },
         {
-          image: "mockup.svg",
+          image: 'zoning.svg',
+          title: 'Le Zoning',
+          description:
+            "Le zoning est une phase de préparation qui va servir à lister et prioriser les différents éléments qui seront constitutifs de l'interface utilisateurs. C'est une schématisation dans les grandes lignes de ce que sera le projet.",
+        },
+        {
+          image: 'wireframe.svg',
+          title: 'Le Wireframe',
+          description:
+            "C'est une représentation statique de l'interface de votre site web. En dessin, on commence toujours par tracer les traits de base, en UX Design, on commence toujours par construire un wireframe ! Et surtout, on garde une approche “mobile first” en déclinant ses maquettes sur plusieurs devices : en Desktop et en mobile.",
+        },
+        {
+          image: 'prototype.svg',
+          title: 'Le prototype',
+          description:
+            "Le prototype est une représentation dynamique. C'est l'étape qui vous permet de tester votre solution, grâce à un empilement dynamique de vos wireframes. Contrairement aux précédentes étapes qui sont statiques, le prototype est interactif.",
+        },
+        {
+          image: 'mockup.svg',
           title: "Maquettage de l'app",
           description:
-            "Une fois les workflows, les fonctionnalités et les chemins d'utilisation définis ensemble, nos équipes UX/UI créent avec vous une visualisation haute résolution de toutes les pages de votre outil dans un temps record.",
+            "Une fois les workflows, les fonctionnalités et les chemins d'utilisation définis ensemble, nos équipes UX/UI créent une visualisation haute résolution de toutes les pages de votre outil. La maquette donne un aperçu du potentiel rendu final. On peut alors étudier les incohérences graphiques, les éléments perfectibles et ce qu'il manque.",
         },
       ],
     }
@@ -51,14 +70,7 @@ export default {
   justify-content: space-between;
   text-align: center;
   gap: 2em;
-
-  @media screen and (max-width: 768px) {
-    padding: 6rem 1rem;
-  }
-
-  @media screen and (min-width: 768px) {
-    padding: 6rem;
-  }
+  animation: fade-in 1s forwards;
 }
 
 .mockup--header {
@@ -66,9 +78,8 @@ export default {
   flex-direction: column;
   gap: 1em;
 
-  h1 {
+  h2 {
     text-transform: uppercase;
-    font-size: 2.5em;
     position: relative;
     padding-bottom: 0.5em;
 
@@ -85,10 +96,9 @@ export default {
     }
   }
 
-  h3 {
+  p {
     color: rgba(128, 128, 128, 0.701);
     font-weight: 300;
-    font-size: 0.8em;
   }
 
   img {

@@ -1,6 +1,6 @@
 <template>
   <section id="team" class="team--wrapper animated--section">
-    <h2 class="team--title">Rencontrez l'équipe</h2>
+    <h2 class="team-title">Rencontrez l'équipe</h2>
 
     <div class="team--grid">
       <AboutTeamCard
@@ -28,12 +28,12 @@ export default {
             {
               name: 'LinkedIn',
               url: 'https://www.linkedin.com/in/cheick-sinoussou-4478a71bb/',
-              icon: 'logo-linkedin',
+              icon: ['fab', 'linkedin'],
             },
             {
               name: 'Instagram',
               url: 'https://www.instagram.com/nickyofff/',
-              icon: 'logo-instagram',
+              icon: ['fab', 'instagram'],
             },
           ],
         },
@@ -45,12 +45,12 @@ export default {
             {
               name: 'Site web',
               url: 'https://khenrijo.netlify.app',
-              icon: 'globe',
+              icon: ['fas', 'globe'],
             },
             {
               name: 'GitHub',
               url: 'https://github.com/khenrijo21',
-              icon: 'logo-github',
+              icon: ['fab', 'github'],
             },
           ],
         },
@@ -62,12 +62,12 @@ export default {
             {
               name: 'Site web',
               url: 'https://marcaureln.com',
-              icon: 'globe',
+              icon: ['fas', 'globe'],
             },
             {
               name: 'GitHub',
               url: 'https://github.com/marcaureln',
-              icon: 'logo-github',
+              icon: ['fab', 'github'],
             },
           ],
         },
@@ -87,9 +87,7 @@ export default {
   }
 }
 
-.team--title {
-  font-size: 4rem;
-  text-transform: uppercase;
+.team-title {
   margin-bottom: 4rem;
 }
 

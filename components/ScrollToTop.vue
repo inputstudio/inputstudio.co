@@ -19,8 +19,8 @@ export default {
 
     btnScrollTop.addEventListener('click', () => {
       window.scrollTo({
-        top: 0, 
-        behavior: 'smooth'
+        top: 0,
+        behavior: 'smooth',
       })
     })
   },
@@ -35,7 +35,7 @@ export default {
   justify-content: center;
   align-content: center;
   color: white;
-  background-color: $bg-quaternary;
+  background-color: $background;
   position: fixed;
   bottom: 1.5em;
   right: 1em;
@@ -44,6 +44,7 @@ export default {
   height: 1.7em;
   width: 1.7em;
   font-size: 1.5em;
+  opacity: 0.5;
 
   &:hover {
     transform: scale(1.1);

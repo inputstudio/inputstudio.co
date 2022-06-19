@@ -37,8 +37,6 @@ export default {
           y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
         })(window, document, "clarity", "script", "bydeojcf1q");`,
       },
-      { src: 'https://unpkg.com/ionicons@4.5.10-0/dist/ionicons/ionicons.esm.js', type: 'module' },
-      { src: 'https://unpkg.com/ionicons@4.5.10-0/dist/ionicons/ionicons.js', nomodule: '' },
     ],
     __dangerouslyDisableSanitizers: ['script'],
   },
@@ -58,10 +56,21 @@ export default {
     '@nuxtjs/eslint-module',
     // https://github.com/nuxt-community/style-resources-module
     '@nuxtjs/style-resources',
+    // https://github.com/nuxt-community/fontawesome-module
+    '@nuxtjs/fontawesome',
   ],
 
   styleResources: {
     scss: ['~/assets/css/*.scss'],
+  },
+
+  fontawesome: {
+    component: 'fa',
+    suffix: false,
+    icons: {
+      solid: ['faArrowDown', 'faPaperPlane', 'faGlobe', 'faMobile', 'faPenRuler'],
+      brands: ['faFacebookF', 'faLinkedin', 'faGithub', 'faInstagram'],
+    },
   },
 
   // Modules: https://go.nuxtjs.dev/config-modules
@@ -70,12 +79,16 @@ export default {
     '@nuxtjs/google-fonts',
     // https://github.com/moritzsternemann/vue-plausible
     'vue-plausible',
+    // https://axios.nuxtjs.org/
+    '@nuxtjs/axios',
+    // https://github.com/nuxt-community/community-modules/tree/master/packages/toast
+    '@nuxtjs/toast',
   ],
 
   googleFonts: {
     families: {
-      'Fjalla+One': true,
-      Roboto: true,
+      'Public+Sans': [400],
+      Inter: [700],
     },
     download: true,
     inject: true,
@@ -86,6 +99,16 @@ export default {
     apiHost: 'https://analytics.inputstudio.co',
   },
 
+  toast: {
+    position: 'bottom-center',
+    duration: 3000,
+  },
+
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},
+
+  // https://nuxtjs.org/docs/features/configuration/#edit-host-and-port
+  server: {
+    host: '0.0.0.0', // default: localhost
+  },
 }

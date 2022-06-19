@@ -3,6 +3,7 @@
     <AboutIntro />
     <AboutValues />
     <AboutTeam />
+    <AppServices />
     <AppContact />
   </div>
 </template>

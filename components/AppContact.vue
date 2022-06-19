@@ -1,12 +1,8 @@
 <template>
   <section class="contact--wrapper">
-    <div class="contact--title">
-      <h1>Prêt à tenter une expérience inédite ?</h1>
-    </div>
-    <div class="contact--content">
-      <h2>Faites nous confiance, faites partie de nos premiers clients !</h2>
-    </div>
-    <nuxt-link to="/contact" class="contact-us">Contactez nous</nuxt-link>
+    <h2 class="contact-title">Prêt à tenter une expérience inédite ?</h2>
+    <h3 class="contact-subtitle">Faites nous confiance, faites partie de nos clients !</h3>
+    <nuxt-link to="/contact" class="contact-btn">Contactez nous</nuxt-link>
   </section>
 </template>
 
@@ -18,10 +14,10 @@ export default {
     const showSection = (entry) => {
       if (entry[0].isIntersecting) {
         // get the div elements in contact wrapper
-        const contactSectionDivs = entry[0].target.querySelectorAll('div')
+        const contactSectionDivs = entry[0].target.querySelectorAll('h2, h3')
 
         // get the contact us button in the same section
-        const contactUsBtn = entry[0].target.querySelector('.contact-us')
+        const contactUsBtn = entry[0].target.querySelector('.contact-btn')
 
         // Add show-contact class in all div to launch the animation
         contactSectionDivs.forEach((div) => {
@@ -50,7 +46,6 @@ export default {
 <style lang="scss" scoped>
 .contact--wrapper {
   width: 100%;
-  padding: 6rem 2rem;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -58,22 +53,15 @@ export default {
   align-items: center;
   gap: 2.5em;
 
-  div,
-  .contact-us {
+  h2,
+  h3,
+  .contact-btn {
     opacity: 0;
     transform: translateY(-100%);
   }
-
-  @media screen and (min-width: 768px) {
-    padding: 6rem;
-  }
 }
 
-.contact--title {
-  font-size: 1.5em;
-}
-
-.contact-us {
+.contact-btn {
   @include button($cursor: pointer);
 
   @media screen and(max-width: 768px) {
@@ -81,7 +69,7 @@ export default {
   }
 
   @media screen and(min-width: 768px) {
-    width: 15%;
+    width: fit-content;
   }
 }
 

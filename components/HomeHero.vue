@@ -3,7 +3,7 @@
     <h1 class="baffle">Nous ne réalisons pas des sites mais des experiences web.</h1>
     <nuxt-link :to="{ path: '/', hash: '#about' }" class="learnmore-btn">
       <span>En savoir plus</span>
-      <ion-icon name="arrow-down" size="large"></ion-icon>
+      <fa class="icon" :icon="['fas', 'arrow-down']" size="lg" />
     </nuxt-link>
   </section>
 </template>
@@ -28,8 +28,6 @@ export default {
 
 <style lang="scss" scoped>
 .hero--wrapper {
-  padding: 0;
-  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -39,40 +37,19 @@ export default {
   height: 100vh;
   color: #fff;
   overflow: hidden;
-  /* // https://colorhunt.co/palette/293462f24c4cec9b3bf7d716
-  background: linear-gradient(320deg, #293462, #f24c4c, #f7d716); */
-
-  // https://colorhunt.co/palette/2121216d9886d9cab3f6f6f6
-  background: linear-gradient(320deg, $bg-primary, $bg-secondary, $bg-tertiary);
-
+  background: linear-gradient(320deg, $primary, $secondary, $tertiary);
   background-size: 600% 600%;
   -webkit-animation: HeroGradient 16s ease infinite;
   -moz-animation: HeroGradient 16s ease infinite;
   animation: HeroGradient 16s ease infinite;
-
-  ion-icon {
-    position: absolute;
-    z-index: 10000;
-    margin-top: 20px;
-    -webkit-animation: arrow-animation 2s linear infinite;
-    -moz-animation: arrow-animation 2s linear infinite;
-    animation: arrow-animation 2s linear infinite;
-  }
 }
 
 h1 {
   display: block;
-  padding: 0 20vw;
   text-align: left;
-  font-family: 'Fjalla One', sans-serif;
-  font-size: 4rem;
   text-transform: uppercase;
   margin-bottom: 2rem;
   cursor: pointer;
-
-  @media screen and (max-width: 768px) {
-    font-size: 3rem;
-  }
 }
 
 .learnmore-btn {
@@ -81,7 +58,13 @@ h1 {
   align-items: center;
 
   span {
-    margin-bottom: 0.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .icon {
+    -webkit-animation: arrow-animation 2s linear infinite;
+    -moz-animation: arrow-animation 2s linear infinite;
+    animation: arrow-animation 2s linear infinite;
   }
 }
 </style>

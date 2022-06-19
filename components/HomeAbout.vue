@@ -1,7 +1,7 @@
 <template>
   <section id="about" class="about--wrapper">
     <div class="about--title">
-      <h1>Think outside the box</h1>
+      <h2>Think outside the box</h2>
     </div>
 
     <div class="about--content">
@@ -53,12 +53,7 @@ export default {
   display: flex;
 
   @media screen and(max-width: 768px) {
-    padding: 6rem 1rem;
     flex-direction: column;
-  }
-
-  @media screen and(min-width: 768px) {
-    padding: 6rem;
   }
 
   div {
@@ -77,7 +72,6 @@ export default {
     text-align: center;
     width: 100%;
     margin-bottom: 1.5rem;
-    font-size: 1.2em;
   }
 
   @media screen and(min-width: 768px) {
@@ -101,12 +95,10 @@ export default {
 
   span {
     font-weight: bold;
-    text-transform: uppercase;
   }
 }
 
 p {
-  font-size: 1.2rem;
   color: #333;
   margin-bottom: 1rem;
 }

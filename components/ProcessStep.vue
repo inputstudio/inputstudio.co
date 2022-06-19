@@ -2,10 +2,8 @@
   <div class="process--step">
     <img :src="getImage(image)" :alt="title" />
     <div class="step--body">
-      <h2>{{ title }}</h2>
-      <p>
-        {{ description }}
-      </p>
+      <h3>{{ step + 1 }}.  {{ title }}</h3>
+      <p>{{ description }}</p>
     </div>
   </div>
 </template>
@@ -13,6 +11,10 @@
 <script>
 export default {
   props: {
+    step: {
+      type: Number,
+      required: true,
+    },
     image: {
       type: String,
       required: true,
@@ -66,11 +68,6 @@ export default {
     @media screen and (min-width: 768px) {
       width: 30em;
     }
-  }
-
-  h2 {
-    font-family: 'Fjalla One', sans-serif;
-    font-size: 1.8em;
   }
 }
 

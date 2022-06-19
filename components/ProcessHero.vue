@@ -13,24 +13,18 @@ export default {}
 
 <style lang="scss" scoped>
 .process-hero--wrapper {
-  font-family: 'Fjalla One', sans-serif;
   height: 90vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background: linear-gradient(320deg, $bg-primary, $bg-secondary, $bg-tertiary);
+  background: linear-gradient(320deg, $primary, $secondary, $tertiary);
   position: relative;
   isolation: isolate;
   color: white;
   gap: 1.2em;
 
   @media screen and (max-width: 768px) {
-    padding: 6rem 1rem;
     text-align: center;
-  }
-
-  @media screen and (min-width: 768px) {
-    padding: 6rem;
   }
 
   &::before {
@@ -47,24 +41,6 @@ export default {}
 
 h1 {
   text-transform: uppercase;
-
-  @media screen and (max-width: 768px) {
-    font-size: 4em;
-  }
-
-  @media screen and (min-width: 768px) {
-    font-size: 5em;
-  }
-}
-
-h3 {
-  @media screen and (max-width: 768px) {
-    font-size: 1.1em;
-  }
-
-  @media screen and (min-width: 768px) {
-    font-size: 1.6em;
-  }
 }
 
 .scroll-indicator {
@@ -75,8 +51,8 @@ h3 {
 
   @media screen and (max-width: 768px) {
     height: 3.5em;
-    bottom: .8em;
-    right: .5em;
+    bottom: 0.8em;
+    right: 0.5em;
   }
 
   @media screen and (min-width: 768px) {

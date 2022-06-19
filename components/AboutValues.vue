@@ -2,7 +2,7 @@
   <section class="values--wrapper">
     <h2 class="values-title">Nos valeurs</h2>
 
-    <div class="values-grid">
+    <div class="values--grid">
       <AboutValuesCard
         v-for="(value, index) in values"
         :key="index"
@@ -19,14 +19,14 @@ export default {
     return {
       values: [
         {
-          title: 'Goût du défi',
-          description:
-            'Nous sommes toujours à la recherche de nouveaux défis, sortir de notre zone de confort ne nous fait pas peur.',
-        },
-        {
           title: "Priorité à l'utilisateur",
           description:
             "Nous nous efforçons de rendre nos applications intuitives, et pour cela, nous n'hésitons pas à nous affranchir des règles établies.",
+        },
+        {
+          title: 'Goût du défi',
+          description:
+            'Nous sommes toujours à la recherche de nouveaux défis, sortir de notre zone de confort ne nous fait pas peur.',
         },
         {
           title: "À l'écoute",
@@ -47,26 +47,19 @@ export default {
 <style lang="scss" scoped>
 .values--wrapper {
   width: 100vw;
-  padding: 6rem 2rem;
-  background-color: $bg-secondary;
-  color: white;
-
-  @media screen and (min-width: 768px) {
-    padding: 6rem 20vw;
-  }
+  background-color: $primary;
+  color: $on-primary;
 }
 
-.values-grid {
+.values--grid {
   display: flex;
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
-  gap: 3rem;
+  gap: 2rem;
 }
 
 h2 {
-  font-size: 4rem;
-  text-transform: uppercase;
   margin-bottom: 4rem;
 }
 </style>
