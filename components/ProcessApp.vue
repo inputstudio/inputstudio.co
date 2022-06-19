@@ -1,44 +1,22 @@
 <template>
   <section class="process-app--wrapper">
     <div class="app--header">
-      <h2>Applications</h2>
+      <h2>Applications web & mobile</h2>
       <p>
         Une application (ou encore une appli) est un programme directement utilisé pour réaliser une tâche, ou un
         ensemble de tâches élémentaires d'un même domaine ou formant un tout.
       </p>
+      <img src="@/assets/img/apps.svg" alt="Bannière maquette" />
     </div>
 
-    <div class="app--body">
-      <div class="apps-grid">
-        <div class="web-app">
-          <img src="@/assets/img/webapp.svg" alt="Applications web" />
-          <h3>Applications webs</h3>
-          <p>
-            Grâce à nos partenariats avec les chefs de file du marché, nous vous fournissons les solutions
-            technologiques qui répondent le mieux à vos besoins. Nous atténuons les risques liés à vos investissements
-            en TI.
-          </p>
-        </div>
-
-        <div class="mobile-app">
-          <img src="@/assets/img/mobile-app.svg" alt="Applications mobile" />
-          <h3>Applications mobile</h3>
-          <p>
-            Grâce à la méthode DevOps, nous livrons plus vite, avec un code de qualité supérieure. Ce processus favorise
-            alors l'intégration des développements et la gestion de l'entretien de vos applications.
-          </p>
-        </div>
-      </div>
-
-      <ProcessStep
-        v-for="(step, index) in steps"
-        :key="index"
-        :step="index"
-        :image="step.image"
-        :title="step.title"
-        :description="step.description"
-      />
-    </div>
+    <ProcessStep
+      v-for="(step, index) in steps"
+      :key="index"
+      :step="index"
+      :image="step.image"
+      :title="step.title"
+      :description="step.description"
+    />
   </section>
 </template>
 
@@ -126,33 +104,12 @@ export default {
     color: rgba(128, 128, 128, 0.701);
     font-weight: 300;
   }
-}
 
-.apps-grid {
-  display: grid;
-  justify-content: space-around;
-
-  @media screen and (max-width: 768px) {
-    grid-template-columns: 100%;
-    gap: 1.5em;
-  }
-
-  @media screen and (min-width: 768px) {
-    grid-template-columns: 40% 40%;
-  }
-
-  div {
-    display: flex;
-    flex-direction: column;
-    gap: 1em;
-    padding: 1em;
-
-    img {
-      height: 10em;
-    }
+  img {
+    height: 18em;
+    margin-block: 1.5em;
   }
 }
-
 .app--body {
   margin-block: 1.5em;
   display: flex;
