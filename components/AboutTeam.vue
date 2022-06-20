@@ -22,7 +22,7 @@ export default {
       team: [
         {
           name: 'Cheick Sinoussou',
-          bio: "Je suis un designer UX/UI dans la conceptualisation et la création de produits numériques, aidant les entreprises et les organismes à but non lucratif à accroître leur capacité d'impact.",
+          bio: "Je suis un designer UI/UX dans la conceptualisation et la création de produits numériques, aidant les entreprises et les organismes à but non lucratif à accroître leur capacité d'impact.",
           image: 'https://ui-avatars.com/api/?name=C+S&size=256',
           socials: [
             {

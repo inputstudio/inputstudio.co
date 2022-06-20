@@ -8,9 +8,9 @@
       <div class="services-desc">
         <p>
           Tous les sites Web sont différents et chaque site requiert une démarche personnalisée pour maximiser son
-          potentiel. Qu'il s'agisse d'un travail d'agence de référence spécifique à un projet , Input Studio est
-          particulièrement bien placé pour fournir des services stratégiques, axés sur la croissance et les résultats
-          grâce à notre approche de la conception Web centrée sur l'humain, convaincante et évolutive.
+          potentiel. Qu'il s'agisse d'un travail d'agence de référence ou d'un projet spécifique, Input Studio est
+          bien placé pour fournir des services stratégiques, axés sur la croissance et les résultats
+          grâce à notre approche de la conception web évolutive, convaincante et centrée sur l'humain.
         </p>
       </div>
     </div>
@@ -43,7 +43,7 @@ export default {
           icon: 'mobile',
           title: 'Mobile',
           description:
-            "Nous concevons avec soin des applications iOS et Android avant tout portés sur l'expérience utilisateur (UX). Nous garantissons la création d'applications faciles à utiliser, belles et attrayantes.",
+            "Nous concevons avec soin des applications iOS et Android avant tout portées sur l'expérience utilisateur (UX). Nous garantissons la création d'applications faciles à utiliser, belles et attrayantes.",
           examples: ['Android', 'iOS', 'Flutter'],
         },
         {

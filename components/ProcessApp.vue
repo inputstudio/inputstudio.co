@@ -41,13 +41,13 @@ export default {
           image: 'tools-pick.svg',
           title: 'Choix des outils adéquats',
           description:
-            "Le choix des outils est tout aussi important que l'étape de l'analyse. Une mauvaise selection est susceptible de gacher l'experience utilisateur et reduire les performances de votre application.",
+            "Le choix des outils est tout aussi important que l'étape de l'analyse. Une mauvaise sélection est susceptible de gâcher l'experience utilisateur et réduire les performances de votre application.",
         },
         {
           image: 'programming.svg',
-          title: "Realisation de l'application",
+          title: "Réalisation de l'application",
           description:
-            'Place au code ! Vous pouvez dormir sur vos lauriers. Nous travaillons sans relache, jour et nuit dans le but de réaliser une application qui vous satisfera en un temps record.',
+            'Place au code ! Vous pouvez dormir sur vos lauriers. Nous travaillons sans relâche, jour et nuit dans le but de réaliser une application qui vous satisfera en un temps record.',
         },
         {
           image: 'test.svg',

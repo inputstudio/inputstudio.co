@@ -37,13 +37,13 @@ export default {
           image: 'zoning.svg',
           title: 'Le Zoning',
           description:
-            "Le zoning est une phase de préparation qui va servir à lister et prioriser les différents éléments qui seront constitutifs de l'interface utilisateurs. C'est une schématisation dans les grandes lignes de ce que sera le projet.",
+            "Le zoning est une phase de préparation qui va servir à lister et prioriser les différents éléments qui seront constitutifs de l'interface utilisateur. C'est une schématisation dans les grandes lignes de ce que sera le projet.",
         },
         {
           image: 'wireframe.svg',
           title: 'Le Wireframe',
           description:
-            "C'est une représentation statique de l'interface de votre site web. En dessin, on commence toujours par tracer les traits de base, en UX Design, on commence toujours par construire un wireframe ! Et surtout, on garde une approche “mobile first” en déclinant ses maquettes sur plusieurs devices : en Desktop et en mobile.",
+            "C'est une représentation statique de l'interface de votre site web. En dessin, on commence toujours par tracer les traits de base, en UX Design, on commence toujours par construire un wireframe ! Et surtout, on garde une approche “mobile first” en déclinant ses maquettes sur plusieurs appareils : en desktop et en mobile.",
         },
         {
           image: 'prototype.svg',
