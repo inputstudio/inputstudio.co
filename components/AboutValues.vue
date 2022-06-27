@@ -53,7 +53,6 @@ export default {
 
 .values--grid {
   display: flex;
-  align-items: center;
   justify-content: center;
   flex-wrap: wrap;
   gap: 6rem;
@@ -61,5 +60,6 @@ export default {
 
 h2 {
   margin-bottom: 4rem;
+  text-align: center;
 }
 </style>

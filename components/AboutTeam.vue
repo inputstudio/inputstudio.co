@@ -89,6 +89,7 @@ export default {
 
 .team-title {
   margin-bottom: 4rem;
+  text-align: center;
 }
 
 .team--grid {
