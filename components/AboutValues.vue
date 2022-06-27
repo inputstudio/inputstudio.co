@@ -36,7 +36,7 @@ export default {
         {
           title: 'Apprentissage permanent',
           description:
-            'Le web évolue constamment, raison pour laquelle nous observons les tendances et les avancées technologiques afin de créer des applications modernes pour vos utilisateurs.',
+            'Nous nous évertuons à développer des applications modernes pour nos clients grâce à une analyse constante des nouvelles tendances.',
         },
       ],
     }
