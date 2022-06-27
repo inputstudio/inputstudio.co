@@ -1,23 +1,19 @@
 <template>
   <section id="about" class="about--wrapper">
     <div class="about--title">
-      <h2>Think outside the box</h2>
+      <h2>Think outside the box*</h2>
     </div>
 
     <div class="about--content">
       <p>
-        Ce qui était à la base une passion, nous en avons fait notre métier. Chaque jour, nous apprenons pour être à la
-        pointe des nouvelles technologies afin de répondre au mieux à vos besoins.
+        <em>Input Studio</em> est une agence web créative qui s'adapte vos besoins grâce à notre approche agile des
+        projets. Nous veillons chaque jour à être à la pointe de la technologie pour délivrer des applications modernes
+        à nos clients. Input Studio est là pour vous aider à réaliser les projets auxquels vous avez toujours pensé.
       </p>
-      <p>
-        Nous sommes là pour vous aider à réaliser les projets que vous avez toujours pensé en mettant à votre
-        disposition notre expertise et notre savoir-faire.
-      </p>
-      <p>
-        <span>Input Studio</span> est avant tout une agence web qui s'adapte aux besoins du client et avec notre
-        approche des projets unique, nous saurons mettre en oeuvre un puissant outil repondant à toutes vos attentes et
-        même plus.
-      </p>
+    </div>
+
+    <div class="about--footer">
+      <p>*Think outside the box = Pensez autrement</p>
     </div>
   </section>
 </template>
@@ -50,11 +46,6 @@ export default {
 .about--wrapper {
   width: 100%;
   margin: auto;
-  display: flex;
-
-  @media screen and(max-width: 768px) {
-    flex-direction: column;
-  }
 
   div {
     opacity: 0;
@@ -63,39 +54,25 @@ export default {
 }
 
 .about--title {
-  flex-shrink: 0;
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-
-  @media screen and(max-width: 768px) {
-    text-align: center;
-    width: 100%;
-    margin-bottom: 1.5rem;
-  }
-
-  @media screen and(min-width: 768px) {
-    width: 40%;
-    padding-left: 4.5em;
-    padding-right: 1rem;
-  }
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 1.5rem;
 }
 
 .about--content {
-  @media screen and(max-width: 768px) {
-    text-align: center;
-    padding-left: unset;
-  }
+  text-align: center;
 
-  @media screen and(min-width: 768px) {
-    text-align: justify;
-    padding-left: 1rem;
-    padding-right: 4.5em;
-  }
-
-  span {
+  em {
+    font-style: normal;
     font-weight: bold;
   }
+}
+
+.about--footer {
+  margin-top: 1.5rem;
+  font-size: 0.9rem;
+  text-align: center;
 }
 
 p {
