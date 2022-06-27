@@ -200,12 +200,12 @@ export default {
 }
 
 .option-chip {
-  @include button($border: solid, $cursor: pointer);
+  @include button($border: solid, $cursor: pointer, $enable-hover: false);
   width: fit-content;
 }
 
 .option-chip-active {
-  @include button($bg: $background, $color: $on-background, $cursor: pointer);
+  @include button($bg: $background, $color: $on-background, $cursor: pointer, $enable-hover: false);
 }
 
 .mail-alt {

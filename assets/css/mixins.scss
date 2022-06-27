@@ -1,4 +1,4 @@
-@mixin button($bg: $on-background, $color: $background, $border: 3px solid $background, $cursor: auto) {
+@mixin button($bg: $on-background, $color: $background, $border: 3px solid $background, $cursor: auto, $enable-hover: true) {
   padding: 0.5rem 1rem;
   border: $border;
   background: $bg;
@@ -8,10 +8,12 @@
   transition: background 0.2s ease-in;
 
   @media screen and (min-width: 768px) {
+    @if $enable-hover {
     &:hover {
       background: $color;
       color: $bg;
     }
+  }
   }
 }
 
