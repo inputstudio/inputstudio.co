@@ -71,7 +71,7 @@ export default {
 }
 
 .about--footer {
-  margin-top: 1.5rem;
+  padding-top: 1.5rem;
   font-size: 0.9rem;
   text-align: center;
 }
