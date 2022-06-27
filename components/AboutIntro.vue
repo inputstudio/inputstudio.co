@@ -10,8 +10,8 @@
       <br />
       Avec le nombre assez considérable de compagnies présentement en ligne, vous ne pouvez pas vous limiter à faire
       comme tout le monde. C'est la raison pour laquelle notre agence web de spécialistes travaille à mettre la
-      technologie à votre service. Cela comprend la transformation de la technologie pour qu'elle corresponde à
-      vos objectifs opérationnels.
+      technologie à votre service. Cela comprend la transformation de la technologie pour qu'elle corresponde à vos
+      objectifs opérationnels.
     </p>
   </section>
 </template>
@@ -43,6 +43,7 @@ p {
   @media screen and (min-width: 768px) {
     align-self: flex-end;
     font-size: 1.5rem;
+    line-height: 2rem;
     max-width: 50vw;
   }
 }

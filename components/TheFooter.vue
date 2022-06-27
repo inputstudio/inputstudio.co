@@ -138,6 +138,7 @@ p {
   text-align: center;
 
   p {
+    line-height: 1.2rem;
     font-size: 0.9em;
   }
 }

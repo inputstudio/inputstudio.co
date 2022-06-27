@@ -1,18 +1,7 @@
 <template>
   <section id="services" class="services--wrapper">
     <div class="services--header">
-      <div class="services-title">
-        <h2>Nos services</h2>
-      </div>
-
-      <div class="services-desc">
-        <p>
-          Tous les sites Web sont différents et chaque site requiert une démarche personnalisée pour maximiser son
-          potentiel. Qu'il s'agisse d'un travail d'agence de référence ou d'un projet spécifique, Input Studio est bien
-          placé pour fournir des services stratégiques, axés sur la croissance et les résultats grâce à notre approche
-          de la conception web évolutive, convaincante et centrée sur l'humain.
-        </p>
-      </div>
+      <h2>Nos services</h2>
     </div>
 
     <div class="services--grid">
@@ -99,11 +88,11 @@ export default {
 
 .services--header {
   display: flex;
+  justify-content: center;
   margin-bottom: 3rem;
 
   @media screen and(max-width: 768px) {
     flex-direction: column;
-    text-align: center;
   }
 
   @media screen and(min-width: 768px) {
@@ -114,39 +103,6 @@ export default {
     opacity: 0;
     transform: translateY(-100%);
   }
-}
-
-.services-title {
-  flex-shrink: 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-
-  @media screen and(max-width: 768px) {
-    text-align: center;
-    width: 100%;
-    margin-bottom: 1.5rem;
-  }
-
-  @media screen and(min-width: 768px) {
-    width: 40%;
-    padding-right: 1rem;
-  }
-}
-
-.services-desc {
-  @media screen and(max-width: 768px) {
-    text-align: center;
-  }
-
-  @media screen and(min-width: 768px) {
-    text-align: justify;
-  }
-}
-
-p {
-  color: #ddd;
-  margin-bottom: 1rem;
 }
 
 .services--grid {

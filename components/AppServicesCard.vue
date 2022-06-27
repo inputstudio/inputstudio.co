@@ -6,7 +6,7 @@
         <h3 class="card-title">{{ title }}</h3>
       </div>
       <div class="card--body">
-        {{ description }}
+        <p>{{ description }}</p>
       </div>
     </div>
     <div class="card--footer">
