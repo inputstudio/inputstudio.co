@@ -56,6 +56,7 @@ export default {
 .about--title {
   display: flex;
   justify-content: center;
+  text-align: center;
   width: 100%;
   margin-bottom: 1.5rem;
 }
