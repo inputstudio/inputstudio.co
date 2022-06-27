@@ -8,9 +8,9 @@
       <div class="services-desc">
         <p>
           Tous les sites Web sont différents et chaque site requiert une démarche personnalisée pour maximiser son
-          potentiel. Qu'il s'agisse d'un travail d'agence de référence ou d'un projet spécifique, Input Studio est
-          bien placé pour fournir des services stratégiques, axés sur la croissance et les résultats
-          grâce à notre approche de la conception web évolutive, convaincante et centrée sur l'humain.
+          potentiel. Qu'il s'agisse d'un travail d'agence de référence ou d'un projet spécifique, Input Studio est bien
+          placé pour fournir des services stratégiques, axés sur la croissance et les résultats grâce à notre approche
+          de la conception web évolutive, convaincante et centrée sur l'humain.
         </p>
       </div>
     </div>
@@ -37,21 +37,21 @@ export default {
           title: 'Web',
           description:
             "Une conception web élégante et réactive qui parle le langage de votre marque et atteint vos objectifs. Des pages d'accueil aux applications web, nous faisons tout !",
-          examples: ['ecommerce', 'portfolio', 'vitrine', 'front-end', 'back-end', 'refonte'],
+          examples: ['Boutique en ligne', 'Entreprise', 'Portfolio', 'Lancement produit', 'Blog', 'Refonte'],
         },
         {
           icon: 'mobile',
           title: 'Mobile',
           description:
             "Nous concevons avec soin des applications iOS et Android avant tout portées sur l'expérience utilisateur (UX). Nous garantissons la création d'applications faciles à utiliser, belles et attrayantes.",
-          examples: ['Android', 'iOS', 'Flutter'],
+          examples: ['Android', 'iOS'],
         },
         {
           icon: 'pen-ruler',
           title: 'UI/UX Design',
           description:
             "« Une image vaut milles mots ». Ebauchez ce que vous avez toujours pensé, c'est la première étape dans la réalisation de votre projet.",
-          examples: ['design', "structure d'interface", 'prototype', 'sketch'],
+          examples: ["Conception d'interface", 'Maquette', 'Prototypage'],
         },
       ],
     }

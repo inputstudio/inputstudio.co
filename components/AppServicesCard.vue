@@ -125,7 +125,6 @@ export default {
   background: darken($color: $primary, $amount: 10);
   color: white;
   padding: 0.3em 0.5em;
-  text-transform: capitalize;
   opacity: 0;
 }
 
