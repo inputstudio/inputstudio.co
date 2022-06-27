@@ -22,7 +22,7 @@ export default {
       team: [
         {
           name: 'Cheick Sinoussou',
-          bio: "Je suis un designer UI/UX dans la conceptualisation et la création de produits numériques, aidant les entreprises et les organismes à but non lucratif à accroître leur capacité d'impact.",
+          bio: 'UI/UX Designer, spécialisé dans la conceptualisation et la création de produits numériques.',
           image: 'https://ui-avatars.com/api/?name=C+S&size=256',
           socials: [
             {
@@ -56,7 +56,7 @@ export default {
         },
         {
           name: "Alex N'Guessan",
-          bio: 'Développeur fullstack Flutter, Node.js et Vue.js. Passionné de web design minimaliste. Amateur de café et grand fan de foot.',
+          bio: 'Développeur fullstack Flutter, Node.js et Vue.js. Passionné de web design minimaliste. Amateur de café.',
           image: 'https://ui-avatars.com/api/?name=A+N&size=256',
           socials: [
             {
