@@ -72,8 +72,11 @@ export default {
 
 .about--footer {
   padding-top: 1.5rem;
-  font-size: 0.9rem;
-  text-align: center;
+
+  p {
+    text-align: center;
+    font-size: 0.9rem;
+  }
 }
 
 p {
