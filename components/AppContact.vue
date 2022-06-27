@@ -2,7 +2,7 @@
   <section class="contact--wrapper">
     <h2 class="contact-title">Prêt à tenter une expérience inédite ?</h2>
     <h3 class="contact-subtitle">Faites nous confiance, faites partie de nos clients !</h3>
-    <nuxt-link to="/contact" class="contact-btn">Contactez nous</nuxt-link>
+    <nuxt-link to="/contact" class="contact-btn">Contactez-nous</nuxt-link>
   </section>
 </template>
 
