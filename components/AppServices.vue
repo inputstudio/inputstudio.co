@@ -45,30 +45,6 @@ export default {
       ],
     }
   },
-  mounted() {
-    const servicesWrapper = document.querySelector('.services--wrapper')
-
-    const showSection = (entry) => {
-      if (entry[0].isIntersecting) {
-        // Select all div in services section header
-        const serviceHeader = entry[0].target.querySelector('.services--header').querySelectorAll('div')
-
-        // For each div add animated class show-service-header
-        serviceHeader.forEach((header) => {
-          header.classList.add('show-services--header')
-        })
-      }
-    }
-
-    const options = {
-      rootMargin: '0px',
-      threshold: 0.2,
-    }
-
-    const observer = new IntersectionObserver(showSection, options)
-
-    observer.observe(servicesWrapper)
-  },
 }
 </script>
 <style lang="scss" scoped>
@@ -120,9 +96,5 @@ export default {
   overflow: auto;
   justify-content: center;
   align-items: center;
-}
-
-.show-services--header {
-  @include div-from-top;
 }
 </style>

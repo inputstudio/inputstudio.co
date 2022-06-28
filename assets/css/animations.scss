@@ -1,69 +1,81 @@
 // Hero gradient animation (https: //www.gradient-animator.com/)
 @keyframes HeroGradient {
-    0% {
-        background-position: 0% 15%;
-    }
+  0% {
+    background-position: 0% 15%;
+  }
 
-    50% {
-        background-position: 100% 86%;
-    }
+  50% {
+    background-position: 100% 86%;
+  }
 
-    100% {
-        background-position: 0% 15%;
-    }
+  100% {
+    background-position: 0% 15%;
+  }
 }
 
 // Fade-down animation
 @keyframes fade-down {
-    from {
-        transform: scaleY(0);
-    }
+  from {
+    transform: scaleY(0);
+  }
 
-    to {
-        transform: scaleY(1);
-    }
+  to {
+    transform: scaleY(1);
+  }
 }
 
 // Fade-in animation
 @keyframes fade-in {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 // Fade-from-top animation
 @keyframes fade-from-top {
-    from {
-        opacity: 0;
-        transform: translateY(-100%);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+  from {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+// Fade-from-top animation
+@keyframes fade-from-bottom {
+  from {
+    opacity: 0;
+    transform: translateY(200%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 // Arrow icon animation
 @keyframes arrow-animation {
-    0%,
-    100% {
-        transform: translateY(2px);
-    }
-    50% {
-        transform: translateY(-2px);
-    }
+  0%,
+  100% {
+    transform: translateY(2px);
+  }
+  50% {
+    transform: translateY(-2px);
+  }
 }
 
 // Contact page from-left animation
 @keyframes from-left {
-    from {
-        transform: translateX(-100%);
-    }
+  from {
+    transform: translateX(-100%);
+  }
 
-    to {
-        transform: translateX(0%);
-    }
+  to {
+    transform: translateX(0%);
+  }
 }

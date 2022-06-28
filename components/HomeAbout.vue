@@ -49,7 +49,7 @@ export default {
 
   div {
     opacity: 0;
-    transform: translateY(-100%);
+    transform: translateY(200%);
   }
 }
 
@@ -85,6 +85,6 @@ p {
 }
 
 .show-about {
-  @include div-from-top;
+  @include div-from-bottom;
 }
 </style>

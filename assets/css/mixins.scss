@@ -33,3 +33,13 @@
     }
   }
 }
+
+@mixin div-from-bottom($from: 1, $to: 3, $duration: 700ms, $delay: 100ms) {
+  @for $i from $from through $to {
+    &:nth-child(#{$i}) {
+      -webkit-animation: fade-from-bottom $duration $delay * $i forwards;
+      -moz-animation: fade-from-bottom $duration $delay * $i forwards;
+      animation: fade-from-bottom $duration $delay * $i forwards;
+    }
+  }
+}
