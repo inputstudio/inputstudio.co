@@ -55,7 +55,7 @@ export default {
   }
 
   @media screen and (min-width: 768px) {
-    max-width: 200px;
+    max-width: 300px;
   }
 }
 .card-fade-down {
