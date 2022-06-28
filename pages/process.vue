@@ -2,10 +2,10 @@
   <div class="wrapper">
     <ProcessHero />
 
-    <div id="firstToggle" class="toggle--wrapper">
+    <div id="toggle--wrapper">
       <p>Maquettes</p>
 
-      <label class="toggle-btn">
+      <label id="toggle-btn">
         <input v-model="isChecked" type="checkbox" />
         <span></span>
       </label>
@@ -15,17 +15,6 @@
 
     <ProcessMockup v-if="!isChecked" />
     <ProcessApp v-else />
-
-    <div class="toggle--wrapper">
-      <p>Maquettes</p>
-
-      <label id="secondToggle" class="toggle-btn">
-        <input v-model="isChecked" type="checkbox" />
-        <span></span>
-      </label>
-
-      <p>Applications</p>
-    </div>
     <AppContact />
   </div>
 </template>
@@ -41,12 +30,23 @@ export default {
     }
   },
   mounted() {
-    const firstTogglePosition = document.getElementById('firstToggle').getBoundingClientRect()
-    const secondToggle = document.getElementById('secondToggle')
+    const toggleWrapper = document.getElementById('toggle--wrapper')
 
-    secondToggle.addEventListener('click', () => {
+    const toggleBtn = document.getElementById('toggle-btn')
+
+    const toggleWrapperPosition = toggleWrapper.offsetTop
+
+    window.addEventListener('scroll', () => {
+      if (window.scrollY >= toggleWrapperPosition) {
+        toggleWrapper.classList.add('sticky')
+      } else {
+        toggleWrapper.classList.remove('sticky')
+      }
+    })
+
+    toggleBtn.addEventListener('click', () => {
       window.scrollTo({
-        top: firstTogglePosition.top,
+        top: toggleWrapperPosition - 10,
         behavior: 'smooth',
       })
     })
@@ -55,7 +55,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.toggle--wrapper {
+#toggle--wrapper {
   width: 100%;
   display: flex;
   justify-content: center;
@@ -63,7 +63,8 @@ export default {
   padding: 2em;
   gap: 2em;
 }
-.toggle-btn {
+
+#toggle-btn {
   position: relative;
   display: inline-block;
   width: 4em;
@@ -109,5 +110,11 @@ export default {
       transition: all 0.5s;
     }
   }
+}
+.sticky {
+  z-index: 200;
+  background-color: whitesmoke;
+  position: fixed;
+  top: 0;
 }
 </style>
