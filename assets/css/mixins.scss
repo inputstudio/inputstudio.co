@@ -24,7 +24,7 @@
   animation: fade-in $duration $delay forwards;
 }
 
-@mixin div-from-top($from: 1, $to: 3, $duration: 700ms, $delay: 300ms) {
+@mixin div-from-top($from: 1, $to: 3, $duration: 700ms, $delay: 100ms) {
   @for $i from $from through $to {
     &:nth-child(#{$i}) {
       -webkit-animation: fade-from-top $duration $delay * $i forwards;

@@ -74,6 +74,6 @@ export default {
 }
 
 .show-contact {
-  @include div-from-top($to: 3, $delay: 500ms);
+  @include div-from-top($to: 3, $delay: 300ms);
 }
 </style>

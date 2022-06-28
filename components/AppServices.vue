@@ -25,14 +25,14 @@ export default {
           icon: 'globe',
           title: 'Web',
           description:
-            "Une conception web élégante et réactive qui parle le langage de votre marque et atteint vos objectifs. Des pages d'accueil aux applications web, nous faisons tout !",
+            "Une conception web élégante et réactive qui parle le langage de votre marque et atteint vos objectifs.",
           examples: ['Boutique en ligne', 'Entreprise', 'Portfolio', 'Lancement produit', 'Blog', 'Refonte'],
         },
         {
           icon: 'mobile',
           title: 'Mobile',
           description:
-            "Nous concevons avec soin des applications iOS et Android avant tout portées sur l'expérience utilisateur (UX). Nous garantissons la création d'applications faciles à utiliser, belles et attrayantes.",
+            "Nous concevons avec soin des applications iOS et Android avant tout portées sur l'expérience utilisateur (UX).",
           examples: ['Android', 'iOS'],
         },
         {

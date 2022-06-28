@@ -51,7 +51,7 @@ export default {
                 element.classList.add('example-fade-in')
               })
             },
-            window.screen.width < 768 ? 100 : 2500
+            window.screen.width < 768 ? 100 : 2000
           )
         }
       })
@@ -138,13 +138,13 @@ export default {
 
 .card-fade-down {
   @media screen and(max-width: 768px) {
-    animation: fade-down 600ms 800ms forwards;
+    animation: fade-down 600ms 500ms forwards;
   }
 
   @media screen and(min-width: 768px) {
     @for $i from 1 through 3 {
       &:nth-child(#{$i}) {
-        animation: fade-down 600ms 800ms * $i forwards;
+        animation: fade-down 600ms 500ms * $i forwards;
       }
     }
   }
@@ -153,7 +153,7 @@ export default {
 .example-fade-in {
   @for $i from 1 through 6 {
     &:nth-child(#{$i}) {
-      animation: fade-in 300ms 0.5s * $i;
+      animation: fade-in 300ms 600ms * $i;
       animation-fill-mode: forwards;
     }
   }
