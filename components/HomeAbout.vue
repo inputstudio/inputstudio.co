@@ -13,7 +13,7 @@
     </div>
 
     <div class="about--footer">
-      <p>*Think outside the box = Pensez autrement</p>
+      <p>*Think outside the box = Penser autrement</p>
     </div>
   </section>
 </template>
