@@ -46,7 +46,11 @@ h1 {
 
 .scroll-indicator {
   position: absolute;
-  bottom: 2em;
+  bottom: 1em;
   right: calc(50% - (2.3em / 2));
+
+  @media screen and (min-width: 768px) {
+    bottom: 2em;
+  }
 }
 </style>
