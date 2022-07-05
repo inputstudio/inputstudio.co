@@ -55,20 +55,38 @@ export default {}
 
 .navbar-link {
   display: inline-block;
+  padding-bottom: 5px;
+  position: relative;
   transition: border 0.1s ease-in-out;
+
+  &:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: white;
+    transform-origin: bottom right;
+    transition: transform 0.4s ease-out;
+  }
+
+  &:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
 
   @media screen and (max-width: 768px) {
     white-space: nowrap;
     padding: 0.5rem;
     margin: auto;
+
+    // TODO: Disable hover effect on mobile
   }
 
   @media screen and (min-width: 768px) {
     margin-inline: 1rem;
-
-    &:hover {
-      border-bottom: 3px solid #fff;
-    }
   }
 }
 

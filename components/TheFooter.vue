@@ -106,13 +106,14 @@ p {
     display: inline-block;
     gap: 2em;
     position: relative;
+    padding-bottom: 5px;
 
     &:after {
       content: '';
       position: absolute;
       width: 100%;
       transform: scaleX(0);
-      height: 1px;
+      height: 2px;
       bottom: 0;
       left: 0;
       background-color: white;
