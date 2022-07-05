@@ -1,10 +1,8 @@
 <template>
   <section class="hero--wrapper">
     <h1 class="baffle">Nous ne réalisons pas des sites mais des experiences web.</h1>
-    <nuxt-link :to="{ path: '/', hash: '#about' }" class="learnmore-btn">
-      <span>En savoir plus</span>
-      <fa class="icon" :icon="['fas', 'arrow-down']" size="lg" />
-    </nuxt-link>
+
+    <AppScrollDown class="scroll-indicator" />
   </section>
 </template>
 
@@ -34,7 +32,7 @@ export default {
   flex-direction: column;
   text-align: center;
   width: 100%;
-  height: 100vh;
+  height: 90vh;
   color: #fff;
   overflow: hidden;
   background: linear-gradient(320deg, $primary, $secondary, $tertiary);
@@ -42,6 +40,10 @@ export default {
   -webkit-animation: HeroGradient 16s ease infinite;
   -moz-animation: HeroGradient 16s ease infinite;
   animation: HeroGradient 16s ease infinite;
+
+  @media screen and (max-width: 768px) {
+    height: 80vh;
+  }
 }
 
 h1 {
@@ -52,19 +54,9 @@ h1 {
   cursor: pointer;
 }
 
-.learnmore-btn {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
-  span {
-    margin-bottom: 1rem;
-  }
-
-  .icon {
-    -webkit-animation: arrow-animation 2s linear infinite;
-    -moz-animation: arrow-animation 2s linear infinite;
-    animation: arrow-animation 2s linear infinite;
-  }
+.scroll-indicator {
+  position: absolute;
+  bottom: 2em;
+  right: calc(50% - (2.3em / 2));
 }
 </style>
