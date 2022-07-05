@@ -39,8 +39,11 @@ export default {
     window.addEventListener('scroll', () => {
       if (window.scrollY >= toggleWrapperPosition) {
         toggleWrapper.classList.add('sticky')
+        document.querySelector('#toggle--wrapper + section').style.marginTop = 'calc(13vh)'
+
       } else {
         toggleWrapper.classList.remove('sticky')
+        document.querySelector('#toggle--wrapper + section').style.marginTop = '0'
       }
     })
 
@@ -62,6 +65,7 @@ export default {
   align-items: center;
   padding: 2em;
   gap: 2em;
+  height: 13vh;
 }
 
 #toggle-btn {
