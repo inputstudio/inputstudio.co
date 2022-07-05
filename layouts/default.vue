@@ -3,7 +3,7 @@
     <TheNavbar />
     <Nuxt />
     <TheFooter />
-    <ScrollToTop />
+    <AppScrollTop />
   </div>
 </template>
 

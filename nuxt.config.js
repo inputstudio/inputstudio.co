@@ -68,7 +68,7 @@ export default {
     component: 'fa',
     suffix: false,
     icons: {
-      solid: ['faArrowDown', 'faPaperPlane', 'faGlobe', 'faMobile', 'faPenRuler'],
+      solid: ['faArrowUp', 'faPaperPlane', 'faGlobe', 'faMobile', 'faPenRuler'],
       brands: ['faFacebookF', 'faLinkedin', 'faGithub', 'faInstagram'],
     },
   },

@@ -1,5 +1,7 @@
 <template>
-  <button id="scroll-top" type="button"></button>
+  <button id="scroll-top" type="button">
+    <fa class="icon" :icon="['fas', 'arrow-up']" />
+  </button>
 </template>
 
 <script>
@@ -31,11 +33,11 @@ export default {
 #scroll-top {
   z-index: 1000;
   border: unset;
+  background: unset;
   display: none;
   justify-content: center;
   align-content: center;
-  color: white;
-  background-color: $background;
+  color: #ddd;
   position: fixed;
   bottom: 1.5em;
   right: 1em;
@@ -43,33 +45,10 @@ export default {
   transition: all 0.2s;
   height: 1.7em;
   width: 1.7em;
-  font-size: 1.5em;
-  opacity: 0.5;
+  font-size: 2em;
 
   &:hover {
     transform: scale(1.1);
-  }
-
-  &::after {
-    content: '>';
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transform: rotate(270deg);
-    animation: fade-to-top 1.5s 0s infinite;
-  }
-}
-
-@keyframes fade-to-top {
-  from {
-    transform: translateY(0.2em) rotate(270deg);
-    opacity: 1;
-  }
-  to {
-    transform: translateY(-0.5em) rotate(270deg);
-    opacity: 0;
   }
 }
 </style>
