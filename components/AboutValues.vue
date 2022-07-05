@@ -6,6 +6,7 @@
       <AboutValuesCard
         v-for="(value, index) in values"
         :key="index"
+        :icon="value.icon"
         :title="value.title"
         :description="value.description"
       />
@@ -19,21 +20,25 @@ export default {
     return {
       values: [
         {
+          icon: 'users-rays', 
           title: "Priorité à l'utilisateur",
           description:
             "Nous nous efforçons de rendre nos applications intuitives, et pour cela, nous n'hésitons pas à nous affranchir des règles établies.",
         },
         {
+          icon: 'laptop-code', 
           title: 'Goût du défi',
           description:
             'Nous sommes toujours à la recherche de nouveaux défis, sortir de notre zone de confort ne nous fait pas peur.',
         },
         {
+          icon: 'ear-listen', 
           title: "À l'écoute",
           description:
             "Nous écoutons attentivement les besoins de nos clients. C'est ainsi que nous parviendrons à développer d'excellentes applications ensemble.",
         },
         {
+          icon: 'chalkboard-user', 
           title: 'Apprentissage permanent',
           description:
             'Nous nous évertuons à développer des applications modernes pour nos clients grâce à une analyse constante des nouvelles tendances.',

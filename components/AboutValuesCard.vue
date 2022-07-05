@@ -1,5 +1,6 @@
 <template>
   <div class="value-card--wrapper">
+    <fa class="icon" :icon="['fas', icon]" />
     <h3>{{ title }}</h3>
     <p>{{ description }}</p>
   </div>
@@ -8,6 +9,10 @@
 <script>
 export default {
   props: {
+    icon: {
+      type: String, 
+      required: true
+    },
     title: {
       type: String,
       required: true,
@@ -70,6 +75,11 @@ export default {
       }
     }
   }
+}
+
+svg {
+  font-size: 3rem;
+  margin-block: .5em;
 }
 
 h3 {
