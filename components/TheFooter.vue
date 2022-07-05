@@ -121,9 +121,11 @@ p {
       transition: transform 0.4s ease-out;
     }
 
-    &:hover:after {
-      transform: scaleX(1);
-      transform-origin: bottom left;
+    @media (hover: hover) {
+      &:hover:after {
+        transform: scaleX(1);
+        transform-origin: bottom left;
+      }
     }
   }
 }

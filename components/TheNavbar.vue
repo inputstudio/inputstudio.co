@@ -72,17 +72,17 @@ export default {}
     transition: transform 0.4s ease-out;
   }
 
-  &:hover:after {
-    transform: scaleX(1);
-    transform-origin: bottom left;
+  @media (hover: hover) {
+    &:hover:after {
+      transform: scaleX(1);
+      transform-origin: bottom left;
+    }
   }
 
   @media screen and (max-width: 768px) {
     white-space: nowrap;
     padding: 0.5rem;
     margin: auto;
-
-    // TODO: Disable hover effect on mobile
   }
 
   @media screen and (min-width: 768px) {
