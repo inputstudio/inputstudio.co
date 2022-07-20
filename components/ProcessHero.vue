@@ -17,26 +17,17 @@ export default {}
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background: linear-gradient(320deg, $primary, $secondary, $tertiary);
+  background: linear-gradient(0deg, $primary, $secondary);
+  background-size: 600% 600%;
   position: relative;
   isolation: isolate;
   color: white;
   gap: 1.2em;
+  animation: HeroGradient 8s ease infinite;
 
   @media screen and (max-width: 768px) {
     text-align: center;
     height: 80vh;
-  }
-
-  &::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    background: linear-gradient(0deg, rgb(0 0 0 / 0.9), rgb(0 0 0 / 0));
-    z-index: -1;
   }
 }
 
