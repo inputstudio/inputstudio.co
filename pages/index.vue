@@ -1,20 +1,9 @@
 <template>
-  <div class="wrapper">
-    <HomeHero />
-    <HomeAbout />
-    <AppServices />
-    <AppContact />
+  <div>
+    <NuxtWelcome />
   </div>
 </template>
 
-<script>
-export default {
-  name: 'IndexPage',
-  scrollToTop: true,
-  head() {
-    return {
-      title: 'Input Studio - Agence de développement web',
-    }
-  },
-}
-</script>
+<script lang="ts" setup></script>
+
+<style lang="scss" scoped></style>
