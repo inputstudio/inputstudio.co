@@ -27,8 +27,8 @@ export default defineNuxtConfig({
   },
   googleFonts: {
     families: {
-      Rubik: [400, 500, 700],
-      Inter: [400, 500, 700],
+      Rubik: [300, 400, 500, 700],
+      Inter: [300, 400, 500, 700],
     },
     download: true,
     base64: false,

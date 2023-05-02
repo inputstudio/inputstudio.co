@@ -1,6 +1,7 @@
 <template>
   <main class="flex h-screen w-screen flex-col justify-between overflow-hidden bg-background p-9">
     <TheNavbar />
+    <HomeHero />
     <TheFooter />
   </main>
 </template>
