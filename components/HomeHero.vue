@@ -1,11 +1,11 @@
 <template>
-  <section class="mb-12 flex flex-col items-center gap-14">
-    <h1 id="animated-title" class="flex cursor-pointer gap-3 text-center text-9xl font-bold leading-normal">
+  <section class="mb-12 flex flex-col items-center gap-8 2xl:gap-14">
+    <h1 id="animated-title" class="flex cursor-pointer gap-3 text-center text-8xl font-bold leading-normal">
       <div id="design">Design.</div>
       <div id="code">Code.</div>
       <div id="cloud">Cloud.</div>
     </h1>
-    <p class="text-center text-2xl font-light md:w-1/2">
+    <p class="text-center text-xl font-light md:w-1/2 2xl:text-2xl">
       Des idées créatives, une expertise technique et une infrastructure cloud de pointe. Notre agence web a tout ce
       dont vous avez besoin.
     </p>

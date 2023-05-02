@@ -1,6 +1,8 @@
 <template>
   <a href="https://calendly.com/input_studio" target="_blank" rel="noopener noreferrer">
-    <div class="absolute bottom-0 left-1/2 w-96 -translate-x-1/2 -translate-y-1/2 transform rounded-2xl shadow-lg">
+    <div
+      class="absolute bottom-0 left-1/2 w-96 -translate-x-1/2 -translate-y-1/3 transform rounded-2xl shadow-lg 2xl:-translate-y-1/2"
+    >
       <div class="flex items-center justify-center gap-3 rounded-t-2xl bg-white p-6">
         <img src="@/assets/img/calendly.svg" alt="Logo Calendly" />
         <div class="flex flex-col">
