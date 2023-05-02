@@ -1,9 +1,12 @@
 <template>
-  <div>
-    <NuxtWelcome />
-  </div>
+  <main class="flex h-screen w-screen flex-col justify-between overflow-hidden bg-background p-9">
+    <TheNavbar />
+    <TheFooter />
+  </main>
 </template>
 
-<script lang="ts" setup></script>
-
-<style lang="scss" scoped></style>
+<script lang="ts" setup>
+useHead({
+  title: 'Input Studio — Agence de développement web',
+});
+</script>
