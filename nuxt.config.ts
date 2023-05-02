@@ -2,7 +2,7 @@
 export default defineNuxtConfig({
   app: {
     head: {
-      title: 'Welcome to Nuxt',
+      title: 'Input Studio',
       meta: [{ name: 'description', content: 'My awesome Nuxt project' }],
       link: [{ rel: 'icon', href: '/favicon.ico' }],
     },
