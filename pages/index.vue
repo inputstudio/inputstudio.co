@@ -1,9 +1,9 @@
 <template>
-  <main class="flex h-screen w-screen flex-col justify-between overflow-hidden bg-background p-9">
+  <main class="flex h-screen w-screen flex-col gap-10 overflow-hidden bg-background p-9 md:justify-between md:gap-0">
     <TheNavbar />
     <HomeHero />
     <AppCalendly />
-    <TheFooter />
+    <TheFooter v-if="!$device.isMobileOrTablet" />
   </main>
 </template>
 

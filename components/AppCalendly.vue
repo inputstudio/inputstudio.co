@@ -1,9 +1,9 @@
 <template>
   <a href="https://calendly.com/input_studio" target="_blank" rel="noopener noreferrer">
     <div
-      class="absolute bottom-0 left-1/2 w-96 -translate-x-1/2 -translate-y-1/3 transform rounded-2xl shadow-lg 2xl:-translate-y-1/2"
+      class="absolute bottom-0 left-1/2 w-4/5 -translate-x-1/2 translate-y-1/3 transform rounded-2xl shadow-lg md:w-96 md:-translate-y-1/3 2xl:-translate-y-1/2"
     >
-      <div class="flex items-center justify-center gap-3 rounded-t-2xl bg-white p-6">
+      <div class="flex items-center justify-around rounded-t-2xl bg-white p-3 md:justify-center md:gap-3 md:p-6">
         <img src="@/assets/img/calendly.svg" alt="Logo Calendly" />
         <div class="flex flex-col">
           <span class="">Planifier une réunion</span>

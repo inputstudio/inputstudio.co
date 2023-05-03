@@ -1,11 +1,16 @@
 <template>
   <section class="mb-12 flex flex-col items-center gap-8 2xl:gap-14">
-    <h1 id="animated-title" class="flex cursor-pointer gap-3 text-center text-8xl font-bold leading-normal">
-      <div id="design">Design.</div>
-      <div id="code">Code.</div>
-      <div id="cloud">Cloud.</div>
+    <h1
+      id="animated-title"
+      class="flex flex-col gap-4 text-center font-bold leading-normal md:cursor-pointer md:flex-row"
+    >
+      <!-- Those bottom padding were added because the "g" in "design" is partially cut at the bottom without them -->
+      <!-- And those on the others words are just for alignment with "design" -->
+      <div id="design" class="pb-1 text-6xl md:pb-2 md:text-8xl">Design.</div>
+      <div id="code" class="text-5xl md:pb-2 md:text-8xl">Code.</div>
+      <div id="cloud" class="text-4xl md:pb-2 md:text-8xl">Cloud.</div>
     </h1>
-    <p class="text-center text-xl font-light md:w-1/2 2xl:text-2xl">
+    <p class="text-center font-light md:w-1/2 md:text-xl 2xl:text-2xl">
       Des idées créatives, une expertise technique et une infrastructure cloud de pointe. Notre agence web a tout ce
       dont vous avez besoin.
     </p>
