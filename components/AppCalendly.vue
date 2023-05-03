@@ -15,5 +15,3 @@
     </div>
   </a>
 </template>
-
-<style lang="scss"></style>
