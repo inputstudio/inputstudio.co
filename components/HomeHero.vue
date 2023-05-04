@@ -28,6 +28,7 @@
 
 <script lang="ts" setup>
 import gsap from 'gsap';
+import SplitText from 'split-type';
 import awsLogo from '@/assets/img/aws.svg';
 import azureLogo from '@/assets/img/azure.svg';
 import doLogo from '@/assets/img/do.svg';
@@ -44,10 +45,18 @@ import tailwindLogo from '@/assets/img/tailwind.svg';
 import vueLogo from '@/assets/img/vue.svg';
 
 useNuxtApp().hook('page:finish', () => {
+  const design = new SplitText('#design', { types: 'chars' });
+  const designChars = design.chars;
   const code = document.querySelector('#code');
   const cloud = document.querySelector('#cloud');
   const tl = gsap.timeline();
-  tl.from(code, { x: -100, ease: 'elastic.out', duration: 1 });
+  tl.fromTo(
+    designChars,
+    { y: 100, autoAlpha: 0 },
+    { y: 0, autoAlpha: 1, stagger: 0.05, ease: 'power2.inOut', duration: 1 }
+  );
+  // FIXME: Code animation should be improved. Why not using a "typing" animation.
+  tl.fromTo(code, { autoAlpha: 0 }, { autoAlpha: 1, ease: 'power2.out', duration: 1 });
   tl.to(cloud, { y: -100, autoAlpha: 0, ease: 'power1.out', duration: 2 });
   tl.to(cloud, { y: 0, autoAlpha: 1, ease: 'power2.inOut' });
 
@@ -119,23 +128,23 @@ const technologies = [
 </script>
 
 <style lang="scss">
-#design {
-  background: linear-gradient(90deg, #ff0000, #ff7300, #002bff, #7a00ff, #ff00c8, #ff0000);
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-size: 400% auto;
-  animation: gradient 30s linear infinite;
-}
+// #design {
+//   background: linear-gradient(90deg, #ff0000, #ff7300, #002bff, #7a00ff, #ff00c8, #ff0000);
+//   background-clip: text;
+//   -webkit-text-fill-color: transparent;
+//   background-size: 400% auto;
+//   animation: gradient 30s linear infinite;
+// }
 
-@keyframes gradient {
-  0% {
-    background-position: 0 0;
-  }
-  50% {
-    background-position: 400% 0;
-  }
-  100% {
-    background-position: 0 0;
-  }
-}
+// @keyframes gradient {
+//   0% {
+//     background-position: 0 0;
+//   }
+//   50% {
+//     background-position: 400% 0;
+//   }
+//   100% {
+//     background-position: 0 0;
+//   }
+// }
 </style>
