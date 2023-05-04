@@ -28,6 +28,7 @@
 </template>
 
 <script lang="ts" setup>
+// @ts-nocheck 2307
 import gsap from 'gsap';
 import SplitText from 'split-type';
 import awsLogo from '@/assets/img/aws.svg';
