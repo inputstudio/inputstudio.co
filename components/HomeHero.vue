@@ -8,7 +8,7 @@
       <!-- And those on the others words are just for alignment with "design" -->
       <div id="design" class="pb-1 text-6xl md:pb-2 md:text-8xl">Design.</div>
       <div id="code" class="text-5xl md:pb-2 md:text-8xl">Code.</div>
-      <div id="cloud" class="text-4xl md:pb-2 md:text-8xl">Cloud.</div>
+      <div id="deploy" class="text-4xl md:pb-2 md:text-8xl">Deploy.</div>
     </h1>
     <p class="text-center font-light md:w-1/2 md:text-xl 2xl:text-2xl">
       Des idées créatives, une expertise technique et une infrastructure cloud de pointe. Notre agence web a tout ce
@@ -20,7 +20,8 @@
         :key="technology.name"
         :src="technology.logo"
         :alt="technology.name"
-        class="max-h-12 w-12 shrink-0"
+        :title="technology.name"
+        class="max-h-12 w-12 shrink-0 transition-transform hover:scale-110"
       />
     </div>
   </section>
@@ -48,17 +49,17 @@ useNuxtApp().hook('page:finish', () => {
   const design = new SplitText('#design', { types: 'chars' });
   const designChars = design.chars;
   const code = document.querySelector('#code');
-  const cloud = document.querySelector('#cloud');
-  const tl = gsap.timeline();
-  tl.fromTo(
-    designChars,
-    { y: 100, autoAlpha: 0 },
-    { y: 0, autoAlpha: 1, stagger: 0.05, ease: 'power2.inOut', duration: 1 }
-  );
-  // FIXME: Code animation should be improved. Why not using a "typing" animation.
-  tl.fromTo(code, { autoAlpha: 0 }, { autoAlpha: 1, ease: 'power2.out', duration: 1 });
-  tl.to(cloud, { y: -100, autoAlpha: 0, ease: 'power1.out', duration: 2 });
-  tl.to(cloud, { y: 0, autoAlpha: 1, ease: 'power2.inOut' });
+  const deploy = document.querySelector('#deploy');
+  const tl = gsap.timeline({
+    defaults: {
+      duration: 1,
+    },
+  });
+  tl.fromTo(designChars, { y: 100, autoAlpha: 0 }, { y: 0, autoAlpha: 1, stagger: 0.05, ease: 'power2.inOut' });
+  // FIXME: Code animation can be improved. Why not using a "typing" animation.
+  tl.fromTo(code, { autoAlpha: 0 }, { autoAlpha: 1, ease: 'power2.out' });
+  tl.to(deploy, { y: -100, autoAlpha: 0, ease: 'power1.out' });
+  tl.to(deploy, { y: 0, autoAlpha: 1, ease: 'power4.inOut' });
 
   document.querySelector('#animated-title')?.addEventListener('mouseenter', () => {
     if (!tl.isActive()) {
@@ -109,42 +110,20 @@ const technologies = [
     logo: flutterLogo,
   },
   {
-    name: 'Azure',
+    name: 'Microsoft Azure',
     logo: azureLogo,
   },
   {
-    name: 'AWS',
+    name: 'Amazon Web Services',
     logo: awsLogo,
   },
   {
-    name: 'Google Cloud',
+    name: 'Google Cloud Platform',
     logo: gcpLogo,
   },
   {
-    name: 'Digital Ocean',
+    name: 'DigitalOcean',
     logo: doLogo,
   },
 ];
 </script>
-
-<style lang="scss">
-// #design {
-//   background: linear-gradient(90deg, #ff0000, #ff7300, #002bff, #7a00ff, #ff00c8, #ff0000);
-//   background-clip: text;
-//   -webkit-text-fill-color: transparent;
-//   background-size: 400% auto;
-//   animation: gradient 30s linear infinite;
-// }
-
-// @keyframes gradient {
-//   0% {
-//     background-position: 0 0;
-//   }
-//   50% {
-//     background-position: 400% 0;
-//   }
-//   100% {
-//     background-position: 0 0;
-//   }
-// }
-</style>
