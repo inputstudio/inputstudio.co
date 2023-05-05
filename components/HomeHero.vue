@@ -1,5 +1,5 @@
 <template>
-  <section class="mb-12 flex flex-col items-center gap-8 2xl:gap-14">
+  <section class="mb-12 flex flex-col items-center gap-7 md:gap-8 2xl:gap-14">
     <h1
       id="animated-title"
       class="flex flex-col gap-4 text-center font-bold leading-normal md:cursor-pointer md:flex-row"
@@ -12,16 +12,8 @@
       Des idées créatives, une expertise technique et une infrastructure cloud de pointe. Notre agence web a tout ce
       dont vous avez besoin.
     </p>
-    <div class="flex items-center gap-9">
-      <img
-        v-for="technology in technologies"
-        :key="technology.name"
-        :src="technology.logo"
-        :alt="technology.name"
-        :title="technology.name"
-        class="max-h-12 w-12 shrink-0 transition-transform hover:scale-110"
-      />
-    </div>
+
+    <HomeTechnos />
   </section>
 </template>
 
@@ -29,20 +21,6 @@
 // @ts-nocheck 2307
 import gsap from 'gsap';
 import SplitText from 'split-type';
-import awsLogo from '@/assets/img/aws.svg';
-import azureLogo from '@/assets/img/azure.svg';
-import doLogo from '@/assets/img/do.svg';
-import figmaLogo from '@/assets/img/figma.svg';
-import flutterLogo from '@/assets/img/flutter.svg';
-import gcpLogo from '@/assets/img/gcp.svg';
-import ghostLogo from '@/assets/img/ghost.svg';
-import laravelLogo from '@/assets/img/laravel.svg';
-import nextLogo from '@/assets/img/next.svg';
-import nuxtLogo from '@/assets/img/nuxt.svg';
-import reactLogo from '@/assets/img/react.svg';
-import sketchLogo from '@/assets/img/sketch.svg';
-import tailwindLogo from '@/assets/img/tailwind.svg';
-import vueLogo from '@/assets/img/vue.svg';
 
 useNuxtApp().hook('page:finish', () => {
   const design = new SplitText('#design', { types: 'chars' });
@@ -66,63 +44,4 @@ useNuxtApp().hook('page:finish', () => {
     }
   });
 });
-
-const technologies = [
-  {
-    name: 'Figma',
-    logo: figmaLogo,
-  },
-  {
-    name: 'Sketch',
-    logo: sketchLogo,
-  },
-  {
-    name: 'Vue.js',
-    logo: vueLogo,
-  },
-  {
-    name: 'Nuxt.js',
-    logo: nuxtLogo,
-  },
-  {
-    name: 'React.js',
-    logo: reactLogo,
-  },
-  {
-    name: 'Next.js',
-    logo: nextLogo,
-  },
-  {
-    name: 'Ghost',
-    logo: ghostLogo,
-  },
-  {
-    name: 'Tailwind CSS',
-    logo: tailwindLogo,
-  },
-  {
-    name: 'Laravel',
-    logo: laravelLogo,
-  },
-  {
-    name: 'Flutter',
-    logo: flutterLogo,
-  },
-  {
-    name: 'Microsoft Azure',
-    logo: azureLogo,
-  },
-  {
-    name: 'Amazon Web Services',
-    logo: awsLogo,
-  },
-  {
-    name: 'Google Cloud Platform',
-    logo: gcpLogo,
-  },
-  {
-    name: 'DigitalOcean',
-    logo: doLogo,
-  },
-];
 </script>

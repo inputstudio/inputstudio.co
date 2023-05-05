@@ -58,6 +58,7 @@
 </template>
 
 <script lang="ts" setup>
+// @ts-nocheck 2307
 import burgerLogo from '@/assets/img/burger.svg';
 
 const menuLinks = [
