@@ -4,11 +4,9 @@
       id="animated-title"
       class="flex flex-col gap-4 text-center font-bold leading-normal md:cursor-pointer md:flex-row"
     >
-      <!-- Those bottom padding were added because the "g" in "design" is partially cut at the bottom without them -->
-      <!-- And those on the others words are just for alignment with "design" -->
-      <div id="design" class="pb-1 text-6xl md:pb-2 md:text-8xl">Design.</div>
-      <div id="code" class="text-5xl md:pb-2 md:text-8xl">Code.</div>
-      <div id="deploy" class="text-4xl md:pb-2 md:text-8xl">Deploy.</div>
+      <div id="design" class="text-6xl md:text-8xl">Design.</div>
+      <div id="code" class="text-5xl md:text-8xl">Code.</div>
+      <div id="deploy" class="text-4xl md:text-8xl">Deploy.</div>
     </h1>
     <p class="text-center font-light md:w-1/2 md:text-xl 2xl:text-2xl">
       Des idées créatives, une expertise technique et une infrastructure cloud de pointe. Notre agence web a tout ce
