@@ -1,3 +1,6 @@
 <template>
-  <h1 class="text-xl font-bold uppercase">Input Studio</h1>
+  <h1 class="font-bold uppercase md:text-xl">
+    Input <br v-if="$device.isMobileOrTablet" />
+    Studio
+  </h1>
 </template>

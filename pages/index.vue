@@ -1,5 +1,7 @@
 <template>
-  <main class="flex h-screen w-screen flex-col gap-10 overflow-hidden bg-background p-9 md:justify-between md:gap-0">
+  <main
+    class="flex h-screen w-screen flex-col gap-10 overflow-hidden bg-background p-5 md:justify-between md:gap-0 md:p-9"
+  >
     <TheNavbar />
     <HomeHero />
     <AppCalendly />
