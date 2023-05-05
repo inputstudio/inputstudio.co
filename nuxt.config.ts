@@ -17,7 +17,15 @@ export default defineNuxtConfig({
       },
     },
   },
-  modules: ['@nuxtjs/device', '@nuxtjs/eslint-module', '@nuxtjs/google-fonts', 'nuxt-headlessui', 'nuxt-icon'],
+  modules: [
+    '@nuxtjs/device',
+    '@nuxtjs/eslint-module',
+    '@nuxtjs/google-fonts',
+    'nuxt-calendly',
+    'nuxt-headlessui',
+    'nuxt-icon',
+  ],
+  calendly: {},
   device: {
     refreshOnResize: true,
   },
