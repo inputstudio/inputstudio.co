@@ -14,6 +14,6 @@
         <IconCSS name="uim:bag" size="32px" class="text-neutral-600 transition-colors hover:text-neutral-900" />
       </nuxt-link>
     </div>
-    <nuxt-link to="#">Nous contacter</nuxt-link>
+    <nuxt-link to="#" class="hover-underline">Nous contacter</nuxt-link>
   </nav>
 </template>

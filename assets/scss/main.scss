@@ -55,3 +55,27 @@ a {
   text-decoration: none;
   color: inherit;
 }
+
+a.hover-underline {
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 1px;
+    bottom: 5px;
+    left: 0;
+    background-color: black;
+    transform-origin: bottom right;
+    transition: transform 400ms ease-out;
+  }  
+
+  @media (hover: hover) {
+    &:hover:before {
+      transform: scaleX(1);
+      transform-origin: bottom left;
+    }
+  }
+}
