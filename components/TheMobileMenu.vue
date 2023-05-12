@@ -72,7 +72,7 @@ const menuLinks = [
   },
   {
     name: 'Nous contacter',
-    url: '#',
+    url: 'contact',
   },
 ];
 
