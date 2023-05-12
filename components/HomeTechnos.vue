@@ -1,23 +1,12 @@
 <template>
-  <div v-if="$device.isMobileOrTablet" class="flex flex-wrap justify-center gap-9">
-    <img
-      v-for="n in range(1, 7)"
-      :key="technologies[n].name"
-      :src="technologies[n].logo"
-      :alt="technologies[n].name"
-      :title="technologies[n].name"
-      class="max-h-12 w-10"
-    />
-  </div>
-
-  <div v-else class="flex items-center gap-9">
+  <div class="flex gap-9 md:items-center" :class="{ 'moving-text': $device.isMobileOrTablet }">
     <img
       v-for="technology in technologies"
       :key="technology.name"
       :src="technology.logo"
       :alt="technology.name"
       :title="technology.name"
-      class="max-h-12 w-12 shrink-0 transition-transform hover:scale-110"
+      class="tech-logo max-h-12 w-10 md:w-12 md:shrink-0 md:transition-transform md:hover:scale-110"
     />
   </div>
 </template>
@@ -97,14 +86,24 @@ const technologies = [
     logo: doLogo,
   },
 ];
-
-function range(start: int, end: int) {
-  const ans = [];
-
-  for (let i = start; i <= end; i++) {
-    ans.push(i);
-  }
-
-  return ans;
-}
 </script>
+
+<style lang="scss">
+/* The animation */
+@keyframes marquee {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+/* media query to enable animation for only those who want it */
+@media (prefers-reduced-motion: no-preference) {
+  .moving-text {
+    width: 230vw;
+    animation: marquee 12s linear infinite backwards;
+  }
+}
+</style>
