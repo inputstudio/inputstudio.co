@@ -2,19 +2,19 @@
   <div>
     <AppBackButton />
 
-    <main class="flex h-full flex-col items-center justify-center gap-5 p-14 md:flex-row">
+    <main class="flex h-full flex-col justify-center gap-5 px-8 py-16 md:flex-row md:px-24 md:py-24">
       <ContactForm />
 
       <section class="flex flex-col rounded-md p-4">
-        <h1 class="mb-10 text-8xl uppercase">THINK OUTSIDE THE BOX</h1>
+        <h1 class="mb-10 text-6xl uppercase md:text-8xl">THINK OUTSIDE THE BOX</h1>
 
-        <div class="grid w-full grid-cols-2 gap-5">
+        <div class="grid h-full w-full grid-cols-1 gap-5 md:grid-cols-2">
           <div class="bg-gray-100 px-2">
             <div class="border-b-2 border-gray-300 py-4 text-center">
               <h4 class="text-lg font-bold capitalize">Carrières</h4>
             </div>
 
-            <div class="flex h-full items-center justify-center">
+            <div class="flex justify-center md:h-full md:items-center">
               <span class="capitalize">à très bientot</span>
             </div>
           </div>
@@ -24,7 +24,7 @@
               <h4 class="text-lg font-bold capitalize">Nos contacts</h4>
             </div>
 
-            <div class="flex flex-col gap-3 px-4 py-5">
+            <div class="flex flex-col justify-center gap-3 px-4 md:h-full">
               <div class="flex flex-col gap-2">
                 <p>Email :</p>
                 <a class="text-gray-600" href="mailto:hello@inputstudio.co">hello@inputstudio.co</a>

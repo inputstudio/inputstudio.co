@@ -1,5 +1,5 @@
 <template>
-  <section class="w-1/2 rounded-md bg-gray-100 p-4">
+  <section class="rounded-md bg-gray-100 p-4 md:w-3/5">
     <div class="flex flex-col gap-3">
       <h1 class="text-4xl font-bold uppercase">Nous contacter !</h1>
       <p>Discutons de votre projet, ensemble nous trouverons une solution aux tâches les plus difficiles.</p>
@@ -49,7 +49,7 @@
       <div class="border-t-2 border-gray-300 pt-4">
         <p>Selectionner un sujet de contact</p>
 
-        <div class="my-2 flex flex-wrap gap-x-5 gap-y-2">
+        <div class="my-2 flex flex-wrap gap-2">
           <p
             v-for="topic in topics"
             :key="topic"
