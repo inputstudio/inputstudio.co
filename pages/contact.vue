@@ -2,16 +2,70 @@
   <div>
     <AppBackButton />
 
-    <main class="flex h-full flex-col items-center justify-center gap-5 p-5 md:flex-row">
+    <main class="flex h-full flex-col items-center justify-center gap-5 p-14 md:flex-row">
       <ContactForm />
 
-      <div class="rounded-md bg-gray-200 p-4"></div>
+      <section class="flex flex-col rounded-md p-4">
+        <h1 class="mb-10 text-8xl uppercase">THINK OUTSIDE THE BOX</h1>
+
+        <div class="grid w-full grid-cols-2 gap-5">
+          <div class="bg-gray-100 px-2">
+            <div class="border-b-2 border-gray-300 py-4 text-center">
+              <h4 class="text-lg font-bold capitalize">Carrières</h4>
+            </div>
+
+            <div class="flex h-full items-center justify-center">
+              <span class="capitalize">à très bientot</span>
+            </div>
+          </div>
+
+          <div class="bg-gray-100 px-2">
+            <div class="border-b-2 border-gray-300 py-4 text-center">
+              <h4 class="text-lg font-bold capitalize">Nos contacts</h4>
+            </div>
+
+            <div class="flex flex-col gap-3 px-4 py-5">
+              <div class="flex flex-col gap-2">
+                <p>Email :</p>
+                <a class="text-gray-600" href="mailto:hello@inputstudio.co">hello@inputstudio.co</a>
+              </div>
+
+              <div class="flex flex-col gap-2">
+                <p>Contact :</p>
+                <a class="text-gray-600" href="tel:+2250769561650">+225 07 69 56 16 50</a>
+              </div>
+
+              <div class="flex flex-col gap-2">
+                <p>Nous suivre :</p>
+
+                <div class="flex gap-4">
+                  <button type="button" @click="openCalendly">
+                    <img src="@/assets/img/calendly.svg" alt="Logo Calendly" width="42" />
+                  </button>
+
+                  <a href="https://github.com/inputstudio/" target="_blank" rel="noopener noreferrer">
+                    <IconCSS name="mdi:github" size="42px" class="text-neutral-600 transition-colors" />
+                  </a>
+
+                  <a href="https://www.linkedin.com/company/inputstudio/" target="_blank" rel="noopener noreferrer">
+                    <IconCSS name="mdi:linkedin" size="42px" class="text-neutral-600 transition-colors" />
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
   </div>
 </template>
 
 <script lang="ts" setup>
 // @ts-nocheck 230
+const calendly = useCalendly();
+const openCalendly = () => {
+  calendly.showPopupWidget('https://calendly.com/input_studio/30min');
+};
 
 useHead({
   title: 'Input Studio — Nous contacter',

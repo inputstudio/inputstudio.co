@@ -1,7 +1,7 @@
 <template>
-  <section class="w-1/2 rounded-md bg-gray-200 p-4">
-    <div class="flex flex-col gap-3 border-b-2">
-      <h1 class="text-4xl font-bold">Nous contacter !</h1>
+  <section class="w-1/2 rounded-md bg-gray-100 p-4">
+    <div class="flex flex-col gap-3">
+      <h1 class="text-4xl font-bold uppercase">Nous contacter !</h1>
       <p>Discutons de votre projet, ensemble nous trouverons une solution aux tâches les plus difficiles.</p>
     </div>
 
@@ -32,7 +32,7 @@
       <div>
         <input id="cahier-charge" type="file" :v-model="formData.cahierCharge" hidden />
 
-        <label for="cahier-charge" class="flex w-full items-center gap-4">
+        <label for="cahier-charge" class="flex w-full cursor-pointer items-center gap-4">
           <span class="rounded-md bg-white p-2">
             <img
               :src="plus"
