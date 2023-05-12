@@ -6,7 +6,7 @@
       <ContactForm />
 
       <section class="flex flex-col rounded-md p-4">
-        <h1 class="mb-10 text-6xl uppercase md:text-8xl">THINK OUTSIDE THE BOX</h1>
+        <h1 id="totb" class="relative mb-10 text-6xl uppercase md:text-8xl">THINK OUTSIDE THE BOX</h1>
 
         <div class="grid h-full w-full grid-cols-1 gap-5 md:grid-cols-2">
           <div class="bg-gray-100 px-2">
@@ -83,6 +83,34 @@ useHead({
     color: gray;
     width: 100%;
     resize: none;
+  }
+}
+
+#totb {
+  @media screen and (max-width: 768px) {
+    margin-bottom: 20%;
+  }
+
+  &::after {
+    content: 'Agence 100% remote';
+    position: absolute;
+    text-transform: uppercase;
+    font-size: 18px;
+    border: 1px solid black;
+    border-radius: 20px;
+    padding: 5px 20px;
+    text-align: center;
+
+    @media screen and (max-width: 768px) {
+      width: 100%;
+      bottom: -20%;
+      right: 0;
+    }
+
+    @media screen and (min-width: 768px) {
+      bottom: 12%;
+      right: 20%;
+    }
   }
 }
 </style>
