@@ -5,19 +5,19 @@
       <p>Remplissez ce formulaire et nous vous contacterons au plus vite pour discuter de votre projet.</p>
     </div>
 
-    <form id="contact-form" class="flex flex-col gap-3" @submit.prevent="submitForm">
-      <input type="text" placeholder="Votre nom" :v-model="data.fullname" required />
+    <form id="contact-form" class="flex flex-col gap-3" @submit.prevent="submit">
+      <input v-model="data.fullname" type="text" placeholder="Votre nom" required />
 
       <div class="flex gap-3">
-        <input class="w-1/2" type="text" placeholder="E-mail/Téléphone" :v-model="data.contact" required />
+        <input v-model="data.contact" class="w-1/2" type="text" placeholder="E-mail/Téléphone" required />
 
-        <select class="w-1/2" :v-model="data.budget">
+        <select v-model="data.budget" class="w-1/2">
           <option value="" selected disabled>Votre budget</option>
           <option v-for="budget in budgets" :key="budget" :value="budget">{{ budget }}</option>
         </select>
       </div>
 
-      <textarea rows="8" :v-model="data.resume" placeholder="Parlez-nous de votre projet"></textarea>
+      <textarea v-model="data.resume" rows="8" placeholder="Parlez-nous de votre projet"></textarea>
 
       <div class="mt-3">
         <p>Selectionnez vos besoins :</p>
@@ -37,15 +37,22 @@
 
       <button
         type="submit"
-        class="mt-3 rounded-lg border-2 bg-black py-4 text-center font-semibold capitalize text-white transition-colors hover:border-black hover:bg-white hover:text-black"
+        class="mt-3 flex justify-center gap-3 rounded-lg border-2 bg-black py-4 text-center font-semibold text-white transition-colors hover:border-black hover:bg-white hover:text-black disabled:cursor-not-allowed"
+        :disabled="loading"
       >
-        Envoyer
+        <div
+          v-if="loading"
+          class="h-6 w-6 animate-spin rounded-full border-4 border-solid border-neutral-300 border-t-transparent"
+        ></div>
+        <span>Envoyer</span>
       </button>
     </form>
   </section>
 </template>
 
 <script lang="ts" setup>
+const loading = ref(false);
+
 const data = ref({
   fullname: '',
   contact: '',
@@ -54,12 +61,7 @@ const data = ref({
   topics: [] as string[],
 });
 
-const budgets = [
-  'Moins de 1.000.000 FCFA',
-  '1.000.000 - 5.000.000 FCFA',
-  '5.000.000 - 10.000.000 FCFA',
-  'Plus de 10.000.000 FCFA',
-];
+const budgets = ['1.000.000 - 5.000.000 FCFA', '5.000.000 - 10.000.000 FCFA', 'Plus de 10.000.000 FCFA'];
 
 const topics = [
   'Site vitrine',
@@ -82,7 +84,27 @@ function handleTopics(topic: string) {
   }
 }
 
-async function submitForm() {}
+async function submit() {
+  loading.value = false;
+
+  const { contactFormEndpoint } = useRuntimeConfig().public;
+
+  try {
+    await fetch(contactFormEndpoint, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(data.value),
+    });
+  } catch (error) {
+    // TODO: Display error snackbar
+  }
+
+  // TODO: Display success snackbar
+
+  loading.value = true;
+}
 </script>
 
 <style lang="scss">
