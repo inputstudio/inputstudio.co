@@ -2,7 +2,7 @@
   <div>
     <AppBackButton />
 
-    <main class="flex h-screen flex-col justify-center gap-6 px-9 py-16 md:flex-row md:p-24">
+    <main class="flex min-h-screen flex-col justify-center gap-6 px-9 py-20 md:flex-row md:p-24">
       <ContactForm />
 
       <section class="flex flex-col">
@@ -14,7 +14,7 @@
               <h4 class="text-xl font-bold">Carrières</h4>
             </div>
 
-            <div class="flex flex-col p-3 md:h-full md:items-center">
+            <div class="flex flex-col p-3 text-center md:h-full md:items-center">
               <span>À très bientot</span>
             </div>
           </div>
@@ -24,7 +24,7 @@
               <h4 class="text-xl font-bold">Nos contacts</h4>
             </div>
 
-            <div class="flex flex-col gap-3 p-3 md:h-full">
+            <div class="flex flex-col gap-5 p-3 md:h-full">
               <p class="">
                 Vous détestez les formulaires ? <br />
                 Envoyez-nous un mail à

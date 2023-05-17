@@ -37,12 +37,12 @@
 
       <button
         type="submit"
-        class="mt-3 flex justify-center gap-3 rounded-lg border-2 bg-black py-4 text-center font-semibold text-white transition-colors hover:border-black hover:bg-white hover:text-black disabled:cursor-not-allowed"
+        class="mt-3 flex justify-center gap-3 rounded-lg border-2 bg-black py-4 text-center font-semibold text-white transition-colors hover:border-black hover:bg-white disabled:cursor-not-allowed disabled:border-black disabled:bg-white disabled:text-black"
         :disabled="loading"
       >
         <div
           v-if="loading"
-          class="h-6 w-6 animate-spin rounded-full border-4 border-solid border-neutral-300 border-t-transparent"
+          class="h-6 w-6 animate-spin rounded-full border-4 border-solid border-black border-t-transparent"
         ></div>
         <span>Envoyer</span>
       </button>
@@ -51,7 +51,7 @@
 </template>
 
 <script lang="ts" setup>
-const loading = ref(false);
+const loading = ref(true);
 
 const data = ref({
   fullname: '',
