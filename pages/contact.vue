@@ -28,9 +28,16 @@
               <p class="">
                 Vous détestez les formulaires ? <br />
                 Envoyez-nous un mail à
-                <a class="text-gray-600" href="mailto:hello@inputstudio.co">hello@inputstudio.co</a>
+                <a class="text-gray-600 md:transition-colors md:hover:text-gray-900" href="mailto:hello@inputstudio.co"
+                  >hello@inputstudio.co</a
+                >
               </p>
-              <p>Ou appelez-nous au : <a class="text-gray-600" href="tel:+2250769561650">+225 07 69 56 16 50</a></p>
+              <p>
+                Ou appelez-nous au :
+                <a class="text-gray-600 md:transition-colors md:hover:text-gray-900" href="tel:+2250769561650"
+                  >+225 07 69 56 16 50</a
+                >
+              </p>
 
               <div class="flex flex-col gap-2">
                 <p>Nous suivre :</p>
@@ -41,11 +48,19 @@
                   </button>
 
                   <a href="https://github.com/inputstudio/" target="_blank" rel="noopener noreferrer">
-                    <IconCSS name="mdi:github" size="42px" class="text-neutral-600 transition-colors" />
+                    <IconCSS
+                      name="mdi:github"
+                      size="42px"
+                      class="text-neutral-600 transition-colors hover:text-neutral-800"
+                    />
                   </a>
 
                   <a href="https://www.linkedin.com/company/inputstudio/" target="_blank" rel="noopener noreferrer">
-                    <IconCSS name="mdi:linkedin" size="42px" class="text-neutral-600 transition-colors" />
+                    <IconCSS
+                      name="mdi:linkedin"
+                      size="42px"
+                      class="text-neutral-600 transition-colors hover:text-neutral-800"
+                    />
                   </a>
                 </div>
               </div>
@@ -105,7 +120,7 @@ useHead({
 
     @media screen and (min-width: 768px) {
       bottom: 12%;
-      right: 20%;
+      right: 30%;
     }
   }
 }

@@ -51,7 +51,7 @@
 </template>
 
 <script lang="ts" setup>
-const loading = ref(true);
+const loading = ref(false);
 
 const data = ref({
   fullname: '',
