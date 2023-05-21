@@ -66,6 +66,7 @@ const budgets = ['1.000.000 - 5.000.000 FCFA', '5.000.000 - 10.000.000 FCFA', 'P
 const topics = [
   'Site vitrine',
   'E-commerce',
+  'Blog',
   'Site web sur mesure',
   'Refonte de site web',
   'Application mobile',
