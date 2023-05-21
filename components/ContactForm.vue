@@ -37,7 +37,7 @@
 
       <button
         type="submit"
-        class="mt-3 flex justify-center gap-3 rounded-lg border-2 bg-black py-4 text-center font-semibold text-white transition-colors hover:border-black hover:bg-white disabled:cursor-not-allowed disabled:border-black disabled:bg-white disabled:text-black"
+        class="mt-3 flex justify-center gap-3 rounded-lg border-2 bg-black py-4 text-center font-semibold text-white transition-colors hover:border-black hover:bg-white hover:text-black disabled:cursor-not-allowed disabled:border-black disabled:bg-white disabled:text-black"
         :disabled="loading"
       >
         <div
@@ -86,7 +86,7 @@ function handleTopics(topic: string) {
 }
 
 async function submit() {
-  loading.value = false;
+  loading.value = true;
 
   const { contactFormEndpoint } = useRuntimeConfig().public;
 
@@ -104,7 +104,7 @@ async function submit() {
 
   // TODO: Display success snackbar
 
-  loading.value = true;
+  loading.value = false;
 }
 </script>
 
