@@ -1,6 +1,6 @@
-FROM alpine
+FROM alpine:3.18
 
-RUN apk add --update nodejs yarn
+RUN apk add --no-cache nodejs=~18.16 yarn=~1.22
 
 WORKDIR /app
 
