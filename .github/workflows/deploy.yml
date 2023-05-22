@@ -24,12 +24,10 @@ jobs:
           push: true
           tags: ghcr.io/inputstudio/inputstudio.co:latest
       - name: Deploy stack to Portainer
-        uses: nvti/portainer-stack-deploy@v1.1
+        uses: carlrygart/portainer-stack-deploy@v1
         with:
           portainer-host: ${{ secrets.PORTAINER_HOST }}
           username: ${{ secrets.PORTAINER_USERNAME }}
           password: ${{ secrets.PORTAINER_PASSWORD }}
           stack-name: inputstudio
           stack-definition: docker-compose.yml
-          prune-stack: true
-          pull-image: true
