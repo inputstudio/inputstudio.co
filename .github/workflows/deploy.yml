@@ -23,11 +23,5 @@ jobs:
         with:
           push: true
           tags: ghcr.io/inputstudio/inputstudio.co:latest
-      - name: Deploy stack to Portainer
-        uses: carlrygart/portainer-stack-deploy@v1
-        with:
-          portainer-host: ${{ secrets.PORTAINER_HOST }}
-          username: ${{ secrets.PORTAINER_USERNAME }}
-          password: ${{ secrets.PORTAINER_PASSWORD }}
-          stack-name: inputstudio
-          stack-definition: docker-compose.yml
+      - name: Trigger Portainer stack webhook
+        run: curl -X POST ${{ secrets.PORTAINER_STACK_WEBHOOK }}
