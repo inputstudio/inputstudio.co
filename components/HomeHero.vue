@@ -1,66 +1,47 @@
 <template>
-  <section class="hero--wrapper">
-    <h1 class="baffle">Nous ne réalisons pas des sites mais des experiences web.</h1>
+  <section class="mb-12 flex flex-col items-center gap-7 md:gap-8 2xl:gap-14">
+    <h1
+      id="animated-title"
+      class="flex flex-col gap-4 text-center font-bold leading-normal md:cursor-pointer md:flex-row"
+    >
+      <div id="design" class="text-6xl md:text-8xl">Design.</div>
+      <div id="code" class="text-5xl md:text-8xl">Code.</div>
+      <div id="deploy" class="text-4xl md:text-8xl">Deploy.</div>
+    </h1>
+    <p class="text-center font-light md:w-1/2 md:text-xl 2xl:text-2xl">
+      Des idées créatives, une expertise technique et une infrastructure cloud de pointe. Notre agence web a tout ce
+      dont vous avez besoin.
+    </p>
 
-    <AppScrollDown class="scroll-indicator" />
+    <HomeTechnos />
   </section>
 </template>
 
-<script>
-import baffle from 'baffle'
+<script lang="ts" setup>
+// @ts-nocheck 2307
+import gsap from 'gsap';
+import SplitText from 'split-type';
 
-export default {
-  mounted() {
-    const gibberish = ['\u2588', '\u2593', '\u2592', '\u2591', '\u2588', '\u2593', '\u2592', '\u2591', '\u2588']
-    const text = document.querySelector('.baffle')
-    const b = baffle(text, { characters: gibberish })
-    b.reveal(1000, 1000)
+useNuxtApp().hook('page:finish', () => {
+  const design = new SplitText('#design', { types: 'chars' });
+  const designChars = design.chars;
+  const code = document.querySelector('#code');
+  const deploy = document.querySelector('#deploy');
+  const tl = gsap.timeline({
+    defaults: {
+      duration: 1,
+    },
+  });
+  tl.fromTo(designChars, { y: 100, autoAlpha: 0 }, { y: 0, autoAlpha: 1, stagger: 0.05, ease: 'power2.inOut' });
+  // FIXME: Code animation can be improved. Why not using a "typing" animation.
+  tl.fromTo(code, { autoAlpha: 0 }, { autoAlpha: 1, ease: 'power2.out' });
+  tl.to(deploy, { y: -100, autoAlpha: 0, ease: 'power1.out' });
+  tl.to(deploy, { y: 0, autoAlpha: 1, ease: 'power4.inOut' });
 
-    text.addEventListener('click', function (e) {
-      e.preventDefault()
-      b.reveal(1000)
-    })
-  },
-}
+  document.querySelector('#animated-title')?.addEventListener('mouseenter', () => {
+    if (!tl.isActive()) {
+      tl.play(0);
+    }
+  });
+});
 </script>
-
-<style lang="scss" scoped>
-.hero--wrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  text-align: center;
-  width: 100%;
-  height: 90vh;
-  color: #fff;
-  overflow: hidden;
-  background: linear-gradient(320deg, $primary, $secondary, $tertiary);
-  background-size: 600% 600%;
-  -webkit-animation: HeroGradient 16s ease infinite;
-  -moz-animation: HeroGradient 16s ease infinite;
-  animation: HeroGradient 16s ease infinite;
-
-  @media screen and (max-width: 768px) {
-    height: 80vh;
-  }
-}
-
-h1 {
-  display: block;
-  text-align: left;
-  text-transform: uppercase;
-  margin-bottom: 2rem;
-  cursor: pointer;
-}
-
-.scroll-indicator {
-  position: absolute;
-  bottom: 1em;
-  right: calc(50% - (2.3em / 2));
-
-  @media screen and (min-width: 768px) {
-    bottom: 2em;
-  }
-}
-</style>
