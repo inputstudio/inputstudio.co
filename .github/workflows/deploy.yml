@@ -31,3 +31,5 @@ jobs:
           password: ${{ secrets.PORTAINER_PASSWORD }}
           stack-name: inputstudio
           stack-definition: docker-compose.yml
+          prune-stack: true
+          pull-image: true
