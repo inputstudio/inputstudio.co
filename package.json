@@ -23,7 +23,7 @@
     "nuxt-calendly": "^0.1.14",
     "nuxt-headlessui": "^1.1.1",
     "nuxt-icon": "^0.4.0",
-    "postcss": "^8.4.23",
+    "postcss": "^8.4.24",
     "prettier": "^2.8.4",
     "prettier-plugin-tailwindcss": "^0.2.8",
     "sass": "^1.58.3",
