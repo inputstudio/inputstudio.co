@@ -14,40 +14,37 @@ function onMouseMove(e, cursor) {
   });
 }
 
+function onMouseEnter(cursor) {
+  gsap.to(cursor, 0.4, {
+    scale: 4,
+  });
+}
+
+function onMouseLeave(cursor) {
+  gsap.to(cursor, 0.4, {
+    scale: 1,
+  });
+}
+
 app.hook('app:mounted', () => {
   const cursor = document.getElementById('cursor');
+  const hoverableLinks = document.querySelectorAll('.ball-expander');
+
+  // For each links with hoverable css class
+  hoverableLinks.forEach((link) => {
+    link.addEventListener('mouseenter', () => onMouseEnter(cursor));
+    link.addEventListener('mouseleave', () => onMouseLeave(cursor));
+  });
 
   document.body.addEventListener('mousemove', (e) => onMouseMove(e, cursor));
-
-  // document.body.addEventListener('mousemove', (e) => {
-  //   const x = e.pageX;
-  //   const y = e.pageY;
-
-  //   console.log(x, y);
-  //   cursor.style.top = x + 'px';
-  //   cursor.style.left = y + 'px';
-  //   cursor.style.display = 'block';
-  // });
 });
-// function logging() {}
-
-// onMounted(() => {
-//   const cursor = document.getElementById('cursor');
-
-//   cursor?.addEventListener('mousemove', (e) => {
-//     let x = e.pageX;
-//     let y = e.pageY;
-
-//     cursor.style.top = x + 'px';
-//     cursor.style.left = y + 'px';
-//     cursor.style.display = 'block';
-//   });
-// });
 </script>
 
 <style lang="scss">
+$bg-color: rgba(0, 0, 0, 0.6);
+
 .cursor {
-  background-color: rgba(0, 0, 0, 0.177);
+  background-color: $bg-color;
   pointer-events: none;
 }
 </style>
