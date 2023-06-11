@@ -1,6 +1,6 @@
 <template>
-  <main>
+  <div>
     <AppCursor v-if="!$device.isMobileOrTablet" />
     <slot />
-  </main>
+  </div>
 </template>

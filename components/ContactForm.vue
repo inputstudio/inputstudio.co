@@ -1,5 +1,5 @@
 <template>
-  <section class="flex flex-col gap-9 rounded-md bg-gray-100 p-6 md:w-3/5">
+  <section class="flex flex-col gap-9 rounded-md bg-gray-100 p-6 text-black md:w-3/5">
     <div class="flex flex-col gap-3">
       <h1 class="text-4xl font-bold uppercase">Nous contacter</h1>
       <p>Remplissez ce formulaire et nous vous contacterons au plus vite pour discuter de votre projet.</p>
