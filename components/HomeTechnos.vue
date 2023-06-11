@@ -1,84 +1,61 @@
 <template>
   <div class="flex gap-9 md:items-center" :class="{ 'moving-text': $device.isMobileOrTablet }">
-    <img
+    <Icon
       v-for="technology in technologies"
-      :key="technology.name"
-      :src="technology.logo"
-      :alt="technology.name"
-      :title="technology.name"
+      :key="technology.logo"
+      :name="technology.logo"
+      :title="technology.title"
+      size="xl"
       class="tech-logo max-h-12 w-10 md:w-12 md:shrink-0 md:transition-transform md:hover:scale-110"
     />
   </div>
 </template>
 
 <script lang="ts" setup>
-// @ts-nocheck 2307
-import awsLogo from '@/assets/img/aws.svg';
-import azureLogo from '@/assets/img/azure.svg';
-import doLogo from '@/assets/img/do.svg';
-import figmaLogo from '@/assets/img/figma.svg';
-import flutterLogo from '@/assets/img/flutter.svg';
-import gcpLogo from '@/assets/img/gcp.svg';
-import laravelLogo from '@/assets/img/laravel.svg';
-import nextLogo from '@/assets/img/next.svg';
-import nuxtLogo from '@/assets/img/nuxt.svg';
-import reactLogo from '@/assets/img/react.svg';
-import sketchLogo from '@/assets/img/sketch.svg';
-import tailwindLogo from '@/assets/img/tailwind.svg';
-import vueLogo from '@/assets/img/vue.svg';
-
 const technologies = [
   {
-    name: 'Figma',
-    logo: figmaLogo,
+    title: 'Figma',
+    logo: 'ph:figma-logo',
   },
   {
-    name: 'Sketch',
-    logo: sketchLogo,
+    title: 'Sketch',
+    logo: 'ph:sketch-logo',
   },
   {
-    name: 'Vue.js',
-    logo: vueLogo,
+    title: 'Vue.js',
+    logo: 'mdi:vuejs',
   },
   {
-    name: 'Nuxt.js',
-    logo: nuxtLogo,
+    title: 'Nuxt.js',
+    logo: 'simple-icons:nuxtdotjs',
   },
   {
-    name: 'React.js',
-    logo: reactLogo,
+    title: 'React.js',
+    logo: 'mdi:react',
   },
   {
-    name: 'Next.js',
-    logo: nextLogo,
+    title: 'Next.js',
+    logo: 'teenyicons:nextjs-solid',
   },
   {
-    name: 'Tailwind CSS',
-    logo: tailwindLogo,
+    title: 'Tailwind CSS',
+    logo: 'mdi:tailwind',
   },
   {
-    name: 'Laravel',
-    logo: laravelLogo,
+    title: 'Laravel',
+    logo: 'mdi:laravel',
   },
   {
-    name: 'Flutter',
-    logo: flutterLogo,
+    title: 'Flutter',
+    logo: 'material-symbols:flutter',
   },
   {
-    name: 'Microsoft Azure',
-    logo: azureLogo,
+    title: 'Google Cloud Platform',
+    logo: 'mdi:google-cloud',
   },
   {
-    name: 'Amazon Web Services',
-    logo: awsLogo,
-  },
-  {
-    name: 'Google Cloud Platform',
-    logo: gcpLogo,
-  },
-  {
-    name: 'DigitalOcean',
-    logo: doLogo,
+    title: 'DigitalOcean',
+    logo: 'mdi:digital-ocean',
   },
 ];
 </script>
