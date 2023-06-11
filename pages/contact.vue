@@ -1,7 +1,5 @@
 <template>
   <div>
-    <AppBackButton />
-
     <main class="flex min-h-screen flex-col justify-center gap-6 px-9 py-20 md:flex-row md:p-24">
       <ContactForm />
 
