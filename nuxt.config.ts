@@ -2,8 +2,14 @@
 export default defineNuxtConfig({
   app: {
     head: {
-      title: 'Input Studio',
-      meta: [{ name: 'description', content: 'My awesome Nuxt project' }],
+      title: 'Input Studio — Agence de développement web',
+      meta: [
+        {
+          name: 'description',
+          content:
+            "Input Studio, votre agence web à Abidjan, spécialisée dans la création sur mesure de sites web et d'applications mobiles en utilisant des technologies modernes, et ce, en mode 100% remote.",
+        },
+      ],
       link: [{ rel: 'icon', href: '/favicon.ico' }],
     },
   },
