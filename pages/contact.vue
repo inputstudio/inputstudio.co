@@ -1,14 +1,12 @@
 <template>
   <div>
-    <AppBackButton />
-
     <main class="flex min-h-screen flex-col justify-center gap-6 px-9 py-20 md:flex-row md:p-24">
       <ContactForm />
 
       <section class="flex flex-col">
         <h1 id="totb" class="relative mb-10 text-6xl uppercase md:text-8xl">THINK OUTSIDE THE BOX</h1>
 
-        <div class="grid h-full w-full grid-cols-1 gap-5 md:grid-cols-2">
+        <div class="grid h-full w-full grid-cols-1 gap-5 text-black md:grid-cols-2">
           <div class="rounded-md bg-gray-100 px-2">
             <div class="py-9 text-center">
               <h4 class="text-xl font-bold">Carrières</h4>
