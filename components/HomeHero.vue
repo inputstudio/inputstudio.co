@@ -13,7 +13,10 @@
       dont vous avez besoin.
     </p>
 
-    <HomeTechnos />
+    <div class="mb-12 flex flex-col gap-4">
+      <HomeTechnos />
+      <HomeGhostCard />
+    </div>
   </section>
 </template>
 
