@@ -24,6 +24,7 @@ export default defineNuxtConfig({
     '@nuxtjs/device',
     '@nuxtjs/eslint-module',
     '@nuxtjs/google-fonts',
+    '@nuxtjs/plausible',
     'nuxt-calendly',
     'nuxt-headlessui',
     'nuxt-icon',
@@ -43,6 +44,11 @@ export default defineNuxtConfig({
     },
     download: true,
     base64: false,
+  },
+  plausible: {
+    domain: 'inputstudio.co',
+    apiHost: 'https://analytics.inputstudio.co',
+    autoOutboundTracking: true,
   },
   postcss: {
     plugins: {
