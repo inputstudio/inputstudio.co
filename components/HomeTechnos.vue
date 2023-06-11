@@ -19,7 +19,6 @@ import doLogo from '@/assets/img/do.svg';
 import figmaLogo from '@/assets/img/figma.svg';
 import flutterLogo from '@/assets/img/flutter.svg';
 import gcpLogo from '@/assets/img/gcp.svg';
-import ghostLogo from '@/assets/img/ghost.svg';
 import laravelLogo from '@/assets/img/laravel.svg';
 import nextLogo from '@/assets/img/next.svg';
 import nuxtLogo from '@/assets/img/nuxt.svg';
@@ -52,10 +51,6 @@ const technologies = [
   {
     name: 'Next.js',
     logo: nextLogo,
-  },
-  {
-    name: 'Ghost',
-    logo: ghostLogo,
   },
   {
     name: 'Tailwind CSS',

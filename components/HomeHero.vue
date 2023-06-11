@@ -1,5 +1,5 @@
 <template>
-  <section class="mb-12 flex flex-col items-center gap-7 md:gap-8 2xl:gap-14">
+  <section class="flex flex-col items-center gap-7 md:gap-8 2xl:gap-14">
     <h1
       id="animated-title"
       class="flex flex-col gap-4 text-center font-bold leading-normal md:cursor-pointer md:flex-row"
