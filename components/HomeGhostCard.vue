@@ -7,14 +7,10 @@
 
     <div class="flex items-center gap-4">
       <p class="text-md">Contacter-nous pour la création de votre blog</p>
-      <img :src="rightArrow" alt="Right arrow" title="Right arrow" />
+      <Icon name="ic:sharp-arrow-right-alt" title="Right arrow" size="2em" />
     </div>
   </nuxt-link>
 </template>
-
-<script lang="ts" setup>
-import rightArrow from '@/assets/img/right-arrow.svg';
-</script>
 
 <style lang="scss">
 .home-ghost-card {
