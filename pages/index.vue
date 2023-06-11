@@ -1,13 +1,12 @@
 <template>
-  <main
+  <div
     class="flex h-screen w-screen flex-col gap-10 overflow-hidden bg-background p-5 md:justify-between md:gap-0 md:p-9"
   >
-    <AppCursor v-if="!$device.isMobileOrTablet" />
     <TheNavbar />
     <HomeHero />
     <AppCalendly />
     <TheFooter v-if="!$device.isMobileOrTablet" />
-  </main>
+  </div>
 </template>
 
 <script lang="ts" setup>

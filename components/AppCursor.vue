@@ -4,7 +4,8 @@
 
 <script setup>
 import { gsap } from 'gsap';
-const app = useNuxtApp();
+
+const { hook } = useNuxtApp();
 
 // Move the cursor
 function onMouseMove(e, cursor) {
@@ -26,7 +27,7 @@ function onMouseLeave(cursor) {
   });
 }
 
-app.hook('app:mounted', () => {
+hook('app:suspense:resolve', () => {
   const cursor = document.getElementById('cursor');
   const hoverableLinks = document.querySelectorAll('.ball-expander');
 
