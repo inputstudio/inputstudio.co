@@ -1,15 +1,19 @@
 <template>
-  <nuxt-link to="/contact" class="home-ghost-card flex items-center justify-between border border-white px-4 py-2">
-    <div class="flex items-center gap-2">
-      <Icon name="simple-icons:ghost" title="Logo ghost" size="2em" />
-      <h2 class="text-2xl font-extralight">GHOST EXPERT</h2>
-    </div>
+  <NuxtLink to="/contact" class="home-ghost-card flex items-center justify-between p-1">
+    <NuxtLink to="https://ghost.org/experts/input-studio/" target="_blank">
+      <div class="flex items-center gap-3">
+        <Icon name="simple-icons:ghost" title="Logo Ghost" size="2em" />
+        <h2 class="text-lg font-light uppercase">Ghost Expert</h2>
+      </div>
+    </NuxtLink>
 
-    <div class="flex items-center gap-4">
-      <p class="text-md">Contacter-nous pour la création de votre blog</p>
-      <Icon name="ic:sharp-arrow-right-alt" title="Right arrow" size="2em" />
+    <div>
+      <div class="flex items-center gap-3">
+        <p class="hidden lg:block">Contacter-nous pour la création de votre blog</p>
+        <Icon name="ic:sharp-arrow-right-alt" title="Right arrow" size="2em" />
+      </div>
     </div>
-  </nuxt-link>
+  </NuxtLink>
 </template>
 
 <style lang="scss">
