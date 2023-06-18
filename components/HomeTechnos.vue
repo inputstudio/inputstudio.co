@@ -1,13 +1,12 @@
 <template>
   <div class="flex gap-9 md:items-center" :class="{ 'moving-text': $device.isMobileOrTablet }">
-    <Icon
-      v-for="technology in technologies"
-      :key="technology.logo"
-      :name="technology.logo"
-      :title="technology.title"
-      size="xl"
-      class="tech-logo max-h-12 w-10 md:w-12 md:shrink-0 md:transition-transform md:hover:scale-110"
-    />
+    <div v-for="technology in technologies" :key="technology.logo" :title="technology.title">
+      <Icon
+        :name="technology.logo"
+        size="xl"
+        class="tech-logo max-h-12 w-10 md:w-12 md:shrink-0 md:transition-transform md:hover:scale-110"
+      />
+    </div>
   </div>
 </template>
 
