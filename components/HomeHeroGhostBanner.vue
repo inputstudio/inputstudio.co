@@ -1,5 +1,5 @@
 <template>
-  <NuxtLink to="/contact" class="home-ghost-card flex items-center justify-between p-1">
+  <NuxtLink to="/contact" class="home-ghost-card flex items-center justify-between px-1 py-1.5">
     <NuxtLink to="https://ghost.org/experts/input-studio/" target="_blank">
       <div class="flex items-center gap-3">
         <Icon name="simple-icons:ghost" title="Logo Ghost" size="2em" />

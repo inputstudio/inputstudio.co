@@ -1,5 +1,5 @@
 <template>
-  <section class="flex flex-col items-center gap-7 md:gap-8 2xl:gap-14">
+  <section class="flex flex-col items-center gap-6 md:gap-9 2xl:gap-12">
     <h1
       id="animated-title"
       class="flex flex-col gap-4 text-center font-bold leading-normal md:cursor-pointer md:flex-row"
@@ -13,9 +13,9 @@
       dont vous avez besoin.
     </p>
 
-    <div class="mb-12 flex flex-col gap-4">
-      <HomeTechnos />
-      <HomeGhostCard />
+    <div class="mb-12 flex flex-col gap-3">
+      <HomeHeroTechnos />
+      <HomeHeroGhostBanner />
     </div>
   </section>
 </template>
