@@ -1,10 +1,10 @@
 <template>
-  <div>
-    <AppCursor v-if="!$device.isMobileOrTablet" />
+  <main>
+    <AppCursor />
 
     <div>
       <AppBackButton />
       <slot />
     </div>
-  </div>
+  </main>
 </template>

@@ -1,10 +1,10 @@
 <template>
   <main class="relative flex flex-col gap-10 overflow-hidden p-5 md:justify-between md:gap-0 md:p-9">
-    <AppCursor v-if="!$device.isMobileOrTablet" />
+    <AppCursor />
     <TheNavbar class="z-10" />
     <HomeHero class="z-10" />
     <AppCalendly />
-    <TheFooter v-if="!$device.isMobileOrTablet" class="z-10" />
+    <TheFooter class="z-10 hidden md:flex" />
     <img
       src="@/assets/img/halo-green.png"
       alt="Background green halo"

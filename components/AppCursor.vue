@@ -1,51 +1,62 @@
 <template>
-  <div id="cursor" class="cursor fixed z-50 aspect-square w-4 -translate-x-1/2 -translate-y-1/2 rounded-full p-4"></div>
+  <div
+    v-if="!isMobileOrTablet"
+    ref="cursor"
+    class="cursor pointer-events-none fixed z-50 hidden aspect-square w-4 -translate-x-1/2 -translate-y-1/2 rounded-full bg-black/60 p-4"
+  ></div>
 </template>
 
 <script setup>
 import { gsap } from 'gsap';
 
 const { hook } = useNuxtApp();
+const { isMobileOrTablet } = useDevice();
 
-// Move the cursor
-function onMouseMove(e, cursor) {
-  gsap.to(cursor, 0.4, {
-    x: e.pageX - 35,
-    y: e.pageY - 35,
+const cursor = ref(null);
+
+function onMouseMove(event, cursor) {
+  gsap.to(cursor, {
+    x: event.pageX - 35,
+    y: event.pageY - 35,
+    duration: 0.4,
   });
 }
 
 function onMouseEnter(cursor) {
-  gsap.to(cursor, 0.4, {
+  gsap.to(cursor, {
     scale: 4,
+    duration: 0.4,
   });
 }
 
 function onMouseLeave(cursor) {
-  gsap.to(cursor, 0.4, {
+  gsap.to(cursor, {
     scale: 1,
+    duration: 0.4,
   });
 }
 
-hook('app:suspense:resolve', () => {
-  const cursor = document.getElementById('cursor');
-  const hoverableLinks = document.querySelectorAll('.ball-expander');
+hook('page:finish', () => {
+  if (!cursor.value) {
+    return;
+  }
 
-  // For each links with hoverable css class
-  hoverableLinks.forEach((link) => {
-    link.addEventListener('mouseenter', () => onMouseEnter(cursor));
-    link.addEventListener('mouseleave', () => onMouseLeave(cursor));
+  cursor.value.classList.remove('hidden');
+  const hoverables = document.querySelectorAll('.ball-expander');
+
+  hoverables.forEach((element) => {
+    element.addEventListener('mouseenter', () => onMouseEnter(cursor.value));
+    element.addEventListener('mouseleave', () => onMouseLeave(cursor.value));
   });
 
-  document.body.addEventListener('mousemove', (e) => onMouseMove(e, cursor));
+  document.body.addEventListener('mousemove', (e) => onMouseMove(e, cursor.value));
+});
+
+hook('page:start', () => {
+  if (!cursor.value) {
+    return;
+  }
+
+  cursor.value.classList.add('hidden');
 });
 </script>
-
-<style lang="scss">
-$bg-color: rgba(0, 0, 0, 0.6);
-
-.cursor {
-  background-color: $bg-color;
-  pointer-events: none;
-}
-</style>
