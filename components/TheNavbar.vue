@@ -1,12 +1,9 @@
 <template>
-  <nav v-if="$device.isMobileOrTablet" class="flex items-center justify-between">
-    <nuxt-link to="/"><AppLogo /></nuxt-link>
-    <TheMobileMenu />
-  </nav>
+  <nav class="flex items-center justify-between">
+    <NuxtLink to="#" class="ball-expander hover-underline hidden lg:block">Studio</NuxtLink>
+    <NuxtLink to="/" class="ball-expander"><AppLogo /></NuxtLink>
+    <NuxtLink to="#" class="ball-expander hover-underline hidden lg:block">Projets</NuxtLink>
 
-  <nav v-else class="flex justify-between">
-    <nuxt-link to="#" class="hover-underline ball-expander">Studio</nuxt-link>
-    <nuxt-link to="/" class="ball-expander"><AppLogo /></nuxt-link>
-    <nuxt-link to="#" class="hover-underline ball-expander">Projets</nuxt-link>
+    <TheMobileMenu class="lg:hidden" />
   </nav>
 </template>

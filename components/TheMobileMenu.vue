@@ -1,10 +1,8 @@
 <template>
   <HeadlessMenu v-slot="{ close }" as="div" class="inline-block text-left font-light">
-    <div>
-      <HeadlessMenuButton>
-        <img :src="burgerLogo" alt="Menu" title="Menu" />
-      </HeadlessMenuButton>
-    </div>
+    <HeadlessMenuButton>
+      <IconCSS name="ci:menu-alt-05" class="text-3xl text-white" />
+    </HeadlessMenuButton>
 
     <transition
       enter-active-class="transition duration-500 ease-out"
@@ -58,9 +56,6 @@
 </template>
 
 <script lang="ts" setup>
-// @ts-nocheck 2307
-import burgerLogo from '@/assets/img/burger.svg';
-
 const menuLinks = [
   {
     name: 'Studio',
