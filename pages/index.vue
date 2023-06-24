@@ -1,10 +1,20 @@
 <template>
-  <main class="flex flex-col gap-10 overflow-hidden p-5 md:justify-between md:gap-0 md:p-9">
+  <main class="relative flex flex-col gap-10 overflow-hidden p-5 md:justify-between md:gap-0 md:p-9">
     <AppCursor v-if="!$device.isMobileOrTablet" />
-    <TheNavbar />
-    <HomeHero />
+    <TheNavbar class="z-10" />
+    <HomeHero class="z-10" />
     <AppCalendly />
-    <TheFooter v-if="!$device.isMobileOrTablet" />
+    <TheFooter v-if="!$device.isMobileOrTablet" class="z-10" />
+    <img
+      src="@/assets/img/halo-green.png"
+      alt="Background green halo"
+      class="absolute bottom-0 left-0 z-0 -translate-x-1/3 translate-y-1/3"
+    />
+    <img
+      src="@/assets/img/halo-blue.png"
+      alt="Background blue halo"
+      class="absolute right-0 top-0 z-0 -translate-y-1/3 translate-x-1/3"
+    />
   </main>
 </template>
 
