@@ -77,7 +77,7 @@ const openCalendly = () => {
 };
 
 useHead({
-  title: 'Nous contacter — Input Studio',
+  title: 'Nous contacter',
 });
 </script>
 

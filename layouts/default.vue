@@ -8,3 +8,9 @@
     </div>
   </main>
 </template>
+
+<script lang="ts" setup>
+useHead({
+  titleTemplate: '%s — Input Studio',
+});
+</script>
