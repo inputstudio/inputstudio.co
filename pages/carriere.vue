@@ -4,5 +4,7 @@
     <h1 class="text-8xl font-bold">Nous ne réalisons pas de sites mais des expériences web.</h1>
 
     <AppScrollIndicator />
+
+    <CareerActivities />
   </main>
 </template>
