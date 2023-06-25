@@ -4,7 +4,7 @@
     <TheNavbar class="z-10" />
     <HomeHero class="z-10" />
     <AppCalendly />
-    <TheFooter class="z-10 hidden md:flex" />
+    <HomeFooter class="z-10 hidden md:flex" />
     <img
       src="@/assets/img/halo-green.png"
       alt="Background green halo"

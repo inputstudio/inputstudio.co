@@ -6,6 +6,8 @@
       <AppBackButton />
       <slot />
     </div>
+
+    <TheFooter />
   </main>
 </template>
 
