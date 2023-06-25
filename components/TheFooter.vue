@@ -18,8 +18,8 @@
         </div>
       </div>
 
-      <div class="flex flex-col justify-end font-bold uppercase">
-        <a v-for="page in pages" :key="`page-url-${page.name}`" :href="page.url" class="hover-underline">
+      <div class="flex flex-col items-end font-bold uppercase">
+        <a v-for="page in pages" :key="`page-url-${page.name}`" :href="page.url" class="hover-underline w-fit">
           {{ page.name }}
           <IconCSS name="ic:baseline-arrow-outward" class="text-2xl" />
         </a>
@@ -27,7 +27,7 @@
     </div>
 
     <div class="flex justify-center text-center text-customGray md:gap-10 md:text-left">
-      <a href="#" class="hover-underline">Politique de confidentialité</a>
+      <a href="#">Politique de confidentialité</a>
       <span>&copy; Copyright (c) 2023</span>
     </div>
   </footer>
