@@ -1,7 +1,7 @@
 <template>
   <div class="mx-auto mt-36 flex w-max rotate-90 items-center justify-center gap-4">
     <p class="uppercase">scroll</p>
-    <div class="scroll-indicator"></div>
+    <div class="h-0.5 w-28 bg-white"></div>
   </div>
 </template>
 
@@ -11,10 +11,4 @@
 // })
 </script>
 
-<style lang="scss">
-.scroll-indicator {
-  width: 100px;
-  height: 1px;
-  background-color: white;
-}
-</style>
+<style lang="scss"></style>
