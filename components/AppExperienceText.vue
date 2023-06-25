@@ -24,11 +24,11 @@
 const props = defineProps({
   textClass: {
     type: String,
-    default: '',
+    default: 'font-thin',
   },
   circleClass: {
     type: String,
-    default: '',
+    default: '-translate-y-8',
   },
 });
 </script>

@@ -1,10 +1,10 @@
 <template>
-  <main class="px-9 py-20 md:p-24">
+  <main class="flex flex-col gap-y-20 px-9 py-20 md:p-24">
     <section>
       <p class="text-xl">Studio</p>
       <h1 class="text-8xl font-bold">
         Nous ne réalisons pas de sites mais des
-        <AppExperienceText :text-class="'font-thin'" :circle-class="'-translate-y-8'" />.
+        <AppExperienceText />.
       </h1>
 
       <AppScrollIndicator />
@@ -33,5 +33,7 @@
     </section>
 
     <CareerActivities />
+
+    <CareerQualities />
   </main>
 </template>

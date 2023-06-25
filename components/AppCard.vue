@@ -1,7 +1,7 @@
 <template>
   <div
     :style="{ borderTopLeftRadius: props.borderTopLeftRadius + 'px' }"
-    class="app-card w-fit rounded-2xl border border-white p-5"
+    class="app-card rounded-2xl border border-white p-5"
   >
     <slot name="app-card-body"></slot>
   </div>
