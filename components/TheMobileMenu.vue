@@ -23,7 +23,7 @@
 
         <div class="flex flex-col gap-3 text-xl">
           <HeadlessMenuItem v-for="(link, index) in menuLinks" :key="`mobile-menu-item-${index}`" @click="close">
-            <nuxt-link :to="link.url">{{ link.name }}</nuxt-link>
+            <NuxtLink :to="link.url">{{ link.name }}</NuxtLink>
           </HeadlessMenuItem>
         </div>
 
@@ -32,13 +32,13 @@
             <img src="@/assets/img/calendly.svg" alt="Logo Calendly" width="42" />
           </button>
 
-          <a href="https://github.com/inputstudio/" target="_blank" rel="noopener noreferrer">
+          <NuxtLink to="https://github.com/inputstudio/" target="_blank">
             <IconCSS name="mdi:github" size="42px" class="text-neutral-600 transition-colors" />
-          </a>
+          </NuxtLink>
 
-          <a href="https://www.linkedin.com/company/inputstudio/" target="_blank" rel="noopener noreferrer">
+          <NuxtLink to="https://www.linkedin.com/company/inputstudio/" target="_blank">
             <IconCSS name="mdi:linkedin" size="42px" class="text-neutral-600 transition-colors" />
-          </a>
+          </NuxtLink>
         </div>
 
         <div class="flex flex-col gap-1 text-lg">
@@ -56,23 +56,20 @@
 </template>
 
 <script lang="ts" setup>
+const { openCalendly } = useCalendlyWidget();
+
 const menuLinks = [
   {
     name: 'Studio',
-    url: '#',
+    url: '/studio',
   },
   {
     name: 'Projets',
-    url: '#',
+    url: '/projects',
   },
   {
     name: 'Nous contacter',
-    url: 'contact',
+    url: '/contact',
   },
 ];
-
-const calendly = useCalendly();
-const openCalendly = () => {
-  calendly.showPopupWidget('https://calendly.com/input_studio/30min');
-};
 </script>

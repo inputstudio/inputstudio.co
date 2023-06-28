@@ -19,8 +19,5 @@
 </template>
 
 <script lang="ts" setup>
-const calendly = useCalendly();
-const openCalendly = () => {
-  calendly.showPopupWidget('https://calendly.com/input_studio/30min');
-};
+const { openCalendly } = useCalendlyWidget();
 </script>
