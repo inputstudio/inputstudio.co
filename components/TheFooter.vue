@@ -43,19 +43,19 @@ const socials = [
   },
   {
     title: 'Instagram',
-    text: '@inputstudio',
+    text: '@input.studio',
     url: 'https://instagram.com/input.studio',
     icon: 'mdi:instagram',
   },
   {
     title: 'LinkedIn',
-    text: 'input.studio',
+    text: 'inputstudio',
     url: 'https://www.linkedin.com/company/inputstudio',
     icon: 'mdi:linkedin',
   },
   {
     title: 'GitHub',
-    text: 'input.studio',
+    text: 'inputstudio',
     url: 'https://github.com/inputstudio',
     icon: 'mdi:github',
   },
