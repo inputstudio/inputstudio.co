@@ -1,5 +1,5 @@
 <template>
-  <nav class="z-10 hidden lg:flex lg:justify-between">
+  <nav class="hidden lg:flex lg:justify-between">
     <div class="flex gap-3">
       <NuxtLink to="https://instagram.com/input.studio" target="_blank" title="Instagram">
         <IconCSS name="mdi:instagram" class="ball-expander text-3xl" />

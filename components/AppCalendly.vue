@@ -1,7 +1,7 @@
 <template>
   <button
     type="button"
-    class="absolute bottom-0 left-1/2 z-10 w-5/6 -translate-x-1/2 -translate-y-6 transform rounded-2xl text-black shadow-lg lg:w-96"
+    class="absolute bottom-0 left-1/2 w-5/6 -translate-x-1/2 -translate-y-6 transform rounded-2xl text-black shadow-lg lg:w-96"
     @click="openCalendly"
   >
     <div class="flex items-center justify-center gap-6 rounded-t-2xl bg-white p-6">

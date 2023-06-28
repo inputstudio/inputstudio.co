@@ -4,6 +4,6 @@
     <NuxtLink to="/" class="ball-expander"><AppLogo /></NuxtLink>
     <NuxtLink to="/projects" class="ball-expander hover-underline hidden lg:block">Projets</NuxtLink>
 
-    <TheMobileMenu class="lg:hidden" />
+    <HomeNavbarMenu class="z-50 lg:hidden" />
   </nav>
 </template>
