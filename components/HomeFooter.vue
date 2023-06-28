@@ -1,5 +1,5 @@
 <template>
-  <nav class="flex justify-between">
+  <nav class="z-10 hidden lg:flex lg:justify-between">
     <div class="flex gap-3">
       <NuxtLink to="https://instagram.com/input.studio" target="_blank" title="Instagram">
         <IconCSS name="mdi:instagram" class="ball-expander text-3xl" />
@@ -13,11 +13,11 @@
         <IconCSS name="mdi:github" class="ball-expander text-3xl" />
       </NuxtLink>
 
-      <NuxtLink to="/carriere" title="Carrière">
+      <NuxtLink to="/careers" title="Carrière">
         <IconCSS name="uim:bag" class="ball-expander text-3xl" />
       </NuxtLink>
     </div>
 
-    <NuxtLink to="/contact" class="hover-underline ball-expander">Nous contacter</NuxtLink>
+    <NuxtLink to="/contact" class="ball-expander hover-underline">Nous contacter</NuxtLink>
   </nav>
 </template>

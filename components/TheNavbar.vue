@@ -1,9 +1,11 @@
 <template>
-  <nav class="flex items-center justify-between">
-    <NuxtLink to="#" class="ball-expander hover-underline hidden lg:block">Studio</NuxtLink>
-    <NuxtLink to="/" class="ball-expander"><AppLogo /></NuxtLink>
-    <NuxtLink to="#" class="ball-expander hover-underline hidden lg:block">Projets</NuxtLink>
+  <nav class="absolute top-6 flex w-screen justify-between px-9">
+    <NuxtLink to="/" class="flex items-center gap-1 text-gray-500 transition-colors hover:text-white">
+      <IconCSS name="ic:baseline-arrow-outward" class="-rotate-90" />
+      <span>Retour à l'accueil</span>
+    </NuxtLink>
 
-    <TheMobileMenu class="lg:hidden" />
+    <!-- TODO: Add a glow effect on hover or something else -->
+    <span class="rounded-full border-[1px] border-white px-3 py-1 uppercase">Agence 100% remote</span>
   </nav>
 </template>

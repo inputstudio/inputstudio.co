@@ -3,7 +3,7 @@
     <AppCursor />
 
     <div>
-      <AppBackButton />
+      <TheNavbar />
       <slot />
     </div>
 
