@@ -5,18 +5,6 @@
     <HomeHero />
     <HomeFooter />
     <AppCalendly />
-    <img
-      src="@/assets/img/halo-green.png"
-      alt=""
-      class="absolute bottom-0 left-0 z-0 -translate-x-1/3 translate-y-1/3"
-      aria-hidden
-    />
-    <img
-      src="@/assets/img/halo-blue.png"
-      alt=""
-      class="absolute right-0 top-0 z-0 -translate-y-1/3 translate-x-1/3"
-      aria-hidden
-    />
   </main>
 </template>
 
@@ -29,3 +17,12 @@ definePageMeta({
   layout: false,
 });
 </script>
+
+<style lang="scss" scoped>
+main {
+  background: no-repeat center url('@/assets/img/halo-green.png'),
+    no-repeat center/75% url('@/assets/img/halo-blue.png');
+  background-position: top 0% left -45%, bottom 0% right -45%;
+  background-color: black;
+}
+</style>
