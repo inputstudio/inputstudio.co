@@ -11,7 +11,7 @@
       <div class="flex flex-col gap-3 lg:flex-row">
         <input v-model="data.contact" class="w-1/2" type="text" placeholder="E-mail/Téléphone" required />
 
-        <select v-model="data.budget" class="w-1/2">
+        <select v-model="data.budget" class="w-1/2" required>
           <option value="" selected disabled>Votre budget</option>
           <option v-for="budget in budgets" :key="budget" :value="budget">{{ budget }}</option>
         </select>
@@ -90,18 +90,16 @@ async function submit() {
   const { contactFormEndpoint } = useRuntimeConfig().public;
 
   try {
-    await fetch(contactFormEndpoint, {
+    await useFetch(contactFormEndpoint, {
       method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(data.value),
+      body: data.value,
     });
   } catch (error) {
     // TODO: Display error snackbar
   }
 
   // TODO: Display success snackbar
+  // TODO: Clear form with @inputstudio/utils
 
   loading.value = false;
 }
