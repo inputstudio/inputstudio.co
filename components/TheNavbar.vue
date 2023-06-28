@@ -6,6 +6,6 @@
     </NuxtLink>
 
     <!-- TODO: Add a glow effect on hover or something else -->
-    <span class="rounded-full border-[1px] border-white px-3 py-1 uppercase">Agence 100% remote</span>
+    <span class="hidden rounded-full border-[1px] border-white px-3 py-1 uppercase lg:block">Agence 100% remote</span>
   </nav>
 </template>
