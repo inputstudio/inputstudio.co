@@ -19,15 +19,15 @@
       </div>
 
       <div class="flex flex-col items-end font-bold uppercase">
-        <a v-for="page in pages" :key="`page-url-${page.name}`" :href="page.url" class="hover-underline w-fit">
+        <NuxtLink v-for="page in pages" :key="`page-url-${page.name}`" :to="page.url" class="hover-underline w-fit">
           {{ page.name }}
           <IconCSS name="ic:baseline-arrow-outward" class="text-2xl" />
-        </a>
+        </NuxtLink>
       </div>
     </div>
 
     <div class="flex justify-center text-center text-customGray md:gap-10 md:text-left">
-      <a href="#">Politique de confidentialité</a>
+      <NuxtLink to="/privacy">Politique de confidentialité</NuxtLink>
       <span>&copy; Copyright (c) 2023</span>
     </div>
   </footer>
@@ -63,20 +63,20 @@ const socials = [
 
 const pages = [
   {
-    name: 'social',
-    url: '#',
+    name: 'Studio',
+    url: '/studio',
   },
   {
-    name: 'projets',
-    url: '#',
+    name: 'Projets',
+    url: '/projects',
   },
   {
-    name: 'carrières',
-    url: '#',
+    name: 'Carrières',
+    url: '/careers',
   },
   {
-    name: 'nous contacter',
-    url: '#',
+    name: 'Nous contacter',
+    url: '/contact',
   },
 ];
 </script>
