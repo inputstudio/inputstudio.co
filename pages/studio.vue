@@ -32,8 +32,8 @@
       </p>
     </section>
 
-    <CareerActivities />
+    <StudioActivities />
 
-    <CareerQualities />
+    <StudioQualities />
   </main>
 </template>
