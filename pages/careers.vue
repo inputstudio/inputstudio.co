@@ -18,6 +18,7 @@
             :key="`career-profile-${index}`"
             :position="index"
             :is-open="index === 0"
+            :last-item="index + 1 === profiles.length"
             :title="profile.title"
             :description="profile.description"
           />

@@ -1,5 +1,5 @@
 <template>
-  <div class="space-y-4 border-b border-t border-white py-4">
+  <div :class="{ 'border-b ': !props.lastItem }" class="space-y-4 border-t border-white py-4">
     <div class="flex cursor-pointer justify-between" @click="show = !show">
       <h2 class="text-4xl">{{ props.title }}</h2>
       <button type="button">
@@ -24,6 +24,10 @@ const props = defineProps({
     required: true,
   },
   isOpen: {
+    type: Boolean,
+    required: true,
+  },
+  lastItem: {
     type: Boolean,
     required: true,
   },
