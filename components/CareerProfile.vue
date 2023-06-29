@@ -1,7 +1,7 @@
 <template>
   <div :class="{ 'border-b ': !props.lastItem }" class="space-y-4 border-t border-white py-4">
     <div class="flex cursor-pointer justify-between" @click="show = !show">
-      <h2 class="text-4xl">{{ props.title }}</h2>
+      <h2 class="text-2xl lg:text-4xl">{{ props.title }}</h2>
       <button type="button">
         <IconCSS v-if="show" name="ic:baseline-minus" class="text-2xl" />
         <IconCSS v-else name="ic:baseline-plus" class="text-2xl" />
@@ -14,7 +14,7 @@
       </p>
       <a
         href="mailto:hello@inputstudio.co"
-        class="my-3 rounded-full border-2 border-white bg-white px-5 py-3 text-black transition-colors hover:bg-black hover:text-white"
+        class="my-3 rounded-full border-2 border-white bg-white px-3 py-1 text-black transition-colors hover:bg-black hover:text-white lg:px-5 lg:py-3"
         >Envoyez votre cv</a
       >
     </div>

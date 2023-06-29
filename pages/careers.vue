@@ -1,18 +1,18 @@
 <template>
-  <main class="flex flex-col gap-y-20 px-9 py-20 md:p-24">
+  <main class="px-9 py-20 md:p-24">
     <section class="section">
       <p class="text-xl">Carrière</p>
-      <h1 class="text-8xl font-bold">Nous embauchons</h1>
+      <h1 class="text-3xl font-bold lg:text-8xl">Nous embauchons</h1>
 
-      <div class="my-20 flex gap-20 text-justify">
-        <p class="w-2/5">
+      <div class="my-8 flex flex-col gap-20 text-justify lg:my-20 lg:flex-row">
+        <p class="lg:w-2/5">
           Input studio est toujours ouvert aux personnes intelligentes et créatives. Rejoignez notre équipe de personnes
           partageant les mêmes idées qui s'efforcent d'atteindre leurs objectifs. Travaillons ensemble vers le succès !
           Nous sommes intéressés par la construction d'une communauté d'individus qui partagent nos valeurs et nos
           objectifs.
         </p>
 
-        <div class="w-3/5">
+        <div class="lg:w-3/5">
           <CareerProfile
             v-for="(profile, index) in profiles"
             :key="`career-profile-${index}`"
