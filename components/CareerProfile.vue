@@ -7,9 +7,17 @@
         <IconCSS v-else name="ic:baseline-plus" class="text-2xl" />
       </button>
     </div>
-    <p v-show="show">
-      {{ props.description }}
-    </p>
+
+    <div v-show="show" class="flex flex-col items-start gap-y-1">
+      <p>
+        {{ props.description }}
+      </p>
+      <a
+        href="mailto:hello@inputstudio.co"
+        class="my-3 rounded-full border-2 border-white bg-white px-5 py-3 text-black transition-colors hover:bg-black hover:text-white"
+        >Envoyez votre cv</a
+      >
+    </div>
   </div>
 </template>
 
