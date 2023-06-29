@@ -16,8 +16,8 @@ const cursor = ref(null);
 
 function onMouseMove(event, cursor) {
   gsap.to(cursor, {
-    x: event.pageX - 35,
-    y: event.pageY - 35,
+    x: event.clientX,
+    y: event.clientY,
     duration: 0.4,
   });
 }
