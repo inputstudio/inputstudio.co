@@ -11,13 +11,14 @@ import { gsap } from 'gsap';
 
 const { hook } = useNuxtApp();
 const { isMobileOrTablet } = useDevice();
+const currentRoute = useRoute();
 
 const cursor = ref(null);
 
 function onMouseMove(event, cursor) {
   gsap.to(cursor, {
-    x: event.clientX,
-    y: event.clientY,
+    x: currentRoute.name === 'index' ? event.clientX - 35 : event.clientX,
+    y: currentRoute.name === 'index' ? event.clientY - 35 : event.clientY,
     duration: 0.4,
   });
 }
