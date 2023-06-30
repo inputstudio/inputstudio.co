@@ -35,5 +35,6 @@
     <StudioActivities />
 
     <StudioQualities />
+    <AppLetsStart />
   </main>
 </template>
