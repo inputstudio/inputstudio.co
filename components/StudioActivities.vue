@@ -1,18 +1,18 @@
 <template>
   <section class="flex flex-col gap-10">
     <h1 class="text-6xl font-medium">Que faisons nous ?</h1>
-    <p class="w-3/4 text-2xl font-light">
-      Input studio est une équipe orientée produit.Nous concevons et développons des solutions web complètes avec un
+    <p class="text-lg font-light md:w-3/4 md:text-2xl">
+      Input studio est une équipe orientée produit. Nous concevons et développons des solutions web complètes avec un
       look et une sensation professionnels en utilisant les dernières technologies et tendances.
     </p>
 
-    <div class="grid grid-cols-3 place-content-center gap-x-7">
+    <div class="grid grid-cols-1 place-content-center gap-6 md:grid-cols-3 md:gap-7">
       <AppCard v-for="(activity, index) in activities" :key="`career-activity-${index}`" :border-top-left-radius="50">
         <template #app-card-body>
           <div class="flex flex-col justify-around gap-5">
             <span class="text-lg text-customGray">{{ `0${index + 1}` }}</span>
             <h2 class="text-4xl font-medium">{{ activity.title }}</h2>
-            <img :src="activity.image" :alt="activity.title" class="aspect-square" />
+            <img :src="activity.image" :alt="activity.title" class="w-2/3 self-center md:aspect-square md:w-full" />
             <p class="text-justify text-customGray">{{ activity.description }}</p>
           </div>
         </template>

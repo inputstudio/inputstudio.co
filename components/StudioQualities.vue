@@ -1,18 +1,18 @@
 <template>
   <section class="flex flex-col gap-10">
     <h1 class="text-6xl font-medium">Nos qualités</h1>
-    <p class="w-3/4 text-2xl font-light">
+    <p class="text-lg font-light md:w-3/4 md:text-2xl">
       Ces qualités combinées font de nous une agence web créative fiable et performante. Nous nous efforçons de fournir
       des services de haute qualité et de créer des solutions qui répondent aux besoins uniques de nos clients, en
       veillant à leur satisfaction à chaque étape du processus.
     </p>
 
-    <div class="flex gap-x-12 overflow-x-auto px-5 pb-10">
+    <div class="flex gap-x-12 overflow-x-auto pb-10 md:px-5">
       <AppCard
         v-for="(quality, index) in qualities"
         :key="`career-quality-${index}`"
         :border-top-left-radius="50"
-        style="min-width: 350px"
+        :style="(isMobileOrTablet && { 'min-width': '250px' }, !isMobileOrTablet && { 'min-width': '350px' })"
       >
         <template #app-card-body>
           <div class="flex flex-col justify-around gap-5">
@@ -34,6 +34,8 @@ import creativity from '@/assets/img/career/creativity.svg';
 import competence from '@/assets/img/career/competence.svg';
 import client from '@/assets/img/career/client.svg';
 import conception from '@/assets/img/career/conception.svg';
+
+const { isMobileOrTablet } = useDevice();
 
 const qualities = [
   {
