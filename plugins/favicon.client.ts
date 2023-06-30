@@ -1,10 +1,12 @@
 export default defineNuxtPlugin((nuxtApp) => {
   const { hook } = nuxtApp;
   let index = 0;
-  let interval: NodeJS.Timer;
+  let interval: NodeJS.Timer | undefined;
   const sequence = ['i', 'N', 'P', 'U', 'T', 'S', 'T', 'U', 'D', 'I', 'O'];
 
   hook('page:finish', () => {
+    if (interval) return;
+
     interval = setInterval(() => {
       const favicon = document.querySelector("link[rel~='icon']") as HTMLLinkElement;
 
@@ -17,5 +19,6 @@ export default defineNuxtPlugin((nuxtApp) => {
 
   hook('page:start', () => {
     clearInterval(interval);
+    interval = undefined;
   });
 });
