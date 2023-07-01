@@ -7,17 +7,17 @@
         ensemble !
       </h1>
 
-      <a
-        href="#"
+      <button
         class="rounded-full bg-white px-5 py-2 text-black md:px-10 md:py-5 md:transition-colors md:hover:bg-black md:hover:text-white"
+        @click="openCalendly"
       >
         Planifier une réunion
         <IconCSS name="ic:baseline-arrow-outward" class="text-xl" />
-      </a>
+      </button>
 
       <p>ou</p>
 
-      <a href="#" class="underline">
+      <a href="mailto:hello@inputstudio.co" class="underline">
         Soumettre un projet
         <IconCSS name="ic:baseline-arrow-outward" class="text-xl" />
       </a>
@@ -25,4 +25,6 @@
   </section>
 </template>
 
-<script lang="ts" setup></script>
+<script lang="ts" setup>
+const { openCalendly } = useCalendlyWidget();
+</script>
