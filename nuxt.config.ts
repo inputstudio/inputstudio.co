@@ -16,6 +16,7 @@ export default defineNuxtConfig({
   css: ['@/assets/scss/main.scss'],
   runtimeConfig: {
     public: {
+      staticAssetsEndpoint: 'https://content.inputstudio.co/assets/',
       contactFormEndpoint:
         'https://faas-fra1-afec6ce7.doserverless.co/api/v1/web/fn-17294e48-7d1c-4808-9722-0e3735df0619/formhandler/formhandler',
     },
