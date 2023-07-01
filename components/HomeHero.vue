@@ -13,7 +13,7 @@
       dont vous avez besoin.
     </p>
 
-    <div class="mb-12 flex flex-col gap-3">
+    <div class="mb-12 flex flex-col items-center gap-5 md:gap-3">
       <HomeHeroTechnos />
       <HomeHeroGhostBanner />
     </div>
