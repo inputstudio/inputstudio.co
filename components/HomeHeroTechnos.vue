@@ -1,5 +1,5 @@
 <template>
-  <div class="flex gap-9 md:items-center" :class="{ 'moving-text': $device.isMobileOrTablet }">
+  <div class="marquee flex gap-9 md:items-center">
     <div v-for="technology in technologies" :key="technology.logo" :title="technology.title">
       <Icon
         :name="technology.logo"
@@ -70,11 +70,13 @@ const technologies = [
   }
 }
 
-/* media query to enable animation for only those who want it */
+/* Enable animation for only those who want it */
 @media (prefers-reduced-motion: no-preference) {
-  .moving-text {
-    width: 230vw;
-    animation: marquee 12s linear infinite backwards;
+  @media screen and (max-width: 768px) {
+    .marquee {
+      width: 230vw;
+      animation: marquee 12s linear infinite backwards;
+    }
   }
 }
 </style>
