@@ -15,6 +15,8 @@ const currentRoute = useRoute();
 
 const cursor = ref(null);
 
+const expandableElements = 'a, .ball-expander';
+
 function onMouseMove(event, cursor) {
   gsap.to(cursor, {
     x: currentRoute.name === 'index' ? event.clientX - 35 : event.clientX,
@@ -37,13 +39,8 @@ function onMouseLeave(cursor) {
   });
 }
 
-hook('page:finish', () => {
-  if (!cursor.value) {
-    return;
-  }
-
-  cursor.value.classList.remove('hidden');
-  const hoverables = document.querySelectorAll('.ball-expander');
+function init() {
+  const hoverables = document.querySelectorAll(expandableElements);
 
   hoverables.forEach((element) => {
     element.addEventListener('mouseenter', () => onMouseEnter(cursor.value));
@@ -51,6 +48,26 @@ hook('page:finish', () => {
   });
 
   document.body.addEventListener('mousemove', (e) => onMouseMove(e, cursor.value));
+}
+
+function clean() {
+  const hoverables = document.querySelectorAll(expandableElements);
+
+  hoverables.forEach((element) => {
+    element.removeEventListener('mouseenter', () => onMouseEnter(cursor.value));
+    element.removeEventListener('mouseleave', () => onMouseLeave(cursor.value));
+  });
+
+  document.body.removeEventListener('mousemove', (e) => onMouseMove(e, cursor.value));
+}
+
+hook('page:finish', () => {
+  if (!cursor.value) {
+    return;
+  }
+
+  init();
+  cursor.value.classList.remove('hidden');
 });
 
 hook('page:start', () => {
@@ -58,6 +75,7 @@ hook('page:start', () => {
     return;
   }
 
+  clean();
   cursor.value.classList.add('hidden');
 });
 </script>
