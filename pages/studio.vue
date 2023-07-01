@@ -4,7 +4,7 @@
       <p class="text-xl">Studio</p>
       <h1 class="text-5xl font-bold md:text-8xl">
         Nous ne réalisons pas de sites mais des
-        <AppExperienceText circle-class="-translate-y-16" />.
+        <AppExperienceText circle-class="-translate-x-4 -translate-y-16 md:-translate-y-8 md:-translate-x-0" />.
       </h1>
 
       <AppScrollIndicator />
@@ -38,3 +38,5 @@
     <AppLetsStart />
   </main>
 </template>
+
+<script lang="ts" setup></script>
