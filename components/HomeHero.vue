@@ -2,7 +2,7 @@
   <section class="flex flex-col items-center gap-6 md:gap-9 xl:gap-12">
     <h1
       id="animated-title"
-      class="flex flex-col gap-4 text-center font-bold leading-normal md:cursor-pointer md:flex-row"
+      class="cursor-expander flex flex-col gap-4 text-center font-bold leading-normal md:flex-row"
     >
       <div id="design" class="text-6xl md:text-8xl">Design.</div>
       <div id="code" class="text-5xl md:text-8xl">Code.</div>
