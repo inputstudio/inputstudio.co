@@ -13,13 +13,13 @@
 
       <div class="md:w-3/5">
         <CareerProfile
-          v-for="(profile, index) in profiles"
-          :key="`career-profile-${index}`"
+          v-for="(job, index) in jobs"
+          :key="`career-profile-${job.id}`"
           :position="index"
           :is-open="index === 0"
-          :last-item="index + 1 === profiles.length"
-          :title="profile.title"
-          :description="profile.description"
+          :last-item="index + 1 === jobs.length"
+          :title="job.title"
+          :description="job.description"
         />
       </div>
     </div>
@@ -27,31 +27,15 @@
 </template>
 
 <script lang="ts" setup>
-const profiles = [
-  {
-    title: 'Developpeur VueJS',
-    description:
-      'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ut fuga repellat, illo itaque dicta accusamus obcaecati quis autem, architecto quod nisi quisquam assumenda ipsam maiores atque blanditiis, sapiente reprehenderit beatae. Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus dolorem temporibus ducimus soluta sapiente exercitationem beatae, assumenda ipsa eius ad optio non enim nisi. Molestias delectus quos eos magnam quidem.',
-  },
-  {
-    title: 'Developpeur ReactJS',
-    description:
-      'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ut fuga repellat, illo itaque dicta accusamus obcaecati quis autem, architecto quod nisi quisquam assumenda ipsam maiores atque blanditiis, sapiente reprehenderit beatae. Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus dolorem temporibus ducimus soluta sapiente exercitationem beatae, assumenda ipsa eius ad optio non enim nisi. Molestias delectus quos eos magnam quidem.',
-  },
-  {
-    title: 'Developpeur React Native',
-    description:
-      'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ut fuga repellat, illo itaque dicta accusamus obcaecati quis autem, architecto quod nisi quisquam assumenda ipsam maiores atque blanditiis, sapiente reprehenderit beatae. Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus dolorem temporibus ducimus soluta sapiente exercitationem beatae, assumenda ipsa eius ad optio non enim nisi. Molestias delectus quos eos magnam quidem.',
-  },
-  {
-    title: 'Developpeur Dart/Flutter',
-    description:
-      'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ut fuga repellat, illo itaque dicta accusamus obcaecati quis autem, architecto quod nisi quisquam assumenda ipsam maiores atque blanditiis, sapiente reprehenderit beatae. Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus dolorem temporibus ducimus soluta sapiente exercitationem beatae, assumenda ipsa eius ad optio non enim nisi. Molestias delectus quos eos magnam quidem.',
-  },
-  {
-    title: 'Developpeur PHP',
-    description:
-      'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ut fuga repellat, illo itaque dicta accusamus obcaecati quis autem, architecto quod nisi quisquam assumenda ipsam maiores atque blanditiis, sapiente reprehenderit beatae. Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus dolorem temporibus ducimus soluta sapiente exercitationem beatae, assumenda ipsa eius ad optio non enim nisi. Molestias delectus quos eos magnam quidem.',
-  },
-];
+const { getItems } = useDirectusItems();
+
+interface Job {
+  id: string | number;
+  date_created: string | Date;
+  date_updated?: string | Date;
+  title: string;
+  description: string;
+}
+
+const jobs = await getItems<Job>({ collection: 'careers' });
 </script>
