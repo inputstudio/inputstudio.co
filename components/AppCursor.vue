@@ -15,7 +15,7 @@ const currentRoute = useRoute();
 
 const cursor = ref(null);
 
-const expandableElements = 'a, .ball-expander';
+const expandableElements = 'a, .cursor-expander';
 
 function onMouseMove(event, cursor) {
   gsap.to(cursor, {
