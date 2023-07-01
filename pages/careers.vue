@@ -28,14 +28,5 @@
 
 <script lang="ts" setup>
 const { getItems } = useDirectusItems();
-
-interface Job {
-  id: string | number;
-  date_created: string | Date;
-  date_updated?: string | Date;
-  title: string;
-  description: string;
-}
-
 const jobs = await getItems<Job>({ collection: 'careers' });
 </script>
