@@ -1,31 +1,29 @@
 <template>
-  <main class="px-9 py-20 md:p-24">
-    <section class="section">
-      <p class="text-xl">Carrière</p>
-      <h1 class="text-3xl font-bold lg:text-8xl">Nous embauchons</h1>
+  <section class="section px-9 py-20">
+    <p class="text-xl font-thin">Carrière</p>
+    <h1 class="text-3xl font-bold md:text-8xl">Nous embauchons</h1>
 
-      <div class="my-8 flex flex-col gap-20 text-justify lg:my-20 lg:flex-row">
-        <p class="lg:w-2/5">
-          Input studio est toujours ouvert aux personnes intelligentes et créatives. Rejoignez notre équipe de personnes
-          partageant les mêmes idées qui s'efforcent d'atteindre leurs objectifs. Travaillons ensemble vers le succès !
-          Nous sommes intéressés par la construction d'une communauté d'individus qui partagent nos valeurs et nos
-          objectifs.
-        </p>
+    <div class="my-8 flex flex-col gap-20 text-justify md:my-20 md:flex-row">
+      <p class="md:w-2/5">
+        Input studio est toujours ouvert aux personnes intelligentes et créatives. Rejoignez notre équipe de personnes
+        partageant les mêmes idées qui s'efforcent d'atteindre leurs objectifs. Travaillons ensemble vers le succès !
+        Nous sommes intéressés par la construction d'une communauté d'individus qui partagent nos valeurs et nos
+        objectifs.
+      </p>
 
-        <div class="lg:w-3/5">
-          <CareerProfile
-            v-for="(profile, index) in profiles"
-            :key="`career-profile-${index}`"
-            :position="index"
-            :is-open="index === 0"
-            :last-item="index + 1 === profiles.length"
-            :title="profile.title"
-            :description="profile.description"
-          />
-        </div>
+      <div class="md:w-3/5">
+        <CareerProfile
+          v-for="(profile, index) in profiles"
+          :key="`career-profile-${index}`"
+          :position="index"
+          :is-open="index === 0"
+          :last-item="index + 1 === profiles.length"
+          :title="profile.title"
+          :description="profile.description"
+        />
       </div>
-    </section>
-  </main>
+    </div>
+  </section>
 </template>
 
 <script lang="ts" setup>

@@ -1,9 +1,9 @@
 <template>
   <section class="section flex flex-col justify-center gap-3 px-9 py-20">
-    <span class="text-xl font-thin">Nous contacter</span>
-    <h1 class="relative mb-10 text-3xl font-bold lg:w-1/2 lg:text-8xl">Réalisons votre projet ensemble !</h1>
+    <p class="text-xl font-thin">Nous contacter</p>
+    <h1 class="mb-10 text-3xl font-bold md:text-8xl 2xl:w-1/2">Réalisons votre projet ensemble !</h1>
 
-    <div class="flex flex-col justify-center gap-12 lg:flex-row">
+    <div class="flex flex-col justify-center gap-12 md:flex-row">
       <ContactForm />
       <ContactMore />
     </div>
