@@ -27,7 +27,7 @@ function onMouseMove(event, cursor) {
 
 function onMouseEnter(cursor) {
   gsap.to(cursor, {
-    scale: 4,
+    scale: 8,
     duration: 0.4,
   });
 }
