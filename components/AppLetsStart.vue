@@ -8,7 +8,7 @@
       </h1>
 
       <button
-        class="rounded-full bg-white px-5 py-2 text-black md:px-10 md:py-5 md:transition-colors md:hover:bg-black md:hover:text-white"
+        class="ball-expander rounded-full bg-white px-5 py-2 text-black md:px-10 md:py-5 md:transition-colors md:hover:bg-black md:hover:text-white"
         @click="openCalendly"
       >
         Planifier une réunion
