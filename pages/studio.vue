@@ -33,6 +33,7 @@
     </section>
 
     <StudioActivities class="section" />
+    <StudioTimeline class="section" />
     <StudioQualities class="section" />
     <AppLetsStart />
   </div>
