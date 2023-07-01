@@ -12,7 +12,7 @@
         v-for="(quality, index) in qualities"
         :key="`career-quality-${index}`"
         :border-top-left-radius="50"
-        :style="(isMobileOrTablet && { 'min-width': '250px' }, !isMobileOrTablet && { 'min-width': '350px' })"
+        class="min-w-[250px] md:min-w-[350px]"
       >
         <template #app-card-body>
           <div class="flex flex-col justify-around gap-5">
@@ -34,8 +34,6 @@ import creativity from '@/assets/img/career/creativity.svg';
 import competence from '@/assets/img/career/competence.svg';
 import client from '@/assets/img/career/client.svg';
 import conception from '@/assets/img/career/conception.svg';
-
-const { isMobileOrTablet } = useDevice();
 
 const qualities = [
   {

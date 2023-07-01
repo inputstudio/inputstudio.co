@@ -1,6 +1,6 @@
 <template>
   <div
-    :style="{ borderTopLeftRadius: props.borderTopLeftRadius + 'px' }"
+    :style="{ borderTopLeftRadius: borderTopLeftRadius + 'px' }"
     class="app-card rounded-2xl border border-white p-5"
   >
     <slot name="app-card-body"></slot>
@@ -8,7 +8,7 @@
 </template>
 
 <script lang="ts" setup>
-const props = defineProps({
+defineProps({
   borderTopLeftRadius: {
     type: Number,
     default: 16,
