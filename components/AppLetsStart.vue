@@ -12,15 +12,14 @@
         @click="openCalendly"
       >
         Planifier une réunion
-        <IconCSS name="ic:baseline-arrow-outward" class="text-xl" />
       </button>
 
       <p>ou</p>
 
-      <a href="mailto:hello@inputstudio.co" class="underline">
+      <NuxtLink to="/contact" class="underline">
         Soumettre un projet
         <IconCSS name="ic:baseline-arrow-outward" class="text-xl" />
-      </a>
+      </NuxtLink>
     </div>
   </section>
 </template>
