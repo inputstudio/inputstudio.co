@@ -25,6 +25,7 @@ export default defineNuxtConfig({
     '@nuxtjs/eslint-module',
     '@nuxtjs/google-fonts',
     '@nuxtjs/plausible',
+    'nuxt-directus',
     'nuxt-calendly',
     'nuxt-headlessui',
     'nuxt-icon',
@@ -32,6 +33,9 @@ export default defineNuxtConfig({
   calendly: {},
   device: {
     refreshOnResize: true,
+  },
+  directus: {
+    url: 'https://content.inputstudio.co',
   },
   eslint: {
     lintOnStart: false,
