@@ -1,6 +1,6 @@
 <template>
   <div :class="{ 'border-b ': !lastItem }" class="space-y-4 border-t border-white py-4">
-    <div class="flex cursor-pointer justify-between" @click="show = !show">
+    <div class="cursor-expander flex justify-between" @click="show = !show">
       <h2 class="text-2xl lg:text-4xl">{{ title }}</h2>
       <button type="button">
         <IconCSS v-if="show" name="ic:baseline-minus" class="text-2xl" />

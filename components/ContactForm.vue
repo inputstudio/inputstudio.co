@@ -26,7 +26,7 @@
           <p
             v-for="topic in topics"
             :key="topic"
-            class="cursor-pointer rounded-full border border-white bg-black px-4 py-1 text-sm transition-colors lg:text-base"
+            class="cursor-expander rounded-full border border-white bg-black px-4 py-1 text-sm transition-colors lg:text-base"
             :class="{ 'bg-white text-black': data.topics.indexOf(topic) >= 0 }"
             @click="handleTopics(topic)"
           >
