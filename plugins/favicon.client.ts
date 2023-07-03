@@ -12,7 +12,7 @@ export default defineNuxtPlugin((nuxtApp) => {
 
       if (!favicon) return;
 
-      favicon.href = `/favicon/${sequence[index % sequence.length]}.png`;
+      favicon.href = `/favicon/${sequence[index % sequence.length]}.ico`;
       index++;
     }, 1500);
   });
