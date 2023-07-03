@@ -22,7 +22,7 @@
           v-if="project.link"
           :to="project.link"
           target="_blank"
-          class="cursor-expander mt-6 flex items-center justify-center gap-1 rounded-full bg-white px-5 py-2 text-black md:w-fit"
+          class="cursor-expander mt-6 flex items-center justify-center gap-1 rounded-full bg-white px-5 py-2 text-black md:w-fit md:transition-colors md:hover:bg-black md:hover:text-white"
         >
           <span>Visitez le site</span>
           <IconCSS name="ic:baseline-arrow-outward" class="text-xl" />
