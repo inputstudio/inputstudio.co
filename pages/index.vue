@@ -15,8 +15,8 @@ useHead({
 
 <style lang="scss" scoped>
 main {
-  background: no-repeat center url('@/assets/img/halo-green.png'),
-    no-repeat center/75% url('@/assets/img/halo-blue.png');
+  background: no-repeat center url('@/assets/img/halo-green.webp'),
+    no-repeat center/75% url('@/assets/img/halo-blue.webp');
   background-position: top 0% left -45%, bottom 0% right -45%;
   background-color: black;
 }
