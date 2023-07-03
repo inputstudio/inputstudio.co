@@ -12,6 +12,7 @@ export default defineNuxtConfig({
       ],
       link: [{ rel: 'icon', href: '/favicon.ico' }],
     },
+    pageTransition: { name: 'fade', mode: 'out-in' },
   },
   css: ['@/assets/scss/main.scss'],
   runtimeConfig: {
