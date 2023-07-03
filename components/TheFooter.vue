@@ -26,9 +26,10 @@
       </div>
     </div>
 
-    <div class="flex justify-center text-center text-customGray md:gap-10 md:text-left">
-      <NuxtLink to="/privacy">Politique de confidentialité</NuxtLink>
-      <span>&copy; Copyright (c) 2023</span>
+    <div class="flex items-center justify-center gap-1 text-center text-customGray md:text-left">
+      <span>Powered by</span>
+      <IconCSS name="line-md:coffee-loop" class="text-xl" />
+      <span> Copyright &copy; 2023</span>
     </div>
   </footer>
 </template>
