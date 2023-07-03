@@ -2,7 +2,7 @@
   <div
     v-if="!isMobileOrTablet"
     ref="cursor"
-    class="cursor pointer-events-none fixed z-50 hidden aspect-square w-3 -translate-x-1/2 -translate-y-1/2 rounded-full bg-red-500/60 p-1"
+    class="cursor pointer-events-none fixed z-50 hidden aspect-square w-3 -translate-x-1/2 -translate-y-1/2 rounded-full border border-white p-2"
   ></div>
 </template>
 
@@ -26,14 +26,14 @@ function onMouseMove(event, cursor) {
 
 function onMouseEnter(cursor) {
   gsap.to(cursor, {
-    scale: 8,
+    padding: 36,
     duration: 0.4,
   });
 }
 
 function onMouseLeave(cursor) {
   gsap.to(cursor, {
-    scale: 1,
+    padding: 8,
     duration: 0.4,
   });
 }
