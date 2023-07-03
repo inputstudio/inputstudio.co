@@ -1,9 +1,14 @@
 <template>
   <main>
     <AppCursor />
-    <TheNavbar v-if="$route.path !== '/'" />
+    <transition name="fade" mode="out-in">
+      <TheNavbar v-if="$route.path !== '/'" />
+    </transition>
     <slot />
-    <TheFooter v-if="$route.path !== '/'" />
+
+    <transition name="fade" mode="out-in">
+      <TheFooter v-if="$route.path !== '/'" />
+    </transition>
   </main>
 </template>
 
