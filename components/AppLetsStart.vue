@@ -16,8 +16,8 @@
 
       <p>ou</p>
 
-      <NuxtLink to="/contact" class="underline">
-        Soumettre un projet
+      <NuxtLink to="/contact">
+        <span class="mr-1 underline">Soumettre un projet</span>
         <IconCSS name="ic:baseline-arrow-outward" class="text-xl" />
       </NuxtLink>
     </div>
