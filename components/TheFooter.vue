@@ -2,7 +2,9 @@
   <footer class="mx-10 flex flex-col justify-center gap-10 border-t border-white py-9 md:mx-24 md:py-12">
     <div class="flex flex-col gap-8 text-center md:flex-row md:justify-between md:text-left">
       <div>
-        <img src="@/assets/img/logo.webp" alt="Logo" class="hidden h-32 -translate-x-9 -translate-y-4 md:block" />
+        <NuxtLink to="/">
+          <img src="@/assets/img/logo.webp" alt="Logo" class="h-18 -translate-y-4 md:block md:h-32 md:-translate-x-9" />
+        </NuxtLink>
         <div class="flex justify-center gap-6 md:justify-start md:gap-3">
           <NuxtLink
             v-for="(social, index) in socials"
