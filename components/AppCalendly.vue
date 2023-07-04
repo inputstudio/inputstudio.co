@@ -4,9 +4,9 @@
     class="cursor-expander absolute bottom-0 left-1/2 w-5/6 -translate-x-1/2 -translate-y-6 transform rounded-2xl text-black shadow-lg lg:w-96"
     @click="openCalendly"
   >
-    <div class="flex items-center justify-center gap-6 rounded-t-2xl bg-white p-6">
-      <img src="@/assets/img/calendly.svg" alt="Logo Calendly" />
-      <div class="flex flex-col text-left text-sm lg:text-base">
+    <div class="flex items-center justify-center gap-6 rounded-t-2xl bg-white p-3 md:p-6">
+      <img src="@/assets/img/calendly.svg" alt="Logo Calendly" class="h-12 md:h-16" />
+      <div class="flex flex-col text-left text-sm md:text-base">
         <span>Planifier une réunion</span>
         <span class="font-thin">Rapide, pratique, efficace.</span>
       </div>
