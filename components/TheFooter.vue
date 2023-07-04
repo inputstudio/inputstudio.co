@@ -1,8 +1,8 @@
 <template>
-  <footer class="mx-10 flex flex-col justify-center gap-10 border-t border-white py-10 md:mx-24 md:py-20">
+  <footer class="mx-10 flex flex-col justify-center gap-10 border-t border-white py-9 md:mx-24 md:py-12">
     <div class="flex flex-col gap-8 text-center md:flex-row md:justify-between md:text-left">
       <div>
-        <h1 class="mb-8 text-5xl font-bold uppercase md:mb-2 md:text-6xl 2xl:text-8xl">INPUT STUDIO</h1>
+        <img src="@/assets/img/logo.webp" alt="Logo" class="hidden h-32 -translate-x-9 -translate-y-4 md:block" />
         <div class="flex justify-center gap-6 md:justify-start md:gap-3">
           <NuxtLink
             v-for="(social, index) in socials"
