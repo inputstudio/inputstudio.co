@@ -20,9 +20,9 @@
         </div>
       </div>
 
-      <div class="flex flex-col items-end font-bold uppercase">
-        <NuxtLink v-for="page in pages" :key="`page-url-${page.name}`" :to="page.url" class="hover-underline w-fit">
-          {{ page.name }}
+      <div class="flex flex-col items-end gap-1 font-bold uppercase">
+        <NuxtLink v-for="page in pages" :key="`page-url-${page.name}`" :to="page.url">
+          <span class="hover-underline">{{ page.name }}</span>
           <IconCSS name="ic:baseline-arrow-outward" class="text-2xl" />
         </NuxtLink>
       </div>
