@@ -3,7 +3,11 @@
     <h2 class="font-inter text-2xl md:text-4xl">{{ project.name }}</h2>
 
     <div class="flex flex-col gap-9 md:flex-row">
-      <img :src="project.cover" :alt="`${project.deliverable} ${project.name}`" class="w-full rounded-xl md:max-w-xl" />
+      <img
+        :src="project.cover"
+        :alt="`${project.deliverable} ${project.name}`"
+        class="w-full shrink-0 rounded-xl object-cover md:w-1/3"
+      />
 
       <div class="flex flex-col gap-3 text-xl">
         <p class="mb-3 font-thin">{{ project.description }}</p>
