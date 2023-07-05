@@ -22,10 +22,7 @@
       </div>
       <div class="flex flex-col gap-1">
         <h3 class="text-gray-500">Adresse :</h3>
-        <p class="text-xl font-bold">
-          Partout dans le monde <br />
-          Nous sommes 100% remote
-        </p>
+        <p class="text-xl font-bold">Planet Earth</p>
       </div>
     </div>
   </div>
