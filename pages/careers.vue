@@ -1,7 +1,7 @@
 <template>
   <section class="section px-9 py-20">
     <p class="text-xl font-thin">Carrière</p>
-    <h1 class="text-3xl font-bold md:text-8xl">Nous embauchons</h1>
+    <h1 class="text-3xl font-bold md:text-8xl">Nous recrutons</h1>
 
     <div class="my-8 flex flex-col gap-20 text-justify md:my-20 md:flex-row">
       <p class="md:w-2/5">

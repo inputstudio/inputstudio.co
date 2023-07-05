@@ -1,27 +1,42 @@
 <template>
-  <div :class="{ 'border-b ': !lastItem }" class="space-y-4 border-t border-white py-4">
-    <div class="cursor-expander flex justify-between" @click="show = !show">
+  <HeadlessDisclosure
+    v-slot="{ open }"
+    as="div"
+    :default-open="isOpen"
+    class="space-y-4 border-t border-white py-4"
+    :class="{ 'border-b ': !lastItem }"
+  >
+    <HeadlessDisclosureButton class="cursor-expander flex w-full justify-between">
       <h2 class="text-2xl lg:text-4xl">{{ title }}</h2>
       <button type="button">
-        <IconCSS v-if="show" name="ic:baseline-minus" class="text-2xl" />
+        <IconCSS v-if="open" name="ic:baseline-minus" class="text-2xl" />
         <IconCSS v-else name="ic:baseline-plus" class="text-2xl" />
       </button>
-    </div>
+    </HeadlessDisclosureButton>
 
-    <div v-show="show" class="flex flex-col items-start gap-y-1">
-      <p>{{ description }}</p>
-      <a
-        href="mailto:hello@inputstudio.co"
-        class="my-3 rounded-full border-2 border-white bg-white px-3 py-1 text-black transition-colors hover:bg-black hover:text-white lg:px-5 lg:py-3"
-      >
-        Envoyez votre CV
-      </a>
-    </div>
-  </div>
+    <transition
+      enter-active-class="transition duration-100 ease-out"
+      enter-from-class="transform scale-95 opacity-0"
+      enter-to-class="transform scale-100 opacity-100"
+      leave-active-class="transition duration-75 ease-out"
+      leave-from-class="transform scale-100 opacity-100"
+      leave-to-class="transform scale-95 opacity-0"
+    >
+      <HeadlessDisclosurePanel class="flex flex-col items-start gap-y-1">
+        <p>{{ description }}</p>
+        <a
+          href="mailto:hello@inputstudio.co"
+          class="my-3 rounded-full bg-white px-3 py-1 text-black transition-colors hover:bg-black hover:text-white lg:px-5 lg:py-3"
+        >
+          Envoyez votre CV
+        </a>
+      </HeadlessDisclosurePanel>
+    </transition>
+  </HeadlessDisclosure>
 </template>
 
 <script lang="ts" setup>
-const props = defineProps({
+defineProps({
   title: {
     type: String,
     required: true,
@@ -32,13 +47,11 @@ const props = defineProps({
   },
   isOpen: {
     type: Boolean,
-    required: true,
+    default: false,
   },
   lastItem: {
     type: Boolean,
     required: true,
   },
 });
-
-const show = ref(props.isOpen);
 </script>
