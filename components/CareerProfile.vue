@@ -22,14 +22,9 @@
       leave-from-class="transform scale-100 opacity-100"
       leave-to-class="transform scale-95 opacity-0"
     >
-      <HeadlessDisclosurePanel class="flex flex-col items-start gap-y-1">
+      <HeadlessDisclosurePanel class="flex flex-col items-start gap-3">
         <p>{{ description }}</p>
-        <a
-          href="mailto:hello@inputstudio.co"
-          class="my-3 rounded-full bg-white px-3 py-1 text-black transition-colors hover:bg-black hover:text-white lg:px-5 lg:py-3"
-        >
-          Envoyez votre CV
-        </a>
+        <AppButton to="mailto:hello@inputstudio.co"> Envoyez votre CV </AppButton>
       </HeadlessDisclosurePanel>
     </transition>
   </HeadlessDisclosure>

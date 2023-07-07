@@ -29,8 +29,8 @@
               <Icon name="ic:baseline-arrow-outward" />
             </NuxtLink>
           </HeadlessMenuItem>
-          <HeadlessMenuItem class="mt-3 w-fit rounded-full bg-white px-6 py-3 font-semibold text-black" @click="close">
-            <button @click="openCalendly">Prendre rendez-vous</button>
+          <HeadlessMenuItem @click="close">
+            <AppButton class="mt-3 font-semibold" @click="openCalendly">Prendre rendez-vous</AppButton>
           </HeadlessMenuItem>
         </div>
 

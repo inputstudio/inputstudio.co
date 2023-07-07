@@ -22,15 +22,10 @@
           <span>{{ project.deliverable }}</span>
         </div>
 
-        <NuxtLink
-          v-if="project.link"
-          :to="project.link"
-          target="_blank"
-          class="cursor-expander mt-6 flex items-center justify-center gap-1 rounded-full bg-white px-5 py-2 text-black md:w-fit md:transition-colors md:hover:bg-black md:hover:text-white"
-        >
-          <span>Visitez le site</span>
+        <AppButton v-if="project.link" :to="project.link" class="mt-9">
+          <span class="text-base">Visitez le site</span>
           <IconCSS name="ic:baseline-arrow-outward" class="text-xl" />
-        </NuxtLink>
+        </AppButton>
       </div>
     </div>
   </div>

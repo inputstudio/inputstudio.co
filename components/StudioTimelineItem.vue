@@ -7,13 +7,9 @@
     <div class="flex w-2/3 flex-col gap-4">
       <p class="text-lg">{{ props.description }}</p>
 
-      <button
-        v-if="props.hasButton"
-        class="cursor-expander w-fit rounded-full bg-white px-5 py-2 text-black md:py-3 md:transition-colors md:hover:bg-black md:hover:text-white"
-        @click="props.buttonAction"
-      >
+      <AppButton v-if="props.hasButton" @click="props.buttonAction">
         {{ props.buttonText }}
-      </button>
+      </AppButton>
     </div>
   </div>
 </template>

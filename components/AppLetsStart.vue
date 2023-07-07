@@ -3,12 +3,7 @@
     <div class="flex flex-col items-center gap-y-3 text-center">
       <h1 class="mb-6 text-4xl leading-tight md:text-8xl">Demarrons votre <AppExperienceText /> ensemble !</h1>
 
-      <button
-        class="cursor-expander rounded-full bg-white px-5 py-2 text-black md:px-10 md:py-5 md:transition-colors md:hover:bg-black md:hover:text-white"
-        @click="openCalendly"
-      >
-        Planifier une réunion
-      </button>
+      <AppButton @click="openCalendly"> Planifier une réunion </AppButton>
 
       <p>ou</p>
 
