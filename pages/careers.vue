@@ -27,6 +27,5 @@
 </template>
 
 <script lang="ts" setup>
-const { getItems } = useDirectusItems();
-const jobs = await getItems<Job>({ collection: 'careers' });
+const { jobs } = useStore();
 </script>

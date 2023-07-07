@@ -27,6 +27,7 @@ export default defineNuxtConfig({
     '@nuxtjs/eslint-module',
     '@nuxtjs/google-fonts',
     '@nuxtjs/plausible',
+    '@pinia/nuxt',
     'nuxt-directus',
     'nuxt-calendly',
     'nuxt-headlessui',
@@ -56,10 +57,16 @@ export default defineNuxtConfig({
     apiHost: 'https://analytics.inputstudio.co',
     autoOutboundTracking: true,
   },
+  pinia: {
+    autoImports: ['defineStore', 'acceptHMRUpdate'],
+  },
   postcss: {
     plugins: {
       tailwindcss: {},
       autoprefixer: {},
     },
+  },
+  imports: {
+    dirs: ['stores'],
   },
 });

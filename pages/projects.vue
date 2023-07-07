@@ -24,12 +24,5 @@
 </template>
 
 <script lang="ts" setup>
-const { getItems } = useDirectusItems();
-const { staticAssetsEndpoint } = useRuntimeConfig().public;
-
-const projects = await getItems<Project>({ collection: 'projects' });
-projects.map((project) => {
-  project.cover = new URL(project.cover, staticAssetsEndpoint).toString();
-  return project;
-});
+const { projects } = useStore();
 </script>
