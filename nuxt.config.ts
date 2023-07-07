@@ -32,6 +32,7 @@ export default defineNuxtConfig({
     'nuxt-calendly',
     'nuxt-headlessui',
     'nuxt-icon',
+    'nuxt-snackbar',
   ],
   calendly: {},
   device: {

@@ -51,6 +51,7 @@
 </template>
 
 <script lang="ts" setup>
+const snackbar = useSnackbar();
 const loading = ref(false);
 
 const data = ref({
@@ -84,6 +85,16 @@ function handleTopics(topic: string) {
   }
 }
 
+function clear() {
+  data.value = {
+    fullname: '',
+    contact: '',
+    budget: '',
+    resume: '',
+    topics: [],
+  };
+}
+
 async function submit() {
   loading.value = true;
 
@@ -94,12 +105,19 @@ async function submit() {
       method: 'POST',
       body: data.value,
     });
-  } catch (error) {
-    // TODO: Display error snackbar
-  }
 
-  // TODO: Display success snackbar
-  // TODO: Clear form with @inputstudio/utils
+    snackbar.add({
+      type: 'success',
+      text: 'Votre message a été envoyé avec succès.',
+    });
+
+    clear();
+  } catch (error) {
+    snackbar.add({
+      type: 'error',
+      text: error,
+    });
+  }
 
   loading.value = false;
 }
