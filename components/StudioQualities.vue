@@ -12,7 +12,7 @@
         v-for="(quality, index) in qualities"
         :key="`career-quality-${index}`"
         :border-top-left-radius="50"
-        class="min-w-[250px] md:min-w-[350px]"
+        class="min-w-[250px] flex-1 md:min-w-[350px]"
       >
         <template #app-card-body>
           <div class="flex flex-col justify-around gap-5">
@@ -40,25 +40,25 @@ const qualities = [
     image: creativity,
     title: 'Créativité',
     description:
-      "Nous sommes passionnés par la créativité et l'innovation. Nous aimons repousser les limites et proposer des solutions uniques et captivantes. Notre équipe de designers et de développeurs est constamment à l'affût des dernières tendances et des meilleures pratiques pour offrir des designs modernes et engageants.",
+      "Nous sommes passionnés par la créativité et l'innovation, repoussant les limites avec des solutions uniques. Notre équipe de designers et développeurs suit les dernières tendances pour des designs modernes et captivants.",
   },
   {
     image: competence,
     title: 'Compétence technique',
     description:
-      "Nous disposons d'une équipe technique hautement qualifiée et expérimentée. Nos développeurs et designers sont des experts dans leur domaine et maîtrisent les dernières technologies et outils. Nous nous engageons à fournir des solutions technologiques robustes, performantes et évolutives.",
+      'Notre équipe technique qualifiée maîtrise les dernières technologies pour des solutions robustes et évolutives.',
   },
   {
     image: client,
     title: 'Orientation client',
     description:
-      'Nous mettons nos clients au cœur de notre démarche. Nous écoutons attentivement leurs besoins, leurs objectifs et leurs préférences, et nous adaptons nos services en conséquence. Nous croyons en une communication transparente et en une collaboration étroite avec nos clients tout au long du processus de projet.',
+      'Nous plaçons nos clients au cœur de notre approche, en écoutant attentivement leurs besoins et en favorisant une communication transparente et une collaboration étroite tout au long du projet.',
   },
   {
     image: conception,
     title: 'Excellence de la conception',
     description:
-      "Nous attachons une grande importance à la qualité de nos designs. Nous nous efforçons de créer des interfaces utilisateur conviviales, esthétiques et intuitives. Nous prenons en compte l'expérience utilisateur (UX) dans toutes nos réalisations, en nous assurant que les utilisateurs finaux bénéficient d'une expérience agréable et fluide.",
+      "Nous accordons une grande importance à la qualité de nos designs, en créant des interfaces conviviales et esthétiques qui optimisent l'expérience utilisateur.",
   },
 ];
 </script>
