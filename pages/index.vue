@@ -3,7 +3,7 @@
     <HomeNavbar />
     <HomeHero />
     <HomeFooter />
-    <AppCalendly />
+    <CalendlyWidget />
   </main>
 </template>
 

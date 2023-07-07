@@ -30,7 +30,7 @@
             </NuxtLink>
           </HeadlessMenuItem>
           <HeadlessMenuItem @click="close">
-            <AppButton class="mt-3 font-semibold" @click="openCalendly">Prendre rendez-vous</AppButton>
+            <CalendlyButton class="mt-3 font-semibold">Prendre rendez-vous</CalendlyButton>
           </HeadlessMenuItem>
         </div>
 
@@ -51,6 +51,5 @@
 </template>
 
 <script lang="ts" setup>
-const { openCalendly } = useCalendlyWidget();
 const { socials, pages } = useLinks();
 </script>
