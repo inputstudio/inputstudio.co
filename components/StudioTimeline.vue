@@ -29,10 +29,6 @@ const { openCalendly } = useCalendlyWidget();
 
 const items = [
   {
-    title: 'Planifier une réunion',
-    description: 'Nous avons une réunion pour définir la portée du projet et savoir quelles sont vos attentes',
-  },
-  {
     title: 'Design',
     description:
       'Nos concepteurs rédigent soigneusement la première version pour votre examen qui passe ensuite par autant de révisions que nécessaire.',
