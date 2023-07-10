@@ -1,5 +1,5 @@
 <template>
-  <div v-if="isMobileOrTablet" class="flex w-full items-center justify-around">
+  <div v-if="isMobileOrTablet" class="flex w-full origin-top items-center justify-around">
     <div class="flex w-4/5 flex-col gap-y-6 text-center">
       <h1 class="text-3xl">{{ props.title }}</h1>
       <p class="text-lg">{{ props.description }}</p>
@@ -8,13 +8,19 @@
       </AppButton>
     </div>
 
-    <div class="separator relative h-full w-1 bg-white px-[1px]"></div>
+    <div class="separator relative h-full w-1 bg-customGray px-[1px]">
+      <div class="ball absolute inset-0 aspect-square w-0 scale-[4] rounded-full border-inherit bg-white p-0"></div>
+      <span class="z-1 absolute left-0 right-0 top-0 h-0 w-full bg-white"></span>
+    </div>
   </div>
 
-  <div v-else class="flex h-[40vh] w-full items-center gap-x-20">
+  <div v-else class="flex h-[60vh] w-full origin-top items-center gap-x-20">
     <h1 class="w-1/3 text-right text-3xl">{{ props.title }}</h1>
 
-    <div class="separator relative h-full w-1 bg-white px-[1px]"></div>
+    <div class="separator relative h-full w-1 bg-customGray px-[1px]">
+      <div class="ball absolute inset-0 aspect-square w-0 scale-[4] rounded-full border-inherit bg-white p-0"></div>
+      <span class="z-1 absolute left-0 right-0 top-0 h-0 w-full bg-white"></span>
+    </div>
 
     <div class="flex w-2/3 flex-col gap-4">
       <p class="text-lg">{{ props.description }}</p>
@@ -62,8 +68,8 @@ const props = defineProps({
     width: 2px;
     aspect-ratio: 1;
     padding: 2px;
-    background-color: white;
-    transform: translateY(50px) scale(4);
+    background-color: inherit;
+    transform: scale(4);
     border-radius: 50%;
   }
 }

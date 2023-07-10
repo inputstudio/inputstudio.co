@@ -1,12 +1,13 @@
 <template>
-  <section class="flex flex-col gap-10">
+  <section id="timeline" class="flex flex-col gap-10">
     <h1 class="text-6xl font-medium">Notre processus</h1>
     <p class="text-lg font-light md:w-3/4 md:text-2xl">
       Nous nous chargeons de la gestion de votre projet, de sa phase de lancement jusqu'à son déploiement.
     </p>
 
-    <div class="grid grid-cols-1 self-center">
+    <div class="grid grid-cols-1 self-center md:gap-y-0">
       <StudioTimelineItem
+        class="timeline-item"
         title="Planifier une réunion"
         description="Nous avons une réunion pour définir la portée du projet et savoir quelles sont vos attentes"
         :has-button="true"
@@ -17,6 +18,7 @@
       <StudioTimelineItem
         v-for="(item, index) in items"
         :key="`timeline-item-${index}`"
+        class="timeline-item"
         :title="item.title"
         :description="item.description"
       />
@@ -25,7 +27,13 @@
 </template>
 
 <script lang="ts" setup>
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/all';
 const { openCalendly } = useCalendlyWidget();
+
+const { hook } = useNuxtApp();
+
+gsap.registerPlugin(ScrollTrigger);
 
 const items = [
   {
@@ -44,4 +52,31 @@ const items = [
       'Nous mettons tout en œuvre pour respecter les délais convenus et livrer votre projet dans les délais prévus, tout en maintenant la qualité et la satisfaction du client au cœur de notre travail.',
   },
 ];
+
+hook('page:finish', () => {
+  const bars = document.querySelectorAll('.timeline-item');
+
+  bars.forEach((bar) => {
+    const separator = bar.querySelector('.separator');
+    const ball = bar.querySelector('.separator > .ball');
+    const background = bar.querySelector('.separator > span');
+
+    gsap
+      .timeline({
+        scrollTrigger: {
+          trigger: separator,
+          scrub: true,
+          start: 'top 90%',
+          end: '+=' + separator?.offsetHeight,
+        },
+      })
+      .to(ball, {
+        width: '2px',
+        padding: '2px',
+      })
+      .to(background, {
+        height: '100%',
+      });
+  });
+});
 </script>
