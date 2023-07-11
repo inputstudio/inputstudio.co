@@ -53,7 +53,7 @@ const items = [
   },
 ];
 
-hook('page:finish', () => {
+hook('page:transition:finish', () => {
   const bars = document.querySelectorAll('.timeline-item');
 
   bars.forEach((bar) => {

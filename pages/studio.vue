@@ -47,7 +47,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 const wrapper = ref();
 
-hook('page:finish', () => {
+hook('page:transition:finish', () => {
   const sections = gsap.utils.toArray('.text-section');
 
   gsap.to(sections, {
