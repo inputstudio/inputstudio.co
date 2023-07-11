@@ -15,15 +15,15 @@
   </div>
 
   <div v-else class="flex h-[60vh] w-full origin-top items-center gap-x-20">
-    <h1 class="w-1/3 text-right text-3xl">{{ props.title }}</h1>
+    <h1 class="w-2/4 text-right text-4xl">{{ props.title }}</h1>
 
     <div class="separator relative h-full w-1 bg-customGray px-[1px]">
       <div class="ball absolute inset-0 aspect-square w-0 scale-[4] rounded-full border-inherit bg-white p-0"></div>
       <span class="z-1 absolute left-0 right-0 top-0 h-0 w-full bg-white"></span>
     </div>
 
-    <div class="flex w-2/3 flex-col gap-4">
-      <p class="text-lg">{{ props.description }}</p>
+    <div class="flex w-2/4 flex-col items-center justify-center gap-4 px-0 text-justify">
+      <p class="w-3/4 text-sm">{{ props.description }}</p>
 
       <AppButton v-if="props.hasButton" @click="props.buttonAction">
         {{ props.buttonText }}
