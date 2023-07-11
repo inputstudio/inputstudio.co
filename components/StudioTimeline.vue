@@ -5,7 +5,7 @@
       Nous nous chargeons de la gestion de votre projet, de sa phase de lancement jusqu'à son déploiement.
     </p>
 
-    <div class="grid grid-cols-1 self-center md:gap-y-0">
+    <div class="grid grid-cols-1 self-center pt-10 md:pt-0">
       <StudioTimelineItem
         class="timeline-item"
         title="Planifier une réunion"

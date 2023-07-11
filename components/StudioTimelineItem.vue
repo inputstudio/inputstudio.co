@@ -1,5 +1,5 @@
 <template>
-  <div v-if="isMobileOrTablet" class="flex w-full origin-top items-center justify-around">
+  <div v-if="isMobileOrTablet" class="my-8 flex w-full origin-top items-center justify-around">
     <div class="flex w-4/5 flex-col gap-y-6 text-center">
       <h1 class="text-3xl">{{ props.title }}</h1>
       <p class="text-lg">{{ props.description }}</p>
@@ -8,7 +8,7 @@
       </AppButton>
     </div>
 
-    <div class="separator relative h-full w-1 bg-customGray px-[1px]">
+    <div class="separator relative h-[140%] w-1 bg-customGray px-[1px]">
       <div class="ball absolute inset-0 aspect-square w-0 scale-[4] rounded-full border-inherit bg-white p-0"></div>
       <span class="z-1 absolute left-0 right-0 top-0 h-0 w-full bg-white"></span>
     </div>
