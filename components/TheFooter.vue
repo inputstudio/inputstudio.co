@@ -35,7 +35,7 @@
         <p>Copyright &copy; 2022 - {{ new Date().getFullYear() }}</p>
       </div>
       <div class="flex items-center justify-center gap-1">
-        <span>Powered by</span>
+        <span>powered by</span>
         <IconCSS name="line-md:coffee-loop" class="text-xl" />
       </div>
     </div>
