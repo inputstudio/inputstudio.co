@@ -76,7 +76,6 @@ a {
 }
 
 .section {
-  min-height: 100vh;
   background-image: url('@/assets/img/halo-blue.webp');
   background-repeat: no-repeat;
   background-size: contain;
@@ -84,5 +83,13 @@ a {
 
   @media (max-width: 1024px) {
     background-size: 150%;
+  }
+
+  @media (max-width: 1536px) {
+    min-height: 100vh;
+  }
+
+  @media (min-width: 1536px) {
+    min-height: 60vh;
   }
 }
