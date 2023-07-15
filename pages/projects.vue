@@ -25,4 +25,8 @@
 
 <script lang="ts" setup>
 const { projects } = useStore();
+
+useHead({
+  title: 'Projets',
+});
 </script>

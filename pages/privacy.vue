@@ -87,3 +87,9 @@
     </p>
   </section>
 </template>
+
+<script setup lang="ts">
+useHead({
+  title: 'Politique de confidentialité',
+});
+</script>

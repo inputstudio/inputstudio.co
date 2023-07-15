@@ -28,4 +28,8 @@
 
 <script lang="ts" setup>
 const { jobs } = useStore();
+
+useHead({
+  title: 'Carrières',
+});
 </script>
