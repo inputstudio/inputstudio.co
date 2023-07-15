@@ -1,24 +1,23 @@
 <template>
   <div ref="wrapper" class="gap-x-30 flex h-screen w-[300vw] flex-nowrap">
     <div class="text-section grid w-screen place-items-center">
-      <p class="w-4/5 text-center text-xl md:text-2xl">
-        Input studio est une agence web <span class="font-bold">100% REMOTE</span> à Abidjan. Avec nous, construire un
-        site web est bien plus que simplement installer un logiciel de conception et faire de l'intégration.
+      <p class="w-4/5 text-center text-xl md:text-2xl 2xl:w-2/3">
+        Input studio est une agence web <span class="font-bold">100% REMOTE</span> basée à Abidjan. Avec nous,
+        construire un site web est bien plus que simplement installer un logiciel de conception et faire de
+        l'intégration.
       </p>
     </div>
 
     <div class="text-section grid w-screen place-items-center">
-      <p class="w-4/5 text-center text-xl md:text-2xl">
-        En effet, notre équipe vous accompagne dans une démarche de planification, de choix technologique, de
-        développement et de maintenance web.
+      <p class="w-4/5 text-center text-xl md:text-2xl 2xl:w-2/3">
+        En effet, notre équipe vous accompagne de la conception à la mise en ligne de votre site web.
       </p>
     </div>
 
     <div class="text-section grid w-screen place-items-center">
-      <p class="w-4/5 text-center text-xl md:text-2xl">
-        Notre agence web créative propose une approche complète, de la conception à la mise en ligne. Nous combinons des
-        compétences en design, en développement et en déploiement pour offrir à nos clients des sites web remarquables
-        qui reflètent leur identité, captivent leur public et atteignent leurs objectifs commerciaux.
+      <p class="w-4/5 text-center text-xl md:text-2xl 2xl:w-2/3">
+        Nous combinons des compétences en design et en développement pour offrir à nos clients des sites web
+        remarquables qui reflètent leur identité.
       </p>
     </div>
   </div>
