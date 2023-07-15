@@ -1,5 +1,5 @@
 <template>
-  <footer class="mx-10 flex flex-col justify-center gap-10 border-t border-white py-9 md:mx-24 md:py-12">
+  <footer class="mx-9 flex flex-col justify-center gap-10 border-t border-white py-9 md:py-12">
     <div class="flex flex-col gap-8 text-center md:flex-row md:justify-between md:text-left">
       <div>
         <NuxtLink to="/">
