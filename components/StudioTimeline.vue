@@ -53,7 +53,7 @@ const items = [
   },
 ];
 
-hook('page:transition:finish', () => {
+const setupTimeline = () => {
   const bars = document.querySelectorAll('.timeline-item');
 
   bars.forEach((bar) => {
@@ -78,5 +78,8 @@ hook('page:transition:finish', () => {
         height: '100%',
       });
   });
-});
+};
+
+hook('page:transition:finish', setupTimeline);
+hook('page:finish', setupTimeline);
 </script>
