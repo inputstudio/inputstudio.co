@@ -46,9 +46,11 @@ const { hook } = useNuxtApp();
 gsap.registerPlugin(ScrollTrigger);
 
 const wrapper = ref();
-
-hook('page:transition:finish', () => {
+const setupHorizontalScroll = () => {
   const sections = gsap.utils.toArray('.text-section');
+
+  // When we come from another page, the elements on the page:finish hook are not ready yet, so we skip, and wait for the page:transition:finish hook
+  if (!sections.length) return;
 
   gsap.to(sections, {
     xPercent: -100 * (sections.length - 1),
@@ -63,7 +65,10 @@ hook('page:transition:finish', () => {
       invalidateOnRefresh: true,
     },
   });
-});
+};
+
+hook('page:finish', setupHorizontalScroll);
+hook('page:transition:finish', setupHorizontalScroll);
 </script>
 
 <style lang="scss" scoped>
