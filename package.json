@@ -24,7 +24,7 @@
     "eslint-config-prettier": "^8.7.0",
     "eslint-plugin-prettier": "^4.2.1",
     "husky": "^8.0.3",
-    "nuxt": "^3.6.1",
+    "nuxt": "^3.6.3",
     "nuxt-calendly": "^0.1.14",
     "nuxt-directus": "^5.4.4",
     "nuxt-headlessui": "^1.1.1",
