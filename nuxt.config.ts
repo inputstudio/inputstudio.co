@@ -11,6 +11,9 @@ export default defineNuxtConfig({
         },
       ],
       link: [{ rel: 'icon', href: '/favicon.ico' }],
+      htmlAttrs: {
+        lang: 'fr',
+      },
     },
     pageTransition: { name: 'fade', mode: 'out-in' },
   },
