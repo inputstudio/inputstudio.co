@@ -1,6 +1,6 @@
 <template>
   <HeadlessMenu v-slot="{ close }" as="div" class="inline-block text-left font-light">
-    <HeadlessMenuButton>
+    <HeadlessMenuButton aria-label="Ouvrir menu">
       <IconCSS name="ci:menu-alt-05" class="text-3xl text-white" />
     </HeadlessMenuButton>
 
@@ -16,7 +16,10 @@
         class="section absolute bottom-0 left-0 right-0 top-0 z-50 flex h-screen w-screen origin-right flex-col justify-between bg-black px-6 pb-32 pt-6"
       >
         <div>
-          <HeadlessMenuButton class="flex items-center gap-1 text-gray-500 transition-colors hover:text-white">
+          <HeadlessMenuButton
+            aria-label="Fermer menu"
+            class="flex items-center gap-1 text-gray-500 transition-colors hover:text-white"
+          >
             <IconCSS name="ic:baseline-close" class="-rotate-90" />
             <span>Fermer</span>
           </HeadlessMenuButton>
