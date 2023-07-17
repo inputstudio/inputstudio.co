@@ -6,7 +6,7 @@
       <img
         :src="project.cover"
         :alt="`${project.deliverable} ${project.name}`"
-        class="w-full shrink-0 rounded-xl object-cover md:w-1/3"
+        class="aspect-square w-full shrink-0 rounded-xl object-cover md:w-1/4"
       />
 
       <div class="flex flex-col gap-3 text-xl">
