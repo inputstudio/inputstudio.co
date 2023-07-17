@@ -43,5 +43,5 @@
 </template>
 
 <script lang="ts" setup>
-const { socials, pages } = useLinks();
+const { socials, pages } = useNave();
 </script>
