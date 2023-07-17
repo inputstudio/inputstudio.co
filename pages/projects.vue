@@ -1,11 +1,11 @@
 <template>
-  <section class="section flex flex-col gap-10 px-9 py-20">
-    <div class="flex flex-col">
+  <div class="flex flex-col gap-y-20 py-20">
+    <div class="flex flex-col px-9">
       <p class="text-xl font-thin">Projets</p>
       <h1 class="text-5xl font-bold md:text-8xl">Nos projets</h1>
     </div>
 
-    <div class="my-10">
+    <div class="p-9">
       <div class="flex flex-col justify-between gap-9 md:flex-row md:gap-20 md:text-center">
         <h2 class="text-4xl">Notre travail, notre fierté</h2>
         <p class="md:w-2/3">
@@ -15,12 +15,12 @@
       </div>
     </div>
 
-    <div class="grid place-items-center gap-9">
+    <div class="grid place-items-center gap-9 px-9">
       <ProjectCard v-for="project in projects" :key="project.id" :project="project" />
     </div>
 
-    <AppLetsStart />
-  </section>
+    <AppLetsStart class="px-9" />
+  </div>
 </template>
 
 <script lang="ts" setup>
