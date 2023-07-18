@@ -54,5 +54,5 @@
 </template>
 
 <script lang="ts" setup>
-const { socials, pages } = useNave();
+const { socials, pages } = useNav();
 </script>
