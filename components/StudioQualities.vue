@@ -34,6 +34,8 @@ import creativity from '@/assets/img/career/creativity.svg';
 import competence from '@/assets/img/career/competence.svg';
 import client from '@/assets/img/career/client.svg';
 import conception from '@/assets/img/career/conception.svg';
+import commitment from '@/assets/img/career/commitment.svg';
+import reactivity from '@/assets/img/career/reactivity.svg';
 
 const qualities = [
   {
@@ -59,6 +61,18 @@ const qualities = [
     title: 'Excellence de la conception',
     description:
       "Nous accordons une grande importance à la qualité de nos designs, en créant des interfaces conviviales et esthétiques qui optimisent l'expérience utilisateur.",
+  },
+  {
+    image: commitment,
+    title: 'Engagement envers la qualité',
+    description:
+      'Nous sommes déterminés à fournir des solutions de haute qualité à nos clients. Notre objectif est de dépasser les attentes de nos clients et de leur offrir une valeur ajoutée tangible.',
+  },
+  {
+    image: reactivity,
+    title: 'Réactivité et flexibilité',
+    description:
+      'Nous nous efforçons de répondre rapidement aux demandes et aux questions de nos clients. De plus, nous sommes flexibles et nous adaptons aux changements qui peuvent survenir en cours de projet, tout en veillant à respecter les délais convenus.',
   },
 ];
 </script>
