@@ -1,5 +1,6 @@
 <template>
   <main>
+    <TheLoader />
     <AppCursor />
     <transition name="fade" mode="out-in">
       <TheNavbar v-if="$route.path !== '/'" />
