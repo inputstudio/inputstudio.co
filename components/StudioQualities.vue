@@ -1,13 +1,13 @@
 <template>
-  <section class="flex flex-col gap-10">
-    <h1 class="text-6xl font-medium">Nos qualités</h1>
-    <p class="text-lg font-light md:w-3/4 md:text-2xl">
+  <section class="flex flex-col gap-10 py-9">
+    <h1 class="px-9 text-6xl font-medium">Nos qualités</h1>
+    <p class="px-9 text-lg font-light md:w-3/4 md:text-2xl">
       Ces qualités combinées font de nous une agence web créative fiable et performante. Nous nous efforçons de fournir
       des services de haute qualité et de créer des solutions qui répondent aux besoins uniques de nos clients, en
       veillant à leur satisfaction à chaque étape du processus.
     </p>
 
-    <div id="qualities-slide" class="splide" aria-labelledby="carousel-heading">
+    <div id="qualities-slide" class="splide px-0" aria-labelledby="carousel-heading">
       <div class="splide__track">
         <ul class="splide__list" :style="{ display: 'grid', gridTemplateColumns: `repeat(${qualities.length}, 1fr)` }">
           <AppCard

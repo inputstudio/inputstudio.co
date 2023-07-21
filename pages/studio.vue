@@ -4,7 +4,7 @@
     <StudioSlider />
     <StudioActivities class="p-9" />
     <StudioTimeline class="p-9" />
-    <StudioQualities class="p-9" />
+    <StudioQualities />
     <AppLetsStart />
   </div>
 </template>
