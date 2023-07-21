@@ -38,6 +38,7 @@
     "typescript": "~5.0.0"
   },
   "dependencies": {
+    "@splidejs/splide": "^4.1.4",
     "gsap": "^3.11.5",
     "nuxt-snackbar": "^1.0.3",
     "split-type": "^0.3.3"
