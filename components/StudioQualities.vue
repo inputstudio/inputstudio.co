@@ -94,8 +94,8 @@ const slider = () => {
     perPage: 4,
     perMove: 3,
     padding: {
-      left: '15px',
-      right: '15px',
+      left: '25px',
+      right: '25px',
     },
     height: '100%',
     focus: 'center',
@@ -105,6 +105,10 @@ const slider = () => {
     breakpoints: {
       480: {
         perMove: 1,
+        padding: {
+          left: '15px',
+          right: '15px',
+        },
       },
     },
   });
@@ -130,6 +134,12 @@ hook('page:transition:finish', slider);
     background: rgba(233, 238, 241, 0.1);
     padding: 0.9em;
     border-radius: 50%;
+
+    @media screen and (min-width: 768px) {
+      padding: 1em;
+      width: 50px;
+      height: 50px;
+    }
 
     svg {
       fill: white;
