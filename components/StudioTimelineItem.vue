@@ -23,7 +23,7 @@
     </div>
 
     <div class="flex w-2/4 flex-col items-center justify-center gap-4 px-0 text-justify">
-      <p class="w-3/4 text-lg">{{ props.description }}</p>
+      <p class="w-3/4 text-xl 2xl:text-2xl">{{ props.description }}</p>
 
       <AppButton v-if="props.hasButton" @click="props.buttonAction">
         {{ props.buttonText }}
