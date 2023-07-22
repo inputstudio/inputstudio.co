@@ -59,6 +59,9 @@ const setupTimeline = () => {
   bars.forEach((bar) => {
     const separator = bar.querySelector('.separator');
     const ball = bar.querySelector('.separator > .ball');
+    const title = bar.querySelector('h1');
+    const description = bar.querySelector('p');
+    const button = bar.querySelector('button');
     const background = bar.querySelector('.separator > span');
 
     gsap
@@ -66,7 +69,7 @@ const setupTimeline = () => {
         scrollTrigger: {
           trigger: separator,
           scrub: true,
-          start: 'top 90%',
+          start: 'top 80%',
           end: '+=' + separator?.offsetHeight,
         },
       })
@@ -74,6 +77,9 @@ const setupTimeline = () => {
         width: '2px',
         padding: '2px',
       })
+      .fromTo(title, { autoAlpha: 0 }, { autoAlpha: 1 })
+      .fromTo(description, { autoAlpha: 0 }, { autoAlpha: 1 })
+      .fromTo(button, { autoAlpha: 0 }, { autoAlpha: 1 })
       .to(background, {
         height: '100%',
       });
