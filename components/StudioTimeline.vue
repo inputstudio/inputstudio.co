@@ -1,7 +1,7 @@
 <template>
-  <section id="timeline" class="flex flex-col gap-10">
-    <h1 class="text-6xl font-medium">Notre processus</h1>
-    <p class="text-lg font-light md:w-3/4 md:text-2xl">
+  <section ref="wrapper" class="flex flex-col gap-10">
+    <h1 ref="title" class="text-6xl font-medium">Notre processus</h1>
+    <p ref="description" class="text-lg font-light md:w-3/4 md:text-2xl">
       Nous nous chargeons de la gestion de votre projet, de sa phase de lancement jusqu'à son déploiement.
     </p>
 
@@ -53,7 +53,13 @@ const items = [
   },
 ];
 
+const wrapper = ref();
+const title = ref();
+const description = ref();
+
 const setupTimeline = () => {
+  fadeAnimation(wrapper.value, [title.value, description.value]);
+
   const bars = document.querySelectorAll('.timeline-item');
 
   bars.forEach((bar) => {
@@ -86,6 +92,7 @@ const setupTimeline = () => {
   });
 };
 
+/** To Do : should be trigger on page refresh or on page change !!! */
 hook('page:transition:finish', setupTimeline);
 hook('page:finish', setupTimeline);
 </script>

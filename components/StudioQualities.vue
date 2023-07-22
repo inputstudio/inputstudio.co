@@ -1,7 +1,7 @@
 <template>
-  <section class="flex flex-col gap-10 py-9">
-    <h1 class="px-9 text-6xl font-medium">Nos qualités</h1>
-    <p class="px-9 text-lg font-light md:w-3/4 md:text-2xl">
+  <section ref="wrapper" class="letstart__wrapper flex flex-col gap-10 py-9">
+    <h1 ref="title" class="letstart__wrapper__title px-9 text-6xl font-medium">Nos qualités</h1>
+    <p ref="description" class="letstart__wrapper__description px-9 text-lg font-light md:w-3/4 md:text-2xl">
       Ces qualités combinées font de nous une agence web créative fiable et performante. Nous nous efforçons de fournir
       des services de haute qualité et de créer des solutions qui répondent aux besoins uniques de nos clients, en
       veillant à leur satisfaction à chaque étape du processus.
@@ -88,6 +88,9 @@ const qualities = [
 ];
 
 const progressBar = ref();
+const wrapper = ref();
+const title = ref();
+const description = ref();
 
 const slider = () => {
   const splide = new Splide('.splide', {
@@ -123,8 +126,14 @@ const slider = () => {
   splide.mount();
 };
 
-hook('page:finish', slider);
-hook('page:transition:finish', slider);
+const init = () => {
+  slider();
+  fadeAnimation(wrapper.value, [title.value, description.value]);
+};
+
+/** To Do : should be trigger on page refresh or on page change !!! */
+hook('page:finish', init);
+hook('page:transition:finish', init);
 </script>
 
 <style lang="scss">
