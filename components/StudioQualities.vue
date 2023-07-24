@@ -38,6 +38,7 @@
 </template>
 
 <script lang="ts" setup>
+// eslint-disable-next-line import/no-named-as-default
 import Splide from '@splidejs/splide';
 import creativity from '@/assets/img/career/creativity.svg';
 import competence from '@/assets/img/career/competence.svg';

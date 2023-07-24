@@ -21,7 +21,6 @@
 </template>
 
 <script lang="ts" setup>
-// @ts-nocheck 2307
 import gsap from 'gsap';
 import SplitText from 'split-type';
 
@@ -36,7 +35,6 @@ useNuxtApp().hook('page:finish', () => {
     },
   });
   tl.fromTo(designChars, { y: 100, autoAlpha: 0 }, { y: 0, autoAlpha: 1, stagger: 0.05, ease: 'power2.inOut' });
-  // FIXME: Code animation can be improved. Why not using a "typing" animation.
   tl.fromTo(code, { autoAlpha: 0 }, { autoAlpha: 1, ease: 'power2.out' });
   tl.to(deploy, { y: -100, autoAlpha: 0, ease: 'power1.out' });
   tl.to(deploy, { y: 0, autoAlpha: 1, ease: 'power4.inOut' });
