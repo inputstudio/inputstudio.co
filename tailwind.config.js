@@ -12,6 +12,11 @@ module.exports = {
     extend: {
       colors: {
         background: '#141414',
+        customGray: '#888A8B',
+      },
+      fontFamily: {
+        inter: ['Inter', 'Helvetica', 'Arial', 'sans-serif'],
+        rubik: ['Rubik', 'Helvetica', 'Arial', 'sans-serif'],
       },
     },
   },

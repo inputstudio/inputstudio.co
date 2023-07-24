@@ -11,11 +11,16 @@ export default defineNuxtConfig({
         },
       ],
       link: [{ rel: 'icon', href: '/favicon.ico' }],
+      htmlAttrs: {
+        lang: 'fr',
+      },
     },
+    pageTransition: { name: 'fade', mode: 'out-in' },
   },
   css: ['@/assets/scss/main.scss'],
   runtimeConfig: {
     public: {
+      staticAssetsEndpoint: 'https://content.inputstudio.co/assets/',
       contactFormEndpoint:
         'https://faas-fra1-afec6ce7.doserverless.co/api/v1/web/fn-17294e48-7d1c-4808-9722-0e3735df0619/formhandler/formhandler',
     },
@@ -25,13 +30,19 @@ export default defineNuxtConfig({
     '@nuxtjs/eslint-module',
     '@nuxtjs/google-fonts',
     '@nuxtjs/plausible',
+    '@pinia/nuxt',
+    'nuxt-directus',
     'nuxt-calendly',
     'nuxt-headlessui',
     'nuxt-icon',
+    'nuxt-snackbar',
   ],
   calendly: {},
   device: {
     refreshOnResize: true,
+  },
+  directus: {
+    url: 'https://content.inputstudio.co',
   },
   eslint: {
     lintOnStart: false,
@@ -39,8 +50,8 @@ export default defineNuxtConfig({
   },
   googleFonts: {
     families: {
-      Rubik: [300, 400, 500, 700],
-      Inter: [300, 400, 500, 700],
+      Rubik: [200, 300, 400, 500, 600, 700, 800],
+      Inter: [200, 300, 400, 500, 600, 700, 800],
     },
     download: true,
     base64: false,
@@ -50,10 +61,16 @@ export default defineNuxtConfig({
     apiHost: 'https://analytics.inputstudio.co',
     autoOutboundTracking: true,
   },
+  pinia: {
+    autoImports: ['defineStore', 'acceptHMRUpdate'],
+  },
   postcss: {
     plugins: {
       tailwindcss: {},
       autoprefixer: {},
     },
+  },
+  imports: {
+    dirs: ['stores'],
   },
 });

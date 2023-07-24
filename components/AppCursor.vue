@@ -1,51 +1,64 @@
 <template>
-  <div id="cursor" class="cursor fixed z-50 aspect-square w-4 -translate-x-1/2 -translate-y-1/2 rounded-full p-4"></div>
+  <div
+    v-if="!isMobileOrTablet"
+    ref="cursor"
+    class="cursor pointer-events-none fixed z-50 hidden aspect-square w-3 -translate-x-1/2 -translate-y-1/2 rounded-full border border-white p-2"
+  ></div>
 </template>
 
 <script setup>
 import { gsap } from 'gsap';
 
 const { hook } = useNuxtApp();
+const { isMobileOrTablet } = useDevice();
 
-// Move the cursor
-function onMouseMove(e, cursor) {
-  gsap.to(cursor, 0.4, {
-    x: e.pageX - 35,
-    y: e.pageY - 35,
+const cursor = ref(null);
+
+const expandableElements = 'a, .cursor-expander';
+
+function onMouseMove(event, cursor) {
+  gsap.to(cursor, {
+    x: event.clientX,
+    y: event.clientY,
+    duration: 0.4,
   });
 }
 
 function onMouseEnter(cursor) {
-  gsap.to(cursor, 0.4, {
-    scale: 4,
+  gsap.to(cursor, {
+    padding: 36,
+    duration: 0.4,
   });
 }
 
 function onMouseLeave(cursor) {
-  gsap.to(cursor, 0.4, {
-    scale: 1,
+  gsap.to(cursor, {
+    padding: 8,
+    duration: 0.4,
   });
 }
 
-hook('app:suspense:resolve', () => {
-  const cursor = document.getElementById('cursor');
-  const hoverableLinks = document.querySelectorAll('.ball-expander');
+function init() {
+  const hoverables = document.querySelectorAll(expandableElements);
 
-  // For each links with hoverable css class
-  hoverableLinks.forEach((link) => {
-    link.addEventListener('mouseenter', () => onMouseEnter(cursor));
-    link.addEventListener('mouseleave', () => onMouseLeave(cursor));
+  hoverables.forEach((element) => {
+    element.addEventListener('mouseenter', () => onMouseEnter(cursor.value));
+    element.addEventListener('mouseleave', () => onMouseLeave(cursor.value));
+    element.addEventListener('click', () => onMouseLeave(cursor.value));
   });
 
-  document.body.addEventListener('mousemove', (e) => onMouseMove(e, cursor));
+  document.body.addEventListener('mousemove', (e) => onMouseMove(e, cursor.value));
+
+  if (cursor.value) {
+    cursor.value.classList.remove('hidden');
+  }
+}
+
+hook('page:finish', () => {
+  init();
+});
+
+hook('page:transition:finish', () => {
+  init();
 });
 </script>
-
-<style lang="scss">
-$bg-color: rgba(0, 0, 0, 0.6);
-
-.cursor {
-  background-color: $bg-color;
-  pointer-events: none;
-}
-</style>

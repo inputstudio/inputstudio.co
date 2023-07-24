@@ -1,6 +1,4 @@
 <template>
-  <h1 class="font-bold uppercase md:text-xl">
-    Input <br v-if="$device.isMobileOrTablet" />
-    Studio
-  </h1>
+  <img src="@/assets/img/logo.webp" alt="Logo" class="hidden h-8 md:block" />
+  <img src="@/assets/img/logo-variant.webp" alt="Logo" class="h-12 md:hidden" />
 </template>

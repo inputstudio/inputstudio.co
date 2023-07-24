@@ -1,17 +1,17 @@
 <template>
-  <section class="flex flex-col gap-9 rounded-md bg-gray-100 p-6 text-black md:w-3/5">
+  <div class="flex flex-col gap-3 rounded-xl bg-black/40 p-6 lg:max-w-xl">
     <div class="flex flex-col gap-3">
-      <h1 class="text-4xl font-bold uppercase">Nous contacter</h1>
+      <h2 class="text-2xl font-bold uppercase lg:text-4xl">Nous contacter</h2>
       <p>Remplissez ce formulaire et nous vous contacterons au plus vite pour discuter de votre projet.</p>
     </div>
 
     <form id="contact-form" class="flex flex-col gap-3" @submit.prevent="submit">
       <input v-model="data.fullname" type="text" placeholder="Votre nom" required />
 
-      <div class="flex gap-3">
+      <div class="flex flex-col gap-3 lg:flex-row">
         <input v-model="data.contact" class="w-1/2" type="text" placeholder="E-mail/Téléphone" required />
 
-        <select v-model="data.budget" class="w-1/2">
+        <select v-model="data.budget" class="w-1/2" required>
           <option value="" selected disabled>Votre budget</option>
           <option v-for="budget in budgets" :key="budget" :value="budget">{{ budget }}</option>
         </select>
@@ -26,8 +26,8 @@
           <p
             v-for="topic in topics"
             :key="topic"
-            class="cursor-pointer rounded-full border border-black px-4 py-1 transition-colors hover:bg-black hover:text-white"
-            :class="{ 'bg-black text-white': data.topics.indexOf(topic) >= 0 }"
+            class="cursor-expander rounded-full border border-white bg-black px-4 py-1 text-sm transition-colors lg:text-base"
+            :class="{ 'bg-white text-black': data.topics.indexOf(topic) >= 0 }"
             @click="handleTopics(topic)"
           >
             {{ topic }}
@@ -37,7 +37,7 @@
 
       <button
         type="submit"
-        class="mt-3 flex justify-center gap-3 rounded-lg border-2 bg-black py-4 text-center font-semibold text-white transition-colors hover:border-black hover:bg-white hover:text-black disabled:cursor-not-allowed disabled:border-black disabled:bg-white disabled:text-black"
+        class="mt-3 flex justify-center gap-3 rounded-lg bg-black py-4 text-center uppercase transition-colors hover:border-black hover:bg-white hover:text-black disabled:cursor-not-allowed disabled:border-black disabled:bg-white disabled:text-black"
         :disabled="loading"
       >
         <div
@@ -47,10 +47,11 @@
         <span>Envoyer</span>
       </button>
     </form>
-  </section>
+  </div>
 </template>
 
 <script lang="ts" setup>
+const snackbar = useSnackbar();
 const loading = ref(false);
 
 const data = ref({
@@ -64,13 +65,12 @@ const data = ref({
 const budgets = ['1.000.000 - 5.000.000 FCFA', '5.000.000 - 10.000.000 FCFA', 'Plus de 10.000.000 FCFA'];
 
 const topics = [
+  'Design UI/UX',
   'Site vitrine',
   'E-commerce',
   'Blog',
-  'Site web sur mesure',
-  'Refonte de site web',
+  'Refonte site web',
   'Application mobile',
-  'Design UI/UX',
   'Cloud',
   'Autres',
 ];
@@ -85,24 +85,39 @@ function handleTopics(topic: string) {
   }
 }
 
+function clear() {
+  data.value = {
+    fullname: '',
+    contact: '',
+    budget: '',
+    resume: '',
+    topics: [],
+  };
+}
+
 async function submit() {
   loading.value = true;
 
   const { contactFormEndpoint } = useRuntimeConfig().public;
 
   try {
-    await fetch(contactFormEndpoint, {
+    await useFetch(contactFormEndpoint, {
       method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(data.value),
+      body: data.value,
     });
-  } catch (error) {
-    // TODO: Display error snackbar
-  }
 
-  // TODO: Display success snackbar
+    snackbar.add({
+      type: 'success',
+      text: 'Votre message a été envoyé avec succès.',
+    });
+
+    clear();
+  } catch (error) {
+    snackbar.add({
+      type: 'error',
+      text: error,
+    });
+  }
 
   loading.value = false;
 }
@@ -113,12 +128,18 @@ async function submit() {
   input,
   select,
   textarea {
-    border-radius: 0.375rem;
-    padding: 12px 10px;
-    background-color: white;
-    color: gray;
+    padding: 0.75rem 1.5rem;
+    color: #ffffff;
     width: 100%;
+    background: rgba($color: #000, $alpha: 0.4);
+    border-radius: 0.75rem;
     resize: none;
+  }
+
+  select {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
   }
 }
 </style>

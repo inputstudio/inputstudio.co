@@ -1,8 +1,8 @@
 <template>
-  <section class="flex flex-col items-center gap-7 md:gap-8 2xl:gap-14">
+  <section class="flex flex-col items-center gap-6 md:gap-9 xl:gap-12">
     <h1
       id="animated-title"
-      class="flex flex-col gap-4 text-center font-bold leading-normal md:cursor-pointer md:flex-row"
+      class="cursor-expander flex flex-col gap-4 text-center font-bold leading-normal md:flex-row"
     >
       <div id="design" class="text-6xl md:text-8xl">Design.</div>
       <div id="code" class="text-5xl md:text-8xl">Code.</div>
@@ -13,15 +13,14 @@
       dont vous avez besoin.
     </p>
 
-    <div class="mb-12 flex flex-col gap-4">
-      <HomeTechnos />
-      <HomeGhostCard />
+    <div class="mb-12 flex flex-col items-center gap-5 md:gap-3">
+      <HomeHeroTechnos />
+      <HomeHeroGhostBanner />
     </div>
   </section>
 </template>
 
 <script lang="ts" setup>
-// @ts-nocheck 2307
 import gsap from 'gsap';
 import SplitText from 'split-type';
 
@@ -36,7 +35,6 @@ useNuxtApp().hook('page:finish', () => {
     },
   });
   tl.fromTo(designChars, { y: 100, autoAlpha: 0 }, { y: 0, autoAlpha: 1, stagger: 0.05, ease: 'power2.inOut' });
-  // FIXME: Code animation can be improved. Why not using a "typing" animation.
   tl.fromTo(code, { autoAlpha: 0 }, { autoAlpha: 1, ease: 'power2.out' });
   tl.to(deploy, { y: -100, autoAlpha: 0, ease: 'power1.out' });
   tl.to(deploy, { y: 0, autoAlpha: 1, ease: 'power4.inOut' });
