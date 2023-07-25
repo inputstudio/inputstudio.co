@@ -4,6 +4,102 @@
     "studio": "Studio",
     "projects": "Projects",
     "contact": "Contact us",
-    "careers": "Careers"
+    "careers": "Careers",
+    "privacy": "Privacy policy",
+    "back-home": "Back to home"
+  },
+  "app": {
+    "remote-agency": "100% remote agency",
+    "lets-start": "Let's start your",
+    "web-experiences": "web experiences",
+    "together": "together!",
+    "contact": "Submit a project"
+  },
+  "calendly": {
+    "plan-meeting": "Schedule a meeting",
+    "advantages": "Quick, convenient, efficient."
+  },
+  "home": {
+    "subtitle": "Creative ideas, technical expertise and state-of-the-art cloud infrastructure. Our web agency has everything you need.",
+    "ghost": "Contact us to create your blog"
+  },
+  "studio": {
+    "title": "Studio",
+    "subtitle": "We don't build websites, we build",
+    "slider": {
+      "slide1": "Input studio is a 100% REMOTE web agency based in Abidjan. With us, building a website is much more than just doing integration.",
+      "slide2": "In fact, our team will support you from design to the launch of your website.",
+      "slide3": "We combine design and development skills to offer our customers outstanding websites that reflect their identity."
+    },
+    "activities": {
+      "title": "What do we do?",
+      "subtitle": "Input studio is a product-oriented team. We design and develop complete web solutions with a professional look and feel using the latest technologies.",
+      "design": "Our ultimate goal is to provide platforms that deliver an exceptional user experience and enable our customers to achieve their business objectives.",
+      "development": "Our programming expertise and commitment to quality enable us to realize our customers' visions with excellence.",
+      "deployment": "We take care of the deployment of your technology solutions, ensuring that they are correctly configured and optimized for performance."
+    },
+    "qualities": {
+      "title": "Our strengths",
+      "subtitle": "These combined qualities make us a reliable and successful creative web agency. We strive to deliver high-quality services and create solutions that meet our customers' unique needs, ensuring their satisfaction every step of the way.",
+      "creativity": "Creativity",
+      "creativity-desc": "We're passionate about creativity and innovation, pushing boundaries with unique solutions. Our team of designers and developers follows the latest trends for modern, captivating designs.",
+      "competence": "Technical skills",
+      "competence-desc": "Our qualified technical team masters the latest technologies for robust, scalable solutions.",
+      "client": "Customer focus",
+      "client-desc": "We place our customers at the heart of our approach, listening carefully to their needs and fostering transparent communication and close collaboration throughout the project.",
+      "conception": "Excellence in design",
+      "conception-desc": "We place great importance on the quality of our designs, creating user-friendly, aesthetically pleasing interfaces that optimize the user experience.",
+      "commitment": "Commitment to quality",
+      "commitment-desc": "We are committed to delivering high-quality solutions to our customers. Our aim is to exceed our customers' expectations and deliver tangible added value.",
+      "reactivity": "Responsiveness and flexibility",
+      "reactivity-desc": "We strive to respond quickly to our customers' requests and questions. What's more, we're flexible, adapting to any changes that may occur during the course of a project, while ensuring that agreed deadlines are met."
+    }
+  },
+  "projects": {
+    "title": "Our projects",
+    "subtitle": "Our pride and joy",
+    "description": "We only commit to projects that reflect our core values, and we're passionate about being fully involved every step of the way.",
+    "visit-website": "Visit website"
+  },
+  "contact": {
+    "title": "Contact us",
+    "subtitle": "Let's make it happen!",
+    "form-title": "Contact us",
+    "form-subtitle": "Fill in this form and we will contact you as soon as possible to discuss your project.",
+    "form-name": "Your name",
+    "form-contact": "E-mail/Phone",
+    "form-message": "Tell us more about your project",
+    "form-budget": "Your budget",
+    "form-topics": "Select your needs:",
+    "form-topic-design": "UI/UX design",
+    "form-topic-website": "Website",
+    "form-topic-ecommerce": "E-commerce",
+    "form-topic-blog": "Blog",
+    "form-topic-redesign": "Website redesign",
+    "form-topic-mobile": "Mobile app",
+    "form-topic-cloud": "Cloud",
+    "form-topic-other": "Other",
+    "form-submit": "Submit",
+    "form-success": "Your message has been sent!",
+    "form-alt": "You hate forms?",
+    "form-alt-email": "Email:",
+    "form-alt-phone": "Phone:",
+    "form-alt-address": "Address:"
+  },
+  "careers": {
+    "title": "We are hiring",
+    "description": "Input studio is always open to smart, creative people. Join our team of like-minded people striving to achieve their goals. Let's work together towards success! We're interested in building a community of individuals who share our values and goals.",
+    "apply": "Apply now"
+  },
+  "meta": {
+    "title": "Web development agency",
+    "description": "Input Studio, your web agency in Abidjan, specializes in the custom creation of websites and mobile applications using modern technologies, in 100% remote mode.",
+    "pages": {
+      "studio": "Studio",
+      "projects": "Projects",
+      "contact": "Contact us",
+      "careers": "Careers",
+      "privacy": "Privacy policy"
+    }
   }
 }
