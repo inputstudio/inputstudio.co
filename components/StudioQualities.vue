@@ -47,8 +47,6 @@ import conception from '@/assets/img/career/conception.svg';
 import commitment from '@/assets/img/career/commitment.svg';
 import reactivity from '@/assets/img/career/reactivity.svg';
 
-const { hook } = useNuxtApp();
-
 const qualities = [
   {
     image: creativity,
@@ -93,7 +91,14 @@ const wrapper = ref();
 const title = ref();
 const description = ref();
 
-const slider = () => {
+useAnimation(animationAndSlider);
+
+function animationAndSlider() {
+  initSlider();
+  fadeAnimation(wrapper.value, [title.value, description.value]);
+}
+
+function initSlider() {
   const splide = new Splide('.splide', {
     perPage: 4,
     perMove: 3,
@@ -125,16 +130,7 @@ const slider = () => {
   });
 
   splide.mount();
-};
-
-const init = () => {
-  slider();
-  fadeAnimation(wrapper.value, [title.value, description.value]);
-};
-
-/** To Do : should be trigger on page refresh or on page change !!! */
-hook('page:finish', init);
-hook('page:transition:finish', init);
+}
 </script>
 
 <style lang="scss">

@@ -27,12 +27,11 @@
 </template>
 
 <script lang="ts" setup>
-import { gsap } from 'gsap';
 import design from '@/assets/img/career/design.svg';
 import development from '@/assets/img/career/development.svg';
 import deployment from '@/assets/img/career/deployment.svg';
 
-const { hook } = useNuxtApp();
+const { $gsap } = useNuxtApp();
 
 const activities = [
   {
@@ -59,15 +58,13 @@ const wrapper = ref();
 const title = ref();
 const description = ref();
 
-const initAnimation = () => {
-  const activitiesCards = gsap.utils.toArray('.career-activity');
+useAnimation(animation);
+
+function animation() {
+  const activitiesCards = $gsap.utils.toArray('.career-activity');
 
   const timeline = fadeAnimation(wrapper.value, [title.value, description.value]);
 
   timeline.from(activitiesCards, { autoAlpha: 0 });
-};
-
-/** To Do : should be trigger on page refresh or on page change !!! */
-hook('page:transition:finish', initAnimation);
-hook('page:finish', initAnimation);
+}
 </script>

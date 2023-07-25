@@ -7,17 +7,15 @@
 </template>
 
 <script setup>
-import { gsap } from 'gsap';
-
-const { hook } = useNuxtApp();
+const { $gsap } = useNuxtApp();
 const { isMobileOrTablet } = useDevice();
+
+useAnimation(animation, true);
 
 const cursor = ref(null);
 
-const expandableElements = 'a, .cursor-expander';
-
 function onMouseMove(event, cursor) {
-  gsap.to(cursor, {
+  $gsap.to(cursor, {
     x: event.clientX,
     y: event.clientY,
     duration: 0.4,
@@ -25,20 +23,21 @@ function onMouseMove(event, cursor) {
 }
 
 function onMouseEnter(cursor) {
-  gsap.to(cursor, {
+  $gsap.to(cursor, {
     padding: 36,
     duration: 0.4,
   });
 }
 
 function onMouseLeave(cursor) {
-  gsap.to(cursor, {
+  $gsap.to(cursor, {
     padding: 8,
     duration: 0.4,
   });
 }
 
-function init() {
+function animation() {
+  const expandableElements = 'a, .cursor-expander';
   const hoverables = document.querySelectorAll(expandableElements);
 
   hoverables.forEach((element) => {
@@ -53,12 +52,4 @@ function init() {
     cursor.value.classList.remove('hidden');
   }
 }
-
-hook('page:finish', () => {
-  init();
-});
-
-hook('page:transition:finish', () => {
-  init();
-});
 </script>

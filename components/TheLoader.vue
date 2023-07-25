@@ -34,14 +34,12 @@
 </template>
 
 <script lang="ts" setup>
-import { gsap } from 'gsap';
-
-const { hook } = useNuxtApp();
+const { hook, $gsap } = useNuxtApp();
 
 const loader = ref();
 
 const hideLoader = () => {
-  gsap.to(loader.value, { autoAlpha: 0, duration: 1.5 });
+  $gsap.to(loader.value, { autoAlpha: 0, duration: 1.5 });
 };
 
 hook('page:finish', hideLoader);

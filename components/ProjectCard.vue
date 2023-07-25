@@ -33,22 +33,18 @@
 </template>
 
 <script setup lang="ts">
-const { hook } = useNuxtApp();
-
-const wrapper = ref();
-
-const setupTimeline = () => {
-  fadeAnimation(wrapper.value, [wrapper.value]);
-};
-
-/** To Do : should be trigger on page refresh or on page change !!! */
-hook('page:transition:finish', setupTimeline);
-hook('page:finish', setupTimeline);
-
 defineProps({
   project: {
     type: Object as PropType<Project>,
     required: true,
   },
 });
+
+const wrapper = ref();
+
+useAnimation(animation);
+
+function animation() {
+  fadeAnimation(wrapper.value, [wrapper.value]);
+}
 </script>

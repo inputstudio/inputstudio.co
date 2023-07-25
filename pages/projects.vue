@@ -25,7 +25,6 @@
 
 <script lang="ts" setup>
 const { projects } = useStore();
-const { hook } = useNuxtApp();
 
 const wrapper = ref();
 const title = ref();
@@ -33,13 +32,11 @@ const subtitle = ref();
 const slogan = ref();
 const description = ref();
 
-const setupTimeline = () => {
-  fadeAnimation(wrapper.value, [title.value, subtitle.value, slogan.value, description.value]);
-};
+useAnimation(animation);
 
-/** To Do : should be trigger on page refresh or on page change !!! */
-hook('page:transition:finish', setupTimeline);
-hook('page:finish', setupTimeline);
+function animation() {
+  fadeAnimation(wrapper.value, [title.value, subtitle.value, slogan.value, description.value]);
+}
 
 useHead({
   title: 'Projets',

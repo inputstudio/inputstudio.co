@@ -21,19 +21,23 @@
 </template>
 
 <script lang="ts" setup>
-import gsap from 'gsap';
 import SplitText from 'split-type';
 
-useNuxtApp().hook('page:finish', () => {
+const { $gsap } = useNuxtApp();
+
+useAnimation(animation);
+
+function animation() {
   const design = new SplitText('#design', { types: 'chars' });
   const designChars = design.chars;
   const code = document.querySelector('#code');
   const deploy = document.querySelector('#deploy');
-  const tl = gsap.timeline({
+  const tl = $gsap.timeline({
     defaults: {
       duration: 1,
     },
   });
+
   tl.fromTo(designChars, { y: 100, autoAlpha: 0 }, { y: 0, autoAlpha: 1, stagger: 0.05, ease: 'power2.inOut' });
   tl.fromTo(code, { autoAlpha: 0 }, { autoAlpha: 1, ease: 'power2.out' });
   tl.to(deploy, { y: -100, autoAlpha: 0, ease: 'power1.out' });
@@ -44,5 +48,5 @@ useNuxtApp().hook('page:finish', () => {
       tl.play(0);
     }
   });
-});
+}
 </script>

@@ -16,19 +16,18 @@
 </template>
 
 <script lang="ts" setup>
-import { gsap } from 'gsap';
-import { ScrollTrigger } from 'gsap/all';
+const { $gsap, $ScrollTrigger } = useNuxtApp();
 
-const { hook } = useNuxtApp();
-
-gsap.registerPlugin(ScrollTrigger);
+$gsap.registerPlugin($ScrollTrigger);
 
 const wrapper = ref();
 
-const initAnimation = () => {
-  const fadeables = gsap.utils.toArray('.fadeable');
+useAnimation(animation);
 
-  gsap
+function animation() {
+  const fadeables = $gsap.utils.toArray('.fadeable');
+
+  $gsap
     .timeline({
       scrollTrigger: {
         trigger: wrapper.value,
@@ -37,8 +36,5 @@ const initAnimation = () => {
       },
     })
     .from(fadeables, { autoAlpha: 0, y: -30, stagger: 0.5 });
-};
-/** To Do : should be trigger on page refresh or on page change !!! */
-hook('page:transition:finish', initAnimation);
-hook('page:finish', initAnimation);
+}
 </script>
