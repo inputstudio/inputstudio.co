@@ -89,7 +89,7 @@
 </template>
 
 <script setup lang="ts">
-useHead({
-  title: 'Politique de confidentialité',
+definePageMeta({
+  title: 'meta.pages.privacy',
 });
 </script>

@@ -24,7 +24,7 @@
         </div>
 
         <AppButton v-if="project.link" :to="project.link" class="mt-9">
-          <span class="text-base">Visitez le site</span>
+          <span class="text-base">{{ $t('projects.visit-website') }}</span>
           <IconCSS name="ic:baseline-arrow-outward" class="text-xl" />
         </AppButton>
       </div>

@@ -30,7 +30,7 @@
 
     <div class="flex flex-col items-center justify-center gap-3 text-center text-customGray md:text-left">
       <div class="flex items-center justify-center gap-1">
-        <NuxtLink to="/privacy">Politique de confidentialité</NuxtLink>
+        <NuxtLink to="/privacy">{{ $t('navigation.privacy') }}</NuxtLink>
         <span>·</span>
         <p>Copyright &copy; 2022 - {{ new Date().getFullYear() }}</p>
       </div>

@@ -4,6 +4,102 @@
     "studio": "Studio",
     "projects": "Projets",
     "contact": "Nous contacter",
-    "careers": "Carrières"
+    "careers": "Carrières",
+    "privacy": "Politique de confidentialité",
+    "back-home": "Retour à l'accueil"
+  },
+  "app": {
+    "remote-agency": "Agence 100% remote",
+    "lets-start": "Demarrons votre",
+    "web-experiences": "expériences web",
+    "together": "ensemble !",
+    "contact": "Soumettre un projet"
+  },
+  "calendly": {
+    "plan-meeting": "Planifier une réunion",
+    "advantages": "Rapide, pratique, efficace."
+  },
+  "home": {
+    "subtitle": "Des idées créatives, une expertise technique et une infrastructure cloud de pointe. Notre agence web a tout ce dont vous avez besoin.",
+    "ghost": "Contacter-nous pour la création de votre blog"
+  },
+  "studio": {
+    "title": "Studio",
+    "subtitle": "Nous ne réalisons pas des sites mais des",
+    "slider": {
+      "slide1": "Input studio est une agence web 100% REMOTE basée à Abidjan. Avec nous, construire un site web est bien plus que simplement installer un logiciel de conception et faire de l'intégration.",
+      "slide2": "En effet, notre équipe vous accompagne de la conception à la mise en ligne de votre site web.",
+      "slide3": "Nous combinons des compétences en design et en développement pour offrir à nos clients des sites web remarquables qui reflètent leur identité."
+    },
+    "activities": {
+      "title": "Que faisons nous ?",
+      "subtitle": "Input studio est une équipe orientée produit. Nous concevons et développons des solutions web complètes avec une allure et une sensation professionnelle en utilisant les dernières technologies.",
+      "design": "Notre objectif ultime est de fournir des plateformes qui offrent une expérience utilisateur exceptionnelle et permettent à nos clients d'atteindre leurs objectifs commerciaux.",
+      "development": "Notre expertise en programmation et notre engagement envers la qualité nous permettent de réaliser les visions de nos clients avec excellence.",
+      "deployment": "Nous prenons en charge le déploiement de vos solutions technologiques, en nous assurant qu'elles sont configurées correctement et optimisées pour les performances."
+    },
+    "qualities": {
+      "title": "Nos qualités",
+      "subtitle": "Ces qualités combinées font de nous une agence web créative fiable et performante. Nous nous efforçons de fournir des services de haute qualité et de créer des solutions qui répondent aux besoins uniques de nos clients, en veillant à leur satisfaction à chaque étape du processus.",
+      "creativity": "Créativité",
+      "creativity-desc": "Nous sommes passionnés par la créativité et l'innovation, repoussant les limites avec des solutions uniques. Notre équipe de designers et développeurs suit les dernières tendances pour des designs modernes et captivants.",
+      "competence": "Compétence technique",
+      "competence-desc": "Notre équipe technique qualifiée maîtrise les dernières technologies pour des solutions robustes et évolutives.",
+      "client": "Orientation client",
+      "client-desc": "Nous plaçons nos clients au cœur de notre approche, en écoutant attentivement leurs besoins et en favorisant une communication transparente et une collaboration étroite tout au long du projet.",
+      "conception": "Excellence de la conception",
+      "conception-desc": "Nous accordons une grande importance à la qualité de nos designs, en créant des interfaces conviviales et esthétiques qui optimisent l'expérience utilisateur.",
+      "commitment": "Engagement envers la qualité",
+      "commitment-desc": "Nous sommes déterminés à fournir des solutions de haute qualité à nos clients. Notre objectif est de dépasser les attentes de nos clients et de leur offrir une valeur ajoutée tangible.",
+      "reactivity": "Réactivité et flexibilité",
+      "reactivity-desc": "Nous nous efforçons de répondre rapidement aux demandes et aux questions de nos clients. De plus, nous sommes flexibles et nous adaptons aux changements qui peuvent survenir en cours de projet, tout en veillant à respecter les délais convenus."
+    }
+  },
+  "projects": {
+    "title": "Nos projets",
+    "subtitle": "Notre travail, notre fierté",
+    "description": "Nous ne nous engageons que dans des projets qui reflètent nos valeurs profondes, et nous sommes passionnés par une implication totale à chaque étape.",
+    "visit-website": "Visiter le site"
+  },
+  "contact": {
+    "title": "Nous contacter",
+    "subtitle": "Réalisons votre projet ensemble !",
+    "form-title": "Nous contacter",
+    "form-subtitle": "Remplissez ce formulaire et nous vous contacterons au plus vite pour discuter de votre projet.",
+    "form-name": "Votre nom",
+    "form-contact": "E-mail/Téléphone",
+    "form-message": "Parlez-nous de votre projet",
+    "form-budget": "Votre budget",
+    "form-topics": "Selectionnez vos besoins :",
+    "form-topic-design": "Design UI/UX",
+    "form-topic-website": "Site vitrine",
+    "form-topic-ecommerce": "E-commerce",
+    "form-topic-blog": "Blog",
+    "form-topic-redesign": "Refonte site web",
+    "form-topic-mobile": "Application mobile",
+    "form-topic-cloud": "Cloud",
+    "form-topic-other": "Autres",
+    "form-submit": "Envoyer",
+    "form-success": "Votre message a bien été envoyé !",
+    "form-alt": "Vous détestez les formulaires ?",
+    "form-alt-email": "Email :",
+    "form-alt-phone": "Téléphone :",
+    "form-alt-address": "Adresse :"
+  },
+  "careers": {
+    "title": "Nous recrutons",
+    "description": "Input studio est toujours ouvert aux personnes intelligentes et créatives. Rejoignez notre équipe de personnes partageant les mêmes idées qui s'efforcent d'atteindre leurs objectifs. Travaillons ensemble vers le succès ! Nous sommes intéressés par la construction d'une communauté d'individus qui partagent nos valeurs et nos objectifs.",
+    "apply": "Envoyez votre CV"
+  },
+  "meta": {
+    "title": "Agence de développement web",
+    "description": "Input Studio, votre agence web à Abidjan, spécialisée dans la création sur mesure de sites web et d'applications mobiles en utilisant des technologies modernes, et ce, en mode 100% remote.",
+    "pages": {
+      "studio": "Studio",
+      "projects": "Projets",
+      "contact": "Nous contacter",
+      "careers": "Carrières",
+      "privacy": "Politique de confidentialité"
+    }
   }
 }

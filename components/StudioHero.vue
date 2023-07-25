@@ -1,8 +1,8 @@
 <template>
   <section class="relative h-screen">
-    <p ref="title" class="text-xl font-thin">Studio</p>
+    <p ref="title" class="text-xl font-thin">{{ $t('studio.title') }}</p>
     <h1 ref="description" class="text-3xl font-bold leading-9 md:text-8xl">
-      Nous ne réalisons pas de sites mais des <AppExperienceText />.
+      {{ $t('studio.subtitle') }} <AppExperienceText />.
     </h1>
 
     <AppScrollIndicator

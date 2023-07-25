@@ -1,24 +1,15 @@
 <template>
   <div ref="wrapper" class="gap-x-30 flex h-screen w-[300vw] flex-nowrap">
     <div class="text-section grid w-screen place-items-center">
-      <p class="w-4/5 text-center text-xl md:text-2xl 2xl:w-2/3">
-        Input studio est une agence web <span class="font-bold">100% REMOTE</span> basée à Abidjan. Avec nous,
-        construire un site web est bien plus que simplement installer un logiciel de conception et faire de
-        l'intégration.
-      </p>
+      <p class="w-4/5 text-center text-xl md:text-2xl 2xl:w-2/3">{{ $t('studio.slider.slide1') }}</p>
     </div>
 
     <div class="text-section grid w-screen place-items-center">
-      <p class="w-4/5 text-center text-xl md:text-2xl 2xl:w-2/3">
-        En effet, notre équipe vous accompagne de la conception à la mise en ligne de votre site web.
-      </p>
+      <p class="w-4/5 text-center text-xl md:text-2xl 2xl:w-2/3">{{ $t('studio.slider.slide2') }}</p>
     </div>
 
     <div class="text-section grid w-screen place-items-center">
-      <p class="w-4/5 text-center text-xl md:text-2xl 2xl:w-2/3">
-        Nous combinons des compétences en design et en développement pour offrir à nos clients des sites web
-        remarquables qui reflètent leur identité.
-      </p>
+      <p class="w-4/5 text-center text-xl md:text-2xl 2xl:w-2/3">{{ $t('studio.slider.slide3') }}</p>
     </div>
   </div>
 </template>

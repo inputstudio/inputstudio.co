@@ -10,7 +10,7 @@
 </template>
 
 <script setup lang="ts">
-useHead({
-  title: 'Studio',
+definePageMeta({
+  title: 'meta.pages.studio',
 });
 </script>

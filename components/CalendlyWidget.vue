@@ -7,8 +7,8 @@
     <div class="flex items-center justify-center gap-6 rounded-t-2xl bg-white p-3 md:p-4 2xl:p-6">
       <img src="@/assets/img/calendly.svg" alt="Logo Calendly" class="h-12 md:h-16" />
       <div class="flex flex-col text-left text-sm md:text-base">
-        <span>Planifier une réunion</span>
-        <span class="font-thin">Rapide, pratique, efficace.</span>
+        <span>{{ $t('calendly.plan-meeting') }}</span>
+        <span class="font-thin">{{ $t('calendly.advantages') }}</span>
       </div>
     </div>
 
