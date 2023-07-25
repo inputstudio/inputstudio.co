@@ -57,6 +57,13 @@ export default defineNuxtConfig({
     download: true,
     base64: false,
   },
+  i18n: {
+    strategy: 'no_prefix',
+    defaultLocale: 'en',
+    detectBrowserLanguage: {
+      useCookie: false,
+    },
+  },
   plausible: {
     domain: 'inputstudio.co',
     apiHost: 'https://analytics.inputstudio.co',

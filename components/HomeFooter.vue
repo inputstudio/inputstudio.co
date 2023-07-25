@@ -13,11 +13,11 @@
         <IconCSS name="mdi:github" class="text-3xl" />
       </NuxtLink>
 
-      <NuxtLink to="/careers" title="Carrière">
+      <NuxtLink to="/careers" :title="$t('navigation.careers')">
         <IconCSS name="uim:bag" class="text-3xl" />
       </NuxtLink>
     </div>
 
-    <NuxtLink to="/contact" class="hover-underline">Nous contacter</NuxtLink>
+    <NuxtLink to="/contact" class="hover-underline">{{ $t('navigation.contact') }}</NuxtLink>
   </nav>
 </template>

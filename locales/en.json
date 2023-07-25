@@ -1,0 +1,9 @@
+{
+  "navigation": {
+    "home": "Home",
+    "studio": "Studio",
+    "projects": "Projects",
+    "contact": "Contact us",
+    "careers": "Careers"
+  }
+}
