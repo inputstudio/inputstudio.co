@@ -29,6 +29,7 @@ export default defineNuxtConfig({
     '@nuxtjs/device',
     '@nuxtjs/eslint-module',
     '@nuxtjs/google-fonts',
+    '@nuxtjs/i18n',
     '@nuxtjs/plausible',
     '@pinia/nuxt',
     'nuxt-directus',
