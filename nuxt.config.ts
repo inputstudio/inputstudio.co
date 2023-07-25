@@ -26,6 +26,7 @@ export default defineNuxtConfig({
     },
   },
   modules: [
+    '@hypernym/nuxt-gsap',
     '@nuxtjs/device',
     '@nuxtjs/eslint-module',
     '@nuxtjs/google-fonts',
@@ -55,6 +56,11 @@ export default defineNuxtConfig({
     },
     download: true,
     base64: false,
+  },
+  gsap: {
+    extraPlugins: {
+      scrollTrigger: true,
+    },
   },
   plausible: {
     domain: 'inputstudio.co',
