@@ -15,6 +15,7 @@ export default defineNuxtConfig({
     },
   },
   modules: [
+    '@nuxt/content',
     '@nuxtjs/device',
     '@nuxtjs/eslint-module',
     '@nuxtjs/google-fonts',

@@ -1,4 +1,18 @@
 declare global {
+  export interface PrivacyPolicy {
+    id: string;
+    date_created: string;
+    date_updated?: string;
+    translations: PrivacyPolicyTranslation[];
+  }
+
+  export interface PrivacyPolicyTranslation {
+    id: number;
+    privacy_policy_id: number;
+    languages_code: string;
+    content: string;
+  }
+
   export interface Project {
     id: string;
     date_created: string;
@@ -10,7 +24,7 @@ declare global {
     orgTypeIcon: string;
     translations: ProjectTranslation[];
   }
-  
+
   export interface ProjectTranslation {
     id: number;
     projects_id: number;
