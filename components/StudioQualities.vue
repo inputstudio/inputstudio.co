@@ -1,10 +1,8 @@
 <template>
   <section ref="wrapper" class="letstart__wrapper flex flex-col gap-10 py-9">
-    <h1 ref="title" class="letstart__wrapper__title px-9 text-6xl font-medium">Nos qualités</h1>
+    <h1 ref="title" class="letstart__wrapper__title px-9 text-6xl font-medium">{{ $t('studio.qualities.title') }}</h1>
     <p ref="description" class="letstart__wrapper__description px-9 text-lg font-light md:w-3/4 md:text-2xl">
-      Ces qualités combinées font de nous une agence web créative fiable et performante. Nous nous efforçons de fournir
-      des services de haute qualité et de créer des solutions qui répondent aux besoins uniques de nos clients, en
-      veillant à leur satisfaction à chaque étape du processus.
+      {{ $t('studio.qualities.subtitle') }}
     </p>
 
     <div id="qualities-slide" class="splide px-0" aria-labelledby="carousel-heading">
@@ -47,44 +45,39 @@ import conception from '@/assets/img/career/conception.svg';
 import commitment from '@/assets/img/career/commitment.svg';
 import reactivity from '@/assets/img/career/reactivity.svg';
 
+const { t } = useI18n();
 const { hook } = useNuxtApp();
 
 const qualities = [
   {
     image: creativity,
-    title: 'Créativité',
-    description:
-      "Nous sommes passionnés par la créativité et l'innovation, repoussant les limites avec des solutions uniques. Notre équipe de designers et développeurs suit les dernières tendances pour des designs modernes et captivants.",
+    title: t('studio.qualities.creativity'),
+    description: t('studio.qualities.creativity-desc'),
   },
   {
     image: competence,
-    title: 'Compétence technique',
-    description:
-      'Notre équipe technique qualifiée maîtrise les dernières technologies pour des solutions robustes et évolutives.',
+    title: t('studio.qualities.competence'),
+    description: t('studio.qualities.competence-desc'),
   },
   {
     image: client,
-    title: 'Orientation client',
-    description:
-      'Nous plaçons nos clients au cœur de notre approche, en écoutant attentivement leurs besoins et en favorisant une communication transparente et une collaboration étroite tout au long du projet.',
+    title: t('studio.qualities.client'),
+    description: t('studio.qualities.client-desc'),
   },
   {
     image: conception,
-    title: 'Excellence de la conception',
-    description:
-      "Nous accordons une grande importance à la qualité de nos designs, en créant des interfaces conviviales et esthétiques qui optimisent l'expérience utilisateur.",
+    title: t('studio.qualities.conception'),
+    description: t('studio.qualities.conception-desc'),
   },
   {
     image: commitment,
-    title: 'Engagement envers la qualité',
-    description:
-      'Nous sommes déterminés à fournir des solutions de haute qualité à nos clients. Notre objectif est de dépasser les attentes de nos clients et de leur offrir une valeur ajoutée tangible.',
+    title: t('studio.qualities.commitment'),
+    description: t('studio.qualities.commitment-desc'),
   },
   {
     image: reactivity,
-    title: 'Réactivité et flexibilité',
-    description:
-      'Nous nous efforçons de répondre rapidement aux demandes et aux questions de nos clients. De plus, nous sommes flexibles et nous adaptons aux changements qui peuvent survenir en cours de projet, tout en veillant à respecter les délais convenus.',
+    title: t('studio.qualities.reactivity'),
+    description: t('studio.qualities.reactivity-desc'),
   },
 ];
 

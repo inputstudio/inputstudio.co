@@ -14,7 +14,14 @@ export const useStore = defineStore('main', {
     async fetchProjects() {
       const { getItems } = useDirectusItems();
       const { staticAssetsEndpoint } = useRuntimeConfig().public;
-      const { data } = await useLazyAsyncData('projects', () => getItems<Project>({ collection: 'projects' }));
+      const { data } = await useLazyAsyncData('projects', () =>
+        getItems<Project>({
+          collection: 'projects',
+          params: {
+            fields: ['*', 'translations.*'],
+          },
+        })
+      );
       this.projects =
         data.value?.map((project) => {
           project.cover = new URL(project.cover, staticAssetsEndpoint).toString();
@@ -23,7 +30,14 @@ export const useStore = defineStore('main', {
     },
     async fetchJobs() {
       const { getItems } = useDirectusItems();
-      const { data } = await useLazyAsyncData('jobs', () => getItems<Job>({ collection: 'careers' }));
+      const { data } = await useLazyAsyncData('jobs', () =>
+        getItems<Job>({
+          collection: 'careers',
+          params: {
+            fields: ['*', 'translations.*'],
+          },
+        })
+      );
       this.jobs = data.value ?? [];
     },
   },

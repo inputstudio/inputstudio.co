@@ -8,10 +8,8 @@
       <div id="code" class="text-5xl md:text-8xl">Code.</div>
       <div id="deploy" class="text-4xl md:text-8xl">Deploy.</div>
     </h1>
-    <p class="text-center font-light md:w-1/2 md:text-xl 2xl:text-2xl">
-      Des idées créatives, une expertise technique et une infrastructure cloud de pointe. Notre agence web a tout ce
-      dont vous avez besoin.
-    </p>
+
+    <p class="text-center font-light md:w-1/2 md:text-xl 2xl:text-2xl">{{ $t('home.subtitle') }}</p>
 
     <div class="mb-12 flex flex-col items-center gap-5 md:gap-3">
       <HomeHeroTechnos />

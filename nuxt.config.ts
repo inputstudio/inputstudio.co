@@ -2,18 +2,7 @@
 export default defineNuxtConfig({
   app: {
     head: {
-      title: 'Input Studio — Agence de développement web',
-      meta: [
-        {
-          name: 'description',
-          content:
-            "Input Studio, votre agence web à Abidjan, spécialisée dans la création sur mesure de sites web et d'applications mobiles en utilisant des technologies modernes, et ce, en mode 100% remote.",
-        },
-      ],
       link: [{ rel: 'icon', href: '/favicon.ico' }],
-      htmlAttrs: {
-        lang: 'fr',
-      },
     },
     pageTransition: { name: 'fade', mode: 'out-in' },
   },
@@ -26,9 +15,11 @@ export default defineNuxtConfig({
     },
   },
   modules: [
+    '@nuxt/content',
     '@nuxtjs/device',
     '@nuxtjs/eslint-module',
     '@nuxtjs/google-fonts',
+    '@nuxtjs/i18n',
     '@nuxtjs/plausible',
     '@pinia/nuxt',
     'nuxt-directus',
@@ -55,6 +46,14 @@ export default defineNuxtConfig({
     },
     download: true,
     base64: false,
+  },
+  i18n: {
+    strategy: 'no_prefix',
+    defaultLocale: 'fr',
+    locales: ['fr', 'en'],
+    detectBrowserLanguage: {
+      useCookie: false,
+    },
   },
   plausible: {
     domain: 'inputstudio.co',

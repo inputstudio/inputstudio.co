@@ -7,12 +7,6 @@
   </main>
 </template>
 
-<script lang="ts" setup>
-useHead({
-  title: 'Input Studio — Agence de développement web',
-});
-</script>
-
 <style lang="scss" scoped>
 main {
   background:

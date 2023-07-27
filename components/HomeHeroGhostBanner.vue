@@ -12,7 +12,7 @@
 
     <div>
       <div class="flex items-center gap-3">
-        <p class="hidden lg:block">Contacter-nous pour la création de votre blog</p>
+        <p class="hidden lg:block">{{ $t('home.ghost') }}</p>
         <Icon name="ic:sharp-arrow-right-alt" title="Right arrow" size="2em" />
       </div>
     </div>
