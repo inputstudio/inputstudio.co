@@ -13,8 +13,8 @@
           :position="index"
           :is-open="index === 0"
           :last-item="index + 1 === jobs.length"
-          :title="job.title"
-          :description="job.description"
+          :title="job.translations.find((translation) => translation.languages_code === locale)!.title"
+          :description="job.translations.find((translation) => translation.languages_code === locale)!.description"
         />
       </div>
     </div>
@@ -23,6 +23,7 @@
 
 <script lang="ts" setup>
 const { jobs } = useStore();
+const { locale } = useI18n();
 
 definePageMeta({
   title: 'meta.pages.careers',

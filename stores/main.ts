@@ -23,7 +23,14 @@ export const useStore = defineStore('main', {
     },
     async fetchJobs() {
       const { getItems } = useDirectusItems();
-      const { data } = await useLazyAsyncData('jobs', () => getItems<Job>({ collection: 'careers' }));
+      const { data } = await useLazyAsyncData('jobs', () =>
+        getItems<Job>({
+          collection: 'careers',
+          params: {
+            fields: ['*', 'translations.*'],
+          },
+        })
+      );
       this.jobs = data.value ?? [];
     },
   },

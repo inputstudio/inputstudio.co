@@ -17,6 +17,13 @@ declare global {
     id: string | number;
     date_created: string | Date;
     date_updated?: string | Date;
+    translations: JobTranslation[];
+  }
+
+  export interface JobTranslation {
+    id: number;
+    careers_id: number;
+    languages_code: string;
     title: string;
     description: string;
   }
