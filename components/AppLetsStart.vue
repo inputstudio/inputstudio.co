@@ -1,14 +1,16 @@
 <template>
   <section ref="wrapper" class="section grid min-h-screen place-items-center">
     <div class="flex flex-col items-center gap-y-3 text-center">
-      <h1 class="fadeable mb-6 text-4xl leading-tight md:text-8xl">Demarrons votre <AppExperienceText /> ensemble !</h1>
+      <h1 class="fadeable mb-6 text-4xl leading-tight md:text-8xl">
+        {{ $t('app.lets-start') }} <AppExperienceText /> {{ $t('app.together') }}
+      </h1>
 
-      <CalendlyButton class="fadeable"> Planifier une réunion </CalendlyButton>
+      <CalendlyButton class="fadeable"> {{ $t('calendly.plan-meeting') }} </CalendlyButton>
 
       <p class="fadeable">ou</p>
 
       <NuxtLink class="fadeable" to="/contact">
-        <span class="mr-1 underline">Soumettre un projet</span>
+        <span class="mr-1 underline">{{ $t('app.contact') }}</span>
         <IconCSS name="ic:baseline-arrow-outward" class="text-xl" />
       </NuxtLink>
     </div>

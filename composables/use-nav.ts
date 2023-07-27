@@ -1,4 +1,6 @@
 export default function () {
+  const { t } = useI18n();
+
   const socials = [
     {
       title: 'Email',
@@ -28,19 +30,19 @@ export default function () {
 
   const pages = [
     {
-      name: 'Studio',
+      name: t('navigation.home'),
       url: '/studio',
     },
     {
-      name: 'Projets',
+      name: t('navigation.projects'),
       url: '/projects',
     },
     {
-      name: 'Carrières',
+      name: t('navigation.careers'),
       url: '/careers',
     },
     {
-      name: 'Nous contacter',
+      name: t('navigation.contact'),
       url: '/contact',
     },
   ];

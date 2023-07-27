@@ -1,10 +1,7 @@
 <template>
   <section ref="wrapper" class="flex flex-col gap-10">
-    <h1 ref="title" class="text-6xl font-medium">Que faisons nous ?</h1>
-    <p ref="description" class="text-lg font-light md:w-3/4 md:text-2xl">
-      Input studio est une équipe orientée produit. Nous concevons et développons des solutions web complètes avec une
-      allure et une sensation professionnelle en utilisant les dernières technologies.
-    </p>
+    <h1 ref="title" class="text-6xl font-medium">{{ $t('studio.activities.title') }}</h1>
+    <p ref="description" class="text-lg font-light md:w-3/4 md:text-2xl">{{ $t('studio.activities.subtitle') }}</p>
 
     <div class="grid grid-cols-1 place-content-center gap-6 md:grid-cols-3 md:gap-9">
       <AppCard
@@ -32,25 +29,23 @@ import development from '@/assets/img/career/development.svg';
 import deployment from '@/assets/img/career/deployment.svg';
 
 const { $gsap } = useNuxtApp();
+const { t } = useI18n();
 
 const activities = [
   {
     title: 'Création de design',
     image: design,
-    description:
-      "Notre objectif ultime est de fournir des plateformes qui offrent une expérience utilisateur exceptionnelle et permettent à nos clients d'atteindre leurs objectifs commerciaux.",
+    description: t('studio.activities.design'),
   },
   {
     title: 'Développement',
     image: development,
-    description:
-      'Notre expertise en programmation et notre engagement envers la qualité nous permettent de réaliser les visions de nos clients avec excellence.',
+    description: t('studio.activities.development'),
   },
   {
     title: 'Déploiement',
     image: deployment,
-    description:
-      "Nous prenons en charge le déploiement de vos solutions technologiques, en nous assurant qu'elles sont configurées correctement et optimisées pour les performances.",
+    description: t('studio.activities.deployment'),
   },
 ];
 
