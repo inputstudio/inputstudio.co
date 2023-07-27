@@ -14,7 +14,14 @@ export const useStore = defineStore('main', {
     async fetchProjects() {
       const { getItems } = useDirectusItems();
       const { staticAssetsEndpoint } = useRuntimeConfig().public;
-      const { data } = await useLazyAsyncData('projects', () => getItems<Project>({ collection: 'projects' }));
+      const { data } = await useLazyAsyncData('projects', () =>
+        getItems<Project>({
+          collection: 'projects',
+          params: {
+            fields: ['*', 'translations.*'],
+          },
+        })
+      );
       this.projects =
         data.value?.map((project) => {
           project.cover = new URL(project.cover, staticAssetsEndpoint).toString();

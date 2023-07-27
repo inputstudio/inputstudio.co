@@ -4,13 +4,20 @@ declare global {
     date_created: string;
     date_updated?: string;
     name: string;
-    description: string;
     link?: string;
     cover: string;
-    deliverable: string;
     deliverableIcon: string;
-    orgType: string;
     orgTypeIcon: string;
+    translations: ProjectTranslation[];
+  }
+  
+  export interface ProjectTranslation {
+    id: number;
+    projects_id: number;
+    languages_code: string;
+    description: string;
+    deliverable: string;
+    orgType: string;
   }
 
   export interface Job {

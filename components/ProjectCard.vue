@@ -6,21 +6,21 @@
       <img
         ref="cover"
         :src="project.cover"
-        :alt="`${project.deliverable} ${project.name}`"
+        :alt="`${deliverable} ${project.name}`"
         class="aspect-square w-full shrink-0 rounded-xl object-cover md:w-1/4"
       />
 
       <div class="flex flex-col gap-3 text-xl">
-        <p ref="description" class="mb-3 font-thin">{{ project.description }}</p>
+        <p ref="description" class="mb-3 font-thin">{{ description }}</p>
 
         <div class="flex items-center gap-3">
           <Icon :name="project.orgTypeIcon" />
-          <span>{{ project.orgType }}</span>
+          <span>{{ orgType }}</span>
         </div>
 
         <div class="flex items-center gap-3">
           <Icon :name="project.deliverableIcon" />
-          <span>{{ project.deliverable }}</span>
+          <span>{{ deliverable }}</span>
         </div>
 
         <AppButton v-if="project.link" :to="project.link" class="mt-9">
@@ -33,6 +33,7 @@
 </template>
 
 <script setup lang="ts">
+const { locale } = useI18n();
 const { hook } = useNuxtApp();
 
 const wrapper = ref();
@@ -45,10 +46,20 @@ const setupTimeline = () => {
 hook('page:transition:finish', setupTimeline);
 hook('page:finish', setupTimeline);
 
-defineProps({
+const props = defineProps({
   project: {
     type: Object as PropType<Project>,
     required: true,
   },
 });
+
+const deliverable = props.project.translations.find(
+  (translation) => translation.languages_code === locale.value
+)!.deliverable;
+
+const description = props.project.translations.find(
+  (translation) => translation.languages_code === locale.value
+)!.description;
+
+const orgType = props.project.translations.find((translation) => translation.languages_code === locale.value)!.orgType;
 </script>
