@@ -10,7 +10,6 @@
         class="timeline-item"
         title="Planifier une réunion"
         description="Nous avons une réunion pour définir la portée du projet et savoir quelles sont vos attentes"
-        :has-button="true"
         button-text="Planifier une reunion"
         :button-action="openCalendly"
       />

@@ -3,7 +3,7 @@
     <div class="flex w-4/5 flex-col gap-y-6 text-center">
       <h1 class="text-3xl">{{ title }}</h1>
       <p class="text-lg">{{ description }}</p>
-      <AppButton v-if="hasButton" class="flex self-center px-4" @click="buttonAction()">
+      <AppButton v-if="buttonAction" class="flex self-center px-4" @click="buttonAction()">
         {{ buttonText }}
       </AppButton>
     </div>
@@ -25,7 +25,7 @@
     <div class="flex w-2/4 flex-col items-center justify-center gap-4 px-0 text-justify">
       <p class="w-3/4 text-xl 2xl:text-2xl">{{ description }}</p>
 
-      <AppButton v-if="hasButton" @click="buttonAction()">
+      <AppButton v-if="buttonAction" @click="buttonAction()">
         {{ buttonText }}
       </AppButton>
     </div>
@@ -44,17 +44,13 @@ defineProps({
     type: String,
     required: true,
   },
-  hasButton: {
-    type: Boolean,
-    default: false,
-  },
   buttonText: {
     type: String,
     default: '',
   },
   buttonAction: {
     type: Function,
-    default: () => {},
+    default: null,
   },
 });
 </script>
