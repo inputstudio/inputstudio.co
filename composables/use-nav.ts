@@ -30,7 +30,7 @@ export default function () {
 
   const pages = [
     {
-      name: t('navigation.home'),
+      name: t('navigation.studio'),
       url: '/studio',
     },
     {
