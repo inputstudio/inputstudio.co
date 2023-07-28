@@ -13,23 +13,23 @@ const { isMobileOrTablet } = useDevice();
 const cursor = ref(null);
 const animationDuration = 0.4;
 
-function onMouseMove(event, cursor) {
-  $gsap.to(cursor, {
+function onMouseMove(event) {
+  $gsap.to(cursor.value, {
     x: event.clientX,
     y: event.clientY,
     duration: animationDuration,
   });
 }
 
-function onMouseEnter(cursor) {
-  $gsap.to(cursor, {
+function onMouseEnter() {
+  $gsap.to(cursor.value, {
     padding: 36,
     duration: animationDuration,
   });
 }
 
-function onMouseLeave(cursor) {
-  $gsap.to(cursor, {
+function onMouseLeave() {
+  $gsap.to(cursor.value, {
     padding: 8,
     duration: animationDuration,
   });
@@ -40,12 +40,12 @@ function animation() {
   const hoverables = document.querySelectorAll(expandableElements);
 
   hoverables.forEach((element) => {
-    element.addEventListener('mouseenter', () => onMouseEnter(cursor.value));
-    element.addEventListener('mouseleave', () => onMouseLeave(cursor.value));
-    element.addEventListener('click', () => onMouseLeave(cursor.value));
+    element.addEventListener('mouseenter', () => onMouseEnter());
+    element.addEventListener('mouseleave', () => onMouseLeave());
+    element.addEventListener('click', () => onMouseLeave());
   });
 
-  document.body.addEventListener('mousemove', (e) => onMouseMove(e, cursor.value));
+  document.body.addEventListener('mousemove', (e) => onMouseMove(e));
 
   if (cursor.value) {
     cursor.value.classList.remove('hidden');
