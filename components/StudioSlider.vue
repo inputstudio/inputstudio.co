@@ -15,19 +15,18 @@
 </template>
 
 <script setup lang="ts">
-import { gsap } from 'gsap';
-import { ScrollTrigger } from 'gsap/all';
-const { hook } = useNuxtApp();
-
-gsap.registerPlugin(ScrollTrigger);
+const { $gsap } = useNuxtApp();
 
 const wrapper = ref();
-const setupHorizontalScroll = () => {
-  const sections = gsap.utils.toArray('.text-section');
+
+useAnimation(animation);
+
+function animation() {
+  const sections = $gsap.utils.toArray('.text-section');
 
   if (!sections.length) return;
 
-  gsap.to(sections, {
+  $gsap.to(sections, {
     xPercent: -100 * (sections.length - 1),
     ease: 'none',
     scrollTrigger: {
@@ -40,8 +39,5 @@ const setupHorizontalScroll = () => {
       invalidateOnRefresh: true,
     },
   });
-};
-
-hook('page:finish', setupHorizontalScroll);
-hook('page:transition:finish', setupHorizontalScroll);
+}
 </script>

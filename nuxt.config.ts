@@ -15,6 +15,7 @@ export default defineNuxtConfig({
     },
   },
   modules: [
+    '@hypernym/nuxt-gsap',
     '@nuxt/content',
     '@nuxtjs/device',
     '@nuxtjs/eslint-module',
@@ -46,6 +47,11 @@ export default defineNuxtConfig({
     },
     download: true,
     base64: false,
+  },
+  gsap: {
+    extraPlugins: {
+      scrollTrigger: true,
+    },
   },
   i18n: {
     strategy: 'no_prefix',

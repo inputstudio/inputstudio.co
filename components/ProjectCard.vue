@@ -34,17 +34,6 @@
 
 <script setup lang="ts">
 const { locale } = useI18n();
-const { hook } = useNuxtApp();
-
-const wrapper = ref();
-
-const setupTimeline = () => {
-  fadeAnimation(wrapper.value, [wrapper.value]);
-};
-
-/** To Do : should be trigger on page refresh or on page change !!! */
-hook('page:transition:finish', setupTimeline);
-hook('page:finish', setupTimeline);
 
 const props = defineProps({
   project: {
@@ -53,6 +42,13 @@ const props = defineProps({
   },
 });
 
+const wrapper = ref();
+
+useAnimation(animation);
+
+function animation() {
+  fadeAnimation(wrapper.value, [wrapper.value]);
+}
 const deliverable = props.project.translations.find(
   (translation) => translation.languages_code === locale.value
 )!.deliverable;
