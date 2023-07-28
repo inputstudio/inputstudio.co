@@ -27,13 +27,10 @@
 </template>
 
 <script lang="ts" setup>
-import { gsap } from 'gsap';
-import { ScrollTrigger } from 'gsap/all';
+const { $gsap, $ScrollTrigger } = useNuxtApp();
 const { openCalendly } = useCalendlyWidget();
 
-const { hook } = useNuxtApp();
-
-gsap.registerPlugin(ScrollTrigger);
+$gsap.registerPlugin($ScrollTrigger);
 
 const items = [
   {
@@ -57,26 +54,28 @@ const wrapper = ref();
 const title = ref();
 const description = ref();
 
-const setupTimeline = () => {
+useAnimation(animation);
+
+function animation() {
   fadeAnimation(wrapper.value, [title.value, description.value]);
 
   const bars = document.querySelectorAll('.timeline-item');
 
   bars.forEach((bar) => {
-    const separator = bar.querySelector('.separator');
+    const separator = bar.querySelector('.separator') as HTMLElement;
     const ball = bar.querySelector('.separator > .ball');
     const title = bar.querySelector('h1');
     const description = bar.querySelector('p');
     const button = bar.querySelector('button');
     const background = bar.querySelector('.separator > span');
 
-    gsap
+    $gsap
       .timeline({
         scrollTrigger: {
           trigger: separator,
           scrub: true,
           start: 'top 80%',
-          end: '+=' + separator?.offsetHeight,
+          end: '+=' + separator.offsetHeight,
         },
       })
       .to(ball, {
@@ -90,9 +89,5 @@ const setupTimeline = () => {
         height: '100%',
       });
   });
-};
-
-/** To Do : should be trigger on page refresh or on page change !!! */
-hook('page:transition:finish', setupTimeline);
-hook('page:finish', setupTimeline);
+}
 </script>

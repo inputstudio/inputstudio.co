@@ -1,8 +1,8 @@
 <template>
   <section class="relative h-screen">
-    <p ref="title" class="text-xl font-thin">Studio</p>
+    <p ref="title" class="text-xl font-thin">{{ $t('studio.title') }}</p>
     <h1 ref="description" class="text-3xl font-bold leading-9 md:text-8xl">
-      Nous ne réalisons pas de sites mais des <AppExperienceText />.
+      {{ $t('studio.subtitle') }} <AppExperienceText />.
     </h1>
 
     <AppScrollIndicator
@@ -13,21 +13,16 @@
 </template>
 
 <script lang="ts" setup>
-import { gsap } from 'gsap';
-
-const { hook } = useNuxtApp();
-
+const { $gsap } = useNuxtApp();
 const title = ref();
 const description = ref();
 
-const initAnimation = () => {
-  gsap
+useAnimation(animation);
+
+function animation() {
+  return $gsap
     .timeline({ delay: 0.5 })
     .fromTo(title.value, { autoAlpha: 0 }, { autoAlpha: 1 })
     .fromTo(description.value, { autoAlpha: 0 }, { autoAlpha: 1 });
-};
-
-/** To Do : should be trigger on page refresh or on page change !!! */
-hook('page:transition:finish', initAnimation);
-hook('page:finish', initAnimation);
+}
 </script>

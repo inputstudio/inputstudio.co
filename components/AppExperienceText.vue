@@ -1,6 +1,6 @@
 <template>
   <div class="encircle inline p-6">
-    <span :class="textClass">expériences web</span>
+    <span :class="textClass">{{ $t('app.web-experiences') }}</span>
   </div>
 </template>
 

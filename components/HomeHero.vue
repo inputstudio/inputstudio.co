@@ -8,10 +8,8 @@
       <div id="code" class="text-5xl md:text-8xl">Code.</div>
       <div id="deploy" class="text-4xl md:text-8xl">Deploy.</div>
     </h1>
-    <p class="text-center font-light md:w-1/2 md:text-xl 2xl:text-2xl">
-      Des idées créatives, une expertise technique et une infrastructure cloud de pointe. Notre agence web a tout ce
-      dont vous avez besoin.
-    </p>
+
+    <p class="text-center font-light md:w-1/2 md:text-xl 2xl:text-2xl">{{ $t('home.subtitle') }}</p>
 
     <div class="mb-12 flex flex-col items-center gap-5 md:gap-3">
       <HomeHeroTechnos />
@@ -21,19 +19,23 @@
 </template>
 
 <script lang="ts" setup>
-import gsap from 'gsap';
 import SplitText from 'split-type';
 
-useNuxtApp().hook('page:finish', () => {
+const { $gsap } = useNuxtApp();
+
+useAnimation(animation);
+
+function animation() {
   const design = new SplitText('#design', { types: 'chars' });
   const designChars = design.chars;
   const code = document.querySelector('#code');
   const deploy = document.querySelector('#deploy');
-  const tl = gsap.timeline({
+  const tl = $gsap.timeline({
     defaults: {
       duration: 1,
     },
   });
+
   tl.fromTo(designChars, { y: 100, autoAlpha: 0 }, { y: 0, autoAlpha: 1, stagger: 0.05, ease: 'power2.inOut' });
   tl.fromTo(code, { autoAlpha: 0 }, { autoAlpha: 1, ease: 'power2.out' });
   tl.to(deploy, { y: -100, autoAlpha: 0, ease: 'power1.out' });
@@ -44,5 +46,5 @@ useNuxtApp().hook('page:finish', () => {
       tl.play(0);
     }
   });
-});
+}
 </script>

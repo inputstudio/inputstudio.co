@@ -24,7 +24,7 @@
     >
       <HeadlessDisclosurePanel class="flex flex-col items-start gap-3">
         <p>{{ description }}</p>
-        <AppButton to="mailto:hello@inputstudio.co"> Envoyez votre CV </AppButton>
+        <AppButton to="mailto:hello@inputstudio.co"> {{ $t('careers.apply') }} </AppButton>
       </HeadlessDisclosurePanel>
     </transition>
   </HeadlessDisclosure>
