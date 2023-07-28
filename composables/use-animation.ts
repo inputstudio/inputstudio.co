@@ -10,7 +10,6 @@ export default function (animation: (...args: any[]) => unknown, initializeTwice
     initialized.value = true;
   };
 
-  hook('page:finish', initialize);
   hook('page:transition:finish', initialize);
 
   return { initialized, initialize };
