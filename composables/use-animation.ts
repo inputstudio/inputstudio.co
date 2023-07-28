@@ -1,4 +1,4 @@
-export default function (animation: (...args: any[]) => unknown, initializeTwice = false) {
+export default function (animation: (...args: Function[]) => unknown, initializeTwice = false) {
   const { hook } = useNuxtApp();
   const initialized = ref(false);
 
