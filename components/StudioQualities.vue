@@ -117,10 +117,10 @@ function initSlider() {
   });
 
   // Updates the bar width whenever the carousel moves:
-  splide.on('mounted move', function () {
+  splide.on('mounted move', () => {
     const end = splide.Components.Controller.getEnd() + 1;
     const rate = Math.min((splide.index + 1) / end, 1);
-    progressBar.value.style.width = String(100 * rate) + '%';
+    progressBar.value.style.width = `${String(100 * rate)}%`;
   });
 
   splide.mount();

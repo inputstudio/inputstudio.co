@@ -35,7 +35,7 @@ function animation() {
       pinSpacing: true,
       scrub: 1,
       snap: 1 / (sections.length - 1),
-      end: () => '+=' + wrapper.value.offsetWidth,
+      end: () => `+=${wrapper.value.offsetWidth}`,
       invalidateOnRefresh: true,
     },
   });
