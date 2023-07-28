@@ -17,7 +17,8 @@
   },
   "calendly": {
     "plan-meeting": "Planifier une réunion",
-    "advantages": "Rapide, pratique, efficace."
+    "advantages": "Rapide, pratique, efficace.",
+    "purpose": "Nous pouvons avoir une réunion pour définir la portée du projet et savoir quelles sont vos attentes."
   },
   "home": {
     "subtitle": "Des idées créatives, une expertise technique et une infrastructure cloud de pointe. Notre agence web a tout ce dont vous avez besoin.",
@@ -53,6 +54,16 @@
       "commitment-desc": "Nous sommes déterminés à fournir des solutions de haute qualité à nos clients. Notre objectif est de dépasser les attentes de nos clients et de leur offrir une valeur ajoutée tangible.",
       "reactivity": "Réactivité et flexibilité",
       "reactivity-desc": "Nous nous efforçons de répondre rapidement aux demandes et aux questions de nos clients. De plus, nous sommes flexibles et nous adaptons aux changements qui peuvent survenir en cours de projet, tout en veillant à respecter les délais convenus."
+    },
+    "timeline": {
+      "title": "Notre processus",
+      "description": "Nous nous chargeons de la gestion de votre projet, de sa phase de lancement jusqu'à son déploiement.",
+      "design": "Design",
+      "design-desc": "Nos concepteurs rédigent soigneusement la première version pour votre examen qui passe ensuite par autant de révisions que nécessaire.",
+      "integration": "Intégration",
+      "integration-desc": "Notre équipe technique possède une expertise approfondie dans le domaine de l'intégration et utilise les meilleures pratiques pour garantir des intégrations fluides, sécurisées et évolutives. Nous veillons à ce que toutes les composantes de votre écosystème numérique fonctionnent harmonieusement ensemble, offrant une expérience utilisateur cohérente et une gestion efficace des données.",
+      "delivery": "Livraison du projet",
+      "delivery-desc": "Nous mettons tout en œuvre pour respecter les délais convenus et livrer votre projet dans les délais prévus, tout en maintenant la qualité et la satisfaction du client au cœur de notre travail."
     }
   },
   "projects": {

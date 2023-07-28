@@ -17,7 +17,8 @@
   },
   "calendly": {
     "plan-meeting": "Schedule a meeting",
-    "advantages": "Quick, convenient, efficient."
+    "advantages": "Quick, convenient, efficient.",
+    "purpose": "We can have a meeting to define the scope of the project and find out what your expectations are."
   },
   "home": {
     "subtitle": "Creative ideas, technical expertise and state-of-the-art cloud infrastructure. Our web agency has everything you need.",
@@ -53,6 +54,16 @@
       "commitment-desc": "We are committed to delivering high-quality solutions to our customers. Our aim is to exceed our customers' expectations and deliver tangible added value.",
       "reactivity": "Responsiveness and flexibility",
       "reactivity-desc": "We strive to respond quickly to our customers' requests and questions. What's more, we're flexible, adapting to any changes that may occur during the course of a project, while ensuring that agreed deadlines are met."
+    },
+    "timeline": {
+      "title": "Our process",
+      "description": "We'll manage your project from launch to deployment.",
+      "design": "Design",
+      "design-desc": "Our designers carefully draft the first version for your exam, which then goes through as many revisions as necessary.",
+      "integration": "Integration",
+      "integration-desc": "Our technical team has in-depth integration expertise and uses best practices to ensure smooth, secure and scalable integrations. We ensure that all components of your digital ecosystem work harmoniously together, delivering a consistent user experience and efficient data management.",
+      "delivery": "Project delivery",
+      "delivery-desc": "We do our utmost to meet agreed deadlines and deliver your project on time, while keeping quality and customer satisfaction at the heart of our work."
     }
   },
   "projects": {
