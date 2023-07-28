@@ -7,32 +7,31 @@
 </template>
 
 <script setup>
-const { $gsap } = useNuxtApp();
+const { $gsap, hook } = useNuxtApp();
 const { isMobileOrTablet } = useDevice();
 
-useAnimation(animation, true);
-
 const cursor = ref(null);
+const animationDuration = 0.4;
 
 function onMouseMove(event, cursor) {
   $gsap.to(cursor, {
     x: event.clientX,
     y: event.clientY,
-    duration: 0.4,
+    duration: animationDuration,
   });
 }
 
 function onMouseEnter(cursor) {
   $gsap.to(cursor, {
     padding: 36,
-    duration: 0.4,
+    duration: animationDuration,
   });
 }
 
 function onMouseLeave(cursor) {
   $gsap.to(cursor, {
     padding: 8,
-    duration: 0.4,
+    duration: animationDuration,
   });
 }
 
@@ -52,4 +51,7 @@ function animation() {
     cursor.value.classList.remove('hidden');
   }
 }
+
+hook('page:finish', () => animation());
+hook('page:transition:finish', () => animation());
 </script>
