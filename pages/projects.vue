@@ -12,7 +12,7 @@
       </div>
     </div>
 
-    <div class="grid place-items-center gap-9 px-9">
+    <div ref="projectsWrapper" class="grid place-items-center gap-9 px-9">
       <ProjectCard v-for="project in projects" :key="project.id" :project="project" />
     </div>
 
@@ -28,11 +28,12 @@ const title = ref();
 const subtitle = ref();
 const slogan = ref();
 const description = ref();
+const projectsWrapper = ref();
 
 useAnimation(animation);
 
 function animation() {
-  fadeAnimation(wrapper.value, [title.value, subtitle.value, slogan.value, description.value]);
+  fadeAnimation(wrapper.value, [title.value, subtitle.value, slogan.value, description.value, projectsWrapper.value]);
 }
 
 definePageMeta({
