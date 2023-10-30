@@ -10,7 +10,7 @@
     "format": "prettier --ignore-path .gitignore --write ."
   },
   "devDependencies": {
-    "@commitlint/cli": "^17.6.6",
+    "@commitlint/cli": "^18.2.0",
     "@commitlint/config-conventional": "^17.6.6",
     "@hypernym/nuxt-gsap": "^2.2.2",
     "@nuxt/content": "^2.7.2",
