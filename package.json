@@ -20,7 +20,7 @@
     "@nuxtjs/google-fonts": "^3.0.1",
     "@nuxtjs/i18n": "^8.0.0-rc.4",
     "@nuxtjs/plausible": "^0.2.1",
-    "@pinia/nuxt": "^0.4.11",
+    "@pinia/nuxt": "^0.5.1",
     "@typescript-eslint/parser": "^6.2.0",
     "autoprefixer": "^10.4.14",
     "eslint": "^8.42.0",
