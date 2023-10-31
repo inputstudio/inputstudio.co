@@ -43,7 +43,7 @@
   "dependencies": {
     "@splidejs/splide": "^4.1.4",
     "nuxt-snackbar": "^1.0.3",
-    "split-type": "^0.3.3"
+    "split-type": "^0.3.4"
   },
   "volta": {
     "node": "18.15.0",
