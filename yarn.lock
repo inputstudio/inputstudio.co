@@ -6301,10 +6301,10 @@ nuxt-icon@^0.6.1:
     "@iconify/vue" "^4.1.1"
     "@nuxt/kit" "^3.8.0"
 
-nuxt-snackbar@^1.0.3:
-  version "1.0.3"
-  resolved "https://registry.yarnpkg.com/nuxt-snackbar/-/nuxt-snackbar-1.0.3.tgz#77d8042da46638c951db9bae1cf49d5a9965813b"
-  integrity sha512-FoS0An/0L+Cx0gz8sH6P2oW4G7uIcuqEEpgIOTmcb1a/2nyXpTtteVIDiIYgp00vJonV3Q/0Y2jpjcbmR+1yDg==
+nuxt-snackbar@^1.0.4:
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/nuxt-snackbar/-/nuxt-snackbar-1.0.4.tgz#f1885b1017d65e7bd07e1669ac71b555da991241"
+  integrity sha512-7C8m7Kma60FYs1F0zw1bYSYj2lPtaTSIIXBdI1rc3mDMYngpnUTvZhoqBF5w/LyIggFpgNjpYKJLOpsW9wzcEA==
   dependencies:
     "@nuxt/kit" "^3.2.3"
     defu "^6.1.2"
