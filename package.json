@@ -29,7 +29,7 @@
     "husky": "^8.0.3",
     "nuxt": "^3.7.3",
     "nuxt-calendly": "^0.1.14",
-    "nuxt-directus": "^5.4.4",
+    "nuxt-directus": "^5.6.0",
     "nuxt-headlessui": "^1.1.1",
     "nuxt-icon": "^0.6.1",
     "pinia": "^2.1.4",

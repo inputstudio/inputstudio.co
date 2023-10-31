@@ -6277,10 +6277,10 @@ nuxt-calendly@^0.1.14:
     "@nuxt/kit" "^3.1.1"
     defu "^6.1.2"
 
-nuxt-directus@^5.4.4:
-  version "5.5.0"
-  resolved "https://registry.yarnpkg.com/nuxt-directus/-/nuxt-directus-5.5.0.tgz#5b6a7da8d443c9bd3fad636ae6e3aa7fe47ee93e"
-  integrity sha512-OsKuWsf6t+8i4YCWTI2Nh0ssoZbC606s43Zt1v6iUwdlxp3LnS4+EU9E72rssGZ7boVfQ1v5crponZAqZ26zLQ==
+nuxt-directus@^5.6.0:
+  version "5.6.0"
+  resolved "https://registry.yarnpkg.com/nuxt-directus/-/nuxt-directus-5.6.0.tgz#08a87c78706bcbf90e9a5246b2ec8ad67526cf7e"
+  integrity sha512-PHiekefNWpF8qHoWZOMClSckLKcSKo3oRPWgPXdQjkaF0xPkNkH+5ehvFYU3FhNQbVvqalQrAla78J5svFcgPw==
   dependencies:
     "@nuxt/kit" "^3.0.0"
 
