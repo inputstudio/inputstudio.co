@@ -736,10 +736,10 @@
   resolved "https://registry.yarnpkg.com/@humanwhocodes/object-schema/-/object-schema-1.2.1.tgz#b520529ec21d8e5945a1851dfd1c32e94e39ff45"
   integrity sha512-ZnQMnLV4e7hDlUvw8H+U8ASL02SS2Gn6+9Ac3wGGLIe7+je2AeAOxPY+izIPJDfFDb7eDjev0Us8MO1iFRN8hA==
 
-"@hypernym/nuxt-gsap@^2.2.2":
-  version "2.4.1"
-  resolved "https://registry.yarnpkg.com/@hypernym/nuxt-gsap/-/nuxt-gsap-2.4.1.tgz#fe2d92f8fae9631494df3cb02c467f04433903ec"
-  integrity sha512-VK7wKRvWm2zsS11FAFFJUvrouW50ffWtjyCGrAl1aSzOmWksACM48i9ow78EUljAKi2GMttAN4F6j/7PX0AALA==
+"@hypernym/nuxt-gsap@^2.4.2":
+  version "2.4.2"
+  resolved "https://registry.yarnpkg.com/@hypernym/nuxt-gsap/-/nuxt-gsap-2.4.2.tgz#5f0ec928749c36041a50fa53e649a49af544f516"
+  integrity sha512-Oep+0ABn58PbJo4tX8A8ja2hGjjBtyFE7DJAF/q8DIDGXMFaZlTbvcreCmMdKhuJ5NR8ODE0fEObUEYci901gg==
   dependencies:
     gsap "^3.12.2"
 
