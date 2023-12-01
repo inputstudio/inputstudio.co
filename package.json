@@ -38,7 +38,7 @@
     "prettier-plugin-tailwindcss": "^0.4.1",
     "sass": "^1.58.3",
     "tailwindcss": "^3.3.2",
-    "typescript": "~5.0.0"
+    "typescript": "~5.3.2"
   },
   "dependencies": {
     "@splidejs/splide": "^4.1.4",
