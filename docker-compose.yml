@@ -6,10 +6,10 @@ services:
     container_name: inputstudio.co
     restart: always
     labels:
-      - "traefik.enable=true"
-      - "traefik.http.routers.inputstudio.rule=Host(`inputstudio.co`)"
-      - "traefik.http.routers.inputstudio.entrypoints=websecure"
-      - "traefik.http.routers.inputstudio.tls.certresolver=letsencryptresolver"
+      - 'traefik.enable=true'
+      - 'traefik.http.routers.inputstudio.rule=Host(`inputstudio.co`)'
+      - 'traefik.http.routers.inputstudio.entrypoints=websecure'
+      - 'traefik.http.routers.inputstudio.tls.certresolver=letsencryptresolver'
 
 networks:
   default:
