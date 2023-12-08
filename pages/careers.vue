@@ -6,7 +6,8 @@
     <div class="my-8 flex flex-col gap-20 text-justify md:my-20 md:flex-row">
       <p class="md:w-2/5">{{ $t('careers.description') }}</p>
 
-      <div class="md:w-3/5">
+      <AppLoader v-if="pending" />
+      <div v-else class="md:w-3/5">
         <CareerProfile
           v-for="(job, index) in jobs"
           :key="`career-profile-${job.id}`"
@@ -24,7 +25,7 @@
 <script lang="ts" setup>
 const { locale } = useI18n();
 const { getItems } = useDirectusItems();
-const { data: jobs } = await useLazyAsyncData(
+const { data: jobs, pending } = await useLazyAsyncData(
   'jobs',
   () =>
     getItems<Job>({

@@ -12,7 +12,8 @@
       </div>
     </div>
 
-    <div ref="projectsWrapper" class="grid place-items-center gap-9 px-9">
+    <AppLoader v-if="pending" />
+    <div v-else ref="projectsWrapper" class="grid place-items-center gap-9 px-9">
       <ProjectCard v-for="project in projects" :key="project.id" :project="project" />
     </div>
 
@@ -23,7 +24,7 @@
 <script lang="ts" setup>
 const { getItems } = useDirectusItems();
 const { staticAssetsEndpoint } = useRuntimeConfig().public;
-const { data: projects } = await useLazyAsyncData(
+const { data: projects, pending } = await useLazyAsyncData(
   'projects',
   () =>
     getItems<Project>({
