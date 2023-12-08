@@ -22,8 +22,21 @@
 </template>
 
 <script lang="ts" setup>
-const { jobs } = useStore();
 const { locale } = useI18n();
+const { getItems } = useDirectusItems();
+const { data: jobs } = await useLazyAsyncData(
+  'jobs',
+  () =>
+    getItems<Job>({
+      collection: 'careers',
+      params: {
+        fields: ['*', 'translations.*'],
+      },
+    }),
+  {
+    default: () => [],
+  }
+);
 
 definePageMeta({
   title: 'meta.pages.careers',

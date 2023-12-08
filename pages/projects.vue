@@ -21,7 +21,26 @@
 </template>
 
 <script lang="ts" setup>
-const { projects } = useStore();
+const { getItems } = useDirectusItems();
+const { staticAssetsEndpoint } = useRuntimeConfig().public;
+const { data: projects } = await useLazyAsyncData(
+  'projects',
+  () =>
+    getItems<Project>({
+      collection: 'projects',
+      params: {
+        fields: ['*', 'translations.*'],
+      },
+    }),
+  {
+    default: () => [],
+    transform: (projects) =>
+      projects.map((project) => ({
+        ...project,
+        cover: new URL(project.cover, staticAssetsEndpoint).toString(),
+      })),
+  }
+);
 
 const wrapper = ref();
 const title = ref();
