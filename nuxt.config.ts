@@ -71,7 +71,4 @@ export default defineNuxtConfig({
       autoprefixer: {},
     },
   },
-  imports: {
-    dirs: ['stores'],
-  },
 });
