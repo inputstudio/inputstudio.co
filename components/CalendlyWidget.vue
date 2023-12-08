@@ -22,7 +22,7 @@
     </div>
 
     <div class="rounded-b-2xl bg-neutral-100">
-      <p class="py-2 text-center text-xs font-thin text-neutral-500">Copyright (c) {{ new Date().getFullYear() }}</p>
+      <p class="py-2 text-center text-xs font-light">Copyright (c) {{ new Date().getFullYear() }}</p>
     </div>
   </button>
 </template>
