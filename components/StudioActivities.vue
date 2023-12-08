@@ -24,27 +24,23 @@
 </template>
 
 <script lang="ts" setup>
-import design from '@/assets/img/career/design.svg';
-import development from '@/assets/img/career/development.svg';
-import deployment from '@/assets/img/career/deployment.svg';
-
 const { $gsap } = useNuxtApp();
 const { t } = useI18n();
 
 const activities = [
   {
     title: 'Création de design',
-    image: design,
+    image: '/img/career/design.svg',
     description: t('studio.activities.design'),
   },
   {
     title: 'Développement',
-    image: development,
+    image: '/img/career/development.svg',
     description: t('studio.activities.development'),
   },
   {
     title: 'Déploiement',
-    image: deployment,
+    image: '/img/career/deployment.svg',
     description: t('studio.activities.deployment'),
   },
 ];

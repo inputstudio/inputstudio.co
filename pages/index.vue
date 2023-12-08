@@ -10,8 +10,8 @@
 <style lang="scss" scoped>
 main {
   background:
-    no-repeat center url('@/assets/img/halo-green.webp'),
-    no-repeat center url('@/assets/img/halo-blue.webp');
+    no-repeat center url('/img/halo-green.webp'),
+    no-repeat center url('/img/halo-blue.webp');
   background-position:
     top -5% right 25%,
     bottom 0 left 15%;
@@ -19,8 +19,8 @@ main {
 
   @media screen and (min-width: 768px) {
     background:
-      no-repeat center url('@/assets/img/halo-green.webp'),
-      no-repeat center/75% url('@/assets/img/halo-blue.webp');
+      no-repeat center url('/img/halo-green.webp'),
+      no-repeat center/75% url('/img/halo-blue.webp');
     background-position:
       top 0% left -45%,
       bottom 0% right -45%;

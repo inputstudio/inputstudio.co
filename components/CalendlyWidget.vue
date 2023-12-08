@@ -6,14 +6,8 @@
   >
     <div class="flex items-center justify-center gap-6 rounded-t-2xl bg-white p-3 md:p-4 2xl:p-6">
       <picture>
-        <source
-          srcset="@/assets/img/calendly.svg"
-          alt="Logo Calendly"
-          media="(min-width: 768px)"
-          width="64"
-          height="64"
-        />
-        <img src="@/assets/img/calendly.svg" alt="Logo Calendly" width="48" height="48" />
+        <source srcset="/img/calendly.svg" alt="Logo Calendly" media="(min-width: 768px)" width="64" height="64" />
+        <img src="/img/calendly.svg" alt="Logo Calendly" width="48" height="48" />
       </picture>
       <div class="flex flex-col text-left text-sm md:text-base">
         <span>{{ $t('calendly.plan-meeting') }}</span>

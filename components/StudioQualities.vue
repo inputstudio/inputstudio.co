@@ -38,43 +38,37 @@
 <script lang="ts" setup>
 // eslint-disable-next-line import/no-named-as-default
 import Splide from '@splidejs/splide';
-import creativity from '@/assets/img/career/creativity.svg';
-import competence from '@/assets/img/career/competence.svg';
-import client from '@/assets/img/career/client.svg';
-import conception from '@/assets/img/career/conception.svg';
-import commitment from '@/assets/img/career/commitment.svg';
-import reactivity from '@/assets/img/career/reactivity.svg';
 
 const { t } = useI18n();
 
 const qualities = [
   {
-    image: creativity,
+    image: '/img/career/creativity.svg',
     title: t('studio.qualities.creativity'),
     description: t('studio.qualities.creativity-desc'),
   },
   {
-    image: competence,
+    image: '/img/career/competence.svg',
     title: t('studio.qualities.competence'),
     description: t('studio.qualities.competence-desc'),
   },
   {
-    image: client,
+    image: '/img/career/client.svg',
     title: t('studio.qualities.client'),
     description: t('studio.qualities.client-desc'),
   },
   {
-    image: conception,
+    image: '/img/career/conception.svg',
     title: t('studio.qualities.conception'),
     description: t('studio.qualities.conception-desc'),
   },
   {
-    image: commitment,
+    image: '/img/career/commitment.svg',
     title: t('studio.qualities.commitment'),
     description: t('studio.qualities.commitment-desc'),
   },
   {
-    image: reactivity,
+    image: '/img/career/reactivity.svg',
     title: t('studio.qualities.reactivity'),
     description: t('studio.qualities.reactivity-desc'),
   },
