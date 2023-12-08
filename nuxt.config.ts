@@ -1,3 +1,5 @@
+const cacheTTL = 60 * 60 * 24 * 365; // 1 year
+
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   app: {
@@ -12,6 +14,13 @@ export default defineNuxtConfig({
       staticAssetsEndpoint: 'https://content.inputstudio.co/assets/',
       contactFormEndpoint:
         'https://faas-fra1-afec6ce7.doserverless.co/api/v1/web/fn-17294e48-7d1c-4808-9722-0e3735df0619/formhandler/formhandler',
+    },
+  },
+  nitro: {
+    compressPublicAssets: true,
+    routeRules: {
+      '/img/**': { headers: { 'cache-control': `public,max-age=${cacheTTL},s-maxage=${cacheTTL}` } },
+      '/_nuxt/**': { headers: { 'cache-control': `public,max-age=${cacheTTL},s-maxage=${cacheTTL}` } },
     },
   },
   modules: [
