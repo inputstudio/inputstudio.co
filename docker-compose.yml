@@ -17,6 +17,8 @@ services:
     restart: always
     volumes:
       - directus-uploads:/directus/uploads
+    env_file:
+      - stack.env
     labels:
       - "traefik.enable=true"
       - "traefik.http.routers.directus.rule=Host(`content.inputstudio.co`)"
