@@ -21,9 +21,9 @@ services:
       - stack.env # Portainer stack env variables are injected here
     labels:
       - 'traefik.enable=true'
-      - 'traefik.http.routers.directus.rule=Host(`content.inputstudio.co`)'
-      - 'traefik.http.routers.directus.entrypoints=websecure'
-      - 'traefik.http.routers.directus.tls.certresolver=letsencryptresolver'
+      - 'traefik.http.routers.inputstudio-directus.rule=Host(`content.inputstudio.co`)'
+      - 'traefik.http.routers.inputstudio-directus.entrypoints=websecure'
+      - 'traefik.http.routers.inputstudio-directus.tls.certresolver=letsencryptresolver'
 
   blog:
     image: ghost:5
@@ -34,9 +34,9 @@ services:
       - stack.env # Portainer stack env variables are injected here
     labels:
       - 'traefik.enable=true'
-      - 'traefik.http.routers.echomedias.entrypoints=websecure'
-      - 'traefik.http.routers.echomedias.rule=Host(`blog.inputstudio.co`)'
-      - 'traefik.http.routers.echomedias.tls.certresolver=letsencryptresolver'
+      - 'traefik.http.routers.inputstudio-ghost.entrypoints=websecure'
+      - 'traefik.http.routers.inputstudio-ghost.rule=Host(`blog.inputstudio.co`)'
+      - 'traefik.http.routers.inputstudio-ghost.tls.certresolver=letsencryptresolver'
 
 networks:
   default:
