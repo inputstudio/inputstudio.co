@@ -11,19 +11,32 @@ services:
       - 'traefik.http.routers.inputstudio.entrypoints=websecure'
       - 'traefik.http.routers.inputstudio.tls.certresolver=letsencryptresolver'
 
-  directus:
-    container_name: directus
+  cms:
+    container_name: content.inputstudio.co
     image: directus/directus:10
     restart: always
     volumes:
       - directus-uploads:/directus/uploads
     env_file:
-      - stack.env
+      - stack.env # Portainer stack env variables are injected here
     labels:
-      - "traefik.enable=true"
-      - "traefik.http.routers.directus.rule=Host(`content.inputstudio.co`)"
-      - "traefik.http.routers.directus.entrypoints=websecure"
-      - "traefik.http.routers.directus.tls.certresolver=letsencryptresolver"
+      - 'traefik.enable=true'
+      - 'traefik.http.routers.directus.rule=Host(`content.inputstudio.co`)'
+      - 'traefik.http.routers.directus.entrypoints=websecure'
+      - 'traefik.http.routers.directus.tls.certresolver=letsencryptresolver'
+
+  blog:
+    image: ghost:5
+    container_name: blog.inputstudio.co
+    volumes:
+      - ghost-data:/var/lib/ghost/content
+    env_file:
+      - stack.env # Portainer stack env variables are injected here
+    labels:
+      - 'traefik.enable=true'
+      - 'traefik.http.routers.echomedias.entrypoints=websecure'
+      - 'traefik.http.routers.echomedias.rule=Host(`blog.inputstudio.co`)'
+      - 'traefik.http.routers.echomedias.tls.certresolver=letsencryptresolver'
 
 networks:
   default:
@@ -33,3 +46,5 @@ networks:
 volumes:
   directus-uploads:
     name: inputstudio-directus-uploads
+  ghost-data:
+    name: inputstudio-ghost-data
