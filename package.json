@@ -31,7 +31,7 @@
     "nuxt-calendly": "^0.1.14",
     "nuxt-directus": "^5.4.4",
     "nuxt-headlessui": "^1.1.1",
-    "nuxt-icon": "^0.4.0",
+    "nuxt-icon": "^0.6.8",
     "pinia": "^2.1.4",
     "postcss": "^8.4.23",
     "prettier": "^3.0.0",
