@@ -5,6 +5,8 @@ services:
     container_name: inputstudio.co
     image: ghcr.io/inputstudio/inputstudio.co:latest
     restart: always
+    env_file:
+      - stack.env # Portainer stack env variables are injected here
     labels:
       - 'traefik.enable=true'
       - 'traefik.http.routers.inputstudio.rule=Host(`inputstudio.co`)'
