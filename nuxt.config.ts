@@ -2,6 +2,7 @@ const cacheTTL = 60 * 60 * 24 * 365; // 1 year
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
+  devtools: { enabled: true },
   app: {
     head: {
       link: [{ rel: 'icon', href: '/favicon.ico' }],
@@ -36,6 +37,7 @@ export default defineNuxtConfig({
     'nuxt-headlessui',
     'nuxt-icon',
     'nuxt-snackbar',
+    '@nuxtjs/tailwindcss',
   ],
   calendly: {},
   device: {
@@ -72,11 +74,5 @@ export default defineNuxtConfig({
     domain: 'inputstudio.co',
     apiHost: 'https://analytics.inputstudio.co',
     autoOutboundTracking: true,
-  },
-  postcss: {
-    plugins: {
-      tailwindcss: {},
-      autoprefixer: {},
-    },
   },
 });
