@@ -10,6 +10,7 @@ services:
       - 'traefik.http.routers.inputstudio.rule=Host(`inputstudio.co`)'
       - 'traefik.http.routers.inputstudio.entrypoints=websecure'
       - 'traefik.http.routers.inputstudio.tls.certresolver=letsencryptresolver'
+      - 'com.centurylinklabs.watchtower.monitor-only' # Disabling watchtower for this container
 
   cms:
     container_name: content.inputstudio.co
