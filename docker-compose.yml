@@ -18,10 +18,10 @@ services:
     container_name: content.inputstudio.co
     image: directus/directus:10
     restart: always
-    volumes:
-      - directus-uploads:/directus/uploads
     env_file:
       - stack.env # Portainer stack env variables are injected here
+    volumes:
+      - directus-uploads:/directus/uploads
     labels:
       - 'traefik.enable=true'
       - 'traefik.http.routers.inputstudio-directus.rule=Host(`content.inputstudio.co`)'
@@ -29,12 +29,13 @@ services:
       - 'traefik.http.routers.inputstudio-directus.tls.certresolver=letsencryptresolver'
 
   blog:
-    image: ghost:5
     container_name: blog.inputstudio.co
-    volumes:
-      - ghost-data:/var/lib/ghost/content
+    image: ghost:5
+    restart: always
     env_file:
       - stack.env # Portainer stack env variables are injected here
+    volumes:
+      - ghost-data:/var/lib/ghost/content
     labels:
       - 'traefik.enable=true'
       - 'traefik.http.routers.inputstudio-ghost.entrypoints=websecure'
