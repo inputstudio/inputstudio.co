@@ -37,9 +37,6 @@
               <Icon name="ic:baseline-arrow-outward" />
             </NuxtLink>
           </HeadlessMenuItem>
-          <HeadlessMenuItem @click="close">
-            <CalendlyButton class="mt-3 font-semibold">{{ $t('calendly.plan-meeting') }}</CalendlyButton>
-          </HeadlessMenuItem>
         </div>
 
         <div class="flex justify-center gap-6 md:justify-start md:gap-3">

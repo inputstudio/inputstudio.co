@@ -6966,14 +6966,6 @@ nuxi@^3.10.0:
   optionalDependencies:
     fsevents "~2.3.3"
 
-nuxt-calendly@^0.1.14:
-  version "0.1.18"
-  resolved "https://registry.yarnpkg.com/nuxt-calendly/-/nuxt-calendly-0.1.18.tgz#648d351e03b426b012d292b09ffd8ce4e1adb3b2"
-  integrity sha512-uf1fJ5LR47Eao5k0o/QsmvwnwZMvd9BTShD8LKWVqI53fc2eSTFCsogbyhXyqXGJbSudPvuW5Z/uVIjDA73ZDg==
-  dependencies:
-    "@nuxt/kit" "^3.9.3"
-    defu "^6.1.4"
-
 nuxt-headlessui@^1.1.5:
   version "1.1.5"
   resolved "https://registry.yarnpkg.com/nuxt-headlessui/-/nuxt-headlessui-1.1.5.tgz#433d17772f9090b399c54ae8d3e1e149500ab0e6"

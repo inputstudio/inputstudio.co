@@ -32,13 +32,11 @@ export default defineNuxtConfig({
     '@nuxtjs/google-fonts',
     '@nuxtjs/i18n',
     '@nuxtjs/plausible',
-    'nuxt-calendly',
     'nuxt-headlessui',
     'nuxt-icon',
     'nuxt-snackbar',
     '@nuxtjs/tailwindcss',
   ],
-  calendly: {},
   content: {
     locales: ['fr', 'en'],
   },

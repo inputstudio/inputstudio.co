@@ -5,14 +5,6 @@
 
     <div class="grid grid-cols-1 pt-10 md:pt-0">
       <StudioTimelineItem
-        class="timeline-item"
-        :title="$t('calendly.plan-meeting')"
-        :description="$t('calendly.purpose')"
-        :button-text="$t('calendly.plan-meeting')"
-        :button-action="openCalendly"
-      />
-
-      <StudioTimelineItem
         v-for="(item, index) in items"
         :key="`timeline-item-${index}`"
         class="timeline-item"
@@ -26,7 +18,6 @@
 <script lang="ts" setup>
 const { t } = useI18n();
 const { $gsap, $ScrollTrigger } = useNuxtApp();
-const { openCalendly } = useCalendlyWidget();
 
 $gsap.registerPlugin($ScrollTrigger);
 
