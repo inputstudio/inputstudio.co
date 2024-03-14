@@ -40,6 +40,9 @@ export default defineNuxtConfig({
     '@nuxtjs/tailwindcss',
   ],
   calendly: {},
+  content: {
+    locales: ['fr', 'en'],
+  },
   device: {
     refreshOnResize: true,
   },

@@ -21,6 +21,7 @@
     "@nuxtjs/i18n": "^8.0.0-rc.4",
     "@nuxtjs/plausible": "^0.2.4",
     "@nuxtjs/tailwindcss": "^6.10.4",
+    "@tailwindcss/typography": "^0.5.10",
     "@typescript-eslint/parser": "^6.2.0",
     "eslint": "^8.56.0",
     "eslint-config-prettier": "^9.1.0",
