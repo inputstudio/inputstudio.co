@@ -1,4 +1,4 @@
-export default function (animation: () => unknown, initializeTwice = false) {
+export const useAnimation = (animation: () => unknown, initializeTwice = false) => {
   const { hook } = useNuxtApp();
   const initialized = ref(false);
 
@@ -13,4 +13,4 @@ export default function (animation: () => unknown, initializeTwice = false) {
   hook('page:transition:finish', initialize);
 
   return { initialized, initialize };
-}
+};

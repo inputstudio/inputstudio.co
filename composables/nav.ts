@@ -1,4 +1,4 @@
-export default function () {
+export const useNav = () => {
   const { t } = useI18n();
 
   const socials = [
@@ -50,4 +50,4 @@ export default function () {
   ];
 
   return { pages, socials };
-}
+};
