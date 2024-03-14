@@ -1,7 +1,3 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
 @import 'animations';
 @import 'vars';
 
@@ -20,11 +16,12 @@ html {
   margin: 0;
   padding: 0;
   font-size: 16px;
-  font-family: 'Inter', Helvetica, Arial, sans-serif;
+  font-family: 'DM Sans', 'Inter', Helvetica, Arial, sans-serif;
   cursor: none;
 }
 
-html, body {
+html,
+body {
   overflow-x: hidden;
 }
 
@@ -60,7 +57,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: Rubik, Helvetica, Arial, sans-serif;
+  font-family: 'DM Sans', 'Inter', Helvetica, Arial, sans-serif;
 }
 
 ol,
@@ -86,7 +83,7 @@ a {
 }
 
 .section {
-  background-image: url('@/assets/img/halo-blue.webp');
+  background-image: url('/img/halo-blue.webp');
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;

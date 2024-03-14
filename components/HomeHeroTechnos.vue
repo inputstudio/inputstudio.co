@@ -3,7 +3,7 @@
     <div v-for="technology in technologies" :key="technology.logo" :title="technology.title">
       <Icon
         :name="technology.logo"
-        size="xl"
+        size="48"
         class="tech-logo max-h-12 w-10 md:w-12 md:shrink-0 md:transition-transform md:hover:scale-110"
       />
     </div>

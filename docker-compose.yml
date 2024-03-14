@@ -1,16 +1,54 @@
 version: '3.9'
 
 services:
-  app:
-    image: ghcr.io/inputstudio/inputstudio.co:latest
+  web:
     container_name: inputstudio.co
+    image: ghcr.io/inputstudio/inputstudio.co:latest
     restart: always
+    env_file:
+      - stack.env # Portainer stack env variables are injected here
     labels:
-      - "traefik.enable=true"
-      - "traefik.http.routers.inputstudio.rule=Host(`inputstudio.co`)"
-      - "traefik.http.routers.inputstudio.entrypoints=websecure"
-      - "traefik.http.routers.inputstudio.tls.certresolver=letsencryptresolver"
+      - 'traefik.enable=true'
+      - 'traefik.http.routers.inputstudio.rule=Host(`inputstudio.co`)'
+      - 'traefik.http.routers.inputstudio.entrypoints=websecure'
+      - 'traefik.http.routers.inputstudio.tls.certresolver=letsencryptresolver'
+      - 'com.centurylinklabs.watchtower.monitor-only' # Disabling watchtower for this container
+
+  cms:
+    container_name: content.inputstudio.co
+    image: directus/directus:10
+    restart: always
+    env_file:
+      - stack.env # Portainer stack env variables are injected here
+    volumes:
+      - directus-uploads:/directus/uploads
+    labels:
+      - 'traefik.enable=true'
+      - 'traefik.http.routers.inputstudio-directus.rule=Host(`content.inputstudio.co`)'
+      - 'traefik.http.routers.inputstudio-directus.entrypoints=websecure'
+      - 'traefik.http.routers.inputstudio-directus.tls.certresolver=letsencryptresolver'
+
+  blog:
+    container_name: blog.inputstudio.co
+    image: ghost:5
+    restart: always
+    env_file:
+      - stack.env # Portainer stack env variables are injected here
+    volumes:
+      - ghost-data:/var/lib/ghost/content
+    labels:
+      - 'traefik.enable=true'
+      - 'traefik.http.routers.inputstudio-ghost.entrypoints=websecure'
+      - 'traefik.http.routers.inputstudio-ghost.rule=Host(`blog.inputstudio.co`)'
+      - 'traefik.http.routers.inputstudio-ghost.tls.certresolver=letsencryptresolver'
 
 networks:
   default:
     name: internal-net
+    external: true
+
+volumes:
+  directus-uploads:
+    name: inputstudio-directus-uploads
+  ghost-data:
+    name: inputstudio-ghost-data

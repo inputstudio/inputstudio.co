@@ -86,7 +86,7 @@ function handleTopics(topic: string) {
   }
 }
 
-function clear() {
+function clearForm() {
   data.value = {
     fullname: '',
     contact: '',
@@ -99,21 +99,18 @@ function clear() {
 async function submit() {
   loading.value = true;
 
-  const { contactFormEndpoint } = useRuntimeConfig().public;
+  const { error } = await useFetch('/api/contact', {
+    method: 'POST',
+    body: data.value,
+  });
 
-  try {
-    await useFetch(contactFormEndpoint, {
-      method: 'POST',
-      body: data.value,
-    });
-
+  if (!error.value) {
+    clearForm();
     snackbar.add({
       type: 'success',
       text: t('contact.form-success'),
     });
-
-    clear();
-  } catch (error) {
+  } else {
     snackbar.add({
       type: 'error',
       text: error,

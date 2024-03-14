@@ -1,6 +1,6 @@
 <template>
   <div ref="wrapper" class="flex flex-col gap-9 rounded-xl border-[1px] border-green-400/50 p-3 md:p-9">
-    <h2 ref="title" class="font-inter text-2xl md:text-4xl">{{ project.name }}</h2>
+    <h2 ref="title" class="text-2xl md:text-4xl">{{ project.name }}</h2>
 
     <div class="flex flex-col gap-9 md:flex-row">
       <img

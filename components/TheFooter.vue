@@ -3,7 +3,7 @@
     <div class="flex flex-col gap-8 text-center md:flex-row md:justify-between md:text-left">
       <div>
         <NuxtLink to="/">
-          <img src="@/assets/img/logo.webp" alt="Logo" class="h-18 -translate-y-4 md:block md:h-32 md:-translate-x-9" />
+          <img src="/img/logo.webp" alt="Logo" class="h-18 -translate-y-4 md:block md:h-32 md:-translate-x-9" />
         </NuxtLink>
         <div class="flex justify-center gap-6 md:justify-start md:gap-3">
           <NuxtLink

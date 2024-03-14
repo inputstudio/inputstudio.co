@@ -15,6 +15,6 @@ defineProps({
 
 <style lang="scss">
 .encircle {
-  background: no-repeat center/95% url('@/assets/img/encircle.svg');
+  background: no-repeat center/95% url('/img/encircle.svg');
 }
 </style>

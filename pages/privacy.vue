@@ -29,15 +29,15 @@ definePageMeta({
 <style lang="scss">
 [data-content-id='content'] {
   h1 {
-    @apply break-all text-5xl my-3 font-bold md:text-8xl;
+    @apply my-3 break-all text-5xl font-bold md:text-8xl;
   }
 
   h2 {
-    @apply text-xl font-bold my-3 md:text-2xl;
+    @apply my-3 text-xl font-bold md:text-2xl;
   }
 
   p {
-    @apply text-justify mb-3;
+    @apply mb-3 text-justify;
   }
 
   ul {

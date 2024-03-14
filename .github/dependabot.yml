@@ -9,5 +9,8 @@ updates:
     directory: '/' # Location of package manifests
     schedule:
       interval: 'monthly'
-    target-branch: 'dev' # Raise pull requests against `dev` branch
     open-pull-requests-limit: 10 # Allow up to 10 open pull requests for npm dependencies
+  - package-ecosystem: 'github-actions'
+    directory: '/'
+    schedule:
+      interval: 'monthly'

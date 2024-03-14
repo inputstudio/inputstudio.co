@@ -12,7 +12,8 @@
       </div>
     </div>
 
-    <div ref="projectsWrapper" class="grid place-items-center gap-9 px-9">
+    <AppLoader v-if="pending" />
+    <div v-else ref="projectsWrapper" class="grid place-items-center gap-9 px-9">
       <ProjectCard v-for="project in projects" :key="project.id" :project="project" />
     </div>
 
@@ -21,7 +22,26 @@
 </template>
 
 <script lang="ts" setup>
-const { projects } = useStore();
+const { getItems } = useDirectusItems();
+const { staticAssetsEndpoint } = useRuntimeConfig().public;
+const { data: projects, pending } = await useLazyAsyncData(
+  'projects',
+  () =>
+    getItems<Project>({
+      collection: 'projects',
+      params: {
+        fields: ['*', 'translations.*'],
+      },
+    }),
+  {
+    default: () => [],
+    transform: (projects) =>
+      projects.map((project) => ({
+        ...project,
+        cover: new URL(project.cover, staticAssetsEndpoint).toString(),
+      })),
+  }
+);
 
 const wrapper = ref();
 const title = ref();
