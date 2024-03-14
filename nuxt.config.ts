@@ -32,7 +32,6 @@ export default defineNuxtConfig({
     '@nuxtjs/google-fonts',
     '@nuxtjs/i18n',
     '@nuxtjs/plausible',
-    'nuxt-directus',
     'nuxt-calendly',
     'nuxt-headlessui',
     'nuxt-icon',
@@ -45,9 +44,6 @@ export default defineNuxtConfig({
   },
   device: {
     refreshOnResize: true,
-  },
-  directus: {
-    url: 'https://content.inputstudio.co',
   },
   eslint: {
     lintOnStart: false,
