@@ -2,7 +2,7 @@
   "navigation": {
     "home": "Home",
     "studio": "Studio",
-    "projects": "Projects",
+    "blog": "Blog (FR)",
     "contact": "Contact us",
     "careers": "Careers",
     "privacy": "Privacy policy",
@@ -66,12 +66,6 @@
       "delivery-desc": "We do our utmost to meet agreed deadlines and deliver your project on time, while keeping quality and customer satisfaction at the heart of our work."
     }
   },
-  "projects": {
-    "title": "Our projects",
-    "subtitle": "Our pride and joy",
-    "description": "We only commit to projects that reflect our core values, and we're passionate about being fully involved every step of the way.",
-    "visit-website": "Visit website"
-  },
   "contact": {
     "title": "Contact us",
     "subtitle": "Let's make it happen!",
@@ -102,7 +96,6 @@
     "description": "Input Studio, your web agency in Abidjan, specializes in the custom creation of websites and mobile applications using modern technologies, in 100% remote mode.",
     "pages": {
       "studio": "Studio",
-      "projects": "Projects",
       "contact": "Contact us",
       "privacy": "Privacy policy"
     }

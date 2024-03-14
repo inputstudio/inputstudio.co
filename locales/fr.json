@@ -2,7 +2,7 @@
   "navigation": {
     "home": "Accueil",
     "studio": "Studio",
-    "projects": "Projets",
+    "blog": "Blog",
     "contact": "Nous contacter",
     "careers": "Carrières",
     "privacy": "Politique de confidentialité",
@@ -66,12 +66,6 @@
       "delivery-desc": "Nous mettons tout en œuvre pour respecter les délais convenus et livrer votre projet dans les délais prévus, tout en maintenant la qualité et la satisfaction du client au cœur de notre travail."
     }
   },
-  "projects": {
-    "title": "Nos projets",
-    "subtitle": "Notre travail, notre fierté",
-    "description": "Nous ne nous engageons que dans des projets qui reflètent nos valeurs profondes, et nous sommes passionnés par une implication totale à chaque étape.",
-    "visit-website": "Visiter le site"
-  },
   "contact": {
     "title": "Nous contacter",
     "subtitle": "Réalisons votre projet ensemble !",
@@ -102,7 +96,6 @@
     "description": "Input Studio, votre agence web à Abidjan, spécialisée dans la création sur mesure de sites web et d'applications mobiles en utilisant des technologies modernes, et ce, en mode 100% remote.",
     "pages": {
       "studio": "Studio",
-      "projects": "Projets",
       "contact": "Nous contacter",
       "privacy": "Politique de confidentialité"
     }

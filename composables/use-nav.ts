@@ -34,8 +34,9 @@ export default function () {
       url: '/studio',
     },
     {
-      name: t('navigation.projects'),
-      url: '/projects',
+      name: t('navigation.blog'),
+      url: '/blog',
+      external: true,
     },
     {
       name: t('navigation.careers'),
