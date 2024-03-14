@@ -1,6 +1,6 @@
 export default defineNuxtRouteMiddleware((to, from) => {
   const linksOnLeft = ['/projects', '/contact'];
-  const linksOnRight = ['/studio', '/careers'];
+  const linksOnRight = ['/studio'];
 
   if (from.path === '/') {
     if (linksOnLeft.includes(to.path)) {

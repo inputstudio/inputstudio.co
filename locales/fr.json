@@ -97,11 +97,6 @@
     "form-alt-phone": "Téléphone :",
     "form-alt-address": "Adresse :"
   },
-  "careers": {
-    "title": "Nous recrutons",
-    "description": "Input studio est toujours ouvert aux personnes intelligentes et créatives. Rejoignez notre équipe de personnes partageant les mêmes idées qui s'efforcent d'atteindre leurs objectifs. Travaillons ensemble vers le succès ! Nous sommes intéressés par la construction d'une communauté d'individus qui partagent nos valeurs et nos objectifs.",
-    "apply": "Envoyez votre CV"
-  },
   "meta": {
     "title": "Agence de développement web",
     "description": "Input Studio, votre agence web à Abidjan, spécialisée dans la création sur mesure de sites web et d'applications mobiles en utilisant des technologies modernes, et ce, en mode 100% remote.",
@@ -109,7 +104,6 @@
       "studio": "Studio",
       "projects": "Projets",
       "contact": "Nous contacter",
-      "careers": "Carrières",
       "privacy": "Politique de confidentialité"
     }
   }

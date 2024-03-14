@@ -97,11 +97,6 @@
     "form-alt-phone": "Phone:",
     "form-alt-address": "Address:"
   },
-  "careers": {
-    "title": "We are hiring",
-    "description": "Input studio is always open to smart, creative people. Join our team of like-minded people striving to achieve their goals. Let's work together towards success! We're interested in building a community of individuals who share our values and goals.",
-    "apply": "Apply now"
-  },
   "meta": {
     "title": "Web development agency",
     "description": "Input Studio, your web agency in Abidjan, specializes in the custom creation of websites and mobile applications using modern technologies, in 100% remote mode.",
@@ -109,7 +104,6 @@
       "studio": "Studio",
       "projects": "Projects",
       "contact": "Contact us",
-      "careers": "Careers",
       "privacy": "Privacy policy"
     }
   }

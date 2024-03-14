@@ -21,7 +21,13 @@
       </div>
 
       <div class="flex flex-col items-end gap-1 font-bold uppercase">
-        <NuxtLink v-for="page in pages" :key="`page-url-${page.name}`" :to="page.url">
+        <NuxtLink
+          v-for="page in pages"
+          :key="`page-url-${page.name}`"
+          :to="page.url"
+          :target="page.external ? '_blank' : '_self'"
+          :external="page.external"
+        >
           <span class="hover-underline">{{ page.name }}</span>
           <IconCSS name="ic:baseline-arrow-outward" class="text-2xl" />
         </NuxtLink>

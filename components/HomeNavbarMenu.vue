@@ -27,7 +27,12 @@
 
         <div class="flex flex-col gap-3">
           <HeadlessMenuItem v-for="(link, index) in pages" :key="`mobile-menu-item-${index}`" @click="close">
-            <NuxtLink :to="link.url" class="flex items-center gap-3 text-2xl font-semibold">
+            <NuxtLink
+              :to="link.url"
+              :target="link.external ? '_blank' : '_self'"
+              :external="link.external"
+              class="flex items-center gap-3 text-2xl font-semibold"
+            >
               {{ link.name }}
               <Icon name="ic:baseline-arrow-outward" />
             </NuxtLink>

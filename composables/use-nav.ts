@@ -39,7 +39,8 @@ export default function () {
     },
     {
       name: t('navigation.careers'),
-      url: '/careers',
+      url: 'https://inputstudio.notion.site/Careers-a4866eda2bc54b00b0be6d94d2a3b19e',
+      external: true,
     },
     {
       name: t('navigation.contact'),

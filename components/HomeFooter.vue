@@ -13,7 +13,11 @@
         <IconCSS name="mdi:github" class="text-3xl" />
       </NuxtLink>
 
-      <NuxtLink to="/careers" :title="$t('navigation.careers')">
+      <NuxtLink
+        to="https://inputstudio.notion.site/Careers-a4866eda2bc54b00b0be6d94d2a3b19e"
+        target="_blank"
+        :title="$t('navigation.careers')"
+      >
         <IconCSS name="uim:bag" class="text-3xl" />
       </NuxtLink>
     </div>
