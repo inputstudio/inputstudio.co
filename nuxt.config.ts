@@ -32,6 +32,7 @@ export default defineNuxtConfig({
     '@nuxtjs/google-fonts',
     '@nuxtjs/i18n',
     '@nuxtjs/plausible',
+    '@nuxtjs/sitemap',
     'nuxt-headlessui',
     'nuxt-icon',
     'nuxt-snackbar',
@@ -71,5 +72,8 @@ export default defineNuxtConfig({
     domain: 'inputstudio.co',
     apiHost: 'https://analytics.inputstudio.co',
     autoOutboundTracking: true,
+  },
+  site: {
+    url: 'https://inputstudio.co',
   },
 });
