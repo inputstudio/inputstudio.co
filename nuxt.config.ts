@@ -32,11 +32,11 @@ export default defineNuxtConfig({
     '@nuxtjs/google-fonts',
     '@nuxtjs/i18n',
     '@nuxtjs/plausible',
-    '@nuxtjs/sitemap',
+    '@nuxtjs/seo',
+    '@nuxtjs/tailwindcss',
     'nuxt-headlessui',
     'nuxt-icon',
     'nuxt-snackbar',
-    '@nuxtjs/tailwindcss',
   ],
   content: {
     locales: ['fr', 'en'],
