@@ -2,7 +2,7 @@
   <nav class="z-10 flex items-center justify-between">
     <NuxtLink to="/studio" class="hover-underline hidden lg:block">{{ $t('navigation.studio') }}</NuxtLink>
     <NuxtLink to="/"><AppLogo /></NuxtLink>
-    <NuxtLink to="/blog" class="hover-underline hidden lg:block" :external="true">
+    <NuxtLink to="https://inputstudio.co/blog" class="hover-underline hidden lg:block" :external="true">
       {{ $t('navigation.blog') }}
     </NuxtLink>
 

@@ -35,7 +35,7 @@ export const useNav = () => {
     },
     {
       name: t('navigation.blog'),
-      url: '/blog',
+      url: 'https://inputstudio.co/blog',
       external: true,
     },
     {
