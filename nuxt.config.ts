@@ -24,8 +24,8 @@ export default defineNuxtConfig({
   modules: [
     '@hypernym/nuxt-gsap',
     '@nuxt/content',
+    '@nuxt/eslint',
     '@nuxtjs/device',
-    '@nuxtjs/eslint-module',
     '@nuxtjs/google-fonts',
     '@nuxtjs/i18n',
     '@nuxtjs/plausible',
@@ -41,10 +41,6 @@ export default defineNuxtConfig({
   },
   device: {
     refreshOnResize: true,
-  },
-  eslint: {
-    lintOnStart: false,
-    formatter: 'visualstudio',
   },
   googleFonts: {
     families: {
