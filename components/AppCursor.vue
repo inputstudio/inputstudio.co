@@ -3,7 +3,7 @@
     v-if="!isMobileOrTablet"
     ref="cursor"
     class="cursor pointer-events-none fixed z-50 hidden aspect-square w-3 -translate-x-1/2 -translate-y-1/2 rounded-full border border-white p-2"
-  ></div>
+  />
 </template>
 
 <script setup>

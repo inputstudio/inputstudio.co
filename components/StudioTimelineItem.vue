@@ -9,8 +9,8 @@
     </div>
 
     <div class="separator relative h-[140%] w-1 bg-customGray px-[1px]">
-      <div class="ball absolute inset-0 aspect-square w-0 scale-[4] rounded-full border-inherit bg-white p-0"></div>
-      <span class="z-1 absolute left-0 right-0 top-0 h-0 w-full bg-white"></span>
+      <div class="ball absolute inset-0 aspect-square w-0 scale-[4] rounded-full border-inherit bg-white p-0" />
+      <span class="z-1 absolute left-0 right-0 top-0 h-0 w-full bg-white" />
     </div>
   </div>
 
@@ -18,8 +18,8 @@
     <h1 class="w-2/4 text-right text-4xl">{{ title }}</h1>
 
     <div class="separator relative h-full w-1 bg-customGray px-[1px]">
-      <div class="ball absolute inset-0 aspect-square w-0 scale-[4] rounded-full border-inherit bg-white p-0"></div>
-      <span class="z-1 absolute left-0 right-0 top-0 h-0 w-full bg-white"></span>
+      <div class="ball absolute inset-0 aspect-square w-0 scale-[4] rounded-full border-inherit bg-white p-0" />
+      <span class="z-1 absolute left-0 right-0 top-0 h-0 w-full bg-white" />
     </div>
 
     <div class="flex w-2/4 flex-col items-center justify-center gap-4 px-0 text-justify">

@@ -29,14 +29,13 @@
       </div>
 
       <div class="my-slider-progress mt-5">
-        <div ref="progressBar" class="my-slider-progress-bar"></div>
+        <div ref="progressBar" class="my-slider-progress-bar" />
       </div>
     </div>
   </section>
 </template>
 
 <script lang="ts" setup>
-// eslint-disable-next-line import/no-named-as-default
 import Splide from '@splidejs/splide';
 
 const { t } = useI18n();

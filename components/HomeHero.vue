@@ -3,7 +3,7 @@
     <div class="group relative inline-flex">
       <div
         class="transitiona-all animate-tilt absolute -inset-px rounded-xl bg-gradient-to-r from-[#44BCFF] via-[#FF44EC] to-[#FF675E] opacity-70 blur-lg duration-1000 group-hover:-inset-1 group-hover:opacity-100 group-hover:duration-200"
-      ></div>
+      />
       <span
         class="relative inline-flex items-center justify-center rounded-xl bg-black/85 px-6 py-3 tracking-wide text-white transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-gray-900 focus:ring-offset-2"
       >

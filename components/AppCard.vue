@@ -3,7 +3,7 @@
     :style="{ borderTopLeftRadius: borderTopLeftRadius + 'px' }"
     class="app-card rounded-2xl border border-white p-5"
   >
-    <slot name="app-card-body"></slot>
+    <slot name="app-card-body" />
   </div>
 </template>
 

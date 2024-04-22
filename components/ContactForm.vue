@@ -17,7 +17,7 @@
         </select>
       </div>
 
-      <textarea v-model="data.resume" rows="8" :placeholder="$t('contact.form-message')"></textarea>
+      <textarea v-model="data.resume" rows="8" :placeholder="$t('contact.form-message')" />
 
       <div class="mt-3">
         <p>{{ $t('contact.form-topics') }}</p>
@@ -43,7 +43,7 @@
         <div
           v-if="loading"
           class="h-6 w-6 animate-spin rounded-full border-4 border-solid border-black border-t-transparent"
-        ></div>
+        />
         <span>{{ $t('contact.form-submit') }}</span>
       </button>
     </form>
