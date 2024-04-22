@@ -1,50 +1,41 @@
 <template>
-  <section class="flex flex-col items-center gap-6 md:gap-9 xl:gap-12">
+  <section class="my-32 flex flex-col items-center gap-6 md:gap-9 xl:gap-12">
+    <div class="group relative inline-flex">
+      <div
+        class="transitiona-all animate-tilt absolute -inset-px rounded-xl bg-gradient-to-r from-[#44BCFF] via-[#FF44EC] to-[#FF675E] opacity-70 blur-lg duration-1000 group-hover:-inset-1 group-hover:opacity-100 group-hover:duration-200"
+      ></div>
+      <span
+        class="relative inline-flex items-center justify-center rounded-xl bg-black/85 px-6 py-3 tracking-wide text-white transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-gray-900 focus:ring-offset-2"
+      >
+        Design & Development Studio
+      </span>
+    </div>
+
     <h1
-      id="animated-title"
-      class="cursor-expander flex flex-col gap-4 text-center font-bold leading-normal md:flex-row"
+      class="cursor-expander max-w-screen-md text-center text-2xl font-thin leading-relaxed tracking-wide md:text-4xl"
     >
-      <div id="design" class="text-6xl md:text-8xl">Design.</div>
-      <div id="code" class="text-5xl md:text-8xl">Code.</div>
-      <div id="deploy" class="text-4xl md:text-8xl">Deploy.</div>
+      Plus qu'une <span class="line-through">agence web</span>, un
+      <span class="font-bold"> partenaire </span>
+      <span class="stroke-me"> créatif </span> pour propulser votre business
     </h1>
 
-    <p class="text-center font-light md:w-1/2 md:text-xl 2xl:text-2xl">{{ $t('home.subtitle') }}</p>
-
-    <div class="mb-12 flex flex-col items-center gap-5 md:gap-3">
-      <HomeHeroTechnos />
-      <HomeHeroGhostBanner />
+    <div class="flex gap-9">
+      <NuxtLink to="/studio" class="rounded bg-white/85 px-6 py-3 text-black transition-colors hover:bg-white/95">
+        Nos solutions
+      </NuxtLink>
+      <NuxtLink to="/contact" class="rounded bg-white/25 px-6 py-3 transition-colors hover:bg-white/15">
+        Contactez-nous
+      </NuxtLink>
     </div>
+
+    <HomeHeroShowcase />
   </section>
 </template>
 
-<script lang="ts" setup>
-import SplitText from 'split-type';
-
-const { $gsap } = useNuxtApp();
-
-useAnimation(animation);
-
-function animation() {
-  const design = new SplitText('#design', { types: 'chars' });
-  const designChars = design.chars;
-  const code = document.querySelector('#code');
-  const deploy = document.querySelector('#deploy');
-  const tl = $gsap.timeline({
-    defaults: {
-      duration: 1,
-    },
-  });
-
-  tl.fromTo(designChars, { y: 100, autoAlpha: 0 }, { y: 0, autoAlpha: 1, stagger: 0.05, ease: 'power2.inOut' });
-  tl.fromTo(code, { autoAlpha: 0 }, { autoAlpha: 1, ease: 'power2.out' });
-  tl.to(deploy, { y: -100, autoAlpha: 0, ease: 'power1.out' });
-  tl.to(deploy, { y: 0, autoAlpha: 1, ease: 'power4.inOut' });
-
-  document.querySelector('#animated-title')?.addEventListener('mouseenter', () => {
-    if (!tl.isActive()) {
-      tl.play(0);
-    }
-  });
+<style scoped>
+.stroke-me {
+  font-weight: bold;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 1px;
 }
-</script>
+</style>

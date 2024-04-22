@@ -37,6 +37,7 @@ export default defineNuxtConfig({
     'nuxt-headlessui',
     'nuxt-icon',
     'nuxt-snackbar',
+    'nuxt-marquee',
   ],
   content: {
     locales: ['fr', 'en'],
@@ -50,7 +51,7 @@ export default defineNuxtConfig({
   },
   googleFonts: {
     families: {
-      'DM Sans': [100, 300, 400, 500, 600, 700],
+      Inter: [100, 300, 400, 500, 600, 700],
     },
     download: true,
     base64: false,

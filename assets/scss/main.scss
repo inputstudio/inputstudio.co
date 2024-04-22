@@ -57,7 +57,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'DM Sans', 'Inter', Helvetica, Arial, sans-serif;
+  font-family: 'Inter', Helvetica, Arial, sans-serif;
 }
 
 ol,
@@ -80,23 +80,4 @@ img {
 a {
   text-decoration: none;
   color: inherit;
-}
-
-.section {
-  background-image: url('/img/halo-blue.webp');
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center;
-
-  @media (max-width: 1024px) {
-    background-size: 150%;
-  }
-
-  @media (max-width: 1536px) {
-    min-height: 100vh;
-  }
-
-  @media (min-width: 1536px) {
-    min-height: 60vh;
-  }
 }

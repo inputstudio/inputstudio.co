@@ -31,6 +31,7 @@
     "nuxt": "^3.11.1",
     "nuxt-headlessui": "^1.1.5",
     "nuxt-icon": "^0.6.8",
+    "nuxt-marquee": "^1.0.4",
     "prettier": "^3.2.5",
     "prettier-plugin-tailwindcss": "^0.5.11",
     "sass": "^1.69.7",
@@ -41,8 +42,7 @@
   },
   "dependencies": {
     "@splidejs/splide": "^4.1.4",
-    "nuxt-snackbar": "^1.0.3",
-    "split-type": "^0.3.3"
+    "nuxt-snackbar": "^1.0.3"
   },
   "volta": {
     "node": "20.11.0",
