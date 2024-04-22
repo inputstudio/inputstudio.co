@@ -5,9 +5,10 @@
     "dev": "nuxt dev --open --public --dotvenv stack.env",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
-    "postinstall": "nuxt prepare && husky",
+    "postinstall": "nuxt prepare",
     "lint": "eslint .",
-    "format": "prettier --ignore-path .gitignore --write ."
+    "format": "prettier --ignore-path .gitignore --write .",
+    "prepare": "husky"
   },
   "devDependencies": {
     "@commitlint/cli": "^19.2.1",
