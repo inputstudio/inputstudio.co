@@ -13,9 +13,6 @@ export default defineNuxtConfig({
   runtimeConfig: {
     botApiKey: '',
     chatId: '',
-    public: {
-      staticAssetsEndpoint: 'https://content.inputstudio.co/assets/',
-    },
   },
   nitro: {
     compressPublicAssets: true,
