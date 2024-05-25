@@ -22,6 +22,14 @@ const clients = [
     logo: '/img/clients/cinergies.png',
   },
   {
+    title: 'Adrili',
+    logo: '/img/clients/adrili.png',
+  },
+  {
+    title: 'Université des Lagunes',
+    logo: '/img/clients/ul.png',
+  },
+  {
     title: 'Echomédias MSSC',
     logo: '/img/clients/echomedias.png',
   },
