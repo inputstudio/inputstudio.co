@@ -23,27 +23,27 @@
 const clients = [
   {
     title: "Côte d'Ivoire Énergies",
-    logo: '/img/clients/cinergies.png',
+    logo: '/img/clients/cinergies.webp',
   },
   {
     title: 'Adrili',
-    logo: '/img/clients/adrili.png',
+    logo: '/img/clients/adrili.webp',
   },
   {
     title: 'Université des Lagunes',
-    logo: '/img/clients/ul.png',
+    logo: '/img/clients/ul.webp',
   },
   {
     title: 'Echomédias MSSC',
-    logo: '/img/clients/echomedias.png',
+    logo: '/img/clients/echomedias.webp',
   },
   {
     title: 'Mr Cocktail',
-    logo: '/img/clients/mrcocktail.png',
+    logo: '/img/clients/mrcocktail.webp',
   },
   {
     title: 'Optinov',
-    logo: '/img/clients/optinov.png',
+    logo: '/img/clients/optinov.webp',
   },
 ];
 </script>

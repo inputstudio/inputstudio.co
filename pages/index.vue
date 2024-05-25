@@ -9,8 +9,8 @@
 <style lang="scss" scoped>
 main {
   background:
-    no-repeat center url('/img/grain-overlay.png'),
-    no-repeat center url('/img/stars.png');
+    no-repeat center url('/img/grain-overlay.webp'),
+    no-repeat center url('/img/stars.webp');
   background-color: #141414;
 }
 </style>
