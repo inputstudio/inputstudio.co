@@ -1,15 +1,19 @@
 <template>
   <div>
-    <h2 class="py-9 text-center text-lg tracking-wide text-white/50">Nous avons gagné leur confiance</h2>
+    <h2 class="py-9 text-center text-lg tracking-wide text-white/65">Nous avons gagné leur confiance</h2>
 
     <NuxtMarquee v-if="$device.isMobile">
       <div v-for="client in clients" :key="client.logo" :title="client.title">
         <img :src="client.logo" :alt="`Logo ${client.title}`" class="mx-3 h-12" />
       </div>
     </NuxtMarquee>
-    <div v-else class="flex max-w-screen-lg">
+    <div v-else class="flex max-w-screen-2xl">
       <div v-for="client in clients" :key="client.logo" :title="client.title">
-        <img :src="client.logo" :alt="`Logo ${client.title}`" class="mx-9 h-16" />
+        <img
+          :src="client.logo"
+          :alt="`Logo ${client.title}`"
+          class="mr-12 h-16 grayscale transition-all hover:filter-none"
+        />
       </div>
     </div>
   </div>
