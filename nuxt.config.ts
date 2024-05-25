@@ -17,8 +17,16 @@ export default defineNuxtConfig({
   nitro: {
     compressPublicAssets: true,
     routeRules: {
+      // Cache static assets
       '/img/**': { headers: { 'cache-control': `public,max-age=${cacheTTL},s-maxage=${cacheTTL}` } },
       '/_nuxt/**': { headers: { 'cache-control': `public,max-age=${cacheTTL},s-maxage=${cacheTTL}` } },
+      // Redirects
+      '/careers': {
+        redirect: 'https://inputstudio.notion.site/Careers-Input-Studio-a4866eda2bc54b00b0be6d94d2a3b19e?pvs=74',
+      },
+      '/archives ': {
+        redirect: 'https://inputstudio.notion.site/Archives-Input-Studio-dbff46b2d1874678b2f78d6d51453dc4?pvs=74',
+      },
     },
   },
   modules: [
