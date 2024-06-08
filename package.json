@@ -21,7 +21,7 @@
     "@nuxtjs/tailwindcss": "^6.10.4",
     "@splidejs/splide": "^4.1.4",
     "@tailwindcss/typography": "^0.5.10",
-    "nuxt": "^3.11.1",
+    "nuxt": "^3.11.2",
     "nuxt-headlessui": "^1.1.5",
     "nuxt-icon": "^0.6.8",
     "nuxt-marquee": "^1.0.4",
