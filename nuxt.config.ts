@@ -41,7 +41,6 @@ export default defineNuxtConfig({
     '@nuxtjs/tailwindcss',
     'nuxt-headlessui',
     'nuxt-icon',
-    'nuxt-snackbar',
     'nuxt-marquee',
   ],
   content: {

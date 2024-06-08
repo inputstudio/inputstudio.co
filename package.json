@@ -36,8 +36,7 @@
     "vue-tsc": "^1"
   },
   "dependencies": {
-    "@splidejs/splide": "^4.1.4",
-    "nuxt-snackbar": "^1.0.3"
+    "@splidejs/splide": "^4.1.4"
   },
   "volta": {
     "node": "20.11.0",

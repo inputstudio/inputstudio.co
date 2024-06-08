@@ -16,7 +16,6 @@
         <transition name="fade" mode="out-in">
           <TheFooter v-if="route.path !== '/'" />
         </transition>
-        <NuxtSnackbar />
       </main>
     </Body>
   </Html>

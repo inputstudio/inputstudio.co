@@ -38,13 +38,13 @@
       <button
         type="submit"
         class="mt-3 flex justify-center gap-3 rounded-lg bg-black py-4 text-center uppercase transition-colors hover:border-black hover:bg-white hover:text-black disabled:cursor-not-allowed disabled:border-black disabled:bg-white disabled:text-black"
-        :disabled="loading"
+        :disabled="loading || success"
       >
         <div
           v-if="loading"
           class="h-6 w-6 animate-spin rounded-full border-4 border-solid border-black border-t-transparent"
         />
-        <span>{{ $t('contact.form-submit') }}</span>
+        <span>{{ success ? t('contact.form-success') : $t('contact.form-submit') }}</span>
       </button>
     </form>
   </div>
@@ -52,7 +52,7 @@
 
 <script lang="ts" setup>
 const { t } = useI18n();
-const snackbar = useSnackbar();
+const success = ref(false);
 const loading = ref(false);
 
 const data = ref({
@@ -106,15 +106,13 @@ async function submit() {
 
   if (!error.value) {
     clearForm();
-    snackbar.add({
-      type: 'success',
-      text: t('contact.form-success'),
-    });
+    success.value = true;
+
+    setTimeout(() => {
+      success.value = false;
+    }, 3000);
   } else {
-    snackbar.add({
-      type: 'error',
-      text: error,
-    });
+    alert(error.value);
   }
 
   loading.value = false;
