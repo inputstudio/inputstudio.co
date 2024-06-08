@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-col gap-3 rounded-xl bg-black/40 p-6 lg:max-w-xl">
+  <div class="flex flex-col gap-3 rounded-xl bg-black/40 p-6 lg:max-w-screen-xl">
     <div class="flex flex-col gap-3">
       <h2 class="text-2xl font-bold uppercase lg:text-4xl">{{ $t('contact.form-title') }}</h2>
       <p>{{ $t('contact.form-subtitle') }}</p>
@@ -17,27 +17,11 @@
         </select>
       </div>
 
-      <textarea v-model="data.resume" rows="8" :placeholder="$t('contact.form-message')" />
-
-      <div class="mt-3">
-        <p>{{ $t('contact.form-topics') }}</p>
-
-        <div class="my-3 flex flex-wrap gap-2">
-          <p
-            v-for="topic in topics"
-            :key="topic"
-            class="cursor-expander rounded-full border border-white bg-black px-4 py-1 text-sm transition-colors lg:text-base"
-            :class="{ 'bg-white text-black': data.topics.indexOf(topic) >= 0 }"
-            @click="handleTopics(topic)"
-          >
-            {{ topic }}
-          </p>
-        </div>
-      </div>
+      <textarea v-model="data.resume" rows="6" :placeholder="$t('contact.form-message')" />
 
       <button
         type="submit"
-        class="mt-3 flex justify-center gap-3 rounded-lg bg-black py-4 text-center uppercase transition-colors hover:border-black hover:bg-white hover:text-black disabled:cursor-not-allowed disabled:border-black disabled:bg-white disabled:text-black"
+        class="flex justify-center gap-3 rounded-lg bg-black py-4 text-center uppercase transition-colors hover:border-black hover:bg-white hover:text-black disabled:cursor-not-allowed disabled:border-black disabled:bg-white disabled:text-black"
         :disabled="loading || success"
       >
         <div
@@ -60,41 +44,9 @@ const data = ref({
   contact: '',
   budget: '',
   resume: '',
-  topics: [] as string[],
 });
 
 const budgets = ['1.000.000 - 5.000.000 FCFA', '5.000.000 - 10.000.000 FCFA', '+ 10.000.000 FCFA'];
-
-const topics = [
-  t('contact.form-topic-design'),
-  t('contact.form-topic-website'),
-  t('contact.form-topic-ecommerce'),
-  t('contact.form-topic-blog'),
-  t('contact.form-topic-redesign'),
-  t('contact.form-topic-mobile'),
-  t('contact.form-topic-cloud'),
-  t('contact.form-topic-other'),
-];
-
-function handleTopics(topic: string) {
-  const index = data.value.topics.indexOf(topic);
-
-  if (index === -1) {
-    data.value.topics.push(topic);
-  } else {
-    data.value.topics.splice(index, 1);
-  }
-}
-
-function clearForm() {
-  data.value = {
-    fullname: '',
-    contact: '',
-    budget: '',
-    resume: '',
-    topics: [],
-  };
-}
 
 async function submit() {
   loading.value = true;
@@ -105,8 +57,13 @@ async function submit() {
   });
 
   if (!error.value) {
-    clearForm();
     success.value = true;
+    data.value = {
+      fullname: '',
+      contact: '',
+      budget: '',
+      resume: '',
+    };
 
     setTimeout(() => {
       success.value = false;
