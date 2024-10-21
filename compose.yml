@@ -1,0 +1,17 @@
+services:
+  web:
+    image: ghcr.io/inputstudio/inputstudio.co:latest
+    container_name: inputstudio.co
+    restart: always
+    env_file:
+      - stack.env # Portainer stack env variables are injected here
+    labels:
+      - 'traefik.enable=true'
+      - 'traefik.http.routers.inputstudio.rule=Host(`inputstudio.co`)'
+      - 'traefik.http.routers.inputstudio.entrypoints=websecure'
+      - 'traefik.http.routers.inputstudio.tls.certresolver=letsencryptresolver'
+
+networks:
+  default:
+    name: internal-net
+    external: true
