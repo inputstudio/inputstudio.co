@@ -42,4 +42,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Trigger Portainer stack webhook
-        run: curl -X POST ${{ secrets.PORTAINER_STACK_WEBHOOK }}
+        run: |
+          response=$(curl -X POST -w "%{http_code}" -o /dev/null -s ${{ secrets.PORTAINER_STACK_WEBHOOK }})
+          if [ "$response" -ne 204 ]; then
+            echo "Error: POST request failed with status code $response"
+            exit 1
+          fi
