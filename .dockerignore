@@ -9,7 +9,6 @@ dist
 .DS_Store
 .eslint*
 .prettier*
-.deepsource.toml
 Dockerfile
 docker-compose.yml
 .vscode
